@@ -1,0 +1,74 @@
+html {
+  overflow: hidden;
+}
+
+td {
+  padding-left: 0.5em;
+  padding-bottom: 0.2em;
+  text-align: right;
+}
+
+.fork {
+  margin-top: 8px; /*FIXME: calculate from bootstrap*/
+}
+
+.ui.checkbox {
+  display: block;
+  margin: 0px;
+}
+
+.map-label {
+  background-color: white;
+  border: 1px solid black;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.tag-desc {
+  display: block;
+  max-height: 14px;
+  max-width: 14px;
+}
+
+.map-marker-default {
+  color: #ccc;
+}
+
+.map-marker-great {
+  color: #f55;
+}
+
+.map-marker-outdoor {
+  color: #6aa;
+}
+
+.map {
+  position: absolute;
+  top: 50px; /*FIXME: calculate based on navbar-header*/
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.infowindow-title {
+  font-weight: bold;
+}
+
+.infowindow-address,
+.infowindow-comment {
+  /* On Chromium 48, text is sometimes invisible when italic.
+  font-style: italic;*/
+  color: #555;
+}
+
+.infowindow-closed {
+  font-weight: bold;
+  color: red;
+}
+
+.infowindow-open {
+  font-weight: bold;
+  color: green;
+}

@@ -1,0 +1,15 @@
+<div data-ng-repeat="group in tags.groups">
+  <table>
+    <tr data-ng-repeat="tag in group">
+      <td>#{{ tag.name }}</td>
+      <td data-ng-bind-html="tag.desc | rawHtml"></td>
+      <td><div class="ui fitted toggle checkbox">
+          <input type="checkbox" tabindex="0" name="{{ tag.name }}"
+                 data-ng-model="states[tag.name]"
+                 data-ng-disabled="!tag.enabled" />
+          <label></label>
+      </div></td>
+    </tr>
+  </table>
+  <hr />
+</div>

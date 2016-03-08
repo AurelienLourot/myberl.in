@@ -1,0 +1,71 @@
+[
+  [
+    {
+      "name": "bar",
+      "desc": "<img class='tag-desc' src='https://mt.googleapis.com/vt/icon/name=icons/onion/1494-wht-circle-blank-4x.png' />",
+      "icon": "https://mt.googleapis.com/vt/icon/name=icons/onion/1494-wht-circle-blank-4x.png",
+      "initialState": true,
+      "enabled": true
+    },
+    {
+      "name": "club",
+      "desc": "<img class='tag-desc' src='https://mt.googleapis.com/vt/icon/name=icons/onion/1497-wht-diamond-blank-4x.png' />",
+      "icon": "https://mt.googleapis.com/vt/icon/name=icons/onion/1497-wht-diamond-blank-4x.png",
+      "initialState": true,
+      "enabled": true
+    },
+    {
+      "name": "restaurant",
+      "desc": "<img class='tag-desc' src='https://mt.googleapis.com/vt/icon/name=icons/onion/1496-wht-square-blank-4x.png' />",
+      "icon": "https://mt.googleapis.com/vt/icon/name=icons/onion/1496-wht-square-blank-4x.png",
+      "initialState": true,
+      "enabled": true
+    },
+    {
+      "name": "concert",
+      "desc": "<img class='tag-desc' src='https://mt.googleapis.com/vt/icon/name=icons/onion/1495-wht-star-blank-4x.png' />",
+      "icon": "https://mt.googleapis.com/vt/icon/name=icons/onion/1495-wht-star-blank-4x.png",
+      "initialState": false,
+      "enabled": true
+    },
+    {
+      "name": "sightseeing",
+      "desc": "<img class='tag-desc' src='https://mt.googleapis.com/vt/icon/name=icons/onion/1493-wht-blank_maps-4x.png' />",
+      "icon": "https://mt.googleapis.com/vt/icon/name=icons/onion/1493-wht-blank_maps-4x.png",
+      "initialState": false,
+      "enabled": true
+    }
+  ],
+  [
+    {
+      "name": "great",
+      "desc": "<i class='fa fa-map-marker fa-lg map-marker-great'></i>",
+      "color": "DB4436",
+      "initialState": true,
+      "enabled": false
+    },
+    {
+      "name": "good",
+      "desc": "<i class='fa fa-map-marker fa-lg map-marker-default'></i>",
+      "color": "777777",
+      "initialState": true,
+      "enabled": true
+    }
+  ],
+  [
+    {
+      "name": "indoor",
+      "desc": "<i class='fa fa-map-marker fa-lg map-marker-default'></i>",
+      "color": "777777",
+      "initialState": true,
+      "enabled": true
+    },
+    {
+      "name": "outdoor",
+      "desc": "<i class='fa fa-map-marker fa-lg map-marker-outdoor'></i>",
+      "color": "93D7E8",
+      "initialState": true,
+      "enabled": true
+    }
+  ]
+]
