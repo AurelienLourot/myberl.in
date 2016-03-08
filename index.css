@@ -8,8 +8,18 @@ td {
   text-align: right;
 }
 
+.brand {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 28px;
+  color: white;
+}
+
+.brand-my {
+  color: #f66;
+}
+
 .settings {
-  margin-top: -7px; /*FIXME: calculate from bootstrap*/
+  margin-top: -13px; /*FIXME*/
   margin-left: 1em;
 }
 
