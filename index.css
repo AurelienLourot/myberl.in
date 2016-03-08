@@ -8,8 +8,9 @@ td {
   text-align: right;
 }
 
-.fork {
-  margin-top: 8px; /*FIXME: calculate from bootstrap*/
+.settings {
+  margin-top: -7px; /*FIXME: calculate from bootstrap*/
+  margin-left: 1em;
 }
 
 .ui.checkbox {
