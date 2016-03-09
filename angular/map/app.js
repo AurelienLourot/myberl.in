@@ -110,7 +110,7 @@
 
         var tolerance = 20; // px
 
-        // Note that by iterating in that direction, latest markers have more change to get a
+        // Note that by iterating in that direction, latest markers have more chance to get a
         // visible label:
         outer:
         for (var i = 0; i < markers.length; ++i) {
