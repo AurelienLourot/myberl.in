@@ -63,7 +63,7 @@
       };
 
       // Shows or hides the map's markers, depending whether they are matching the current filters
-      // or not.
+      // or not. Triggers label decluttering as a side effect.
       // areMatching: function that takes a list of tag keys and returns true if the provided tags
       //              match the current filters.
       this.showHideMarkers = function(areMatching) {
@@ -71,6 +71,7 @@
           var marker = markers[i];
           marker.setVisibleOnMap(areMatching(marker.tagKeys) ? map : null);
         }
+        declutter();
       };
 
       this.dbg_click_each_marker = function() {
@@ -94,6 +95,51 @@
         console.error('No marker visible.');
       };
 
+      // Shows/Hides marker labels.
+      var declutter = function() {
+        var projection = projectionFactory.getProjection();
+        if (!projection) {
+          return; // initialization isn't done yet
+        }
+
+        for (var i = 0; i < markers.length; ++i) {
+          var marker = markers[i];
+          marker.declutterDone = false;
+          marker.positionPoint = projection.fromLatLngToContainerPixel(marker.getPosition());
+        }
+
+        var tolerance = 20; // px
+
+        // Note that by iterating in that direction, latest markers have more change to get a
+        // visible label:
+        outer:
+        for (var i = 0; i < markers.length; ++i) {
+          var markerBeingEvaluated = markers[i];
+
+          for (var j = 0; j < markers.length; ++j) {
+            var markerNotToHide = markers[j];
+            if (markerBeingEvaluated === markerNotToHide ||
+                !markerBeingEvaluated.isVisible() ||
+                !markerNotToHide.isVisible() ||
+                markerNotToHide.declutterDone && !markerNotToHide.isLabelVisible()) {
+              continue;
+            }
+
+            var dX = markerNotToHide.positionPoint.x - markerBeingEvaluated.positionPoint.x;
+            var dY = markerNotToHide.positionPoint.y - markerBeingEvaluated.positionPoint.y;
+            if (Math.abs(dX) < tolerance &&
+                Math.abs(dY) < tolerance) {
+              markerBeingEvaluated.setLabelVisible(false);
+              markerBeingEvaluated.declutterDone = true;
+              continue outer;
+            }
+          }
+
+          markerBeingEvaluated.setLabelVisible(true);
+          markerBeingEvaluated.declutterDone = true;
+        }
+      };
+
       // Private members:
       var map = new google.maps.Map(document.getElementById(elemId), {
         center: berlinTvTower,
@@ -101,6 +147,13 @@
         mapTypeControl: false,
         streetViewControl: false,
       });
+      map.addListener('zoom_changed', declutter);
+
+      var projectionFactory = new google.maps.OverlayView();
+      projectionFactory.draw = function(){};
+      projectionFactory.onAdd = declutter;
+      projectionFactory.setMap(map);
+
       var markers = [];
 
       // Public members:
@@ -140,6 +193,24 @@
       this.isVisible = function() {
         return !!googleMarker.map;
       };
+
+      // Shows or hides the marker label.
+      // visibility: boolean.
+      this.setLabelVisible = function(visibility) {
+        // set() triggers a refresh, while just setting the property doesn't, see MarkerWithLabel's
+        // implementation:
+        googleMarker.set('labelVisible', visibility);
+      }
+
+      // Note that even if returns true, label can still be invisible in reality in case the marker
+      // itself isn't visible.
+      this.isLabelVisible = function() {
+        return googleMarker.labelVisible;
+      }
+
+      this.getPosition = function() {
+        return googleMarker.getPosition();
+      }
 
       // Public members:
       this.tagKeys = descriptor.tags;
