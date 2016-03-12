@@ -75,7 +75,9 @@
               onChange: function() {
                 // Workaround for https://github.com/Semantic-Org/Semantic-UI/issues/1202 :
                 var inputElm = $(this);
-                scope.$apply(scope.states[inputElm.attr('name')] = inputElm.is(':checked'));
+                var inputElmName = inputElm.attr('name');
+                scope.$apply(scope.states[inputElmName] = inputElm.is(':checked'));
+                dbg_checkboxChanged(inputElmName);
 
                 $timeout(function () { // necessary on Safari and Android's browser, so Angular
                                        // first updates the model
@@ -165,5 +167,25 @@
     };
 
     return TagFilters;
+  })();
+
+  var dbg_checkboxChanged = (function() {
+    // Secret dialog will pop up after the following sequence is clicked:
+    var seq = ['bar', 'club', 'restaurant', 'concert', 'sightseeing',
+               'bar', 'club', 'restaurant', 'concert', 'sightseeing'];
+    var lastClicked = -1;
+
+    return function(checkboxName) {
+      if (checkboxName == seq[lastClicked + 1]) {
+        ++lastClicked;
+      } else {
+        lastClicked = -1;
+      }
+      if (lastClicked == seq.length - 1) {
+        lastClicked = -1;
+        $('#filters').popup('hide');
+        $('#dbg_secret').popup('show');
+      }
+    };
   })();
 })();

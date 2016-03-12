@@ -36,10 +36,16 @@
                 addListener(showHideMarkers);
                 showHideMarkers();
                 googleMap.dbg_check_markers_are_visible();
-                // googleMap.dbg_click_each_marker();
               }
             });
           });
+
+          dbg_click_each_marker = function() {
+            googleMap.dbg_click_each_marker();
+          };
+          dbg_remove_all_markers = function() {
+            googleMap.clearMarkers();
+          };
         });
       },
     };
@@ -61,6 +67,13 @@
       this.addMarker = function(marker) {
         markers.push(marker);
       };
+
+      // Removes all markers.
+      this.clearMarkers = function() {
+        while (markers.length) {
+          markers.pop().setVisibleOnMap(null);
+        }
+      }
 
       // Shows or hides the map's markers, depending whether they are matching the current filters
       // or not. Triggers label decluttering as a side effect.
@@ -97,6 +110,10 @@
 
       // Shows/Hides marker labels.
       var declutter = function() {
+        if (dbg_no_declutter) {
+          return;
+        }
+
         var projection = projectionFactory.getProjection();
         if (!projection) {
           return; // initialization isn't done yet
@@ -428,3 +445,7 @@
   // File containing all the marker descriptors:
   GoogleMap.markerDescriptors = 'angular/map/markers.json';
 })();
+
+var dbg_click_each_marker;
+var dbg_remove_all_markers;
+var dbg_no_declutter = false;

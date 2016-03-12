@@ -83,6 +83,22 @@
       </div>
     </div>
 
+    <div id="dbg_secret" class="panel panel-default">
+      <div class="panel-body">
+        <p><b>Debug</b></p>
+        <p><button class="btn btn-default" onclick="dbg_click_each_marker();">
+          Click each marker
+        </button></p>
+        <p><button class="btn btn-default" onclick="dbg_no_declutter = true;">
+          Disable decluttering
+        </button></p>
+        <p><button class="btn btn-default" onclick="dbg_remove_all_markers();">
+          Remove all markers
+        </button></p>
+        <p><button class="btn btn-default dbg_secret_close">Close</button></p>
+      </div>
+    </div>
+
     <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&key=AIzaSyDgo1hF6M7dGD75NQgfNXGvT422ri9ieyU&libraries=places">
     </script>
     <script src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.10/src/markerwithlabel.js">
@@ -98,6 +114,7 @@
     <script>
       $(document).ready(function(){
         $('#filters').popup();
+        $('#dbg_secret').popup();
       });
     </script>
 
