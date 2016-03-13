@@ -382,8 +382,8 @@
         var gMarkerOpts = {};
         gMarkerOpts.position = descriptor.position;
         gMarkerOpts.labelContent = descriptor.title;
-        gMarkerOpts.labelAnchor = new google.maps.Point(-8,  // 8px to the right
-                                                        -8); // 8px to the bottom
+        gMarkerOpts.labelAnchor = new google.maps.Point(-5,  // 5px to the right
+                                                        -5); // 5px to the bottom
         gMarkerOpts.labelClass = 'map-label';
         gMarkerOpts.icon = googleIcon(that.tagKeys, getTagDescriptorByKey);
         return new MarkerWithLabel(gMarkerOpts);
@@ -418,12 +418,14 @@
       if (!url) {
         return null;
       }
+      var origSize = 20;   // px
+      var wantedSize = 14; // px
       var result = {
         url: url,
-        anchor: new google.maps.Point(10, 10),
+        anchor: new google.maps.Point(wantedSize / 2, wantedSize / 2),
       };
       if (color) {
-        result.url += '&filter=ff' + color;
+        result.url += '&scale=' + wantedSize / origSize + '&filter=ff' + color;
       }
       return result;
     };
