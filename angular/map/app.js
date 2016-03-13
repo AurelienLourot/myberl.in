@@ -94,7 +94,7 @@
             var marker = markers[index];
             setTimeout(function() {
               marker.dbg_listener();
-            }, 5000 + (index - startIndex) * 2500);
+            }, 5000 + (index - startIndex) * 2800);
           })(i);
         }
       };
