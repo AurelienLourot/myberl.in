@@ -402,7 +402,7 @@
 
       // Iterate from the least to the most important tag:
       var url = null;
-      var color = null;
+      var color = 'gray';
       for (var key = tagKeys.length - 1; key >= 0; --key) {
         var descriptor = getTagDescriptorByKey(tagKeys[key]);
         // If the descriptor has an icon, overtake it:
@@ -418,16 +418,10 @@
       if (!url) {
         return null;
       }
-      var origSize = 20;   // px
-      var wantedSize = 14; // px
-      var result = {
-        url: url,
-        anchor: new google.maps.Point(wantedSize / 2, wantedSize / 2),
+      return {
+        url: url + '_' + color + '.png',
+        anchor: new google.maps.Point(7, 7), // px
       };
-      if (color) {
-        result.url += '&scale=' + wantedSize / origSize + '&filter=ff' + color;
-      }
-      return result;
     };
 
     var closeAnyOpenInfoWindow = function() {
