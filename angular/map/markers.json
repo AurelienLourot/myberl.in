@@ -118,11 +118,10 @@
     "tags": ["club", "indoor", "good"]
   },
   {
-    "title": "Theater Im Keller",
-    "place_id": "ChIJjbibGLdPqEcRvCjN9hfKa2A",
+    "title": "Keller",
     "position": {
-      "lat": 52.48843200000001,
-      "lng": 13.427726000000007
+      "lat": 52.48305999999999,
+      "lng": 13.43119999999999
     },
     "tags": ["club", "great", "indoor"]
   },
@@ -206,7 +205,7 @@
     "tags": ["club", "great", "indoor", "outdoor"]
   },
   {
-    "title": "RAMPE",
+    "title": "RAMPE Club",
     "comment": "Beach",
     "position": {
       "lat": 52.511807,
@@ -584,6 +583,7 @@
   {
     "title": "Tante Emma",
     "comment": "WiFi",
+    "place_id": "ChIJ535jbU5OqEcRq0YA0SPd4mU",
     "position": {
       "lat": 52.501524,
       "lng": 13.441528000000062
