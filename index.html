@@ -76,14 +76,14 @@
       </div>
     </nav>
 
-    <div id="filters" class="panel panel-default">
+    <div id="filters" class="panel panel-default hidden">
       <div class="panel-body">
         <tag-filters></tag-filters>
         <button class="btn btn-default filters_close">Done</button>
       </div>
     </div>
 
-    <div id="dbg_secret" class="panel panel-default">
+    <div id="dbg_secret" class="panel panel-default hidden">
       <div class="panel-body">
         <p><b>Debug</b></p>
         <p><button class="btn btn-default" onclick="dbg_click_each_marker();">
@@ -99,6 +99,19 @@
       </div>
     </div>
 
+    <!-- jQuery Popup Overlay -->
+    <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.11/jquery.popupoverlay.js"></script>
+    <script>
+      $(document).ready(function() {
+        var popups = [$('#filters'), $('#dbg_secret')];
+        for (var i = 0; i < popups.length; ++i) {
+          var popup = popups[i];
+          popup.popup();
+          popup.removeClass('hidden');
+        }
+      });
+    </script>
+
     <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&key=AIzaSyDgo1hF6M7dGD75NQgfNXGvT422ri9ieyU&libraries=places">
     </script>
     <script src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.10/src/markerwithlabel.js">
@@ -108,15 +121,6 @@
     <script src="thirdparty/bootstrap-3.3.5/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="thirdparty/bootstrap-assets/ie10-viewport-bug-workaround.js"></script>
-
-    <!-- jQuery Popup Overlay -->
-    <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.11/jquery.popupoverlay.js"></script>
-    <script>
-      $(document).ready(function(){
-        $('#filters').popup();
-        $('#dbg_secret').popup();
-      });
-    </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
     <script src="app.js"></script>
