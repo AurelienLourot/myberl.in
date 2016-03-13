@@ -1227,5 +1227,64 @@
       "lng": 13.241111100000014
     },
     "tags": ["sightseeing", "outdoor", "great"]
+  },
+  {
+    "title": "Neue City Bowling",
+    "position": {
+      "lat": 52.4867923,
+      "lng": 13.4214029
+    },
+    "tags": ["bar", "indoor", "good"]
+  },
+  {
+    "title": "Fes Turkish BBQ",
+    "position": {
+      "lat": 52.489273,
+      "lng": 13.408633
+    },
+    "tags": ["restaurant", "great", "indoor", "outdoor"]
+  },
+  {
+    "title": "Preussische Spirituosen Manufaktur",
+    "comment": "Distillery",
+    "position": {
+      "lat": 52.545375,
+      "lng": 13.343464
+    },
+    "tags": ["sightseeing", "great", "indoor"]
+  },
+  {
+    "title": "FilmBar",
+    "comment": "Bar cinema",
+    "position": {
+      "lat": 52.480745,
+      "lng": 13.431741
+    },
+    "tags": ["bar", "great", "indoor"]
+  },
+  {
+    "title": "Baraka",
+    "comment": "Maroccan-Egyptian",
+    "position": {
+      "lat": 52.499730,
+      "lng": 13.429981
+    },
+    "tags": ["restaurant", "great", "indoor"]
+  },
+  {
+    "title": "Ein Laden",
+    "position": {
+      "lat": 52.488236,
+      "lng": 13.429820
+    },
+    "tags": ["restaurant", "bar", "great", "indoor"]
+  },
+  {
+    "title": "Pazzi X Pizza",
+    "position": {
+      "lat": 52.477330,
+      "lng": 13.423246
+    },
+    "tags": ["restaurant", "good", "indoor"]
   }
 ]
