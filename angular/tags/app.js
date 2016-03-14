@@ -1,6 +1,6 @@
 'use strict';
 
-(function(){
+define(function(){
   var app = angular.module('tags', []);
 
   app.factory('tagsModuleIsReady', function() {
@@ -188,4 +188,4 @@
       }
     };
   })();
-})();
+});

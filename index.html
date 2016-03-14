@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="berlin">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,6 +40,8 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script data-main="main.js" src="thirdparty/require.js"></script>
   </head>
   <body onclick="$('#navbar').collapse('hide');">
 
@@ -86,13 +88,13 @@
     <div id="dbg_secret" class="panel panel-default hidden">
       <div class="panel-body">
         <p><b>Debug</b></p>
-        <p><button class="btn btn-default" onclick="dbg_click_each_marker();">
+        <p><button class="btn btn-default" onclick="dbg.click_each_marker();">
           Click each marker
         </button></p>
-        <p><button class="btn btn-default" onclick="dbg_no_declutter = true;">
+        <p><button class="btn btn-default" onclick="dbg.disable_decluttering();">
           Disable decluttering
         </button></p>
-        <p><button class="btn btn-default" onclick="dbg_remove_all_markers();">
+        <p><button class="btn btn-default" onclick="dbg.remove_all_markers();">
           Remove all markers
         </button></p>
         <p><button class="btn btn-default dbg_secret_close">Close</button></p>
@@ -101,16 +103,6 @@
 
     <!-- jQuery Popup Overlay -->
     <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.11/jquery.popupoverlay.js"></script>
-    <script>
-      $(document).ready(function() {
-        var popups = [$('#filters'), $('#dbg_secret')];
-        for (var i = 0; i < popups.length; ++i) {
-          var popup = popups[i];
-          popup.popup();
-          popup.removeClass('hidden');
-        }
-      });
-    </script>
 
     <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&key=AIzaSyDgo1hF6M7dGD75NQgfNXGvT422ri9ieyU&libraries=places">
     </script>
@@ -123,8 +115,5 @@
     <script src="thirdparty/bootstrap-assets/ie10-viewport-bug-workaround.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
-    <script src="app.js"></script>
-    <script src="angular/map/app.js"></script>
-    <script src="angular/tags/app.js"></script>
   </body>
 </html>
