@@ -5,8 +5,7 @@
       <td data-ng-bind-html="tag.desc | rawHtml"></td>
       <td><div class="ui fitted toggle checkbox">
           <input type="checkbox" tabindex="0" name="{{ tag.name }}"
-                 data-ng-model="states[tag.name]"
-                 data-ng-disabled="!tag.enabled" />
+                 data-ng-model="states[tag.name]" />
           <label></label>
       </div></td>
     </tr>

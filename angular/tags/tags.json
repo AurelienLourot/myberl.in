@@ -4,36 +4,43 @@
       "name": "bar",
       "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1494-wht-circle-blank_white.png' />",
       "icon": "assets/pics/thirdparty/1494-wht-circle-blank",
-      "initialState": true,
-      "enabled": true
+      "initialState": true
+    },
+    {
+      "name": "cafe",
+      "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1494-wht-circle-blank_white.png' />",
+      "icon": "assets/pics/thirdparty/1494-wht-circle-blank",
+      "initialState": true
     },
     {
       "name": "club",
       "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1497-wht-diamond-blank_white.png' />",
       "icon": "assets/pics/thirdparty/1497-wht-diamond-blank",
-      "initialState": true,
-      "enabled": true
+      "initialState": true
     },
     {
       "name": "restaurant",
       "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1496-wht-square-blank_white.png' />",
       "icon": "assets/pics/thirdparty/1496-wht-square-blank",
-      "initialState": true,
-      "enabled": true
+      "initialState": true
+    },
+    {
+      "name": "brunch",
+      "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1496-wht-square-blank_white.png' />",
+      "icon": "assets/pics/thirdparty/1496-wht-square-blank",
+      "initialState": true
     },
     {
       "name": "concert",
       "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1495-wht-star-blank_white.png' />",
       "icon": "assets/pics/thirdparty/1495-wht-star-blank",
-      "initialState": false,
-      "enabled": true
+      "initialState": false
     },
     {
       "name": "sightseeing",
       "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1493-wht-blank_maps_white.png' />",
       "icon": "assets/pics/thirdparty/1493-wht-blank_maps",
-      "initialState": false,
-      "enabled": true
+      "initialState": false
     }
   ],
   [
@@ -41,15 +48,19 @@
       "name": "great",
       "desc": "<i class='fa fa-map-marker fa-lg map-marker-great'></i>",
       "color": "red",
-      "initialState": true,
-      "enabled": false
+      "initialState": true
     },
     {
       "name": "good",
       "desc": "<i class='fa fa-map-marker fa-lg map-marker-default'></i>",
       "color": "gray",
-      "initialState": true,
-      "enabled": true
+      "initialState": true
+    },
+    {
+      "name": "todiscover",
+      "desc": "<i class='fa fa-map-marker fa-lg map-marker-todiscover'></i>",
+      "color": "orange",
+      "initialState": false
     }
   ],
   [
@@ -57,15 +68,13 @@
       "name": "indoor",
       "desc": "<i class='fa fa-map-marker fa-lg map-marker-default'></i>",
       "color": "gray",
-      "initialState": true,
-      "enabled": true
+      "initialState": true
     },
     {
       "name": "outdoor",
       "desc": "<i class='fa fa-map-marker fa-lg map-marker-outdoor'></i>",
       "color": "cyan",
-      "initialState": true,
-      "enabled": true
+      "initialState": true
     }
   ]
 ]

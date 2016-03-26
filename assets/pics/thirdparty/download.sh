@@ -8,8 +8,8 @@ icons=(\
 1493-wht-blank_maps)
 scales=(0.7 0.7 0.7 0.7 0.45)
 
-colors=(white gray red cyan)
-color_codes=(FFFFFF 777777 DB4436 93D7E8)
+colors=(white gray red cyan orange)
+color_codes=(FFFFFF 777777 DB4436 93D7E8 FFBB55)
 
 for i in $(seq 0 $((${#icons[@]} - 1)))
 do

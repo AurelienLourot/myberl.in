@@ -55,6 +55,10 @@ td {
   color: #6aa;
 }
 
+.map-marker-todiscover {
+  color: #fb5;
+}
+
 .map {
   position: absolute;
   top: 50px; /*FIXME: calculate based on navbar-header*/

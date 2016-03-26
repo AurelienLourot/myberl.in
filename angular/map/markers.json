@@ -263,7 +263,7 @@
       "lat": 52.5069577,
       "lng": 13.456146999999987
     },
-    "tags": ["bar", "club", "restaurant", "outdoor", "great", "indoor"]
+    "tags": ["bar", "club", "restaurant", "cafe", "outdoor", "great", "indoor"]
   },
   {
     "title": "Bohnengold",
@@ -288,7 +288,7 @@
       "lat": 52.482204,
       "lng": 13.431577699999934
     },
-    "tags": ["bar", "club", "outdoor", "great"]
+    "tags": ["bar", "cafe", "club", "outdoor", "great"]
   },
   {
     "title": "Lupita Bar",
@@ -322,7 +322,7 @@
       "lat": 52.502063,
       "lng": 13.432426999999961
     },
-    "tags": ["bar", "club", "great", "indoor"]
+    "tags": ["bar", "cafe", "club", "great", "indoor"]
   },
   {
     "title": "Bechereck",
@@ -357,7 +357,7 @@
       "lat": 52.498952,
       "lng": 13.428224
     },
-    "tags": ["bar", "restaurant", "indoor", "good"]
+    "tags": ["bar", "cafe", "restaurant", "indoor", "good"]
   },
   {
     "title": "BEATmung",
@@ -400,7 +400,7 @@
       "lat": 52.48782,
       "lng": 13.431100000000015
     },
-    "tags": ["bar", "great", "indoor"]
+    "tags": ["bar", "cafe", "great", "indoor"]
   },
   {
     "title": "K-fetisch",
@@ -408,7 +408,7 @@
       "lat": 52.483095,
       "lng": 13.44180000000006
     },
-    "tags": ["bar", "indoor", "good"]
+    "tags": ["bar", "cafe", "indoor", "good"]
   },
   {
     "title": "Ä",
@@ -453,7 +453,7 @@
       "lat": 52.473839,
       "lng": 13.425185000000056
     },
-    "tags": ["bar", "great", "indoor"]
+    "tags": ["bar", "cafe", "great", "indoor"]
   },
   {
     "title": "San Remo",
@@ -461,7 +461,7 @@
       "lat": 52.500483,
       "lng": 13.444461000000048
     },
-    "tags": ["bar", "great", "indoor", "outdoor"]
+    "tags": ["bar", "cafe", "great", "indoor", "outdoor"]
   },
   {
     "title": "Fette Ecke",
@@ -478,7 +478,7 @@
       "lat": 52.539459,
       "lng": 13.407347999999956
     },
-    "tags": ["bar", "restaurant", "great", "indoor", "outdoor"]
+    "tags": ["cafe", "restaurant", "great", "indoor", "outdoor"]
   },
   {
     "title": "Kattelbach",
@@ -487,7 +487,7 @@
       "lat": 52.49994,
       "lng": 13.432170000000042
     },
-    "tags": ["bar", "indoor", "good"]
+    "tags": ["bar", "cafe", "indoor", "good"]
   },
   {
     "title": "SO36",
@@ -512,7 +512,7 @@
       "lat": 52.508107,
       "lng": 13.455137000000036
     },
-    "tags": ["bar", "indoor", "good"]
+    "tags": ["cafe", "indoor", "good"]
   },
   {
     "title": "BruchBerg",
@@ -529,7 +529,7 @@
       "lat": 52.49347,
       "lng": 13.438369999999964
     },
-    "tags": ["bar", "great", "indoor"]
+    "tags": ["cafe", "great", "indoor"]
   },
   {
     "title": "Trude Ruth und Goldammer",
@@ -545,7 +545,7 @@
       "lat": 52.539462,
       "lng": 13.406757999999968
     },
-    "tags": ["bar", "indoor", "good"]
+    "tags": ["cafe", "indoor", "good"]
   },
   {
     "title": "Deck5",
@@ -554,7 +554,7 @@
       "lat": 52.54966,
       "lng": 13.41520360000004
     },
-    "tags": ["bar", "outdoor", "good"]
+    "tags": ["bar", "cafe", "outdoor", "good"]
   },
   {
     "title": "Villa Neukölln",
@@ -588,7 +588,7 @@
       "lat": 52.501524,
       "lng": 13.441528000000062
     },
-    "tags": ["bar", "great", "indoor"]
+    "tags": ["cafe", "bar", "great", "indoor"]
   },
   {
     "title": "Bar Walther",
@@ -596,7 +596,7 @@
       "lat": 52.49886999999999,
       "lng": 13.441779999999996
     },
-    "tags": ["bar", "indoor", "good"]
+    "tags": ["bar", "cafe", "indoor", "good"]
   },
   {
     "title": "Trödler Bar",
@@ -620,7 +620,7 @@
       "lat": 52.4916784,
       "lng": 13.4353566
     },
-    "tags": ["bar", "outdoor", "good"]
+    "tags": ["bar", "cafe", "outdoor", "good"]
   },
   {
     "title": "nhow",
@@ -630,7 +630,7 @@
       "lat": 52.5011068,
       "lng": 13.450851000000057
     },
-    "tags": ["bar", "indoor", "good"]
+    "tags": ["cafe", "indoor", "good"]
   },
   {
     "title": "Café Provinz",
@@ -639,7 +639,7 @@
       "lat": 52.490382,
       "lng": 13.449053000000049
     },
-    "tags": ["restaurant", "bar", "great", "indoor", "outdoor"]
+    "tags": ["restaurant", "cafe", "great", "indoor", "outdoor"]
   },
   {
     "title": "White Trash",
@@ -674,7 +674,7 @@
       "lat": 52.476666,
       "lng": 13.419905999999969
     },
-    "tags": ["bar", "restaurant", "great", "indoor"]
+    "tags": ["cafe", "restaurant", "great", "indoor"]
   },
   {
     "title": "Crêperie Manouche",
@@ -693,7 +693,7 @@
       "lat": 52.539744,
       "lng": 13.410143000000062
     },
-    "tags": ["restaurant", "bar", "outdoor", "indoor", "good"]
+    "tags": ["restaurant", "bar", "cafe", "outdoor", "indoor", "good"]
   },
   {
     "title": "Café Futuro",
@@ -702,7 +702,7 @@
       "lat": 52.48788,
       "lng": 13.432310000000031
     },
-    "tags": ["bar", "restaurant", "great", "indoor"]
+    "tags": ["cafe", "restaurant", "great", "indoor"]
   },
   {
     "title": "YOSOY",
@@ -715,12 +715,11 @@
   },
   {
     "title": "Szimpla",
-    "comment": "Brunch",
     "position": {
       "lat": 52.511181,
       "lng": 13.461207000000059
     },
-    "tags": ["restaurant", "bar", "great", "indoor"]
+    "tags": ["brunch", "restaurant", "cafe", "great", "indoor"]
   },
   {
     "title": "Ankerklause",
@@ -765,7 +764,7 @@
       "lat": 52.49732,
       "lng": 13.43893000000003
     },
-    "tags": ["restaurant", "bar", "great", "indoor"]
+    "tags": ["restaurant", "cafe", "great", "indoor"]
   },
   {
     "title": "frank und frei",
@@ -798,12 +797,11 @@
   },
   {
     "title": "Salon Schmück",
-    "comment": "Brunch",
     "position": {
       "lat": 52.50093,
       "lng": 13.439120000000003
     },
-    "tags": ["restaurant", "bar", "great", "indoor", "outdoor"]
+    "tags": ["restaurant", "brunch", "cafe", "great", "indoor", "outdoor"]
   },
   {
     "title": "Amar",
@@ -981,7 +979,7 @@
       "lat": 52.498902,
       "lng": 13.425539999999957
     },
-    "tags": ["restaurant", "great", "indoor"]
+    "tags": ["brunch", "restaurant", "great", "indoor"]
   },
   {
     "title": "ALASKA",
@@ -1029,12 +1027,11 @@
   },
   {
     "title": "Bastard",
-    "comment": "Breakfast",
     "position": {
       "lat": 52.495212,
       "lng": 13.431982999999946
     },
-    "tags": ["restaurant", "outdoor", "good"]
+    "tags": ["brunch", "outdoor", "good"]
   },
   {
     "title": "Zazza",
@@ -1043,7 +1040,7 @@
       "lat": 52.4999919,
       "lng": 13.444299100000002
     },
-    "tags": ["restaurant", "great", "outdoor", "indoor"]
+    "tags": ["restaurant", "brunch", "great", "outdoor", "indoor"]
   },
   {
     "title": "Stiege",
@@ -1082,12 +1079,11 @@
   },
   {
     "title": "Varadinek",
-    "comment": "Brunch",
     "position": {
       "lat": 52.497490000000006,
       "lng": 13.44091000000003
     },
-    "tags": ["restaurant", "great", "indoor"]
+    "tags": ["brunch", "great", "indoor"]
   },
   {
     "title": "Pig & Tiger",
@@ -1260,7 +1256,7 @@
       "lat": 52.480745,
       "lng": 13.431741
     },
-    "tags": ["bar", "great", "indoor"]
+    "tags": ["bar", "cafe", "great", "indoor"]
   },
   {
     "title": "Baraka",
@@ -1286,5 +1282,402 @@
       "lng": 13.423246
     },
     "tags": ["restaurant", "good", "indoor"]
+  },
+  {
+    "title": "Nest",
+    "position": {
+      "lat": 52.497119,
+      "lng": 13.439089
+    },
+    "tags": ["bar", "brunch", "todiscover", "great", "indoor"]
+  },
+  {
+    "title": "Tempo-Box",
+    "position": {
+      "lat": 52.509860,
+      "lng": 13.455870
+    },
+    "tags": ["restaurant", "todiscover", "indoor", "outdoor"]
+  },
+  {
+    "title": "Myxa",
+    "position": {
+      "lat": 52.490273,
+      "lng": 13.426710
+    },
+    "tags": ["restaurant", "brunch", "great", "indoor"]
+  },
+  {
+    "title": "Fuchsbau",
+    "position": {
+      "lat": 52.495659,
+      "lng": 13.419383
+    },
+    "tags": ["brunch", "todiscover", "indoor"]
+  },
+  {
+    "title": "Brezel Company",
+    "position": {
+      "lat": 52.490111,
+      "lng": 13.427177
+    },
+    "tags": ["brunch", "todiscover", "indoor"]
+  },
+  {
+    "title": "Fahimi Bar",
+    "comment": "Hip",
+    "position": {
+      "lat": 52.499351,
+      "lng": 13.419728
+    },
+    "tags": ["bar", "todiscover", "indoor"]
+  },
+  {
+    "title": "Chez Dang",
+    "comment": "Asian",
+    "position": {
+      "lat": 52.493127,
+      "lng": 13.428352
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "La Femme",
+    "place_id": "ChIJK6tjGbZPqEcR6tLh2swidpw",
+    "position": {
+      "lat": 52.490960,
+      "lng": 13.423751
+    },
+    "tags": ["brunch", "todiscover", "indoor"]
+  },
+  {
+    "title": "Burrito Baby",
+    "position": {
+      "lat": 52.491289,
+      "lng": 13.428281
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Oui, madame",
+    "position": {
+      "lat": 52.526744,
+      "lng": 13.409665
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "I Golosi Briganti",
+    "comment": "Italian",
+    "position": {
+      "lat": 52.497869,
+      "lng": 13.441885
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Hopfenreich",
+    "position": {
+      "lat": 52.499474,
+      "lng": 13.439258
+    },
+    "tags": ["bar", "todiscover", "indoor"]
+  },
+  {
+    "title": "Bosco",
+    "position": {
+      "lat": 52.499683,
+      "lng": 13.438894
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Transit",
+    "comment": "Asian tapas",
+    "position": {
+      "lat": 52.505982,
+      "lng": 13.465720
+    },
+    "tags": ["restaurant", "todiscover", "indoor", "outdoor"]
+  },
+  {
+    "title": "...",
+    "comment": "Alternative",
+    "ignore_errors": true,
+    "position": {
+      "lat": 52.498177,
+      "lng": 13.442178
+    },
+    "tags": ["brunch", "todiscover", "indoor", "outdoor"]
+  },
+  {
+    "title": "District Môt",
+    "comment": "Vietnamese street food",
+    "position": {
+      "lat": 52.527721,
+      "lng": 13.403422
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Lavanderia Vecchia",
+    "comment": "Italian",
+    "position": {
+      "lat": 52.481446,
+      "lng": 13.426393
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Momos",
+    "comment": "Organic vegetarian dumplings",
+    "position": {
+      "lat": 52.531075,
+      "lng": 13.410100
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Ohlala",
+    "comment": "Vegan",
+    "position": {
+      "lat": 52.512756,
+      "lng": 13.462281
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Smart Deli",
+    "comment": "Japanese",
+    "position": {
+      "lat": 52.527870,
+      "lng": 13.386569
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Bakery",
+    "ignore_errors": true,
+    "position": {
+      "lat": 52.498603,
+      "lng": 13.442243
+    },
+    "tags": ["brunch", "todiscover", "indoor"]
+  },
+  {
+    "title": "Gärten der Welt",
+    "position": {
+      "lat": 52.537697,
+      "lng": 13.574696
+    },
+    "tags": ["sightseeing", "todiscover", "outdoor"]
+  },
+  {
+    "title": "Körnerpark",
+    "position": {
+      "lat": 52.471357,
+      "lng": 13.437864
+    },
+    "tags": ["sightseeing", "todiscover", "outdoor"]
+  },
+  {
+    "title": "Führungen Tempelhof",
+    "comment": "Visits of the former airport",
+    "position": {
+      "lat": 52.480945,
+      "lng": 13.388310
+    },
+    "tags": ["sightseeing", "todiscover", "indoor"]
+  },
+  {
+    "title": "Monkey Bar",
+    "comment": "Hip hotel bar with view",
+    "position": {
+      "lat": 52.505671,
+      "lng": 13.337896
+    },
+    "tags": ["bar", "todiscover", "indoor"]
+  },
+  {
+    "title": "Café Eliza",
+    "position": {
+      "lat": 52.499039,
+      "lng": 13.438280
+    },
+    "tags": ["cafe", "todiscover", "indoor"]
+  },
+  {
+    "title": "Kaffee Burger",
+    "position": {
+      "lat": 52.528694,
+      "lng": 13.408573
+    },
+    "tags": ["club", "todiscover", "indoor"]
+  },
+  {
+    "title": "Fos Bar",
+    "comment": "Rock bar",
+    "position": {
+      "lat": 52.551847,
+      "lng": 13.386689
+    },
+    "tags": ["bar", "todiscover", "indoor"]
+  },
+  {
+    "title": "Anita Berber",
+    "position": {
+      "lat": 52.545329,
+      "lng": 13.373590
+    },
+    "tags": ["club", "bar", "todiscover", "indoor"]
+  },
+  {
+    "title": "Bite Club",
+    "comment": "Street food every second Friday",
+    "position": {
+      "lat": 52.497048,
+      "lng": 13.452544
+    },
+    "tags": ["restaurant", "todiscover", "outdoor"]
+  },
+  {
+    "title": "Thai Park",
+    "comment": "Thai street food on Sunday",
+    "position": {
+      "lat": 52.492815,
+      "lng": 13.313199
+    },
+    "tags": ["restaurant", "todiscover", "outdoor"]
+  },
+  {
+    "title": "House of small wonder",
+    "comment": "Japanese",
+    "position": {
+      "lat": 52.524498,
+      "lng": 13.389127
+    },
+    "tags": ["brunch", "todiscover", "indoor"]
+  },
+  {
+    "title": "Prince",
+    "comment": "Asian",
+    "position": {
+      "lat": 52.524460,
+      "lng": 13.409620
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Sky.Bar",
+    "comment": "Hip hotel bar with view",
+    "place_id": "ChIJA65CgXpOqEcRorMC9SZfAQo",
+    "position": {
+      "lat": 52.528440,
+      "lng": 13.457071
+    },
+    "tags": ["bar", "todiscover", "indoor"]
+  },
+  {
+    "title": "Luzia",
+    "place_id": "ChIJe-IgvDNOqEcR65aU1jfYOEk",
+    "position": {
+      "lat": 52.501738,
+      "lng": 13.418323
+    },
+    "tags": ["cafe", "todiscover", "indoor"]
+  },
+  {
+    "title": "Impala",
+    "position": {
+      "lat": 52.532552,
+      "lng": 13.412197
+    },
+    "tags": ["cafe", "todiscover", "indoor"]
+  },
+  {
+    "title": "Berliner Unterwelten",
+    "comment": "Visit of a WWII bunker",
+    "position": {
+      "lat": 52.547824,
+      "lng": 13.389253
+    },
+    "tags": ["sightseeing", "great", "indoor"]
+  },
+  {
+    "title": "Cassiopeia",
+    "place_id": "ChIJsdkMp1lOqEcRnfv0Hibk2JI",
+    "position": {
+      "lat": 52.507156,
+      "lng": 13.454700
+    },
+    "tags": ["club", "bar", "todiscover", "indoor", "outdoor"]
+  },
+  {
+    "title": "Hotel-Bar",
+    "position": {
+      "lat": 52.496536,
+      "lng": 13.420449
+    },
+    "tags": ["bar", "todiscover", "indoor"]
+  },
+  {
+    "title": "Max und Moritz",
+    "position": {
+      "lat": 52.502589,
+      "lng": 13.414033
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Bikini",
+    "comment": "Bar with view",
+    "place_id": "ChIJ99S8mv9QqEcRZxIPBXtoDro",
+    "position": {
+      "lat": 52.505499,
+      "lng": 13.335814
+    },
+    "tags": ["bar", "todiscover", "indoor"]
+  },
+  {
+    "title": "Sushi Cube",
+    "position": {
+      "lat": 52.490824,
+      "lng": 13.393879
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Mittendrin",
+    "comment": "Flammkuchen",
+    "position": {
+      "lat": 52.525711,
+      "lng": 13.400931
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Solo pizza e pasta",
+    "position": {
+      "lat": 52.501948,
+      "lng": 13.417457
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Defne",
+    "position": {
+      "lat": 52.495371,
+      "lng": 13.417724
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "3 Schwestern",
+    "comment": "German food",
+    "position": {
+      "lat": 52.503680,
+      "lng": 13.423414
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
   }
 ]
