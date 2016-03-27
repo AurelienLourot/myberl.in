@@ -87,3 +87,10 @@ td {
   font-weight: bold;
   color: green;
 }
+
+.loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1031; /*FIXME: should be based on bootstrap's navbar's z-index*/
+}

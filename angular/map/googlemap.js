@@ -30,6 +30,12 @@ var Map = (function() {
       declutter();
     };
 
+    // Adds a listener on instance readiness.
+    // Listeners will get `elemId` as argument.
+    this.addListener = function(listener) {
+      listeners.push(listener);
+    };
+
     this.dbg_click_each_marker = function() {
       var startIndex = 0;
       for (var i = startIndex; i < markers.length; ++i) {
@@ -109,12 +115,25 @@ var Map = (function() {
       streetViewControl: false,
     });
     map.addListener('zoom_changed', declutter);
+    map.addListener('tilesloaded', (function() {
+      var firstTime = true;
+      return function() {
+        if (firstTime) {
+          console.log(elemId + ' ready.');
+          for (var i in listeners) {
+            listeners[i](elemId);
+          }
+        }
+        firstTime = false;
+      };
+    })());
 
     var projectionFactory = new google.maps.OverlayView();
     projectionFactory.draw = function(){};
     projectionFactory.onAdd = declutter;
     projectionFactory.setMap(map);
 
+    var listeners = []; // listeners on map readiness.
     var markers = [];
 
     // Public members:
