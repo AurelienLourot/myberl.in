@@ -1,4 +1,4 @@
-# myberl.in
+# myberl.in [![Build Status](https://travis-ci.org/AurelienLourot/myberl.in.svg?branch=master)](https://travis-ci.org/AurelienLourot/myberl.in)
 
 Source of http://myberl.in . An interactive map of bars, clubs and restaurants in Berlin.
 
