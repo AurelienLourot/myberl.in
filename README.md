@@ -5,7 +5,6 @@ Source of http://myberl.in . An interactive map of bars, clubs and restaurants i
 ## Running the E2E tests
 
 ```bash
-$ sudo npm install -g karma-cli
 $ npm install
-$ karma start
+$ npm test
 ```

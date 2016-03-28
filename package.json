@@ -5,6 +5,9 @@
     "type": "git",
     "url": "https://github.com/AurelienLourot/myberl.in.git"
   },
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start"
+  },
   "devDependencies": {
     "karma": "0.13.22",
     "jasmine-core": "2.4.1",
