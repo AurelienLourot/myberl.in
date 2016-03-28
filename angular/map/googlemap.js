@@ -407,5 +407,5 @@ define({
   Marker: Marker,
 
   // File containing all the marker descriptors:
-  markerDescriptors: 'angular/map/markers.json',
+  markerDescriptors: requirejs.toUrl('angular/map/markers.json'),
 });

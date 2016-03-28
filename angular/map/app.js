@@ -8,7 +8,7 @@ define(['angular/map/googlemap', 'angular/tags/app'], function(googlemap, tags) 
                                                       addListener, areMatching, $http, $timeout) {
     return {
       restrict: 'E',
-      templateUrl: 'angular/map/map.html',
+      templateUrl: requirejs.toUrl('angular/map/map.html'),
       scope: {
         filtersId: '@', // filter panel's id
       },
@@ -21,7 +21,10 @@ define(['angular/map/googlemap', 'angular/tags/app'], function(googlemap, tags) 
           var googleMap = new googlemap.Map(scope.id);
 
           var addMarkersToMap = function(resolve, reject) {
+            console.log('Loading markers...');
             $http.get(googlemap.markerDescriptors).success(function(data) {
+              console.log('Markers found.');
+
               var deregisterWatch = scope.$watch(tagsModuleIsReady, function(ready) {
                 if (ready) {
                   deregisterWatch();

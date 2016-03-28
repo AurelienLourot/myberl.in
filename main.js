@@ -1,7 +1,16 @@
 'use strict';
 
+// Adds a listener on module readiness.
+var addListener = function(listener) {
+  listeners.push(listener);
+};
+
+var listeners = [];
+
 var requireAngularApp = function(resolve, reject) {
   requirejs(['angular/app'], function(berlin) {
+    console.log('Angular app imported.');
+
     // Replaces 'ng-app="berlin"', see
     // http://www.sitepoint.com/using-requirejs-angularjs-applications/ :
     angular.bootstrap(document, ['berlin']);
@@ -35,8 +44,19 @@ var initJQueryPopupOverlays = function(resolve, reject) {
 
 var hideLoadingLabel = function() {
   $('.loading').hide();
+};
+
+var callListeners = function() {
   console.log('App ready.');
+  for (var i in listeners) {
+    listeners[i]();
+  }
 };
 
 var loadAngularApp = (new Promise(requireAngularApp)).then(waitForAngularAppReady);
-Promise.all([loadAngularApp, new Promise(initJQueryPopupOverlays)]).then(hideLoadingLabel);
+Promise.all([loadAngularApp, new Promise(initJQueryPopupOverlays)]).then(hideLoadingLabel)
+  .then(callListeners);
+
+define({
+  addListener: addListener,
+});
