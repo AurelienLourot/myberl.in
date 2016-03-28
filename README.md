@@ -2,7 +2,14 @@
 
 Source of http://myberl.in . An interactive map of bars, clubs and restaurants in Berlin.
 
-## Running the E2E tests
+## Serve locally
+
+```bash
+$ sudo npm install -g http-server
+$ http-server
+```
+
+## Run the E2E tests
 
 ```bash
 $ npm install
