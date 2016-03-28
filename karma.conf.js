@@ -22,11 +22,12 @@ module.exports = function(config) {
       {pattern: 'main.js', included: false},
       'https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js',
       'http://oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js',
+      'lib/error.js',
+      'thirdparty/require.js',
       'thirdparty/jquery-popup-overlay-1.7.11/jquery.popupoverlay.js',
       'https://maps.googleapis.com/maps/api/js?signed_in=true&key=AIzaSyDgo1hF6M7dGD75NQgfNXGvT422ri9ieyU&libraries=places',
       'http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.10/src/markerwithlabel.js',
       'thirdparty/angularjs-1.4.4/angular.min.js',
-      'thirdparty/require.js',
       'test/e2e.js',
     ],
 

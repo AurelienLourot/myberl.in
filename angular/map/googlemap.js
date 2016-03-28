@@ -54,7 +54,7 @@ var Map = (function() {
           return;
         }
       }
-      console.error('No marker visible.');
+      error('No marker visible.');
     };
 
     // Shows/Hides marker labels.
@@ -214,9 +214,9 @@ var Marker = (function() {
 
         if (status != google.maps.places.PlacesServiceStatus.OK || !gPlace) {
           if (status == google.maps.places.PlacesServiceStatus.OVER_QUERY_LIMIT) {
-            console.error("API rate limit hit.");
+            error("API rate limit hit.");
           } else if (status != IGNORE_ERRORS) {
-            console.error('Place "' + descriptor.title + '"\'s details not found.');
+            error('Place "' + descriptor.title + '"\'s details not found.');
           }
         } else {
           var location = gPlace.geometry.location;
@@ -265,11 +265,11 @@ var Marker = (function() {
           var googlePlaceId;
           if (status != google.maps.places.PlacesServiceStatus.OK || !results.length) {
             if (status == google.maps.places.PlacesServiceStatus.OVER_QUERY_LIMIT) {
-              console.error("API rate limit hit.");
+              error("API rate limit hit.");
             }
             if (!descriptor.place_id) {
               if (!descriptor.ignore_errors) {
-                console.error('Place "' + descriptor.title + '" not found.');
+                error('Place "' + descriptor.title + '" not found.');
               }
             } else {
               // Gotten from
@@ -278,15 +278,14 @@ var Marker = (function() {
             }
           } else {
             if (results.length > 1 && !descriptor.place_id) {
-              console.error('Place "' + descriptor.title + '" found ' + results.length
-                            + ' times:');
+              error('Place "' + descriptor.title + '" found ' + results.length + ' times:');
               for (var i in results) {
                 console.log(results[i]);
               }
             }
             if (descriptor.place_id) {
               if (!descriptor.ignore_errors && descriptor.place_id != results[0].place_id) {
-                console.error('Place "' + descriptor.title + '" has id ' + results[0].place_id);
+                error('Place "' + descriptor.title + '" has id ' + results[0].place_id);
               }
               googlePlaceId = descriptor.place_id;
             } else {
@@ -315,8 +314,8 @@ var Marker = (function() {
       var checkDistance = function(receivedPosition) {
         var distance = distanceFrom(receivedPosition);
         if (distance > tolerance) {
-          console.error('Place "' + descriptor.title + '" is ' + distance + 'm away, at ('
-                        + receivedPosition.lat + ', ' + receivedPosition.lng + ').');
+          error('Place "' + descriptor.title + '" is ' + distance + 'm away, at ('
+                + receivedPosition.lat + ', ' + receivedPosition.lng + ').');
         }
       }
     };
