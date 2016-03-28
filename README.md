@@ -6,6 +6,6 @@ Source of http://myberl.in . An interactive map of bars, clubs and restaurants i
 
 ```bash
 $ sudo npm install -g karma-cli
-$ npm install karma karma-jasmine karma-chrome-launcher
+$ npm install
 $ karma start
 ```

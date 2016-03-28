@@ -1,0 +1,14 @@
+{
+  "name": "myberl.in",
+  "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AurelienLourot/myberl.in.git"
+  },
+  "devDependencies": {
+    "karma": "0.13.22",
+    "jasmine-core": "2.4.1",
+    "karma-jasmine": "0.3.8",
+    "karma-chrome-launcher": "0.2.3"
+  }
+}
