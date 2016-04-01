@@ -63,8 +63,8 @@ define(['angular/map/googlemap', 'angular/tags/app'], function(googlemap, tags) 
           Promise.all([new Promise(addMarkersToMap),
                        new Promise(waitForMapReady)]).then(callListeners);
 
-          dbg.click_each_marker = function() {
-            googleMap.dbg_click_each_marker();
+          dbg.click_each_visible_marker = function() {
+            googleMap.dbg_click_each_visible_marker();
           };
           dbg.remove_all_markers = function() {
             googleMap.clearMarkers();

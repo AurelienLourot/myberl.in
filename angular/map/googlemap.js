@@ -3,16 +3,16 @@
 var Map = (function() {
   // Creates a google map with no marker (yet).
   // elemId: already existing element id where to draw the google map.
-  var Map = function(elemId) {
+  function Map(elemId) {
 
     // Adds a marker to the map. Will be hidden by default.
     // marker: instance of Marker.
-    this.addMarker = function(marker) {
+    this.addMarker = function addMarker(marker) {
       markers.push(marker);
     };
 
     // Removes all markers.
-    this.clearMarkers = function() {
+    this.clearMarkers = function clearMarkers() {
       while (markers.length) {
         markers.pop().setVisibleOnMap(null);
       }
@@ -22,7 +22,7 @@ var Map = (function() {
     // or not. Triggers label decluttering as a side effect.
     // areMatching: function that takes a list of tag keys and returns true if the provided tags
     //              match the current filters.
-    this.showHideMarkers = function(areMatching) {
+    this.showHideMarkers = function showHideMarkers(areMatching) {
       for (var i = 0; i < markers.length; ++i) {
         var marker = markers[i];
         marker.setVisibleOnMap(areMatching(marker.tagKeys) ? map : null);
@@ -32,23 +32,28 @@ var Map = (function() {
 
     // Adds a listener on instance readiness.
     // Listeners will get `elemId` as argument.
-    this.addListener = function(listener) {
+    this.addListener = function addListener(listener) {
       listeners.push(listener);
     };
 
-    this.dbg_click_each_marker = function() {
-      var startIndex = 0;
-      for (var i = startIndex; i < markers.length; ++i) {
+    this.dbg_click_each_visible_marker = function dbg_click_each_visible_marker() {
+      var nextDelay = 5000; // ms
+      for (var i = 0; i < markers.length; ++i) {
+        if (!markers[i].isVisible()) {
+          continue;
+        }
+
         (function(index) {
-          var marker = markers[index];
           setTimeout(function() {
-            marker.dbg_listener();
-          }, 5000 + (index - startIndex) * 2800);
+            markers[index].dbg_clickListener();
+          }, nextDelay);
         })(i);
+
+        nextDelay += 2800;
       }
     };
 
-    this.dbg_check_markers_are_visible = function() {
+    this.dbg_check_markers_are_visible = function dbg_check_markers_are_visible() {
       for (var i = 0; i < markers.length; ++i) {
         if (markers[i].isVisible()) {
           return;
@@ -58,7 +63,7 @@ var Map = (function() {
     };
 
     // Shows/Hides marker labels.
-    var declutter = function() {
+    function declutter() {
       if (that.dbg_no_declutter) {
         return;
       }
@@ -71,7 +76,8 @@ var Map = (function() {
       for (var i = 0; i < markers.length; ++i) {
         var marker = markers[i];
         marker.declutterDone = false;
-        marker.positionPoint = projection.fromLatLngToContainerPixel(marker.getPosition());
+        marker.positionPoint
+          = marker.isVisible() ? projection.fromLatLngToContainerPixel(marker.getPosition()) : null;
       }
 
       var tolerance = 20; // px
@@ -81,11 +87,13 @@ var Map = (function() {
       outer:
       for (var i = 0; i < markers.length; ++i) {
         var markerBeingEvaluated = markers[i];
+        if (!markerBeingEvaluated.isVisible()) {
+          continue;
+        }
 
         for (var j = 0; j < markers.length; ++j) {
           var markerNotToHide = markers[j];
           if (markerBeingEvaluated === markerNotToHide ||
-              !markerBeingEvaluated.isVisible() ||
               !markerNotToHide.isVisible() ||
               markerNotToHide.declutterDone && !markerNotToHide.isLabelVisible()) {
             continue;
@@ -129,7 +137,7 @@ var Map = (function() {
     })());
 
     var projectionFactory = new google.maps.OverlayView();
-    projectionFactory.draw = function(){};
+    projectionFactory.draw = function draw(){};
     projectionFactory.onAdd = declutter;
     projectionFactory.setMap(map);
 
@@ -156,54 +164,101 @@ var Marker = (function() {
   // getTagDescriptorByKey: a function taking a tag key as argument and returning the
   //                        corresponding tag descriptor.
   // filtersId: filter panel's id.
-  var Marker = function(descriptor, getTagDescriptorByKey, gPlaces, filtersId) {
+  function Marker(descriptor, getTagDescriptorByKey, gPlaces, filtersId) {
 
     // Shows or hides the marker.
     // map: instance of google.maps.Map or null.
-    this.setVisibleOnMap = function(map) {
+    this.setVisibleOnMap = function setVisibleOnMap(map) {
       if (!map) { // hiding
         // Looks like info windows of hidden markers can't get closed, so we don't take the risk:
         closeAnyOpenInfoWindow();
       }
 
-      if (googleMarker.map != map) {
+      if (!googleMarker && map) {
+        googleMarker = createGoogleMarker();
+      }
+      if (googleMarker && googleMarker.map != map) {
         googleMarker.setMap(map);
+      }
+      if (!map) {
+        // Let it be garbage collected:
+        googleMarker = null;
       }
     }
 
-    this.isVisible = function() {
-      return !!googleMarker.map;
+    this.isVisible = function isVisible() {
+      return !!googleMarker && !!googleMarker.map;
     };
 
     // Shows or hides the marker label.
     // visibility: boolean.
-    this.setLabelVisible = function(visibility) {
-      // set() triggers a refresh, while just setting the property doesn't, see MarkerWithLabel's
-      // implementation:
-      googleMarker.set('labelVisible', visibility);
+    this.setLabelVisible = function setLabelVisible(visibility) {
+      if (this.isVisible()) {
+        // set() triggers a refresh, while just setting the property doesn't, see MarkerWithLabel's
+        // implementation:
+        googleMarker.set('labelVisible', visibility);
+      } else {
+        error("setLabelVisible(" + visibility + "): marker '" + descriptor.title +
+              "' isn't visible, ignored.");
+      }
     }
 
-    // Note that even if returns true, label can still be invisible in reality in case the marker
-    // itself isn't visible.
-    this.isLabelVisible = function() {
-      return googleMarker.labelVisible;
+    this.isLabelVisible = function isLabelVisible() {
+      return this.isVisible() && googleMarker.labelVisible;
     }
 
-    this.getPosition = function() {
-      return googleMarker.getPosition();
+    this.getPosition = function getPosition() {
+      if (this.isVisible()) {
+        return googleMarker.getPosition();
+      } else {
+        error("getPosition(): not implemented for invisible markers yet.");
+      }
     }
 
-    // Public members:
-    this.tagKeys = descriptor.tags;
-    this.dbg_listener;
-    this.dbg_descriptor = descriptor;
+    // Private methods
 
-    // Private methods:
-    var addInfoWindow = function() {
+    // Returns the distance in meters between this marker and the provided position.
+    function distanceFrom(position) {
+      // See https://en.wikipedia.org/wiki/Haversine_formula
+
+      var earthRadius = 6371000;
+
+      var lat1 = descriptor.position.lat * Math.PI / 180;
+      var lng1 = descriptor.position.lng * Math.PI / 180;
+      var lat2 = position.lat * Math.PI / 180;
+      var lng2 = position.lng * Math.PI / 180;
+
+      var sinMeanLat = Math.sin((lat2 - lat1) / 2);
+      var sinMeanLng = Math.sin((lng2 - lng1) / 2);
+
+      var result = 2 * earthRadius * Math.asin(Math.sqrt(
+        sinMeanLat * sinMeanLat + Math.cos(lng1) * Math.cos(lng2) * sinMeanLng * sinMeanLng));
+      return result;
+    }
+
+    // MarkerWithLabel factory.
+    function createGoogleMarker() {
+      var gMarkerOpts = {};
+      gMarkerOpts.position = descriptor.position;
+      gMarkerOpts.labelContent = descriptor.title;
+      gMarkerOpts.labelAnchor = new google.maps.Point(-5,  // 5px to the right
+                                                      -5); // 5px to the bottom
+      gMarkerOpts.labelClass = 'map-label';
+      gMarkerOpts.icon = googleIcon(that.tagKeys, getTagDescriptorByKey);
+
+      var result = new MarkerWithLabel(gMarkerOpts);
+      result.addListener('click', clickListener);
+      return result;
+    };
+
+    // Private members:
+    var that = this;
+    var googleMarker = null;
+    var clickListener = (function() {
 
       var IGNORE_ERRORS = "ignore";
 
-      var openInfoWindow = function(gPlace, status) {
+      function openInfoWindow(gPlace, status) {
         closeAnyOpenInfoWindow();
 
         var infoContent = '<div><span class="infowindow-title">' + descriptor.title + '</span>';
@@ -256,7 +311,7 @@ var Marker = (function() {
         currentlyOpenInfoWindow = infoWindow;
       }
 
-      var listener = that.dbg_listener = function() {
+      var listener = function listener() {
         gPlaces.nearbySearch({
           location: descriptor.position,
           radius: tolerance,
@@ -309,57 +364,29 @@ var Marker = (function() {
           }
         });
       };
-      googleMarker.addListener('click', listener);
 
-      var checkDistance = function(receivedPosition) {
+      function checkDistance(receivedPosition) {
         var distance = distanceFrom(receivedPosition);
         if (distance > tolerance) {
           error('Place "' + descriptor.title + '" is ' + distance + 'm away, at ('
                 + receivedPosition.lat + ', ' + receivedPosition.lng + ').');
         }
       }
-    };
 
-    // Returns the distance in meters between this marker and the provided position.
-    var distanceFrom = function(position) {
-      // See https://en.wikipedia.org/wiki/Haversine_formula
-
-      var earthRadius = 6371000;
-
-      var lat1 = descriptor.position.lat * Math.PI / 180;
-      var lng1 = descriptor.position.lng * Math.PI / 180;
-      var lat2 = position.lat * Math.PI / 180;
-      var lng2 = position.lng * Math.PI / 180;
-
-      var sinMeanLat = Math.sin((lat2 - lat1) / 2);
-      var sinMeanLng = Math.sin((lng2 - lng1) / 2);
-
-      var result = 2 * earthRadius * Math.asin(Math.sqrt(
-        sinMeanLat * sinMeanLat + Math.cos(lng1) * Math.cos(lng2) * sinMeanLng * sinMeanLng));
-      return result;
-    }
-
-    // Private members:
-    var that = this;
-    var googleMarker = (function() {
-      var gMarkerOpts = {};
-      gMarkerOpts.position = descriptor.position;
-      gMarkerOpts.labelContent = descriptor.title;
-      gMarkerOpts.labelAnchor = new google.maps.Point(-5,  // 5px to the right
-                                                      -5); // 5px to the bottom
-      gMarkerOpts.labelClass = 'map-label';
-      gMarkerOpts.icon = googleIcon(that.tagKeys, getTagDescriptorByKey);
-      return new MarkerWithLabel(gMarkerOpts);
+      return listener;
     })();
 
-    addInfoWindow();
+    // Public members:
+    this.tagKeys = descriptor.tags;
+    this.dbg_clickListener = clickListener;
+    this.dbg_descriptor = descriptor;
   };
 
   // Returns the best possible icon object to be inserted in the google marker options, based on
   // its provided tags and an heuristic.
   // getTagDescriptorByKey: a function taking a tag key as argument and returning the
   //                        corresponding tag descriptor.
-  var googleIcon = function(tagKeys, getTagDescriptorByKey) {
+  function googleIcon(tagKeys, getTagDescriptorByKey) {
     // The idea of this heuristic is that the first tag describes the marker better than the
     // last one.
 
@@ -387,7 +414,7 @@ var Marker = (function() {
     };
   };
 
-  var closeAnyOpenInfoWindow = function() {
+  function closeAnyOpenInfoWindow() {
     if (currentlyOpenInfoWindow) {
       currentlyOpenInfoWindow.close();
       currentlyOpenInfoWindow = null;
