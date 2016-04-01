@@ -1679,5 +1679,14 @@
       "lng": 13.423414
     },
     "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Cantina Universale",
+    "comment": "Cantine",
+    "position": {
+      "lat": 52.501978,
+      "lng": 13.447523
+    },
+    "tags": ["restaurant", "cafe", "good", "indoor", "outdoor"]
   }
 ]
