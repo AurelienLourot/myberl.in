@@ -1689,5 +1689,14 @@
       "lng": 13.447523
     },
     "tags": ["restaurant", "cafe", "good", "indoor", "outdoor"]
+  },
+  {
+    "title": "Green Bamboo",
+    "comment": "Vietnamese",
+    "position": {
+      "lat": 52.499692,
+      "lng": 13.443264
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
   }
 ]
