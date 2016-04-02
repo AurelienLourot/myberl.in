@@ -68,6 +68,17 @@ var Map = (function() {
         return;
       }
 
+      // Optimization: if we zoomed out a lot, simply hide all labels.
+      if (map.getZoom() < 12) {
+        for (var i = 0; i < markers.length; ++i) {
+          var marker = markers[i];
+          if (marker.isVisible()) {
+            marker.setLabelVisible(false);
+          }
+        }
+        return;
+      }
+
       var projection = projectionFactory.getProjection();
       if (!projection) {
         return; // initialization isn't done yet
