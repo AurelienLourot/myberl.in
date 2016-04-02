@@ -27,7 +27,7 @@ var Map = (function() {
         var marker = markers[i];
         marker.setVisibleOnMap(areMatching(marker.tagKeys) ? map : null);
       }
-      declutter();
+      deferredDeclutter();
     };
 
     // Adds a listener on instance readiness.
@@ -125,6 +125,17 @@ var Map = (function() {
       }
     };
 
+    // Calls declutter() in a bit.
+    var deferredDeclutter = (function() {
+      var timeout = null;
+      return function deferredDeclutter() {
+        if (timeout) {
+          clearTimeout(timeout);
+        }
+        timeout = setTimeout(declutter, 2000);
+      };
+    })();
+
     // Private members:
     var that = this;
     var map = new google.maps.Map(document.getElementById(elemId), {
@@ -133,7 +144,7 @@ var Map = (function() {
       mapTypeControl: false,
       streetViewControl: false,
     });
-    map.addListener('zoom_changed', declutter);
+    map.addListener('zoom_changed', deferredDeclutter);
     map.addListener('tilesloaded', (function() {
       var firstTime = true;
       return function() {
@@ -149,7 +160,7 @@ var Map = (function() {
 
     var projectionFactory = new google.maps.OverlayView();
     projectionFactory.draw = function draw(){};
-    projectionFactory.onAdd = declutter;
+    projectionFactory.onAdd = deferredDeclutter;
     projectionFactory.setMap(map);
 
     var listeners = []; // listeners on map readiness.
