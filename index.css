@@ -62,7 +62,7 @@ td {
 .map {
   position: absolute;
   top: 50px; /*FIXME: calculate based on navbar-header*/
-  bottom: 0px;
+  bottom: 1.3em; /*FIXME: calculate based on footer*/
   left: 0px;
   right: 0px;
 }
@@ -93,4 +93,16 @@ td {
   top: 0;
   right: 0;
   z-index: 1031; /*FIXME: should be based on bootstrap's navbar's z-index*/
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black; /*FIXME: use bootstrap's style*/
+  color: #ddd;
+  text-align: center;
+  vertical-align: middle;
+  font-size: small;
+  height: 1.5em;
 }
