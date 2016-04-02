@@ -1496,7 +1496,7 @@
       "lat": 52.505671,
       "lng": 13.337896
     },
-    "tags": ["bar", "todiscover", "indoor"]
+    "tags": ["bar", "cafe", "great", "indoor", "outdoor"]
   },
   {
     "title": "Café Eliza",
@@ -1682,7 +1682,7 @@
   },
   {
     "title": "Cantina Universale",
-    "comment": "Cantine",
+    "comment": "Cantine, no WiFi",
     "position": {
       "lat": 52.501978,
       "lng": 13.447523
