@@ -30,7 +30,7 @@ var waitForAngularAppReady = function(berlinApp) {
 
 var initJQueryPopupOverlays = function(resolve, reject) {
   $(document).ready(function() {
-    var popups = [$('#filters'), $('#dbg_secret')];
+    var popups = [$('#filters'), $('#credits'), $('#dbg_secret')];
     for (var i = 0; i < popups.length; ++i) {
       var popup = popups[i];
       popup.popup();

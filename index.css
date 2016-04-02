@@ -100,13 +100,21 @@ div.footer {
   bottom: 0;
   width: 100%;
   background-color: black; /*FIXME: use bootstrap's style*/
-  color: #ddd;
   text-align: center;
-  vertical-align: middle;
-  font-size: small;
   height: 1.5em;
+}
+
+a.footer,
+a.footer:hover {
+  color: #ddd;
+  font-size: small;
+  text-decoration: none;
 }
 
 i.footer {
   font-size: 80%;
+}
+
+.credits {
+  max-width: 20em;
 }
