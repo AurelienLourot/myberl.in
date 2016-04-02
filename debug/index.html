@@ -1,0 +1,36 @@
+<!-- Simplest possible version of the app, without markers, to be used as a baseline for performance
+     evaluation. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come 
+         *after* these tags -->
+    <link rel="icon" href="../assets/pics/maps_icon.png">
+
+    <link href="../index.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div id="map" class="map"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&key=AIzaSyDgo1hF6M7dGD75NQgfNXGvT422ri9ieyU&libraries=places">
+    </script>
+    <script>
+      var berlinTvTower = {
+        lat: 52.520815,
+        lng: 13.409419,
+      };
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: berlinTvTower,
+        zoom: 12,
+        mapTypeControl: false,
+        streetViewControl: false,
+      });
+    </script>
+  </body>
+</html>
