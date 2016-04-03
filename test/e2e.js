@@ -4,8 +4,7 @@ requirejs.config({
   baseUrl: '/base',
 });
 
-describe('App', function() {
-  var originalTimeout;
+describe('app', function() {
   beforeEach(function() {
     var fixture
       = '           \

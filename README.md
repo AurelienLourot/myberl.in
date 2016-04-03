@@ -9,7 +9,7 @@ $ sudo npm install -g http-server
 $ http-server
 ```
 
-## Run the E2E tests
+## Run the E2E and unit tests
 
 ```bash
 $ npm install

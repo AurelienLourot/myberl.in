@@ -40,36 +40,38 @@ define(function(){
     }
   }]);
 
+  app.controller('tagsCtrl', function($http, $scope) {
+    $scope.states = {};
+
+    var controller = this;
+    controller.groups = [];
+    var tagDescriptors = requirejs.toUrl('angular/tags/tags.json');
+    $http.get(tagDescriptors).success(function(data) {
+      // Fix icon paths:
+      for (var i = 0; i < data.length; ++i) {
+        for (var j = 0; j < data[i].length; ++j) {
+          data[i][j].desc = data[i][j].desc.replace(/(.*src=')(.*)('.*)/,
+                                                    function(match, group1, group2, group3) {
+            return group1 + requirejs.toUrl(group2) + group3;
+          });
+          if (data[i][j].icon) {
+            data[i][j].icon = requirejs.toUrl(data[i][j].icon);
+          }
+        }
+      }
+
+      controller.groups = data;
+      if (!app.tagFilters) {
+        app.tagFilters = new TagFilters(data, $scope.states);
+      }
+    });
+  });
+
   app.directive('tagFilters', ['$timeout', function($timeout) {
     return {
       restrict: 'E',
       templateUrl: requirejs.toUrl('angular/tags/tag-filters.html'),
-      controller: function($http, $scope) {
-        $scope.states = {};
-
-        var controller = this;
-        controller.groups = [];
-        var tagDescriptors = requirejs.toUrl('angular/tags/tags.json');
-        $http.get(tagDescriptors).success(function(data) {
-          // Fix icon paths:
-          for (var i = 0; i < data.length; ++i) {
-            for (var j = 0; j < data[i].length; ++j) {
-              data[i][j].desc = data[i][j].desc.replace(/(.*src=')(.*)('.*)/,
-                                                        function(match, group1, group2, group3) {
-                return group1 + requirejs.toUrl(group2) + group3;
-              });
-              if (data[i][j].icon) {
-                data[i][j].icon = requirejs.toUrl(data[i][j].icon);
-              }
-            }
-          }
-
-          controller.groups = data;
-          if (!app.tagFilters) {
-            app.tagFilters = new TagFilters(data, $scope.states);
-          }
-        });
-      },
+      controller: 'tagsCtrl',
       controllerAs: 'tags',
       link: function(scope, elm, attrs, ctrl) {
         var deregisterWatch = scope.$watch(function allCheckboxesAreInDom() {

@@ -28,7 +28,12 @@ module.exports = function(config) {
       'https://maps.googleapis.com/maps/api/js?signed_in=true&key=AIzaSyDgo1hF6M7dGD75NQgfNXGvT422ri9ieyU&libraries=places',
       'http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.10/src/markerwithlabel.js',
       'thirdparty/angularjs-1.4.4/angular.min.js',
+      'http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-mocks.js',
+
+      // The order matters, as mocked angular modules can't be unmocked afterwards. Thus when a test
+      // mocks an angular module, all later tests are affected.
       'test/e2e.js',
+      'test/unit.js',
     ],
 
 
