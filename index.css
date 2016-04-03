@@ -99,14 +99,14 @@ div.footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: black; /*FIXME: use bootstrap's style*/
+  background-color: #222222; /*FIXME: use bootstrap's style*/
   text-align: center;
   height: 1.5em;
 }
 
 a.footer,
 a.footer:hover {
-  color: #ddd;
+  color: #9d9d9d; /*FIXME: use bootstrap's style*/
   font-size: small;
   text-decoration: none;
 }
