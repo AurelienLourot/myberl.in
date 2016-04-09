@@ -16,19 +16,19 @@
       "name": "club",
       "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1497-wht-diamond-blank_white.png' />",
       "icon": "assets/pics/thirdparty/1497-wht-diamond-blank",
-      "initialState": true
+      "initialState": false
     },
     {
       "name": "restaurant",
       "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1496-wht-square-blank_white.png' />",
       "icon": "assets/pics/thirdparty/1496-wht-square-blank",
-      "initialState": true
+      "initialState": false
     },
     {
       "name": "brunch",
       "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1496-wht-square-blank_white.png' />",
       "icon": "assets/pics/thirdparty/1496-wht-square-blank",
-      "initialState": true
+      "initialState": false
     },
     {
       "name": "concert",
@@ -54,7 +54,7 @@
       "name": "good",
       "desc": "<i class='fa fa-map-marker fa-lg map-marker-default'></i>",
       "color": "gray",
-      "initialState": true
+      "initialState": false
     },
     {
       "name": "todiscover",
