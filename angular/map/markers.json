@@ -1290,15 +1290,16 @@
       "lat": 52.497119,
       "lng": 13.439089
     },
-    "tags": ["bar", "brunch", "todiscover", "great", "indoor"]
+    "tags": ["bar", "brunch", "restaurant", "great", "indoor", "outdoor"]
   },
   {
     "title": "Tempo-Box",
+    "comment": "Restaurant, cocktail bar",
     "position": {
       "lat": 52.509860,
       "lng": 13.455870
     },
-    "tags": ["restaurant", "todiscover", "indoor", "outdoor"]
+    "tags": ["restaurant", "bar", "good", "indoor", "outdoor"]
   },
   {
     "title": "Myxa",
@@ -1374,7 +1375,7 @@
       "lat": 52.497869,
       "lng": 13.441885
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "good", "indoor"]
   },
   {
     "title": "Hopfenreich",
