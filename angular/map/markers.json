@@ -1734,5 +1734,14 @@
       "lng": 13.372490
     },
     "tags": ["club", "bar", "todiscover", "indoor", "outdoor"]
+  },
+  {
+    "title": "Nudelbude",
+    "comment": "Pasta",
+    "position": {
+      "lat": 52.484369,
+      "lng": 13.432521
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
   }
 ]
