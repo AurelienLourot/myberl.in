@@ -1717,5 +1717,13 @@
       "lng": 13.459106
     },
     "tags": ["restaurant", "cafe", "bar", "todiscover", "indoor"]
+  },
+  {
+    "title": "Badehaus Szimpla",
+    "position": {
+      "lat": 52.507587,
+      "lng": 13.455140
+    },
+    "tags": ["bar", "todiscover", "indoor"]
   }
 ]
