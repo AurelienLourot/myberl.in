@@ -1708,5 +1708,14 @@
       "lng": 13.445441
     },
     "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Lisboa",
+    "comment": "Portuguese tapas",
+    "position": {
+      "lat": 52.510310,
+      "lng": 13.459106
+    },
+    "tags": ["restaurant", "cafe", "bar", "todiscover", "indoor"]
   }
 ]
