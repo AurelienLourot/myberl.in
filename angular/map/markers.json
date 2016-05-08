@@ -1699,5 +1699,14 @@
       "lng": 13.443264
     },
     "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Balé",
+    "comment": "Italian",
+    "position": {
+      "lat": 52.499456,
+      "lng": 13.445441
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
   }
 ]
