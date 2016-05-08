@@ -1725,5 +1725,14 @@
       "lng": 13.455140
     },
     "tags": ["bar", "todiscover", "indoor"]
+  },
+  {
+    "title": "PANKE",
+    "place_id": "ChIJJddsaohRqEcRPDK0T9A9PfQ",
+    "position": {
+      "lat": 52.544301,
+      "lng": 13.372490
+    },
+    "tags": ["club", "bar", "todiscover", "indoor", "outdoor"]
   }
 ]
