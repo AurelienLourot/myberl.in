@@ -1759,5 +1759,14 @@
       "lng": 13.437718
     },
     "tags": ["cafe", "todiscover", "indoor", "outdoor"]
+  },
+  {
+    "title": "New Deli Yoga",
+    "comment": "Vegetarian, Vegan",
+    "position": {
+      "lat": 52.498729,
+      "lng": 13.442774
+    },
+    "tags": ["restaurant", "cafe", "todiscover", "indoor"]
   }
 ]
