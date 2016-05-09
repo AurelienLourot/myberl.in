@@ -1778,5 +1778,14 @@
       "lng": 13.419397
     },
     "tags": ["bar", "outdoor", "good"]
+  },
+  {
+    "title": "Tire Bouchon",
+    "comment": "Italian",
+    "position": {
+      "lat": 52.491540,
+      "lng": 13.419811
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
   }
 ]
