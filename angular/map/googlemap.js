@@ -196,11 +196,17 @@ var Marker = (function() {
         closeAnyOpenInfoWindow();
       }
 
+      var justCreated = false;
       if (!googleMarker && map) {
         googleMarker = createGoogleMarker();
+        justCreated = true;
       }
       if (googleMarker && googleMarker.map != map) {
         googleMarker.setMap(map);
+      }
+      if (justCreated) {
+        // Hide label by default on new markers. The decluttering will make it visible eventually.
+        this.setLabelVisible(false);
       }
       if (!map) {
         // Let it be garbage collected:
