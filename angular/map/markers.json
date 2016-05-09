@@ -1768,5 +1768,15 @@
       "lng": 13.442774
     },
     "tags": ["restaurant", "cafe", "todiscover", "indoor"]
+  },
+  {
+    "title": "Picnic",
+    "comment": "Drink booth, <a class='infowindow-website' target='_blank' href='http://picnic-berlin.com/'>picnic-berlin.com</a>",
+    "ignore_errors": true,
+    "position": {
+      "lat": 52.470714,
+      "lng": 13.419397
+    },
+    "tags": ["bar", "outdoor", "good"]
   }
 ]
