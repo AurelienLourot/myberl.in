@@ -1743,5 +1743,13 @@
       "lng": 13.432521
     },
     "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Prachtwerk",
+    "position": {
+      "lat": 52.479055,
+      "lng": 13.438738
+    },
+    "tags": ["cafe", "bar", "todiscover", "indoor"]
   }
 ]
