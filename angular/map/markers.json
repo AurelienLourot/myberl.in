@@ -1751,5 +1751,13 @@
       "lng": 13.438738
     },
     "tags": ["cafe", "bar", "todiscover", "indoor"]
+  },
+  {
+    "title": "Bitte",
+    "position": {
+      "lat": 52.494109,
+      "lng": 13.437718
+    },
+    "tags": ["cafe", "todiscover", "indoor", "outdoor"]
   }
 ]
