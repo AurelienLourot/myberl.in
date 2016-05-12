@@ -26,7 +26,7 @@ module.exports = function(config) {
       'thirdparty/require.js',
       'thirdparty/jquery-popup-overlay-1.7.11/jquery.popupoverlay.js',
       'https://maps.googleapis.com/maps/api/js?signed_in=true&key=AIzaSyDgo1hF6M7dGD75NQgfNXGvT422ri9ieyU&libraries=places',
-      'http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.10/src/markerwithlabel.js',
+      'thirdparty/markerwithlabel.js',
       'thirdparty/angularjs-1.4.4/angular.min.js',
       'http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-mocks.js',
 
