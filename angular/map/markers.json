@@ -1821,5 +1821,13 @@
       "lng": 13.450786
     },
     "tags": ["restaurant", "outdoor", "great"]
+  },
+  {
+    "title": "Damensalon",
+    "position": {
+      "lat": 52.490998,
+      "lng": 13.429440
+    },
+    "tags": ["bar", "todiscover", "indoor"]
   }
 ]
