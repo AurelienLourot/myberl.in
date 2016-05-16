@@ -68,14 +68,8 @@ var Map = (function() {
         return;
       }
 
-      // Optimization: if we zoomed out a lot, simply hide all labels.
+      // Optimization: if we zoomed out a lot, keep all labels hidden.
       if (map.getZoom() < 12) {
-        for (var i = 0; i < markers.length; ++i) {
-          var marker = markers[i];
-          if (marker.isVisible()) {
-            marker.setLabelVisible(false);
-          }
-        }
         return;
       }
 
@@ -140,11 +134,33 @@ var Map = (function() {
     var that = this;
     var map = new google.maps.Map(document.getElementById(elemId), {
       center: berlinTvTower,
-      zoom: 12,
+      zoom: defaultZoomLevel,
       mapTypeControl: false,
       streetViewControl: false,
     });
-    map.addListener('zoom_changed', deferredDeclutter);
+    map.addListener('zoom_changed', (function() {
+      var prevZoomLevel = defaultZoomLevel;
+      return function() {
+        var zoomLevel = map.getZoom();
+        if (zoomLevel == prevZoomLevel) {
+          error("zoom_changed triggered although zoom level hasn't changed.");
+          return; // nothing to do
+        }
+        if (zoomLevel < prevZoomLevel) { // zoomed out
+          // We hide all labels immediately in order to avoid a bug on Safari on iPhone 4S where too
+          // many visible labels make the browser crash. The deferred decluttering will kick in soon
+          // to show again a reasonable amount of labels.
+          for (var i = 0; i < markers.length; ++i) {
+            var marker = markers[i];
+            if (marker.isVisible()) {
+              marker.setLabelVisible(false);
+            }
+          }
+        }
+        prevZoomLevel = zoomLevel;
+        deferredDeclutter();
+      };
+    })());
     map.addListener('tilesloaded', (function() {
       var firstTime = true;
       return function() {
@@ -171,10 +187,12 @@ var Map = (function() {
     this.dbg_no_declutter = false;
   };
 
+  // Private constants:
   var berlinTvTower = {
     lat: 52.520815,
     lng: 13.409419,
   };
+  var defaultZoomLevel = 12;
 
   return Map;
 })();
