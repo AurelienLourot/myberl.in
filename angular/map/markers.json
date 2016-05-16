@@ -1813,5 +1813,13 @@
       "lng": 13.442660
     },
     "tags": ["cafe", "todiscover", "indoor"]
+  },
+  {
+    "title": "Freischwimmer",
+    "position": {
+      "lat": 52.497344,
+      "lng": 13.450786
+    },
+    "tags": ["restaurant", "outdoor", "great"]
   }
 ]
