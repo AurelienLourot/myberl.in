@@ -1701,6 +1701,15 @@
     "tags": ["restaurant", "good", "indoor"]
   },
   {
+    "title": "Buddha's Kitchen",
+    "comment": "Vietnamese",
+    "position": {
+      "lat": 52.499392,
+      "lng": 13.443434
+    },
+    "tags": ["restaurant", "good", "indoor", "outdoor"]
+  },
+  {
     "title": "Balé",
     "comment": "Italian",
     "position": {
