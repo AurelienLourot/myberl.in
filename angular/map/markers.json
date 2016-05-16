@@ -1787,5 +1787,13 @@
       "lng": 13.419811
     },
     "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "R",
+    "position": {
+      "lat": 52.476494,
+      "lng": 13.419022
+    },
+    "tags": ["restaurant", "cafe", "good", "indoor", "outdoor"]
   }
 ]
