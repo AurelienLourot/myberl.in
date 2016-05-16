@@ -1795,5 +1795,14 @@
       "lng": 13.419022
     },
     "tags": ["restaurant", "cafe", "good", "indoor", "outdoor"]
+  },
+  {
+    "title": "Caramina",
+    "comment": "Persian",
+    "position": {
+      "lat": 52.477068,
+      "lng": 13.420964
+    },
+    "tags": ["restaurant", "cafe", "great", "indoor", "outdoor"]
   }
 ]
