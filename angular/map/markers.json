@@ -1804,5 +1804,14 @@
       "lng": 13.420964
     },
     "tags": ["restaurant", "cafe", "great", "indoor", "outdoor"]
+  },
+  {
+    "title": "Soya",
+    "ignore_errors": true,
+    "position": {
+      "lat": 52.498585,
+      "lng": 13.442660
+    },
+    "tags": ["cafe", "todiscover", "indoor"]
   }
 ]
