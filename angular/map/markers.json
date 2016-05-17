@@ -1838,5 +1838,13 @@
       "lng": 13.429440
     },
     "tags": ["bar", "todiscover", "indoor"]
+  },
+  {
+    "title": "Konrad Tönz",
+    "position": {
+      "lat": 52.497539,
+      "lng": 13.441499
+    },
+    "tags": ["bar", "todiscover", "indoor"]
   }
 ]
