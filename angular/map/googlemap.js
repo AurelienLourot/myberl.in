@@ -179,6 +179,10 @@ var Map = (function() {
     projectionFactory.onAdd = deferredDeclutter;
     projectionFactory.setMap(map);
 
+    var currentPositionMarker = new GeolocationMarker(map, { /*marker_opts*/ }, { // circle_opts
+      fillOpacity: 0.0,
+    });
+
     var listeners = []; // listeners on map readiness.
     var markers = [];
 
