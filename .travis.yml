@@ -1,7 +1,14 @@
 language: node_js
 node_js:
-    - 4
+  - 4
+
+branches:
+  only:
+    - master
+    # See https://docs.travis-ci.com/user/customizing-the-build/#Whitelisting-or-blacklisting-branches :
+    - gh-pages
+
 # See http://karma-runner.github.io/0.13/plus/travis.html :
 before_script:
-    - export DISPLAY=:99.0
-    - sh -e /etc/init.d/xvfb start
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
