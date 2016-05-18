@@ -27,7 +27,7 @@ AddressLine1=$ADDRESS,AddressLine2=,City=Berlin,State=,CountryCode=DE,ZipCode=10
 PhoneNumber=$PHONE,Email=$EMAIL,Fax=,ExtraParams=[]"
 
 aws route53domains register-domain --domain-name $DOMAIN_NAME --duration-in-years 1 \
-    --no-auto-renew --admin-contact "$CONTACT" --registrant-contact "$CONTACT" \
+    --auto-renew --admin-contact "$CONTACT" --registrant-contact "$CONTACT" \
     --tech-contact "$CONTACT" --privacy-protect-admin-contact --privacy-protect-registrant-contact \
     --privacy-protect-tech-contact
 
