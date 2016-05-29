@@ -32,13 +32,13 @@ define(function() {
 
   // Clears the current status if it has the provided color and text.
   var clear = function(color, text) {
-    // Update state...
-    state.cleared = true;
+    if (color == state.color && text == state.text) {
+      // Update state...
+      state.cleared = true;
 
-    // ... and let angular see it:
-    for (var i = 0; i < scopes.length; ++i) {
-      var scope = scopes[i];
-      if (color == scope.state.color && text == scope.state.text) {
+      // ... and let angular see it:
+      for (var i = 0; i < scopes.length; ++i) {
+        var scope = scopes[i];
         scope.$apply(scope.state.cleared = true);
       }
     }
