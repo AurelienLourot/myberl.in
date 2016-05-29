@@ -1716,7 +1716,7 @@
       "lat": 52.499456,
       "lng": 13.445441
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "good", "indoor", "outdoor"]
   },
   {
     "title": "Lisboa",
@@ -1821,7 +1821,7 @@
       "lat": 52.498585,
       "lng": 13.442660
     },
-    "tags": ["cafe", "todiscover", "indoor"]
+    "tags": ["cafe", "restaurant", "todiscover", "indoor"]
   },
   {
     "title": "Freischwimmer",
