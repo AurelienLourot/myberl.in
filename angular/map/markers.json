@@ -1846,5 +1846,14 @@
       "lng": 13.441499
     },
     "tags": ["bar", "todiscover", "indoor"]
+  },
+  {
+    "title": "Tangs",
+    "comment": "Chinese",
+    "position": {
+      "lat": 52.492520,
+      "lng": 13.416114
+    },
+    "tags": ["restaurant", "todiscover", "indoor"]
   }
 ]
