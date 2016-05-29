@@ -1,5 +1,9 @@
 'use strict';
 
+// Constants:
+var statusLabelColor = 'success';
+var statusLabelText = 'Loading';
+
 // Adds a listener on module readiness.
 var addListener = function(listener) {
   listeners.push(listener);
@@ -15,6 +19,8 @@ var requireAngularApp = function(resolve, reject) {
     // http://www.sitepoint.com/using-requirejs-angularjs-applications/ :
     angular.bootstrap(document, ['berlin']);
 
+    berlin.status.set(statusLabelColor, statusLabelText);
+
     window.dbg = berlin.dbg;
     resolve(berlin);
   });
@@ -23,7 +29,7 @@ var requireAngularApp = function(resolve, reject) {
 var waitForAngularAppReady = function(berlinApp) {
   return new Promise(function(resolve, reject) {
     berlinApp.addListener(function() {
-      resolve();
+      resolve(berlinApp);
     });
   });
 };
@@ -42,8 +48,9 @@ var initJQueryPopupOverlays = function(resolve, reject) {
   });
 };
 
-var hideLoadingLabel = function() {
-  $('.loading').hide();
+var clearStatusLabel = function(input) {
+  var berlinApp = input[0];
+  berlinApp.status.clear(statusLabelColor, statusLabelText);
 };
 
 var callListeners = function() {
@@ -54,7 +61,7 @@ var callListeners = function() {
 };
 
 var loadAngularApp = (new Promise(requireAngularApp)).then(waitForAngularAppReady);
-Promise.all([loadAngularApp, new Promise(initJQueryPopupOverlays)]).then(hideLoadingLabel)
+Promise.all([loadAngularApp, new Promise(initJQueryPopupOverlays)]).then(clearStatusLabel)
   .then(callListeners);
 
 define({

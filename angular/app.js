@@ -1,6 +1,6 @@
 'use strict';
 
-define(['angular/map/app', 'angular/tags/app'], function(map, tags){
+define(['angular/map/app', 'angular/tags/app', 'angular/status/app'], function(map, tags, status) {
   map.addListener(function() {
     console.log('Map module ready.');
 
@@ -10,7 +10,7 @@ define(['angular/map/app', 'angular/tags/app'], function(map, tags){
     }
   });
 
-  var app = angular.module('berlin', ['map', 'tags']);
+  var app = angular.module('berlin', ['map', 'tags', 'status']);
 
   app.config(['$compileProvider', function($compileProvider) {
     $compileProvider.debugInfoEnabled(false);
@@ -25,6 +25,7 @@ define(['angular/map/app', 'angular/tags/app'], function(map, tags){
 
   return {
     addListener: addListener,
+    status: status,
     dbg: map.dbg,
   };
 });

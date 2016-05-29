@@ -88,7 +88,7 @@ td {
   color: green;
 }
 
-.loading {
+.status-label {
   position: fixed;
   top: 0;
   right: 0;
