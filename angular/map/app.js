@@ -70,7 +70,7 @@ define(['angular/map/googlemap', 'angular/tags/app'], function(googlemap, tags) 
             googleMap.clearMarkers();
           };
           dbg.disable_decluttering = function() {
-            googleMap.dbg_no_declutter = true;
+            googleMap.dbg_declutteringEngine.stop();
           };
         });
       },
