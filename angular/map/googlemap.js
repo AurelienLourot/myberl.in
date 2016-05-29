@@ -4,7 +4,8 @@ define(['angular/map/declutterer'], function(declutterer) {
   var Map = (function() {
     // Creates a google map with no marker (yet).
     // elemId: already existing element id where to draw the google map.
-    function Map(elemId) {
+    // setStatus: function for setting the application status.
+    function Map(elemId, setStatus) {
 
       // Adds a marker to the map. Will be hidden by default.
       // marker: instance of Marker.
@@ -93,7 +94,8 @@ define(['angular/map/declutterer'], function(declutterer) {
 
       var listeners = []; // listeners on map readiness.
       var markers = [];
-      var declutteringEngine = new declutterer.Declutterer(map, projectionFactory, markers);
+      var declutteringEngine = new declutterer.Declutterer(map, projectionFactory, markers,
+                                                           setStatus);
 
       // Public members:
       this.gPlaces = new google.maps.places.PlacesService(map);

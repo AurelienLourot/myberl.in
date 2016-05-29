@@ -7,7 +7,8 @@ var Declutterer = (function() {
   // projectionFactory: creates a Projection, an object able to convert GPS coordinates to/from
   //                    pixel coordinates.
   // markers: array of Marker's.
-  function Declutterer(map, projectionFactory, markers) {
+  // setStatus: function for setting the application status.
+  function Declutterer(map, projectionFactory, markers, setStatus) {
 
     // Stops the engine.
     this.stop = function stop() {
@@ -16,6 +17,25 @@ var Declutterer = (function() {
 
     // Called periodically. Must have a short execution time.
     function tick() {
+      var beginMs = nowMs();
+      if (endLastTickMs && beginMs - endLastTickMs > 2 * periodMs) {
+        declareDeviceAsSlow();
+      }
+
+      doTick();
+
+      endLastTickMs = nowMs();
+      if (endLastTickMs - beginMs > periodMs) {
+        declareDeviceAsSlow();
+      }
+    }
+
+    function declareDeviceAsSlow() {
+      setStatus('warning', 'Device too slow');
+    }
+
+    // Actual implementation of tick().
+    function doTick() {
       var beginMs = nowMs();
 
       var projection = projectionFactory.getProjection();
@@ -84,8 +104,10 @@ var Declutterer = (function() {
         map.getBounds().contains(marker.getPosition());
     };
 
+    // Private members:
     var doIntervalId = setInterval(tick, periodMs);
     var indexNextMarkerToDeclutter = 0;
+    var endLastTickMs = 0;
 
   };
 
@@ -95,7 +117,7 @@ var Declutterer = (function() {
   };
 
   // Private constants:
-  var periodMs = 1000;
+  var periodMs = 2000;
   var maxStepDurationMs = 50;
   var minStepNumMarkers = 10;
   var tolerance = 20; // px

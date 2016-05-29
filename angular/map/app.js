@@ -1,11 +1,13 @@
 'use strict';
 
-define(['angular/map/googlemap', 'angular/tags/app'], function(googlemap, tags) {
-  var app = angular.module('map', ['tags']);
+define(['angular/map/googlemap', 'angular/tags/app', 'angular/status/app'],
+       function(googlemap, tags, status) {
+  var app = angular.module('map', ['tags', 'status']);
 
   app.directive('map', ['tagsModuleIsReady', 'getTagDescriptorByKey', 'addListener', 'areMatching',
-                        '$http', '$timeout', function(tagsModuleIsReady, getTagDescriptorByKey,
-                                                      addListener, areMatching, $http, $timeout) {
+                        'setStatus', '$http', '$timeout',
+                        function(tagsModuleIsReady, getTagDescriptorByKey, addListener, areMatching,
+                                 setStatus, $http, $timeout) {
     return {
       restrict: 'E',
       templateUrl: requirejs.toUrl('angular/map/map.html'),
@@ -18,7 +20,7 @@ define(['angular/map/googlemap', 'angular/tags/app'], function(googlemap, tags) 
       controllerAs: 'map',
       link: function(scope, elm, attrs, ctrl) {
         $timeout(function () { // after browser rendering
-          var googleMap = new googlemap.Map(scope.id);
+          var googleMap = new googlemap.Map(scope.id, setStatus);
 
           var addMarkersToMap = function(resolve, reject) {
             console.log('Loading markers...');

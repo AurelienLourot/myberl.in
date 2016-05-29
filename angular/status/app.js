@@ -3,6 +3,13 @@
 define(function() {
   var app = angular.module('status', []);
 
+  // Service for setting the current status.
+  app.factory('setStatus', function() {
+    return function(color, text) {
+      set(color, text);
+    };
+  });
+
   app.controller('statusCtrl', function($scope) {
     $scope.state = state;
     scopes.push($scope);
