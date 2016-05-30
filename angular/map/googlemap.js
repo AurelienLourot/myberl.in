@@ -63,6 +63,11 @@ define(['angular/map/declutterer'], function(declutterer) {
         error('No marker visible.');
       };
 
+      var deviceIsSlow = function() {
+        isDeviceSlow = true;
+        setStatus('warning', 'Slow device');
+      }
+
       // Private members:
       var that = this;
       var map = new google.maps.Map(document.getElementById(elemId), {
@@ -95,7 +100,7 @@ define(['angular/map/declutterer'], function(declutterer) {
       var listeners = []; // listeners on map readiness.
       var markers = [];
       var declutteringEngine = new declutterer.Declutterer(map, projectionFactory, markers,
-                                                           setStatus);
+                                                           deviceIsSlow);
 
       // Public members:
       this.gPlaces = new google.maps.places.PlacesService(map);
@@ -156,8 +161,15 @@ define(['angular/map/declutterer'], function(declutterer) {
       this.setLabelVisible = function setLabelVisible(visibility) {
         if (this.isVisible()) {
           // set() triggers a refresh, while just setting the property doesn't, see
-          // MarkerWithLabel's implementation:
-          googleMarker.set('labelVisible', visibility);
+          // MarkerWithLabel's implementation.
+          if (isDeviceSlow) {
+            // Prevents opacity transition and uses less memory when visibility is false:
+            googleMarker.set('labelVisible', visibility);
+          }
+          googleMarker.set('labelStyle', {
+            opacity: visibility ? 1 : 0,
+            'pointer-events': visibility ? 'auto' : 'none',
+          });
         } else {
           error("setLabelVisible(" + visibility + "): marker '" + descriptor.title +
                 "' isn't visible, ignored.");
@@ -165,7 +177,8 @@ define(['angular/map/declutterer'], function(declutterer) {
       }
 
       this.isLabelVisible = function isLabelVisible() {
-        return this.isVisible() && googleMarker.labelVisible;
+        return this.isVisible() && googleMarker.labelVisible &&
+          googleMarker.get('labelStyle').opacity >= 0.5;
       }
 
       this.getPosition = function getPosition() {
@@ -388,6 +401,9 @@ define(['angular/map/declutterer'], function(declutterer) {
 
     return Marker;
   })();
+
+  // true when it has been detected that the frontend device is slow:
+  var isDeviceSlow = false;
 
   return {
     Map: Map,

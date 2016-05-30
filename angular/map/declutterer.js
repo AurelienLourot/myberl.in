@@ -7,8 +7,8 @@ var Declutterer = (function() {
   // projectionFactory: creates a Projection, an object able to convert GPS coordinates to/from
   //                    pixel coordinates.
   // markers: array of Marker's.
-  // setStatus: function for setting the application status.
-  function Declutterer(map, projectionFactory, markers, setStatus) {
+  // deviceIsSlowCallback: called when device is detected to be slow.
+  function Declutterer(map, projectionFactory, markers, deviceIsSlowCallback) {
 
     // Stops the engine.
     this.stop = function stop() {
@@ -34,14 +34,14 @@ var Declutterer = (function() {
     }
 
     function handleSlowDevice() {
-      setStatus('warning', 'Slow device');
-
       // Slow down if possible:
       if (periodMs < slowPeriodMs) {
         periodMs = slowPeriodMs;
         clearInterval(tickIntervalId);
         tickIntervalId = setInterval(tick, periodMs);
       }
+
+      deviceIsSlowCallback();
     };
 
     // Actual implementation of tick().

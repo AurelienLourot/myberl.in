@@ -35,6 +35,7 @@ td {
   padding-bottom: 0px;
   padding-left: 2px;
   padding-right: 2px;
+  transition: opacity 1s;
 }
 
 .tag-desc {
