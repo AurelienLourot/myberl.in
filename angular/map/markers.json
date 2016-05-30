@@ -1403,16 +1403,6 @@
     "tags": ["restaurant", "todiscover", "indoor", "outdoor"]
   },
   {
-    "title": "...",
-    "comment": "Alternative",
-    "ignore_errors": true,
-    "position": {
-      "lat": 52.498177,
-      "lng": 13.442178
-    },
-    "tags": ["brunch", "todiscover", "indoor", "outdoor"]
-  },
-  {
     "title": "District Môt",
     "comment": "Vietnamese street food",
     "position": {
