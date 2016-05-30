@@ -18,16 +18,19 @@ var Declutterer = (function() {
     // Called periodically. Must have a short execution time.
     function tick() {
       var beginMs = nowMs();
-      if (endLastTickMs && beginMs - endLastTickMs > 2 * periodMs) {
+      var timeSinceLastTickMs = endLastTickMs ? beginMs - endLastTickMs : 0;
+      // If the elapsed time since the last tick is very long, it's more likely that the tab was
+      // inactive rather than having a slow device:
+      if (timeSinceLastTickMs > 2 * periodMs && timeSinceLastTickMs < 10000) {
         declareDeviceAsSlow();
       }
 
       doTick();
 
-      endLastTickMs = nowMs();
-      if (endLastTickMs - beginMs > periodMs) {
+      if (nowMs() - beginMs > periodMs) {
         declareDeviceAsSlow();
       }
+      endLastTickMs = nowMs();
     }
 
     function declareDeviceAsSlow() {
