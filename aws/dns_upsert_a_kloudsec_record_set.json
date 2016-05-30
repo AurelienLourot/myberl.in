@@ -1,10 +1,10 @@
 {
-  "Comment": "Updates existing A record",
+  "Comment": "Updates existing special A record for proving domain ownership to Kloudsec",
   "Changes": [
     {
       "Action": "UPSERT",
       "ResourceRecordSet": {
-        "Name": "myberl.in.",
+        "Name": "kloudsecmbrwxmkyek.myberl.in.",
         "Type": "A",
         "TTL": 300,
         "ResourceRecords": [
