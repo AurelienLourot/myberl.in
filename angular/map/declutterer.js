@@ -7,8 +7,10 @@ var Declutterer = (function() {
   // projectionFactory: creates a Projection, an object able to convert GPS coordinates to/from
   //                    pixel coordinates.
   // markers: array of Marker's.
+  // currentPositionMarker: marker showing the user's position.
   // deviceIsSlowCallback: called when device is detected to be slow.
-  function Declutterer(map, projectionFactory, markers, deviceIsSlowCallback) {
+  function Declutterer(map, projectionFactory, markers, currentPositionMarker,
+                       deviceIsSlowCallback) {
 
     // Stops the engine.
     this.stop = function stop() {
@@ -65,11 +67,17 @@ var Declutterer = (function() {
           marker.positionPoint = projection.fromLatLngToContainerPixel(marker.getPosition());
         } else {
           marker.positionPoint = {
-            x: -1,
-            y: -1,
+            x: -999,
+            y: -999,
           };
         }
       }
+      var currentPositionMarkerPosition = currentPositionMarker.getPosition();
+      currentPositionMarker.positionPoint = currentPositionMarkerPosition ?
+        projection.fromLatLngToContainerPixel(currentPositionMarkerPosition) : {
+          x: -999,
+          y: -999,
+        };
 
       // Logic for dynamic tolerance adaption.
       var viewportBounds = map.getBounds();
@@ -119,6 +127,17 @@ var Declutterer = (function() {
           continue;
         }
 
+        // FIXME: playing with zIndex on labels and markers won't help: labels stay above the
+        //        current position. So we solve this here by decluttering.
+        var dX = currentPositionMarker.positionPoint.x - markerBeingEvaluated.positionPoint.x;
+        var dY = currentPositionMarker.positionPoint.y - markerBeingEvaluated.positionPoint.y;
+        var currentPositionTolerance = Math.max(tolerance, currentPositionMinTolerance);
+        if (Math.abs(dX) < currentPositionTolerance &&
+            Math.abs(dY) < currentPositionTolerance) {
+          hideLabelAndAdaptTolerance(markerBeingEvaluated);
+          continue;
+        }
+
         for (var j = 0; j < markers.length; ++j) {
           var markerNotToHide = markers[j];
           if (markerBeingEvaluated === markerNotToHide ||
@@ -165,6 +184,7 @@ var Declutterer = (function() {
   var maxStepDurationMs = 50;
   var minStepNumMarkers = 10;
   var defaultTolerance = 20; // px
+  var currentPositionMinTolerance = 40; // px
   var maxNumLabelsPerPx = 100 / (1000 * 570); // hard limit
   var minNumLabelsPerPx = maxNumLabelsPerPx / 2; // soft limit
 

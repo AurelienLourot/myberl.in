@@ -93,14 +93,16 @@ define(['angular/map/declutterer'], function(declutterer) {
       projectionFactory.draw = function draw(){};
       projectionFactory.setMap(map);
 
-      var currentPositionMarker = new GeolocationMarker(map, { /*marker_opts*/ }, { // circle_opts
+      var currentPositionMarker = new GeolocationMarker(map, { // marker_opts
+        zIndex: 600, // above other markers
+      }, { // circle_opts
         fillOpacity: 0.0,
       });
 
       var listeners = []; // listeners on map readiness.
       var markers = [];
       var declutteringEngine = new declutterer.Declutterer(map, projectionFactory, markers,
-                                                           deviceIsSlow);
+                                                           currentPositionMarker, deviceIsSlow);
 
       // Public members:
       this.gPlaces = new google.maps.places.PlacesService(map);
