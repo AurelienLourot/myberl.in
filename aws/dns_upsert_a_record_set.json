@@ -1,0 +1,21 @@
+{
+  "Comment": "Updates existing A record",
+  "Changes": [
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+        "Name": "myberl.in.",
+        "Type": "A",
+        "TTL": 300,
+        "ResourceRecords": [
+          {
+            "Value": "192.30.252.153"
+          },
+          {
+            "Value": "192.30.252.154"
+          }
+        ]
+      }
+    }
+  ]
+}

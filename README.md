@@ -25,5 +25,6 @@ AWS Access Key ID [None]: ********
 AWS Secret Access Key [None]: ********
 Default region name [None]: us-east-1
 Default output format [None]:
-$ ./aws/dns.sh
+$ ./aws/dns_create.sh
+$ ./aws/dns_update.sh
 ```
