@@ -12,7 +12,7 @@ var Declutterer = (function() {
 
     // Stops the engine.
     this.stop = function stop() {
-      clearInterval(doIntervalId);
+      clearInterval(tickIntervalId);
     };
 
     // Called periodically. Must have a short execution time.
@@ -21,20 +21,27 @@ var Declutterer = (function() {
       var timeSinceLastTickMs = endLastTickMs ? beginMs - endLastTickMs : 0;
       // If the elapsed time since the last tick is very long, it's more likely that the tab was
       // inactive rather than having a slow device:
-      if (timeSinceLastTickMs > 2 * periodMs && timeSinceLastTickMs < 10000) {
-        declareDeviceAsSlow();
+      if (timeSinceLastTickMs > 2 * periodMs && timeSinceLastTickMs < 3 * slowPeriodMs) {
+        handleSlowDevice();
       }
 
       doTick();
 
       if (nowMs() - beginMs > periodMs) {
-        declareDeviceAsSlow();
+        handleSlowDevice();
       }
       endLastTickMs = nowMs();
     }
 
-    function declareDeviceAsSlow() {
-      setStatus('warning', 'Device too slow');
+    function handleSlowDevice() {
+      setStatus('warning', 'Slow device');
+
+      // Slow down if possible:
+      if (periodMs < slowPeriodMs) {
+        periodMs = slowPeriodMs;
+        clearInterval(tickIntervalId);
+        tickIntervalId = setInterval(tick, periodMs);
+      }
     }
 
     // Actual implementation of tick().
@@ -108,7 +115,8 @@ var Declutterer = (function() {
     };
 
     // Private members:
-    var doIntervalId = setInterval(tick, periodMs);
+    var periodMs = normalPeriodMs;
+    var tickIntervalId = setInterval(tick, periodMs);
     var indexNextMarkerToDeclutter = 0;
     var endLastTickMs = 0;
 
@@ -120,7 +128,8 @@ var Declutterer = (function() {
   };
 
   // Private constants:
-  var periodMs = 2000;
+  var normalPeriodMs = 2000;
+  var slowPeriodMs = 2 * normalPeriodMs;
   var maxStepDurationMs = 50;
   var minStepNumMarkers = 10;
   var tolerance = 20; // px
