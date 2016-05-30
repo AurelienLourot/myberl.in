@@ -42,7 +42,7 @@ var Declutterer = (function() {
         clearInterval(tickIntervalId);
         tickIntervalId = setInterval(tick, periodMs);
       }
-    }
+    };
 
     // Actual implementation of tick().
     function doTick() {
@@ -53,10 +53,12 @@ var Declutterer = (function() {
         return; // initialization isn't done yet
       }
 
-      // Calculates the pixel coordinates of each marker.
+      // Calculates the pixel coordinates of each marker and count the amount of visible labels.
+      var numVisibleLabels = 0;
       var currentZoomLevel = map.getZoom();
       for (var i = 0; i < markers.length; ++i) {
         var marker = markers[i];
+        numVisibleLabels += marker.isLabelVisible() ? 1 : 0;
         // Optimization: if we zoomed out a lot, keep all labels hidden by making them out of
         //               screen.
         if (currentZoomLevel >= 12 && marker.isVisible()) {
@@ -68,6 +70,35 @@ var Declutterer = (function() {
           };
         }
       }
+
+      // Logic for dynamic tolerance adaption.
+      var viewportBounds = map.getBounds();
+      var viewportTopRight = projection.fromLatLngToContainerPixel(viewportBounds.getNorthEast());
+      var viewportBottomLeft = projection.fromLatLngToContainerPixel(viewportBounds.getSouthWest());
+      var viewportSize = viewportTopRight.x * viewportBottomLeft.y; // px
+      var maxNumLabels = maxNumLabelsPerPx * viewportSize; // hard limit
+      var minNumLabels = minNumLabelsPerPx * viewportSize; // soft limit
+      function showLabelOrAdaptTolerance(marker) {
+        if (!marker.isLabelVisible()) {
+          if (numVisibleLabels < maxNumLabels) {
+            marker.setLabelVisible(true);
+            ++numVisibleLabels;
+          } else {
+            // Too many labels, increase tolerance:
+            tolerance += defaultTolerance;
+          }
+        }
+      };
+      function hideLabelAndAdaptTolerance(marker) {
+        if (marker.isLabelVisible()) {
+          marker.setLabelVisible(false);
+          --numVisibleLabels;
+          if (numVisibleLabels < minNumLabels) {
+            // Not enough labels, decrease tolerance if possible:
+            tolerance = Math.max(defaultTolerance, tolerance - defaultTolerance);
+          }
+        }
+      };
 
       // Ensures we do a minimum amount of markers, even on a slow system. Ensures as well that we
       // don't do more than the amount of markers.
@@ -81,9 +112,9 @@ var Declutterer = (function() {
         }
 
         var markerBeingEvaluated = markers[indexNextMarkerToDeclutter];
-        if (!isMarkerVisibleOnScreen(markerBeingEvaluated)) {
+        if (!isMarkerVisibleOnViewport(markerBeingEvaluated, viewportBounds)) {
           if (markerBeingEvaluated.isVisible()) {
-            markerBeingEvaluated.setLabelVisible(false);
+            hideLabelAndAdaptTolerance(markerBeingEvaluated);
           }
           continue;
         }
@@ -91,7 +122,7 @@ var Declutterer = (function() {
         for (var j = 0; j < markers.length; ++j) {
           var markerNotToHide = markers[j];
           if (markerBeingEvaluated === markerNotToHide ||
-              !isMarkerVisibleOnScreen(markerNotToHide) ||
+              !isMarkerVisibleOnViewport(markerNotToHide, viewportBounds) ||
               !markerNotToHide.isLabelVisible()) {
             continue;
           }
@@ -100,18 +131,18 @@ var Declutterer = (function() {
           var dY = markerNotToHide.positionPoint.y - markerBeingEvaluated.positionPoint.y;
           if (Math.abs(dX) < tolerance &&
               Math.abs(dY) < tolerance) {
-            markerBeingEvaluated.setLabelVisible(false);
+            hideLabelAndAdaptTolerance(markerBeingEvaluated);
             continue outer;
           }
         }
 
-        markerBeingEvaluated.setLabelVisible(true);
+        showLabelOrAdaptTolerance(markerBeingEvaluated);
       }
     };
 
-    function isMarkerVisibleOnScreen(marker) {
+    function isMarkerVisibleOnViewport(marker, viewportBounds) {
       return marker.isVisible() && marker.positionPoint.x >= 0 &&
-        map.getBounds().contains(marker.getPosition());
+        viewportBounds.contains(marker.getPosition());
     };
 
     // Private members:
@@ -119,6 +150,7 @@ var Declutterer = (function() {
     var tickIntervalId = setInterval(tick, periodMs);
     var indexNextMarkerToDeclutter = 0;
     var endLastTickMs = 0;
+    var tolerance = defaultTolerance; // ~ minimum distance between markers for showing their labels
 
   };
 
@@ -132,7 +164,9 @@ var Declutterer = (function() {
   var slowPeriodMs = 2 * normalPeriodMs;
   var maxStepDurationMs = 50;
   var minStepNumMarkers = 10;
-  var tolerance = 20; // px
+  var defaultTolerance = 20; // px
+  var maxNumLabelsPerPx = 100 / (1000 * 570); // hard limit
+  var minNumLabelsPerPx = maxNumLabelsPerPx / 2; // soft limit
 
   return Declutterer;
 })();
