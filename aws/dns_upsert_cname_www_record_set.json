@@ -1,0 +1,18 @@
+{
+  "Comment": "Updates existing CNAME record for www subdomain",
+  "Changes": [
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+        "Name": "www.myberl.in.",
+        "Type": "CNAME",
+        "TTL": 300,
+        "ResourceRecords": [
+          {
+            "Value": "myberl.in"
+          }
+        ]
+      }
+    }
+  ]
+}
