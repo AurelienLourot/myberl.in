@@ -16,6 +16,12 @@ define(['angular/map/app', 'angular/tags/app', 'angular/status/app'], function(m
     $compileProvider.debugInfoEnabled(false);
   }]);
 
+  app.filter('rawHtml', ['$sce', function($sce) {
+    return function(val) {
+      return $sce.trustAsHtml(val);
+    }
+  }]);
+
   // Adds a listener on module readiness.
   var addListener = function(listener) {
     listeners.push(listener);

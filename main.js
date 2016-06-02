@@ -2,7 +2,7 @@
 
 // Constants:
 var statusLabelColor = 'success';
-var statusLabelText = 'Loading';
+var statusLabelContent = '<i class="fa fa-spinner fa-spin fa-2x"></i>';
 
 // Adds a listener on module readiness.
 var addListener = function(listener) {
@@ -19,7 +19,7 @@ var requireAngularApp = function(resolve, reject) {
     // http://www.sitepoint.com/using-requirejs-angularjs-applications/ :
     angular.bootstrap(document, ['berlin']);
 
-    berlin.status.set(statusLabelColor, statusLabelText);
+    berlin.status.set(statusLabelColor, statusLabelContent);
 
     window.dbg = berlin.dbg;
     resolve(berlin);
@@ -50,7 +50,7 @@ var initJQueryPopupOverlays = function(resolve, reject) {
 
 var clearStatusLabel = function(input) {
   var berlinApp = input[0];
-  berlinApp.status.clear(statusLabelColor, statusLabelText);
+  berlinApp.status.clear(statusLabelColor, statusLabelContent);
 };
 
 var callListeners = function() {
