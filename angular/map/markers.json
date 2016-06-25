@@ -1853,5 +1853,14 @@
       "lng": 13.391450
     },
     "tags": ["cafe", "good", "indoor", "outdoor"]
+  },
+  {
+    "title": "Hofbräu",
+    "comment": "Bavarian",
+    "position": {
+      "lat": 52.524560,
+      "lng": 13.413968
+    },
+    "tags": ["bar", "restaurant", "todiscover", "indoor"]
   }
 ]
