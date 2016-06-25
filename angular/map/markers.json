@@ -1845,5 +1845,13 @@
       "lng": 13.416114
     },
     "tags": ["restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Kaffee am Meer",
+    "position": {
+      "lat": 52.489636,
+      "lng": 13.391450
+    },
+    "tags": ["cafe", "good", "indoor", "outdoor"]
   }
 ]
