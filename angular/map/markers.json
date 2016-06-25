@@ -1862,5 +1862,14 @@
       "lng": 13.413968
     },
     "tags": ["bar", "restaurant", "todiscover", "indoor"]
+  },
+  {
+    "title": "Golgatha",
+    "comment": "Biergarten",
+    "position": {
+      "lat": 52.486700,
+      "lng": 13.378580
+    },
+    "tags": ["bar", "restaurant", "outdoor", "indoor", "good"]
   }
 ]
