@@ -13,6 +13,12 @@ a:focus {
   outline: 0;
 }
 
+.navbar-toggle {
+  float: left;
+  margin-left: 15px; /*FIXME: same as original margin-right*/
+  margin-right: 0;
+}
+
 .navbar-form {
   margin-bottom: 0px; /*FIXME: configurable in bootstrap?*/
 }
