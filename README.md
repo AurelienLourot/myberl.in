@@ -28,3 +28,7 @@ Default output format [None]:
 $ ./aws/dns_create.sh
 $ ./aws/dns_update.sh
 ```
+
+## Documentation
+
+[Why not just creating a map on Google or Foursquare?](doc/why.md)
