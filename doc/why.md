@@ -27,9 +27,9 @@ outdoor bars/clubs becomes a real challenge.
 The only available map is the map of what you have bookmarked. Unfortunately the map is just a side
 thing, using only 1/10th of your screen on the webapp.
 
-This is better on the Android app, however there you can't filter the map. And the map won't be
-displayed if your location can't be determined.
+The map view is better on the Android app, however there you can't filter the map. And the map won't
+be displayed if your location can't be determined.
 
-## [Tripadvisor](https://tripadvisor.com)?
+## [TripAdvisor](https://tripadvisor.com)?
 
 TripAdvisor is only for businesses. You can't add *any* point of interest you want.
