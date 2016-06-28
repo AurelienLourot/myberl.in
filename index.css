@@ -37,9 +37,9 @@ a:focus {
   font-size: 18px; /*FIXME: same as navbar-brand*/
 }
 
-.settings {
-  margin-top: -13px; /*FIXME*/
-  margin-left: 1em;
+.well {
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .github {

@@ -14,7 +14,7 @@ describe('app', function() {
   width: 300px;     \
 }                   \
 </style>            \
-<div id="fixture"><map filters_id="filters"></map><tag-filters></tag-filters></div>';
+<div id="fixture"><map on-tag-click=""></map><tag-filters></tag-filters></div>';
     document.body.insertAdjacentHTML('afterbegin', fixture);
   });
 

@@ -53,7 +53,7 @@
   </head>
   <body onclick="$('#navbar').collapse('hide');">
 
-    <map filters_id="filters"></map>
+    <map on-tag-click="javascript: $('#navbar').collapse('show')"></map>
 
     <status-label></status-label>
 
@@ -70,13 +70,10 @@
           </button>
           <div class="navbar-brand">
             <span class="brand"><span class="brand-my">MY</span>BERL.IN</span>
-            <button class="btn btn-default settings filters_open">
-              <i class="fa fa-cog fa-lg"></i> Settings
-            </button>
           </div>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-          <p class="navbar-text">Bars. Clubs. Restaurants.</p>
+          <tag-filters></tag-filters>
           <form class="navbar-form navbar-left">
             <a class="btn-navbar"
                href="https://github.com/AurelienLourot/myberl.in"
@@ -92,13 +89,6 @@
       <a href="" class="footer credits_open">
         Made with <i class="fa fa-heart footer"></i> in Berlin.
       </a>
-    </div>
-
-    <div id="filters" class="panel panel-default hidden">
-      <div class="panel-body">
-        <tag-filters></tag-filters>
-        <button class="btn btn-default filters_close">Done</button>
-      </div>
     </div>
 
     <div id="credits" class="panel panel-default hidden">

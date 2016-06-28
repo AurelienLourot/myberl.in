@@ -140,8 +140,9 @@ define(['angular/map/declutterer'], function(declutterer) {
     // gPlaces: instance of google.maps.places.PlacesService .
     // getTagDescriptorByKey: a function taking a tag key as argument and returning the
     //                        corresponding tag descriptor.
-    // filtersId: filter panel's id.
-    function Marker(descriptor, getTagDescriptorByKey, gPlaces, filtersId) {
+    // onTagClickScript: script to be run when clicking on a tag (in the info window), e.g.
+    //                   'javascript: myFunction();'.
+    function Marker(descriptor, getTagDescriptorByKey, gPlaces, onTagClickScript) {
 
       // Shows or hides the marker.
       // map: instance of google.maps.Map or null.
@@ -291,8 +292,8 @@ define(['angular/map/declutterer'], function(declutterer) {
           }
 
           for (var i = 0; i < that.tagKeys.length; ++i) {
-            infoContent += '<a class="infowindow-tag" href="javascript: $(\'#' + filtersId
-              + '\').popup(\'show\');">#' + that.tagKeys[i] + '</a> ';
+            infoContent += '<a class="infowindow-tag" href="' + onTagClickScript + '">#'
+              + that.tagKeys[i] + '</a> ';
           }
 
           var infoWindow = new google.maps.InfoWindow({

@@ -12,7 +12,7 @@ define(['angular/map/googlemap', 'angular/tags/app', 'angular/status/app'],
       restrict: 'E',
       templateUrl: requirejs.toUrl('angular/map/map.html'),
       scope: {
-        filtersId: '@', // filter panel's id
+        onTagClick: '@', // e.g. 'javascript: myFunction();'
       },
       controller: ['$scope', function($scope) {
         $scope.id = 'map-' + uid();
@@ -33,7 +33,7 @@ define(['angular/map/googlemap', 'angular/tags/app', 'angular/status/app'],
 
                   for (var i = 0; i < data.length; ++i) {
                     googleMap.addMarker(new googlemap.Marker(data[i], getTagDescriptorByKey,
-                                                             googleMap.gPlaces, scope.filtersId));
+                                                             googleMap.gPlaces, scope.onTagClick));
                   }
 
                   var showHideMarkers = function() {

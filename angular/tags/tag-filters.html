@@ -1,14 +1,19 @@
-<div data-ng-repeat="group in tags.groups">
-  <table>
-    <tr data-ng-repeat="tag in group">
-      <td>#{{ tag.name }}</td>
-      <td data-ng-bind-html="tag.desc | rawHtml"></td>
-      <td><div class="ui fitted toggle checkbox">
-          <input type="checkbox" tabindex="0" name="{{ tag.name }}"
-                 data-ng-model="states[tag.name]" />
-          <label></label>
-      </div></td>
-    </tr>
-  </table>
-  <hr />
+<div class="container-fluid">
+  <div class="col-md-9 col-lg-6 container-fluid">
+    <div class="col-sm-4" data-ng-repeat="group in tags.groups">
+      <div class="well">
+        <table>
+          <tr data-ng-repeat="tag in group">
+            <td>#{{ tag.name }}</td>
+            <td data-ng-bind-html="tag.desc | rawHtml"></td>
+            <td><div class="ui fitted toggle checkbox">
+                <input type="checkbox" tabindex="0" name="{{ tag.name }}"
+                       data-ng-model="states[tag.name]" />
+                <label></label>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
