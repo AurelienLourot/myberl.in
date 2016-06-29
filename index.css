@@ -38,6 +38,12 @@ a:focus {
   margin-top: 10px;
 }
 
+.filter-group {
+  /* centered: */
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .github {
   color: #9d9d9d; /*FIXME: use bootstrap's style*/
 }

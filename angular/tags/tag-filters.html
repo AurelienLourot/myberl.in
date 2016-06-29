@@ -2,7 +2,7 @@
   <div class="col-lg-7 container-fluid">
     <div class="col-sm-6 col-md-4" data-ng-repeat="group in tags.groups">
       <div class="well">
-        <table>
+        <table class="filter-group">
           <tr data-ng-repeat="tag in group">
             <td>#{{ tag.name }}</td>
             <td data-ng-bind-html="tag.desc | rawHtml"></td>
