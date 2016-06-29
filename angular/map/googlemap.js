@@ -65,7 +65,7 @@ define(['angular/map/declutterer'], function(declutterer) {
 
       var deviceIsSlow = function() {
         isDeviceSlow = true;
-        setStatus('warning', 'Slow device');
+        setStatus('warning', '<i class="fa fa-spinner fa-spin fa-2x"></i>');
       }
 
       // Private members:
