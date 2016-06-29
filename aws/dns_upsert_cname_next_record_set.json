@@ -1,0 +1,18 @@
+{
+  "Comment": "Updates existing CNAME record for next subdomain",
+  "Changes": [
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+        "Name": "next.myberl.in.",
+        "Type": "CNAME",
+        "TTL": 300,
+        "ResourceRecords": [
+          {
+            "Value": "s341247851.online.de"
+          }
+        ]
+      }
+    }
+  ]
+}
