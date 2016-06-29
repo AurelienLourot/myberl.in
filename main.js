@@ -64,6 +64,13 @@ var loadAngularApp = (new Promise(requireAngularApp)).then(waitForAngularAppRead
 Promise.all([loadAngularApp, new Promise(initJQueryPopupOverlays)]).then(clearStatusLabel)
   .then(callListeners);
 
+// Collapse navbar when clicking everywhere but on the filters:
+$('body').on('click', null, null, function(e) {
+  if ($(e.target).closest('.filter-group').length == 0) {
+    $('#navbar').collapse('hide');
+  }
+});
+
 define({
   addListener: addListener,
 });
