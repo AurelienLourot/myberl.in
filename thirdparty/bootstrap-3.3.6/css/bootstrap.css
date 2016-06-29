@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=e1d23ed1daceb0ec0547eb05488a5bed)
- * Config saved to config.json and https://gist.github.com/e1d23ed1daceb0ec0547eb05488a5bed
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=e8542d226444d0d3223ae26579ed66bd)
+ * Config saved to config.json and https://gist.github.com/e8542d226444d0d3223ae26579ed66bd
  */
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
@@ -4598,8 +4598,8 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #cccccc;
 }
 .navbar-inverse {
-  background-color: #222222;
-  border-color: #080808;
+  background-color: rgba(34, 34, 34, 0.8);
+  border-color: rgba(8, 8, 8, 0.8);
 }
 .navbar-inverse .navbar-brand {
   color: #9d9d9d;
@@ -4624,7 +4624,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #ffffff;
-  background-color: #080808;
+  background-color: rgba(8, 8, 8, 0.8);
 }
 .navbar-inverse .navbar-nav > .disabled > a,
 .navbar-inverse .navbar-nav > .disabled > a:hover,
@@ -4644,20 +4644,20 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-  border-color: #101010;
+  border-color: rgba(16, 16, 16, 0.8);
 }
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: #080808;
+  background-color: rgba(8, 8, 8, 0.8);
   color: #ffffff;
 }
 @media (max-width: 9998px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
-    border-color: #080808;
+    border-color: rgba(8, 8, 8, 0.8);
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
-    background-color: #080808;
+    background-color: rgba(8, 8, 8, 0.8);
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
     color: #9d9d9d;
@@ -4671,7 +4671,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #ffffff;
-    background-color: #080808;
+    background-color: rgba(8, 8, 8, 0.8);
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover,

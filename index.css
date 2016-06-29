@@ -9,6 +9,10 @@ a:focus {
   outline: 0;
 }
 
+.navbar-header {
+  background-color: #222; /*FIXME: use bootstrap's style*/
+}
+
 .navbar-toggle {
   float: left;
   margin-left: 15px; /*FIXME: same as original margin-right*/
@@ -16,6 +20,7 @@ a:focus {
 }
 
 .navbar-form {
+  background-color: rgba(32,32,32,.6); /*FIXME: use bootstrap's style*/
   margin-bottom: 0px; /*FIXME: configurable in bootstrap?*/
 }
 
