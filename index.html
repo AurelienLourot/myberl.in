@@ -103,16 +103,21 @@
 
     <div id="credits" class="panel panel-default hidden">
       <div class="panel-body">
+        <button type="button" class="close credits_close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
         <p class="credits">
           I'm <a href="http://lourot.com/" target="_blank">Aure</a>, 29 years old. I like electro
           and I've been leaving in Berlin for 2 years. Enjoy the map!
         </p>
-        <button class="btn btn-default credits_close">Close</button>
       </div>
     </div>
 
     <div id="dbg_secret" class="panel panel-default hidden">
       <div class="panel-body">
+        <button type="button" class="close dbg_secret_close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
         <p><b>Debug</b></p>
         <p><button class="btn btn-default" onclick="dbg.click_each_visible_marker();">
           Click each visible marker
@@ -123,7 +128,6 @@
         <p><button class="btn btn-default" onclick="dbg.remove_all_markers();">
           Remove all markers
         </button></p>
-        <p><button class="btn btn-default dbg_secret_close">Close</button></p>
       </div>
     </div>
 
