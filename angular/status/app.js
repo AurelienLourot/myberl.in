@@ -5,8 +5,13 @@ define(function() {
 
   // Service for setting the current status.
   app.factory('setStatus', function() {
-    return function(color, text) {
-      set(color, text);
+    // clr: if true, status will be cleared instead of being set.
+    return function(color, text, clr) {
+      if (!clr) {
+        set(color, text);
+      } else {
+        clear(color, text);
+      }
     };
   });
 

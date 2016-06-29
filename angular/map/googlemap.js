@@ -63,10 +63,25 @@ define(['angular/map/declutterer'], function(declutterer) {
         error('No marker visible.');
       };
 
-      var deviceIsSlow = function() {
-        isDeviceSlow = true;
-        setStatus('warning', '<i class="fa fa-spinner fa-spin fa-2x"></i>');
-      }
+      var deviceIsSlow = (function() {
+        var labelColor = 'warning';
+        var labelContent = '<i class="fa fa-spinner fa-spin fa-2x"></i>';
+
+        function clearStatus() {
+          clearStatusTimeoutId = null
+          setStatus(labelColor, labelContent, /*clear=*/true);
+        }
+        var clearStatusTimeoutId = null;
+
+        return function() {
+          isDeviceSlow = true;
+          setStatus(labelColor, '<i class="fa fa-spinner fa-spin fa-2x"></i>');
+          if (clearStatusTimeoutId) {
+            clearTimeout(clearStatusTimeoutId);
+          }
+          clearStatusTimeoutId = setTimeout(clearStatus, 3000);
+        };
+      })();
 
       // Private members:
       var that = this;
