@@ -45,26 +45,6 @@
   ],
   [
     {
-      "name": "great",
-      "desc": "<i class='fa fa-map-marker fa-lg map-marker-great'></i>",
-      "color": "red",
-      "initialState": true
-    },
-    {
-      "name": "good",
-      "desc": "<i class='fa fa-map-marker fa-lg map-marker-default'></i>",
-      "color": "gray",
-      "initialState": false
-    },
-    {
-      "name": "todiscover",
-      "desc": "<i class='fa fa-map-marker fa-lg map-marker-todiscover'></i>",
-      "color": "orange",
-      "initialState": false
-    }
-  ],
-  [
-    {
       "name": "indoor",
       "desc": "<i class='fa fa-map-marker fa-lg map-marker-default'></i>",
       "color": "gray",
@@ -75,6 +55,46 @@
       "desc": "<i class='fa fa-map-marker fa-lg map-marker-outdoor'></i>",
       "color": "cyan",
       "initialState": true
+    }
+  ],
+  [
+    {
+      "name": "great",
+      "desc": "<i class='fa fa-map-marker fa-lg map-marker-great'></i>",
+      "color": "red",
+      "initialState": true
+    },
+    {
+      "name": "good",
+      "desc": "<i class='fa fa-map-marker fa-lg map-marker-default'></i>",
+      "color": "gray",
+      "initialState": false
+    }
+  ],
+  [
+    {
+      "name": "aure",
+      "desc": "<i class='fa fa-map-marker fa-lg map-marker-default'></i>",
+      "color": "gray",
+      "initialState": true
+    },
+    {
+      "name": "franzi",
+      "desc": "<i class='fa fa-map-marker fa-lg map-marker-not-aure'></i>",
+      "color": "orange",
+      "initialState": true
+    },
+    {
+      "name": "romu",
+      "desc": "<i class='fa fa-map-marker fa-lg map-marker-not-aure'></i>",
+      "color": "orange",
+      "initialState": false
+    },
+    {
+      "name": "other",
+      "desc": "<i class='fa fa-map-marker fa-lg map-marker-not-aure'></i>",
+      "color": "orange",
+      "initialState": false
     }
   ]
 ]

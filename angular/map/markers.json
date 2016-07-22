@@ -6,7 +6,7 @@
       "lat": 52.543852,
       "lng": 13.372653000000016
     },
-    "tags": ["club", "great", "indoor"]
+    "tags": ["club", "great", "indoor", "aure", "romu"]
   },
   {
     "title": "Fiesere Miese",
@@ -14,7 +14,7 @@
       "lat": 52.50563560000001,
       "lng": 13.433045300000003
     },
-    "tags": ["club", "great", "indoor"]
+    "tags": ["club", "great", "indoor", "aure"]
   },
   {
     "title": "Wilde Renate",
@@ -22,7 +22,7 @@
       "lat": 52.49740100000001,
       "lng": 13.46540600000003
     },
-    "tags": ["club", "great", "indoor", "outdoor"]
+    "tags": ["club", "great", "indoor", "outdoor", "aure", "franzi"]
   },
   {
     "title": "IPSE",
@@ -30,7 +30,7 @@
       "lat": 52.497698,
       "lng": 13.451884000000064
     },
-    "tags": ["club", "great", "indoor", "outdoor"]
+    "tags": ["club", "great", "indoor", "outdoor", "aure", "franzi"]
   },
   {
     "title": "Zum schmutzigen Hobby",
@@ -38,7 +38,7 @@
       "lat": 52.507921,
       "lng": 13.45350899999994
     },
-    "tags": ["club", "great", "indoor"]
+    "tags": ["club", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "Astra Kulturhaus",
@@ -46,7 +46,7 @@
       "lat": 52.507242,
       "lng": 13.45180300000004
     },
-    "tags": ["club", "concert", "great", "indoor"]
+    "tags": ["club", "concert", "great", "indoor", "aure"]
   },
   {
     "title": "Ritter Butzke",
@@ -54,7 +54,7 @@
       "lat": 52.502667,
       "lng": 13.407885999999962
     },
-    "tags": ["club", "indoor", "good"]
+    "tags": ["club", "indoor", "good", "aure"]
   },
   {
     "title": "St. Georg",
@@ -62,7 +62,7 @@
       "lat": 52.50290520000001,
       "lng": 13.407824300000016
     },
-    "tags": ["club", "indoor", "good"]
+    "tags": ["club", "indoor", "good", "aure"]
   },
   {
     "title": "Suicide Circus",
@@ -70,7 +70,7 @@
       "lat": 52.507272,
       "lng": 13.450853000000052
     },
-    "tags": ["club", "great", "indoor", "outdoor"]
+    "tags": ["club", "great", "indoor", "outdoor", "aure", "romu"]
   },
   {
     "title": "RAW99",
@@ -78,7 +78,7 @@
       "lat": 52.50773250000001,
       "lng": 13.4541321
     },
-    "tags": ["club", "indoor", "good"]
+    "tags": ["club", "indoor", "good", "aure"]
   },
   {
     "title": "Farbfernseher",
@@ -87,7 +87,7 @@
       "lat": 52.499301,
       "lng": 13.42423800000006
     },
-    "tags": ["club", "indoor", "good"]
+    "tags": ["club", "indoor", "good", "aure"]
   },
   {
     "title": "GRETCHEN Club",
@@ -96,7 +96,7 @@
       "lat": 52.49626199999999,
       "lng": 13.388179000000036
     },
-    "tags": ["club", "indoor", "good", "outdoor"]
+    "tags": ["club", "indoor", "good", "outdoor", "aure"]
   },
   {
     "title": "Griessmühle",
@@ -106,7 +106,7 @@
       "lat": 52.474664,
       "lng": 13.457343000000037
     },
-    "tags": ["club", "indoor", "good", "outdoor"]
+    "tags": ["club", "indoor", "good", "outdoor", "aure", "franzi"]
   },
   {
     "title": "Loftus Hall",
@@ -115,7 +115,7 @@
       "lat": 52.4905207,
       "lng": 13.436409400000002
     },
-    "tags": ["club", "indoor", "good"]
+    "tags": ["club", "indoor", "good", "aure", "franzi"]
   },
   {
     "title": "Keller",
@@ -123,7 +123,7 @@
       "lat": 52.48305999999999,
       "lng": 13.43119999999999
     },
-    "tags": ["club", "great", "indoor"]
+    "tags": ["club", "great", "indoor", "aure"]
   },
   {
     "title": "YAAM",
@@ -132,7 +132,7 @@
       "lat": 52.50923849999999,
       "lng": 13.430582299999969
     },
-    "tags": ["club", "indoor", "good"]
+    "tags": ["club", "indoor", "good", "aure"]
   },
   {
     "title": "Hangar 49",
@@ -141,7 +141,7 @@
       "lat": 52.5137632,
       "lng": 13.422702999999956
     },
-    "tags": ["club", "indoor", "good"]
+    "tags": ["club", "indoor", "good", "aure"]
   },
   {
     "title": "Chalet",
@@ -150,7 +150,7 @@
       "lat": 52.49720139999999,
       "lng": 13.449379399999998
     },
-    "tags": ["club", "great", "indoor", "outdoor"]
+    "tags": ["club", "great", "indoor", "outdoor", "aure", "franzi"]
   },
   {
     "title": "Else",
@@ -158,7 +158,7 @@
       "lat": 52.495087,
       "lng": 13.462532000000012
     },
-    "tags": ["club", "outdoor", "great"]
+    "tags": ["club", "outdoor", "great", "aure"]
   },
   {
     "title": "Rummelsbucht",
@@ -166,7 +166,7 @@
       "lat": 52.5008492,
       "lng": 13.4727037
     },
-    "tags": ["club", "great", "indoor", "outdoor"]
+    "tags": ["club", "great", "indoor", "outdoor", "aure"]
   },
   {
     "title": "Spreeterrassen",
@@ -175,7 +175,7 @@
       "lat": 52.5145168,
       "lng": 13.418110000000002
     },
-    "tags": ["club", "indoor", "good"]
+    "tags": ["club", "indoor", "good", "aure"]
   },
   {
     "title": "WaterGate",
@@ -183,7 +183,7 @@
       "lat": 52.500956,
       "lng": 13.445020999999997
     },
-    "tags": ["club", "great", "indoor", "outdoor"]
+    "tags": ["club", "great", "indoor", "outdoor", "aure"]
   },
   {
     "title": "Weekend",
@@ -193,7 +193,7 @@
       "lat": 52.522966000000004,
       "lng": 13.416719000000057
     },
-    "tags": ["club", "great", "indoor", "outdoor"]
+    "tags": ["club", "great", "indoor", "outdoor", "aure", "romu"]
   },
   {
     "title": "Sisyphos",
@@ -202,7 +202,7 @@
       "lat": 52.493232,
       "lng": 13.491915999999947
     },
-    "tags": ["club", "great", "indoor", "outdoor"]
+    "tags": ["club", "great", "indoor", "outdoor", "aure"]
   },
   {
     "title": "RAMPE Club",
@@ -211,7 +211,7 @@
       "lat": 52.511807,
       "lng": 13.423103999999967
     },
-    "tags": ["club", "outdoor", "great"]
+    "tags": ["club", "outdoor", "great", "aure"]
   },
   {
     "title": "Tresor",
@@ -220,7 +220,7 @@
       "lat": 52.510834,
       "lng": 13.419939
     },
-    "tags": ["club", "great", "indoor"]
+    "tags": ["club", "great", "indoor", "aure"]
   },
   {
     "title": "Birgit & Bier",
@@ -228,7 +228,7 @@
       "lat": 52.49758809999999,
       "lng": 13.449543500000004
     },
-    "tags": ["club", "bar", "outdoor", "great", "indoor"]
+    "tags": ["club", "bar", "outdoor", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "Kater Blau",
@@ -236,7 +236,7 @@
       "lat": 52.5119475,
       "lng": 13.425383799999963
     },
-    "tags": ["club", "great", "indoor", "outdoor"]
+    "tags": ["club", "great", "indoor", "outdoor", "aure", "franzi"]
   },
   {
     "title": "Kosmonaut",
@@ -244,7 +244,7 @@
       "lat": 52.5076084,
       "lng": 13.475117700000057
     },
-    "tags": ["club", "great", "indoor"]
+    "tags": ["club", "great", "indoor", "aure"]
   },
   {
     "title": "Süß War Gestern",
@@ -252,7 +252,7 @@
       "lat": 52.508588,
       "lng": 13.460999000000015
     },
-    "tags": ["club", "bar", "great", "indoor"]
+    "tags": ["club", "bar", "great", "indoor", "aure", "romu"]
   },
   {
     "title": "Neue Heimat",
@@ -263,7 +263,7 @@
       "lat": 52.5069577,
       "lng": 13.456146999999987
     },
-    "tags": ["bar", "club", "restaurant", "cafe", "outdoor", "great", "indoor"]
+    "tags": ["bar", "club", "restaurant", "cafe", "outdoor", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "Bohnengold",
@@ -271,7 +271,7 @@
       "lat": 52.497582,
       "lng": 13.424181999999973
     },
-    "tags": ["club", "bar", "great", "indoor"]
+    "tags": ["club", "bar", "great", "indoor", "aure", "franzi", "romu"]
   },
   {
     "title": "Crack Bellmer",
@@ -279,7 +279,7 @@
       "lat": 52.507699,
       "lng": 13.454750999999987
     },
-    "tags": ["bar", "club", "great", "indoor"]
+    "tags": ["bar", "club", "great", "indoor", "aure"]
   },
   {
     "title": "Klunkerkranich",
@@ -288,7 +288,7 @@
       "lat": 52.482204,
       "lng": 13.431577699999934
     },
-    "tags": ["bar", "cafe", "club", "outdoor", "great"]
+    "tags": ["bar", "cafe", "club", "outdoor", "great", "aure", "franzi"]
   },
   {
     "title": "Lupita Bar",
@@ -298,7 +298,7 @@
       "lat": 52.4993682,
       "lng": 13.4187269
     },
-    "tags": ["club", "bar", "great", "indoor"]
+    "tags": ["club", "bar", "great", "indoor", "aure"]
   },
   {
     "title": "Monarch",
@@ -306,7 +306,7 @@
       "lat": 52.499268,
       "lng": 13.419378000000052
     },
-    "tags": ["bar", "club", "indoor", "good"]
+    "tags": ["bar", "club", "indoor", "good", "aure"]
   },
   {
     "title": "Mein Haus am See",
@@ -314,7 +314,7 @@
       "lat": 52.530007,
       "lng": 13.400766999999975
     },
-    "tags": ["bar", "club", "great", "indoor"]
+    "tags": ["bar", "club", "great", "indoor", "aure", "romu"]
   },
   {
     "title": "Vögelchen",
@@ -322,7 +322,7 @@
       "lat": 52.502063,
       "lng": 13.432426999999961
     },
-    "tags": ["bar", "cafe", "club", "great", "indoor"]
+    "tags": ["bar", "cafe", "club", "great", "indoor", "aure"]
   },
   {
     "title": "Bechereck",
@@ -330,7 +330,7 @@
       "lat": 52.47372,
       "lng": 13.423329999999964
     },
-    "tags": ["bar", "club", "indoor", "good"]
+    "tags": ["bar", "club", "indoor", "good", "aure"]
   },
   {
     "title": "Paloma Bar",
@@ -338,7 +338,7 @@
       "lat": 52.4992686,
       "lng": 13.4191239
     },
-    "tags": ["club", "bar", "indoor", "good"]
+    "tags": ["club", "bar", "indoor", "good", "aure"]
   },
   {
     "title": "Badeschiff",
@@ -348,7 +348,7 @@
       "lat": 52.4978606,
       "lng": 13.45373589999997
     },
-    "tags": ["bar", "outdoor", "good"]
+    "tags": ["bar", "outdoor", "good", "aure"]
   },
   {
     "title": "Hannibal",
@@ -357,7 +357,7 @@
       "lat": 52.498952,
       "lng": 13.428224
     },
-    "tags": ["bar", "cafe", "restaurant", "indoor", "good"]
+    "tags": ["bar", "cafe", "restaurant", "indoor", "good", "aure"]
   },
   {
     "title": "BEATmung",
@@ -366,7 +366,7 @@
       "lat": 52.508736,
       "lng": 13.455417000000011
     },
-    "tags": ["bar", "indoor", "good"]
+    "tags": ["bar", "indoor", "good", "aure"]
   },
   {
     "title": "Schlawinchen",
@@ -375,7 +375,7 @@
       "lat": 52.492652,
       "lng": 13.421626999999946
     },
-    "tags": ["bar", "indoor", "good"]
+    "tags": ["bar", "indoor", "good", "aure", "franzi"]
   },
   {
     "title": "Herman",
@@ -384,7 +384,7 @@
       "lat": 52.53258000000001,
       "lng": 13.41192000000001
     },
-    "tags": ["bar", "great", "indoor"]
+    "tags": ["bar", "great", "indoor", "aure"]
   },
   {
     "title": "ROSI`S",
@@ -392,7 +392,7 @@
       "lat": 52.505008,
       "lng": 13.462471999999934
     },
-    "tags": ["bar", "outdoor", "good"]
+    "tags": ["bar", "outdoor", "good", "aure", "franzi"]
   },
   {
     "title": "Kuschlowski",
@@ -400,7 +400,7 @@
       "lat": 52.48782,
       "lng": 13.431100000000015
     },
-    "tags": ["bar", "cafe", "great", "indoor"]
+    "tags": ["bar", "cafe", "great", "indoor", "aure"]
   },
   {
     "title": "K-fetisch",
@@ -408,7 +408,7 @@
       "lat": 52.483095,
       "lng": 13.44180000000006
     },
-    "tags": ["bar", "cafe", "indoor", "good"]
+    "tags": ["bar", "cafe", "indoor", "good", "aure"]
   },
   {
     "title": "Ä",
@@ -418,7 +418,7 @@
       "lat": 52.485123,
       "lng": 13.436960999999997
     },
-    "tags": ["bar", "great", "indoor"]
+    "tags": ["bar", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "Hops & Barley",
@@ -426,7 +426,7 @@
       "lat": 52.508998,
       "lng": 13.460597000000007
     },
-    "tags": ["bar", "indoor", "good"]
+    "tags": ["bar", "indoor", "good", "aure"]
   },
   {
     "title": "Strandbar",
@@ -436,7 +436,7 @@
       "lat": 52.5224999,
       "lng": 13.39480530000003
     },
-    "tags": ["bar", "outdoor", "great"]
+    "tags": ["bar", "outdoor", "great", "aure"]
   },
   {
     "title": "Syndikat",
@@ -445,7 +445,7 @@
       "lat": 52.478203,
       "lng": 13.424036000000001
     },
-    "tags": ["bar", "indoor", "good"]
+    "tags": ["bar", "indoor", "good", "aure", "franzi"]
   },
   {
     "title": "Frollein Langner",
@@ -453,7 +453,7 @@
       "lat": 52.473839,
       "lng": 13.425185000000056
     },
-    "tags": ["bar", "cafe", "great", "indoor"]
+    "tags": ["bar", "cafe", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "San Remo",
@@ -461,7 +461,7 @@
       "lat": 52.500483,
       "lng": 13.444461000000048
     },
-    "tags": ["bar", "cafe", "great", "indoor", "outdoor"]
+    "tags": ["bar", "cafe", "great", "indoor", "outdoor", "aure"]
   },
   {
     "title": "Fette Ecke",
@@ -469,7 +469,7 @@
       "lat": 52.498976,
       "lng": 13.445527999999968
     },
-    "tags": ["bar", "great", "indoor", "outdoor"]
+    "tags": ["bar", "great", "indoor", "outdoor", "aure", "franzi"]
   },
   {
     "title": "Kauf Dich glücklich",
@@ -478,7 +478,7 @@
       "lat": 52.539459,
       "lng": 13.407347999999956
     },
-    "tags": ["cafe", "restaurant", "great", "indoor", "outdoor"]
+    "tags": ["cafe", "restaurant", "great", "indoor", "outdoor", "aure", "franzi"]
   },
   {
     "title": "Kattelbach",
@@ -487,7 +487,7 @@
       "lat": 52.49994,
       "lng": 13.432170000000042
     },
-    "tags": ["bar", "cafe", "indoor", "good"]
+    "tags": ["bar", "cafe", "indoor", "good", "aure"]
   },
   {
     "title": "SO36",
@@ -496,7 +496,7 @@
       "lat": 52.500402,
       "lng": 13.422158999999965
     },
-    "tags": ["bar", "indoor", "good"]
+    "tags": ["bar", "indoor", "good", "aure", "franzi"]
   },
   {
     "title": "Art und Weise",
@@ -504,7 +504,7 @@
       "lat": 52.472982,
       "lng": 13.425344999999993
     },
-    "tags": ["bar", "indoor", "good"]
+    "tags": ["bar", "indoor", "good", "aure", "franzi"]
   },
   {
     "title": "Kültürzeit",
@@ -512,7 +512,7 @@
       "lat": 52.508107,
       "lng": 13.455137000000036
     },
-    "tags": ["cafe", "indoor", "good"]
+    "tags": ["cafe", "indoor", "good", "aure"]
   },
   {
     "title": "BruchBerg",
@@ -521,7 +521,7 @@
       "lat": 52.4741649,
       "lng": 13.426326000000017
     },
-    "tags": ["bar", "indoor", "good"]
+    "tags": ["bar", "indoor", "good", "aure", "franzi"]
   },
   {
     "title": "Five Elephant",
@@ -529,7 +529,7 @@
       "lat": 52.49347,
       "lng": 13.438369999999964
     },
-    "tags": ["cafe", "great", "indoor"]
+    "tags": ["cafe", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "Trude Ruth und Goldammer",
@@ -537,7 +537,7 @@
       "lat": 52.481173,
       "lng": 13.427865999999995
     },
-    "tags": ["bar", "indoor", "good"]
+    "tags": ["bar", "indoor", "good", "aure", "franzi"]
   },
   {
     "title": "Teigwaren",
@@ -545,7 +545,7 @@
       "lat": 52.539462,
       "lng": 13.406757999999968
     },
-    "tags": ["cafe", "indoor", "good"]
+    "tags": ["cafe", "indoor", "good", "aure"]
   },
   {
     "title": "Deck5",
@@ -554,7 +554,7 @@
       "lat": 52.54966,
       "lng": 13.41520360000004
     },
-    "tags": ["bar", "cafe", "outdoor", "good"]
+    "tags": ["bar", "cafe", "outdoor", "good", "aure", "franzi"]
   },
   {
     "title": "Villa Neukölln",
@@ -562,7 +562,7 @@
       "lat": 52.482056,
       "lng": 13.425095000000056
     },
-    "tags": ["bar", "indoor", "good", "outdoor"]
+    "tags": ["bar", "indoor", "good", "outdoor", "aure", "franzi"]
   },
   {
     "title": "Barbie",
@@ -570,7 +570,7 @@
       "lat": 52.499086,
       "lng": 13.445509000000015
     },
-    "tags": ["bar", "indoor", "good", "outdoor"]
+    "tags": ["bar", "indoor", "good", "outdoor", "aure"]
   },
   {
     "title": "Club der Visionäre",
@@ -578,7 +578,7 @@
       "lat": 52.496783,
       "lng": 13.450459000000023
     },
-    "tags": ["bar", "outdoor", "great"]
+    "tags": ["bar", "outdoor", "great", "aure", "romu"]
   },
   {
     "title": "Tante Emma",
@@ -588,7 +588,7 @@
       "lat": 52.501524,
       "lng": 13.441528000000062
     },
-    "tags": ["cafe", "bar", "great", "indoor"]
+    "tags": ["cafe", "bar", "great", "indoor", "aure", "romu"]
   },
   {
     "title": "Bar Walther",
@@ -596,7 +596,7 @@
       "lat": 52.49886999999999,
       "lng": 13.441779999999996
     },
-    "tags": ["bar", "cafe", "indoor", "good"]
+    "tags": ["bar", "cafe", "indoor", "good", "aure"]
   },
   {
     "title": "Trödler Bar",
@@ -604,7 +604,7 @@
       "lat": 52.50093,
       "lng": 13.416429999999991
     },
-    "tags": ["bar", "great", "indoor"]
+    "tags": ["bar", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "Berliner Berg Brauerei",
@@ -612,7 +612,7 @@
       "lat": 52.4758709,
       "lng": 13.43280720000007
     },
-    "tags": ["bar", "indoor", "good"]
+    "tags": ["bar", "indoor", "good", "aure"]
   },
   {
     "title": "Ufer Pavillon",
@@ -620,7 +620,7 @@
       "lat": 52.4916784,
       "lng": 13.4353566
     },
-    "tags": ["bar", "cafe", "outdoor", "good"]
+    "tags": ["bar", "cafe", "outdoor", "good", "aure", "franzi"]
   },
   {
     "title": "nhow",
@@ -630,7 +630,7 @@
       "lat": 52.5011068,
       "lng": 13.450851000000057
     },
-    "tags": ["cafe", "indoor", "good"]
+    "tags": ["cafe", "indoor", "good", "aure", "romu"]
   },
   {
     "title": "Café Provinz",
@@ -639,7 +639,7 @@
       "lat": 52.490382,
       "lng": 13.449053000000049
     },
-    "tags": ["restaurant", "cafe", "great", "indoor", "outdoor"]
+    "tags": ["restaurant", "cafe", "great", "indoor", "outdoor", "aure"]
   },
   {
     "title": "White Trash",
@@ -648,7 +648,7 @@
       "lat": 52.496747,
       "lng": 13.451949000000013
     },
-    "tags": ["restaurant", "bar", "outdoor", "indoor", "good"]
+    "tags": ["restaurant", "bar", "outdoor", "indoor", "good", "aure"]
   },
   {
     "title": "Las Primas",
@@ -657,7 +657,7 @@
       "lat": 52.498326,
       "lng": 13.442286999999965
     },
-    "tags": ["restaurant", "bar", "great", "indoor", "outdoor"]
+    "tags": ["restaurant", "bar", "great", "indoor", "outdoor", "aure"]
   },
   {
     "title": "De Noantri",
@@ -666,7 +666,7 @@
       "lat": 52.498285,
       "lng": 13.435854999999947
     },
-    "tags": ["restaurant", "bar", "great", "indoor", "outdoor"]
+    "tags": ["restaurant", "bar", "great", "indoor", "outdoor", "aure", "franzi"]
   },
   {
     "title": "Engels",
@@ -674,7 +674,7 @@
       "lat": 52.476666,
       "lng": 13.419905999999969
     },
-    "tags": ["cafe", "restaurant", "great", "indoor"]
+    "tags": ["cafe", "restaurant", "great", "indoor", "aure"]
   },
   {
     "title": "Crêperie Manouche",
@@ -683,7 +683,7 @@
       "lat": 52.493688,
       "lng": 13.414964999999938
     },
-    "tags": ["restaurant", "bar", "great", "indoor", "outdoor"]
+    "tags": ["restaurant", "bar", "great", "indoor", "outdoor", "aure", "franzi"]
   },
   {
     "title": "Prater",
@@ -693,7 +693,7 @@
       "lat": 52.539744,
       "lng": 13.410143000000062
     },
-    "tags": ["restaurant", "bar", "cafe", "outdoor", "indoor", "good"]
+    "tags": ["restaurant", "bar", "cafe", "outdoor", "indoor", "good", "aure"]
   },
   {
     "title": "Café Futuro",
@@ -702,7 +702,7 @@
       "lat": 52.48788,
       "lng": 13.432310000000031
     },
-    "tags": ["cafe", "restaurant", "great", "indoor"]
+    "tags": ["cafe", "restaurant", "great", "indoor", "aure"]
   },
   {
     "title": "YOSOY",
@@ -711,7 +711,7 @@
       "lat": 52.524366,
       "lng": 13.40280800000005
     },
-    "tags": ["restaurant", "bar", "great", "indoor"]
+    "tags": ["restaurant", "bar", "great", "indoor", "aure"]
   },
   {
     "title": "Szimpla",
@@ -719,7 +719,7 @@
       "lat": 52.511181,
       "lng": 13.461207000000059
     },
-    "tags": ["brunch", "restaurant", "cafe", "great", "indoor"]
+    "tags": ["brunch", "restaurant", "cafe", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "Ankerklause",
@@ -727,7 +727,7 @@
       "lat": 52.495804,
       "lng": 13.420556000000035
     },
-    "tags": ["bar", "restaurant", "outdoor", "indoor", "good"]
+    "tags": ["bar", "restaurant", "outdoor", "indoor", "good", "aure", "franzi"]
   },
   {
     "title": "Rock'n'Roll Herberge",
@@ -736,7 +736,7 @@
       "lat": 52.501798,
       "lng": 13.431247999999982
     },
-    "tags": ["bar", "restaurant", "great", "indoor"]
+    "tags": ["bar", "restaurant", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "Markthalle Neun",
@@ -745,7 +745,7 @@
       "lat": 52.502169,
       "lng": 13.431753999999955
     },
-    "tags": ["bar", "restaurant", "great", "indoor"]
+    "tags": ["bar", "restaurant", "great", "indoor", "aure", "romu"]
   },
   {
     "title": "Turkish Market",
@@ -755,7 +755,7 @@
       "lat": 52.49514559999999,
       "lng": 13.423243800000023
     },
-    "tags": ["restaurant", "bar", "outdoor", "good"]
+    "tags": ["restaurant", "bar", "outdoor", "good", "aure", "franzi"]
   },
   {
     "title": "Eckbert Zwo",
@@ -764,7 +764,7 @@
       "lat": 52.49732,
       "lng": 13.43893000000003
     },
-    "tags": ["restaurant", "cafe", "great", "indoor"]
+    "tags": ["restaurant", "cafe", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "frank und frei",
@@ -773,7 +773,7 @@
       "lat": 52.510834,
       "lng": 13.417374999999993
     },
-    "tags": ["bar", "restaurant", "outdoor", "great"]
+    "tags": ["bar", "restaurant", "outdoor", "great", "aure", "franzi"]
   },
   {
     "title": "Beuster",
@@ -783,7 +783,7 @@
       "lat": 52.48597540000001,
       "lng": 13.435352200000011
     },
-    "tags": ["restaurant", "bar", "indoor", "good"]
+    "tags": ["restaurant", "bar", "indoor", "good", "aure", "franzi"]
   },
   {
     "title": "Zimt & Mehl",
@@ -793,7 +793,7 @@
       "lat": 52.490256,
       "lng": 13.456023
     },
-    "tags": ["restaurant", "great", "indoor", "outdoor"]
+    "tags": ["restaurant", "great", "indoor", "outdoor", "aure"]
   },
   {
     "title": "Salon Schmück",
@@ -801,7 +801,7 @@
       "lat": 52.50093,
       "lng": 13.439120000000003
     },
-    "tags": ["restaurant", "brunch", "cafe", "great", "indoor", "outdoor"]
+    "tags": ["restaurant", "brunch", "cafe", "great", "indoor", "outdoor", "aure", "franzi"]
   },
   {
     "title": "Amar",
@@ -810,7 +810,7 @@
       "lat": 52.499816,
       "lng": 13.443930000000023
     },
-    "tags": ["restaurant", "indoor", "good"]
+    "tags": ["restaurant", "indoor", "good", "aure"]
   },
   {
     "title": "BurgerSteig",
@@ -819,7 +819,7 @@
       "lat": 52.499649,
       "lng": 13.443606999999929
     },
-    "tags": ["restaurant", "indoor", "good"]
+    "tags": ["restaurant", "indoor", "good", "aure"]
   },
   {
     "title": "Basilikum",
@@ -828,7 +828,7 @@
       "lat": 52.4991592,
       "lng": 13.4427756
     },
-    "tags": ["restaurant", "outdoor", "great", "indoor"]
+    "tags": ["restaurant", "outdoor", "great", "indoor", "aure", "romu"]
   },
   {
     "title": "Maison Blanche",
@@ -836,7 +836,7 @@
       "lat": 52.490493,
       "lng": 13.410374000000047
     },
-    "tags": ["restaurant", "indoor", "good"]
+    "tags": ["restaurant", "indoor", "good", "aure", "franzi"]
   },
   {
     "title": "Il Casolare",
@@ -845,7 +845,7 @@
       "lat": 52.49488,
       "lng": 13.415666999999985
     },
-    "tags": ["restaurant", "great", "outdoor", "indoor"]
+    "tags": ["restaurant", "great", "outdoor", "indoor", "aure", "franzi"]
   },
   {
     "title": "Imren",
@@ -854,7 +854,7 @@
       "lat": 52.482104,
       "lng": 13.4338814
     },
-    "tags": ["restaurant", "great", "indoor"]
+    "tags": ["restaurant", "great", "indoor", "aure"]
   },
   {
     "title": "Aviatrix",
@@ -864,7 +864,7 @@
       "lat": 52.47706,
       "lng": 13.419589999999971
     },
-    "tags": ["restaurant", "outdoor", "great", "indoor"]
+    "tags": ["restaurant", "outdoor", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "Chay Village",
@@ -873,7 +873,7 @@
       "lat": 52.514022,
       "lng": 13.458811999999966
     },
-    "tags": ["restaurant", "great", "indoor"]
+    "tags": ["restaurant", "great", "indoor", "aure"]
   },
   {
     "title": "Schiller Burger",
@@ -881,7 +881,7 @@
       "lat": 52.477364,
       "lng": 13.423579000000018
     },
-    "tags": ["restaurant", "great", "indoor"]
+    "tags": ["restaurant", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "ROOTZ",
@@ -890,7 +890,7 @@
       "lat": 52.500851,
       "lng": 13.44025099999999
     },
-    "tags": ["restaurant", "outdoor", "indoor", "good"]
+    "tags": ["restaurant", "outdoor", "indoor", "good", "aure"]
   },
   {
     "title": "Burgermeister",
@@ -899,7 +899,7 @@
       "lat": 52.501099,
       "lng": 13.442522999999937
     },
-    "tags": ["restaurant", "outdoor", "good"]
+    "tags": ["restaurant", "outdoor", "good", "aure"]
   },
   {
     "title": "Ban Ban",
@@ -908,7 +908,7 @@
       "lat": 52.476025,
       "lng": 13.422793
     },
-    "tags": ["restaurant", "outdoor", "good"]
+    "tags": ["restaurant", "outdoor", "good", "aure", "franzi"]
   },
   {
     "title": "Weltrestaurant Markthalle",
@@ -917,7 +917,7 @@
       "lat": 52.502349,
       "lng": 13.430945000000065
     },
-    "tags": ["restaurant", "indoor", "good"]
+    "tags": ["restaurant", "indoor", "good", "aure"]
   },
   {
     "title": "Rebellion des Zimtsterns",
@@ -926,7 +926,7 @@
       "lat": 52.499886,
       "lng": 13.444496999999956
     },
-    "tags": ["restaurant", "great", "indoor", "outdoor"]
+    "tags": ["restaurant", "great", "indoor", "outdoor", "aure"]
   },
   {
     "title": "Major",
@@ -934,7 +934,7 @@
       "lat": 52.49121,
       "lng": 13.426027999999974
     },
-    "tags": ["restaurant", "great", "indoor", "outdoor"]
+    "tags": ["restaurant", "great", "indoor", "outdoor", "aure", "franzi"]
   },
   {
     "title": "Rundstück",
@@ -943,7 +943,7 @@
       "lat": 52.473983,
       "lng": 13.425381000000016
     },
-    "tags": ["restaurant", "indoor", "good"]
+    "tags": ["restaurant", "indoor", "good", "aure"]
   },
   {
     "title": "Zio Felix",
@@ -952,7 +952,7 @@
       "lat": 52.473698,
       "lng": 13.42358200000001
     },
-    "tags": ["restaurant", "great", "indoor", "outdoor"]
+    "tags": ["restaurant", "great", "indoor", "outdoor", "aure", "franzi", "romu"]
   },
   {
     "title": "Pagode",
@@ -962,7 +962,7 @@
       "lat": 52.489306,
       "lng": 13.393342999999959
     },
-    "tags": ["restaurant", "indoor", "good"]
+    "tags": ["restaurant", "indoor", "good", "aure"]
   },
   {
     "title": "Nour",
@@ -971,7 +971,7 @@
       "lat": 52.49848480000001,
       "lng": 13.4425771
     },
-    "tags": ["restaurant", "indoor", "good"]
+    "tags": ["restaurant", "indoor", "good", "aure", "romu"]
   },
   {
     "title": "Morgenland",
@@ -980,7 +980,7 @@
       "lat": 52.498902,
       "lng": 13.425539999999957
     },
-    "tags": ["brunch", "restaurant", "great", "indoor"]
+    "tags": ["brunch", "restaurant", "great", "indoor", "aure"]
   },
   {
     "title": "ALASKA",
@@ -989,7 +989,7 @@
       "lat": 52.48293000000001,
       "lng": 13.428350000000023
     },
-    "tags": ["bar", "restaurant", "great", "indoor"]
+    "tags": ["bar", "restaurant", "great", "indoor", "aure"]
   },
   {
     "title": "La Focacceria",
@@ -998,7 +998,7 @@
       "lat": 52.5338,
       "lng": 13.403440000000046
     },
-    "tags": ["restaurant", "great", "indoor"]
+    "tags": ["restaurant", "great", "indoor", "aure"]
   },
   {
     "title": "The Bird",
@@ -1007,7 +1007,7 @@
       "lat": 52.4940301,
       "lng": 13.4217739
     },
-    "tags": ["restaurant", "indoor", "good"]
+    "tags": ["restaurant", "indoor", "good", "aure"]
   },
   {
     "title": "Zimt & Mehl",
@@ -1016,7 +1016,7 @@
       "lat": 52.48476,
       "lng": 13.443913000000066
     },
-    "tags": ["restaurant", "great", "outdoor", "indoor"]
+    "tags": ["restaurant", "great", "outdoor", "indoor", "aure"]
   },
   {
     "title": "MAMA KALO",
@@ -1024,7 +1024,7 @@
       "lat": 52.476755,
       "lng": 13.420650000000025
     },
-    "tags": ["restaurant", "indoor", "outdoor", "good"]
+    "tags": ["restaurant", "indoor", "outdoor", "good", "aure", "franzi"]
   },
   {
     "title": "Bastard",
@@ -1032,7 +1032,7 @@
       "lat": 52.495212,
       "lng": 13.431982999999946
     },
-    "tags": ["brunch", "outdoor", "good"]
+    "tags": ["brunch", "outdoor", "good", "aure", "franzi"]
   },
   {
     "title": "Zazza",
@@ -1041,7 +1041,7 @@
       "lat": 52.4999919,
       "lng": 13.444299100000002
     },
-    "tags": ["restaurant", "brunch", "great", "outdoor", "indoor"]
+    "tags": ["restaurant", "brunch", "great", "outdoor", "indoor", "aure"]
   },
   {
     "title": "Stiege",
@@ -1049,7 +1049,7 @@
       "lat": 52.503018,
       "lng": 13.413626000000022
     },
-    "tags": ["restaurant", "bar", "indoor", "good"]
+    "tags": ["restaurant", "bar", "indoor", "good", "aure"]
   },
   {
     "title": "from Hanoi with Love",
@@ -1058,7 +1058,7 @@
       "lat": 52.471495000000004,
       "lng": 13.42970600000001
     },
-    "tags": ["restaurant", "great", "indoor"]
+    "tags": ["restaurant", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "GORDON",
@@ -1067,7 +1067,7 @@
       "lat": 52.47527,
       "lng": 13.423880000000054
     },
-    "tags": ["restaurant", "great", "outdoor", "indoor"]
+    "tags": ["restaurant", "great", "outdoor", "indoor", "aure", "franzi"]
   },
   {
     "title": "Devil's Kitchen",
@@ -1076,7 +1076,7 @@
       "lat": 52.493665,
       "lng": 13.418125000000032
     },
-    "tags": ["restaurant", "bar", "outdoor", "great"]
+    "tags": ["restaurant", "bar", "outdoor", "great", "aure", "franzi"]
   },
   {
     "title": "Varadinek",
@@ -1084,7 +1084,7 @@
       "lat": 52.497490000000006,
       "lng": 13.44091000000003
     },
-    "tags": ["brunch", "great", "indoor"]
+    "tags": ["brunch", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "Pig & Tiger",
@@ -1093,7 +1093,7 @@
       "lat": 52.475758,
       "lng": 13.422885
     },
-    "tags": ["restaurant", "great", "indoor"]
+    "tags": ["restaurant", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "EHAB",
@@ -1103,7 +1103,7 @@
       "lat": 52.49875,
       "lng": 13.44583
     },
-    "tags": ["restaurant", "outdoor", "indoor", "good"]
+    "tags": ["restaurant", "outdoor", "indoor", "good", "aure"]
   },
   {
     "title": "Delikato",
@@ -1112,7 +1112,7 @@
       "lat": 52.500102,
       "lng": 13.444148000000041
     },
-    "tags": ["restaurant", "great", "indoor", "outdoor"]
+    "tags": ["restaurant", "great", "indoor", "outdoor", "aure"]
   },
   {
     "title": "helloGoodPie",
@@ -1121,7 +1121,7 @@
       "lat": 52.4990337,
       "lng": 13.44249000000002
     },
-    "tags": ["restaurant", "outdoor", "good"]
+    "tags": ["restaurant", "outdoor", "good", "aure", "romu"]
   },
   {
     "title": "Shaan",
@@ -1130,7 +1130,7 @@
       "lat": 52.49955,
       "lng": 13.443669999999997
     },
-    "tags": ["restaurant", "great", "indoor"]
+    "tags": ["restaurant", "great", "indoor", "aure", "romu"]
   },
   {
     "title": "Edelweiss",
@@ -1139,7 +1139,7 @@
       "lat": 52.4982783,
       "lng": 13.434026300000028
     },
-    "tags": ["restaurant", "great", "indoor", "outdoor"]
+    "tags": ["restaurant", "great", "indoor", "outdoor", "aure", "franzi"]
   },
   {
     "title": "Gingi Sushi",
@@ -1148,7 +1148,7 @@
       "lat": 52.53659959999999,
       "lng": 13.420389699999987
     },
-    "tags": ["restaurant", "indoor", "good"]
+    "tags": ["restaurant", "indoor", "good", "aure", "franzi"]
   },
   {
     "title": "Die Turnhalle",
@@ -1157,7 +1157,7 @@
       "lat": 52.5070324,
       "lng": 13.464931500000034
     },
-    "tags": ["restaurant", "great", "indoor"]
+    "tags": ["restaurant", "great", "indoor", "aure"]
   },
   {
     "title": "Lido",
@@ -1167,7 +1167,7 @@
       "lat": 52.499123,
       "lng": 13.44513900000004
     },
-    "tags": ["concert", "great", "indoor"]
+    "tags": ["concert", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "Auster-Club",
@@ -1176,7 +1176,7 @@
       "lat": 52.502468,
       "lng": 13.431060000000002
     },
-    "tags": ["concert", "indoor", "good"]
+    "tags": ["concert", "indoor", "good", "aure", "franzi"]
   },
   {
     "title": "Badeparadies BLUB",
@@ -1185,7 +1185,7 @@
       "lat": 52.45797399999999,
       "lng": 13.44420260000004
     },
-    "tags": ["sightseeing", "outdoor", "good"]
+    "tags": ["sightseeing", "outdoor", "good", "aure", "franzi"]
   },
   {
     "title": "Tempelhof",
@@ -1194,7 +1194,7 @@
       "lat": 52.47786199999999,
       "lng": 13.396226699999943
     },
-    "tags": ["sightseeing", "outdoor", "great"]
+    "tags": ["sightseeing", "outdoor", "great", "aure", "franzi"]
   },
   {
     "title": "Mauerpark",
@@ -1204,7 +1204,7 @@
       "lat": 52.5424,
       "lng": 13.40335200000004
     },
-    "tags": ["sightseeing", "bar", "restaurant", "outdoor", "great"]
+    "tags": ["sightseeing", "bar", "restaurant", "outdoor", "great", "aure", "franzi", "romu"]
   },
   {
     "title": "East Side Gallery",
@@ -1214,7 +1214,7 @@
       "lat": 52.505508,
       "lng": 13.439313599999991
     },
-    "tags": ["sightseeing", "outdoor", "good"]
+    "tags": ["sightseeing", "outdoor", "good", "aure"]
   },
   {
     "title": "Teufelsberg",
@@ -1223,7 +1223,7 @@
       "lat": 52.4972222,
       "lng": 13.241111100000014
     },
-    "tags": ["sightseeing", "outdoor", "great"]
+    "tags": ["sightseeing", "outdoor", "great", "aure", "franzi"]
   },
   {
     "title": "Neue City Bowling",
@@ -1231,7 +1231,7 @@
       "lat": 52.4867923,
       "lng": 13.4214029
     },
-    "tags": ["bar", "indoor", "good"]
+    "tags": ["bar", "indoor", "good", "aure"]
   },
   {
     "title": "Fes Turkish BBQ",
@@ -1239,7 +1239,7 @@
       "lat": 52.489273,
       "lng": 13.408633
     },
-    "tags": ["restaurant", "great", "indoor", "outdoor"]
+    "tags": ["restaurant", "great", "indoor", "outdoor", "aure"]
   },
   {
     "title": "Preussische Spirituosen Manufaktur",
@@ -1248,7 +1248,7 @@
       "lat": 52.545375,
       "lng": 13.343464
     },
-    "tags": ["sightseeing", "great", "indoor"]
+    "tags": ["sightseeing", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "FilmBar",
@@ -1257,7 +1257,7 @@
       "lat": 52.480745,
       "lng": 13.431741
     },
-    "tags": ["bar", "cafe", "great", "indoor"]
+    "tags": ["bar", "cafe", "great", "indoor", "aure"]
   },
   {
     "title": "Baraka",
@@ -1266,7 +1266,7 @@
       "lat": 52.499730,
       "lng": 13.429981
     },
-    "tags": ["restaurant", "great", "indoor"]
+    "tags": ["restaurant", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "Ein Laden",
@@ -1274,7 +1274,7 @@
       "lat": 52.488236,
       "lng": 13.429820
     },
-    "tags": ["restaurant", "bar", "great", "indoor"]
+    "tags": ["restaurant", "bar", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "Pazzi X Pizza",
@@ -1282,7 +1282,7 @@
       "lat": 52.477330,
       "lng": 13.423246
     },
-    "tags": ["restaurant", "good", "indoor"]
+    "tags": ["restaurant", "good", "indoor", "aure", "franzi"]
   },
   {
     "title": "Nest",
@@ -1290,7 +1290,7 @@
       "lat": 52.497119,
       "lng": 13.439089
     },
-    "tags": ["bar", "brunch", "restaurant", "great", "indoor", "outdoor"]
+    "tags": ["bar", "brunch", "restaurant", "great", "indoor", "outdoor", "aure", "franzi"]
   },
   {
     "title": "Tempo-Box",
@@ -1299,7 +1299,7 @@
       "lat": 52.509860,
       "lng": 13.455870
     },
-    "tags": ["restaurant", "bar", "good", "indoor", "outdoor"]
+    "tags": ["restaurant", "bar", "good", "indoor", "outdoor", "aure"]
   },
   {
     "title": "Myxa",
@@ -1307,7 +1307,7 @@
       "lat": 52.490273,
       "lng": 13.426710
     },
-    "tags": ["restaurant", "brunch", "great", "indoor"]
+    "tags": ["restaurant", "brunch", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "Fuchsbau",
@@ -1315,7 +1315,7 @@
       "lat": 52.495659,
       "lng": 13.419383
     },
-    "tags": ["brunch", "todiscover", "indoor"]
+    "tags": ["brunch", "franzi", "good", "indoor"]
   },
   {
     "title": "Brezel Company",
@@ -1323,7 +1323,7 @@
       "lat": 52.490111,
       "lng": 13.427177
     },
-    "tags": ["brunch", "todiscover", "indoor"]
+    "tags": ["brunch", "franzi", "good", "indoor"]
   },
   {
     "title": "Fahimi Bar",
@@ -1332,7 +1332,7 @@
       "lat": 52.499351,
       "lng": 13.419728
     },
-    "tags": ["bar", "todiscover", "indoor"]
+    "tags": ["bar", "other", "good", "indoor"]
   },
   {
     "title": "Chez Dang",
@@ -1341,7 +1341,7 @@
       "lat": 52.493127,
       "lng": 13.428352
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "other", "good", "indoor"]
   },
   {
     "title": "La Femme",
@@ -1350,7 +1350,7 @@
       "lat": 52.490960,
       "lng": 13.423751
     },
-    "tags": ["brunch", "todiscover", "indoor"]
+    "tags": ["brunch", "franzi", "good", "indoor"]
   },
   {
     "title": "Burrito Baby",
@@ -1358,7 +1358,7 @@
       "lat": 52.491289,
       "lng": 13.428281
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "romu", "good", "indoor"]
   },
   {
     "title": "Oui, madame",
@@ -1366,7 +1366,7 @@
       "lat": 52.526744,
       "lng": 13.409665
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "franzi", "good", "indoor"]
   },
   {
     "title": "I Golosi Briganti",
@@ -1375,7 +1375,7 @@
       "lat": 52.497869,
       "lng": 13.441885
     },
-    "tags": ["restaurant", "good", "indoor"]
+    "tags": ["restaurant", "good", "indoor", "aure", "franzi"]
   },
   {
     "title": "Hopfenreich",
@@ -1383,7 +1383,7 @@
       "lat": 52.499474,
       "lng": 13.439258
     },
-    "tags": ["bar", "todiscover", "indoor"]
+    "tags": ["bar", "other", "good", "indoor"]
   },
   {
     "title": "Bosco",
@@ -1391,7 +1391,7 @@
       "lat": 52.499683,
       "lng": 13.438894
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "other", "good", "indoor"]
   },
   {
     "title": "Transit",
@@ -1400,7 +1400,7 @@
       "lat": 52.505982,
       "lng": 13.465720
     },
-    "tags": ["restaurant", "todiscover", "indoor", "outdoor"]
+    "tags": ["restaurant", "other", "good", "indoor", "outdoor"]
   },
   {
     "title": "District Môt",
@@ -1409,7 +1409,7 @@
       "lat": 52.527721,
       "lng": 13.403422
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "other", "good", "indoor"]
   },
   {
     "title": "Lavanderia Vecchia",
@@ -1418,7 +1418,7 @@
       "lat": 52.481446,
       "lng": 13.426393
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "other", "good", "indoor"]
   },
   {
     "title": "Momos",
@@ -1427,7 +1427,7 @@
       "lat": 52.531075,
       "lng": 13.410100
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "other", "good", "indoor"]
   },
   {
     "title": "Ohlala",
@@ -1436,7 +1436,7 @@
       "lat": 52.512756,
       "lng": 13.462281
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "other", "good", "indoor"]
   },
   {
     "title": "Smart Deli",
@@ -1445,7 +1445,7 @@
       "lat": 52.527870,
       "lng": 13.386569
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "other", "good", "indoor"]
   },
   {
     "title": "Bakery",
@@ -1454,7 +1454,7 @@
       "lat": 52.498603,
       "lng": 13.442243
     },
-    "tags": ["brunch", "todiscover", "indoor"]
+    "tags": ["brunch", "other", "good", "indoor"]
   },
   {
     "title": "Gärten der Welt",
@@ -1462,7 +1462,7 @@
       "lat": 52.537697,
       "lng": 13.574696
     },
-    "tags": ["sightseeing", "todiscover", "outdoor"]
+    "tags": ["sightseeing", "outdoor", "other", "good"]
   },
   {
     "title": "Körnerpark",
@@ -1470,7 +1470,7 @@
       "lat": 52.471357,
       "lng": 13.437864
     },
-    "tags": ["sightseeing", "todiscover", "outdoor"]
+    "tags": ["sightseeing", "outdoor", "franzi", "good"]
   },
   {
     "title": "Führungen Tempelhof",
@@ -1479,7 +1479,7 @@
       "lat": 52.480945,
       "lng": 13.388310
     },
-    "tags": ["sightseeing", "todiscover", "indoor"]
+    "tags": ["sightseeing", "franzi", "good", "indoor"]
   },
   {
     "title": "Monkey Bar",
@@ -1488,7 +1488,7 @@
       "lat": 52.505671,
       "lng": 13.337896
     },
-    "tags": ["bar", "cafe", "great", "indoor", "outdoor"]
+    "tags": ["bar", "cafe", "great", "indoor", "outdoor", "aure", "romu"]
   },
   {
     "title": "Café Eliza",
@@ -1496,7 +1496,7 @@
       "lat": 52.499039,
       "lng": 13.438280
     },
-    "tags": ["cafe", "todiscover", "indoor"]
+    "tags": ["cafe", "other", "good", "indoor"]
   },
   {
     "title": "Kaffee Burger",
@@ -1504,7 +1504,7 @@
       "lat": 52.528694,
       "lng": 13.408573
     },
-    "tags": ["club", "todiscover", "indoor"]
+    "tags": ["club", "other", "good", "indoor"]
   },
   {
     "title": "Fos Bar",
@@ -1513,7 +1513,7 @@
       "lat": 52.551847,
       "lng": 13.386689
     },
-    "tags": ["bar", "todiscover", "indoor"]
+    "tags": ["bar", "other", "good", "indoor"]
   },
   {
     "title": "Anita Berber",
@@ -1521,7 +1521,7 @@
       "lat": 52.545329,
       "lng": 13.373590
     },
-    "tags": ["club", "bar", "todiscover", "indoor"]
+    "tags": ["club", "bar", "franzi", "good", "indoor"]
   },
   {
     "title": "Bite Club",
@@ -1530,7 +1530,7 @@
       "lat": 52.497048,
       "lng": 13.452544
     },
-    "tags": ["restaurant", "todiscover", "outdoor"]
+    "tags": ["restaurant", "outdoor", "franzi", "good"]
   },
   {
     "title": "Thai Park",
@@ -1539,7 +1539,7 @@
       "lat": 52.492815,
       "lng": 13.313199
     },
-    "tags": ["restaurant", "todiscover", "outdoor"]
+    "tags": ["restaurant", "outdoor", "other", "good"]
   },
   {
     "title": "House of small wonder",
@@ -1548,7 +1548,7 @@
       "lat": 52.524498,
       "lng": 13.389127
     },
-    "tags": ["brunch", "todiscover", "indoor"]
+    "tags": ["brunch", "other", "good", "indoor"]
   },
   {
     "title": "Prince",
@@ -1557,7 +1557,7 @@
       "lat": 52.524460,
       "lng": 13.409620
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "other", "good", "indoor"]
   },
   {
     "title": "Sky.Bar",
@@ -1567,7 +1567,7 @@
       "lat": 52.528440,
       "lng": 13.457071
     },
-    "tags": ["bar", "todiscover", "indoor"]
+    "tags": ["bar", "other", "good", "indoor"]
   },
   {
     "title": "Luzia",
@@ -1576,7 +1576,7 @@
       "lat": 52.501738,
       "lng": 13.418323
     },
-    "tags": ["cafe", "todiscover", "indoor"]
+    "tags": ["cafe", "other", "good", "indoor"]
   },
   {
     "title": "Impala",
@@ -1584,7 +1584,7 @@
       "lat": 52.532552,
       "lng": 13.412197
     },
-    "tags": ["cafe", "todiscover", "indoor"]
+    "tags": ["cafe", "other", "good", "indoor"]
   },
   {
     "title": "Berliner Unterwelten",
@@ -1593,7 +1593,7 @@
       "lat": 52.547824,
       "lng": 13.389253
     },
-    "tags": ["sightseeing", "great", "indoor"]
+    "tags": ["sightseeing", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "Cassiopeia",
@@ -1602,7 +1602,7 @@
       "lat": 52.507156,
       "lng": 13.454700
     },
-    "tags": ["club", "bar", "todiscover", "indoor", "outdoor"]
+    "tags": ["club", "bar", "other", "good", "indoor", "outdoor"]
   },
   {
     "title": "Hotel-Bar",
@@ -1610,7 +1610,7 @@
       "lat": 52.496536,
       "lng": 13.420449
     },
-    "tags": ["bar", "todiscover", "indoor"]
+    "tags": ["bar", "other", "good", "indoor"]
   },
   {
     "title": "Max und Moritz",
@@ -1618,7 +1618,7 @@
       "lat": 52.502589,
       "lng": 13.414033
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "franzi", "indoor", "good"]
   },
   {
     "title": "Bikini",
@@ -1628,7 +1628,7 @@
       "lat": 52.505499,
       "lng": 13.335814
     },
-    "tags": ["bar", "todiscover", "indoor"]
+    "tags": ["bar", "other", "indoor", "good"]
   },
   {
     "title": "Sushi Cube",
@@ -1636,7 +1636,7 @@
       "lat": 52.490824,
       "lng": 13.393879
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "other", "indoor", "good"]
   },
   {
     "title": "Mittendrin",
@@ -1645,7 +1645,7 @@
       "lat": 52.525711,
       "lng": 13.400931
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "other", "indoor", "good"]
   },
   {
     "title": "Solo pizza e pasta",
@@ -1653,7 +1653,7 @@
       "lat": 52.501948,
       "lng": 13.417457
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "other", "indoor", "good"]
   },
   {
     "title": "Defne",
@@ -1661,7 +1661,7 @@
       "lat": 52.495371,
       "lng": 13.417724
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "other", "indoor", "good"]
   },
   {
     "title": "3 Schwestern",
@@ -1670,7 +1670,7 @@
       "lat": 52.503680,
       "lng": 13.423414
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "other", "indoor", "good"]
   },
   {
     "title": "Cantina Universale",
@@ -1679,7 +1679,7 @@
       "lat": 52.501978,
       "lng": 13.447523
     },
-    "tags": ["restaurant", "cafe", "good", "indoor", "outdoor"]
+    "tags": ["restaurant", "cafe", "good", "indoor", "outdoor", "aure", "romu"]
   },
   {
     "title": "Green Bamboo",
@@ -1688,7 +1688,7 @@
       "lat": 52.499692,
       "lng": 13.443264
     },
-    "tags": ["restaurant", "good", "indoor"]
+    "tags": ["restaurant", "good", "indoor", "aure"]
   },
   {
     "title": "Buddha's Kitchen",
@@ -1697,7 +1697,7 @@
       "lat": 52.499392,
       "lng": 13.443434
     },
-    "tags": ["restaurant", "good", "indoor", "outdoor"]
+    "tags": ["restaurant", "good", "indoor", "outdoor", "aure"]
   },
   {
     "title": "Balé",
@@ -1706,7 +1706,7 @@
       "lat": 52.499456,
       "lng": 13.445441
     },
-    "tags": ["restaurant", "good", "indoor", "outdoor"]
+    "tags": ["restaurant", "good", "indoor", "outdoor", "aure"]
   },
   {
     "title": "Lisboa",
@@ -1715,7 +1715,7 @@
       "lat": 52.510310,
       "lng": 13.459106
     },
-    "tags": ["restaurant", "cafe", "bar", "todiscover", "indoor"]
+    "tags": ["restaurant", "cafe", "bar", "other", "indoor", "good"]
   },
   {
     "title": "Badehaus Szimpla",
@@ -1723,7 +1723,7 @@
       "lat": 52.507587,
       "lng": 13.455140
     },
-    "tags": ["bar", "todiscover", "indoor"]
+    "tags": ["bar", "other", "indoor", "good"]
   },
   {
     "title": "PANKE",
@@ -1732,7 +1732,7 @@
       "lat": 52.544301,
       "lng": 13.372490
     },
-    "tags": ["club", "bar", "todiscover", "indoor", "outdoor"]
+    "tags": ["club", "bar", "franzi", "indoor", "outdoor", "good"]
   },
   {
     "title": "Nudelbude",
@@ -1741,7 +1741,7 @@
       "lat": 52.484369,
       "lng": 13.432521
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "other", "indoor", "good"]
   },
   {
     "title": "Prachtwerk",
@@ -1749,7 +1749,7 @@
       "lat": 52.479055,
       "lng": 13.438738
     },
-    "tags": ["cafe", "bar", "todiscover", "indoor"]
+    "tags": ["cafe", "bar", "other", "indoor", "good"]
   },
   {
     "title": "Bitte",
@@ -1757,7 +1757,7 @@
       "lat": 52.494109,
       "lng": 13.437718
     },
-    "tags": ["cafe", "todiscover", "indoor", "outdoor"]
+    "tags": ["cafe", "other", "indoor", "outdoor", "good"]
   },
   {
     "title": "New Deli Yoga",
@@ -1766,7 +1766,7 @@
       "lat": 52.498729,
       "lng": 13.442774
     },
-    "tags": ["brunch", "cafe", "restaurant", "good", "indoor"]
+    "tags": ["brunch", "cafe", "restaurant", "good", "indoor", "aure"]
   },
   {
     "title": "Picnic",
@@ -1776,7 +1776,7 @@
       "lat": 52.470714,
       "lng": 13.419397
     },
-    "tags": ["bar", "outdoor", "good"]
+    "tags": ["bar", "outdoor", "good", "aure"]
   },
   {
     "title": "Tire Bouchon",
@@ -1785,7 +1785,7 @@
       "lat": 52.491540,
       "lng": 13.419811
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "other", "indoor", "good"]
   },
   {
     "title": "R",
@@ -1793,7 +1793,7 @@
       "lat": 52.476494,
       "lng": 13.419022
     },
-    "tags": ["restaurant", "cafe", "good", "indoor", "outdoor"]
+    "tags": ["restaurant", "cafe", "good", "indoor", "outdoor", "aure", "franzi"]
   },
   {
     "title": "Caramina",
@@ -1802,7 +1802,7 @@
       "lat": 52.477068,
       "lng": 13.420964
     },
-    "tags": ["restaurant", "cafe", "great", "indoor", "outdoor"]
+    "tags": ["restaurant", "cafe", "great", "indoor", "outdoor", "aure"]
   },
   {
     "title": "Soya",
@@ -1811,7 +1811,7 @@
       "lat": 52.498585,
       "lng": 13.442660
     },
-    "tags": ["cafe", "restaurant", "todiscover", "indoor"]
+    "tags": ["cafe", "restaurant", "romu", "indoor", "great"]
   },
   {
     "title": "Freischwimmer",
@@ -1819,7 +1819,7 @@
       "lat": 52.497344,
       "lng": 13.450786
     },
-    "tags": ["restaurant", "outdoor", "great"]
+    "tags": ["restaurant", "outdoor", "great", "aure"]
   },
   {
     "title": "Damensalon",
@@ -1827,7 +1827,7 @@
       "lat": 52.490998,
       "lng": 13.429440
     },
-    "tags": ["bar", "todiscover", "indoor"]
+    "tags": ["bar", "other", "indoor", "good"]
   },
   {
     "title": "Konrad Tönz",
@@ -1835,7 +1835,7 @@
       "lat": 52.497539,
       "lng": 13.441499
     },
-    "tags": ["bar", "todiscover", "indoor"]
+    "tags": ["bar", "other", "indoor", "good"]
   },
   {
     "title": "Tangs",
@@ -1844,7 +1844,7 @@
       "lat": 52.492520,
       "lng": 13.416114
     },
-    "tags": ["restaurant", "todiscover", "indoor"]
+    "tags": ["restaurant", "other", "indoor", "good"]
   },
   {
     "title": "Kaffee am Meer",
@@ -1852,7 +1852,7 @@
       "lat": 52.489636,
       "lng": 13.391450
     },
-    "tags": ["cafe", "good", "indoor", "outdoor"]
+    "tags": ["cafe", "good", "indoor", "outdoor", "aure"]
   },
   {
     "title": "Hofbräu",
@@ -1861,7 +1861,7 @@
       "lat": 52.524560,
       "lng": 13.413968
     },
-    "tags": ["bar", "restaurant", "todiscover", "indoor"]
+    "tags": ["bar", "restaurant", "other", "indoor", "good"]
   },
   {
     "title": "Golgatha",
@@ -1870,6 +1870,6 @@
       "lat": 52.486700,
       "lng": 13.378580
     },
-    "tags": ["bar", "restaurant", "outdoor", "indoor", "good"]
+    "tags": ["bar", "restaurant", "outdoor", "indoor", "good", "aure"]
   }
 ]
