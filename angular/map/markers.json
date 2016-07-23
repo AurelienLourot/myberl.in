@@ -1880,5 +1880,14 @@
       "lng": 13.411064
     },
     "tags": ["bar", "cafe", "restaurant", "outdoor", "great", "aure", "franzi"]
+  },
+  {
+    "title": "Arena",
+    "place_id": "ChIJ5QIoVFROqEcRcGmvtcH0dxI",
+    "position": {
+      "lat": 52.497137,
+      "lng": 13.453205
+    },
+    "tags": ["club", "great", "indoor", "aure"]
   }
 ]
