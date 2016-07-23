@@ -1871,5 +1871,14 @@
       "lng": 13.378580
     },
     "tags": ["bar", "restaurant", "outdoor", "indoor", "good", "aure"]
+  },
+  {
+    "title": "Prinzessinnengärten",
+    "comment": "Alternative biergarten",
+    "position": {
+      "lat": 52.503109,
+      "lng": 13.411064
+    },
+    "tags": ["bar", "cafe", "restaurant", "outdoor", "great", "aure", "franzi"]
   }
 ]
