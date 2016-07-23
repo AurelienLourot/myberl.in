@@ -29,6 +29,7 @@ module.exports = function(config) {
       'thirdparty/require.js',
       'thirdparty/jquery-popup-overlay-1.7.11/jquery.popupoverlay.js',
       'thirdparty/angularjs-1.4.4/angular.min.js',
+      'thirdparty/angularjs-1.4.4/angular-animate.min.js',
       'http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-mocks.js',
 
       // The order matters, as mocked angular modules can't be unmocked afterwards. Thus when a test
