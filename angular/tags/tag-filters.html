@@ -1,9 +1,9 @@
 <div class="container-fluid">
   <div class="col-lg-7 container-fluid">
     <div class="col-sm-6 col-md-4" data-ng-repeat="group in tags.groups">
-      <div class="well" data-ng-hide="filters.areAllHidden(group.getChildren())">
+      <div class="well hidable" data-ng-hide="filters.areAllHidden(group.getChildren())">
         <table class="filter-group filter-control">
-          <tr data-ng-repeat="tag in group" data-ng-show="filters.states[tag.name].visible">
+          <tr class="hidable" data-ng-repeat="tag in group" data-ng-show="filters.states[tag.name].visible">
             <td>#{{ tag.name }}</td>
             <td data-ng-bind-html="tag.desc | rawHtml"></td>
             <td><div class="ui fitted toggle checkbox">
@@ -15,14 +15,12 @@
         </table>
       </div>
     </div>
-    <div data-ng-show="filters.areSomeHidden()">
-      <div class="hidden-sm clearfix"></div>
-      <div class="col-sm-6 col-md-4 more-button">
-        <a href="" class="fa-stack fa-lg filter-control" data-ng-click="filters.makeAllVisible()">
-          <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-          <i class="fa fa-ellipsis-h fa-stack-1x"></i>
-        </a>
-      </div>
+    <div class="hidden-sm clearfix"></div>
+    <div class="col-sm-6 col-md-4 more-button hidable" data-ng-show="filters.areSomeHidden()">
+      <a href="" class="fa-stack fa-lg filter-control" data-ng-click="filters.makeAllVisible()">
+        <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+        <i class="fa fa-ellipsis-h fa-stack-1x"></i>
+      </a>
     </div>
   </div>
 </div>
