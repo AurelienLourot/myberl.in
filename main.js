@@ -66,7 +66,7 @@ Promise.all([loadAngularApp, new Promise(initJQueryPopupOverlays)]).then(clearSt
 
 // Collapse navbar when clicking everywhere but on the filters:
 $('body').on('click', null, null, function(e) {
-  if ($(e.target).closest('.filter-group').length == 0) {
+  if ($(e.target).closest('.filter-control').length == 0) {
     $('#navbar').collapse('hide');
   }
 });

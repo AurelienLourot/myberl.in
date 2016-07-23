@@ -49,6 +49,10 @@ a:focus {
   margin-right: auto;
 }
 
+.more-button {
+  text-align: center;
+}
+
 .github {
   color: #9d9d9d; /*FIXME: use bootstrap's style*/
 }

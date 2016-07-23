@@ -35,8 +35,6 @@ define(function() {
   });
 
   app.controller('tagsCtrl', function($http, $scope) {
-    $scope.states = {};
-
     var controller = this;
     controller.groups = [];
     var tagDescriptors = requirejs.toUrl('angular/tags/tags.json');
@@ -54,10 +52,26 @@ define(function() {
         }
       }
 
-      controller.groups = data;
-      if (!app.tagFilters) {
-        app.tagFilters = new TagFilters(data, $scope.states);
+      // Add group utility function:
+      for (var i = 0; i < data.length; ++i) {
+        var group = data[i];
+
+        // Returns the tag keys belonging to this group:
+        group.getChildren = function() {
+          var result = [];
+          for (var j = 0; j < this.length; ++j) {
+            result.push(this[j].name);
+          }
+          return result;
+        }
       }
+
+      controller.groups = data;
+
+      if (!app.tagFilters) {
+        app.tagFilters = new TagFilters(data);
+      }
+      $scope.filters = app.tagFilters;
     });
   });
 
@@ -85,7 +99,7 @@ define(function() {
                 // Workaround for https://github.com/Semantic-Org/Semantic-UI/issues/1202 :
                 var inputElm = $(this);
                 var inputElmName = inputElm.attr('name');
-                scope.$apply(scope.states[inputElmName] = inputElm.is(':checked'));
+                scope.$apply(scope.filters.states[inputElmName].selected = inputElm.is(':checked'));
                 dbg_checkboxChanged(inputElmName);
 
                 $timeout(function () { // necessary on Safari and Android's browser, so Angular
@@ -107,10 +121,8 @@ define(function() {
   }
 
   var TagFilters = (function() {
-    // tagDescriptors: tag descriptors organized in groups, as in tagDescriptors.
-    // states: empty object. A boolean property for each tag will be created, serving as 2-way bound
-    //         model.
-    var TagFilters = function(tagDescriptors, states) {
+    // tagDescriptors: tag descriptors organized in groups, as in tags.json.
+    var TagFilters = function(tagDescriptors) {
 
       // Returns true if the provided set of tags matches the current filters.
       this.areMatching = function(tagKeys) {
@@ -123,7 +135,7 @@ define(function() {
           var oneSelectedTagFoundInProvidedSet = false;
           for (var j = 0; j < group.length; ++j) {
             var key = group[j].name;
-            if ($.inArray(key, tagKeys) >= 0 && currentStates[key]) {
+            if ($.inArray(key, tagKeys) >= 0 && this.states[key].selected) {
               oneSelectedTagFoundInProvidedSet = true;
               break;
             }
@@ -147,6 +159,37 @@ define(function() {
         }
       };
 
+      // Returns true if each tag of the provided set is currently hidden in the filter view.
+      this.areAllHidden = function(tagKeys) {
+        for (var i = 0; i < tagKeys.length; ++i) {
+          var tagKey = tagKeys[i];
+          if (this.states[tagKey].visible) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      // Returns true if some tags are currently hidden in the filter view.
+      this.areSomeHidden = function() {
+        for (var i in this.states) {
+          if (this.states.hasOwnProperty(i)) {
+            if (!this.states[i].visible) {
+              return true;
+            }
+          }
+        }
+        return false;
+      }
+
+      this.makeAllVisible = function() {
+        for (var i in this.states) {
+          if (this.states.hasOwnProperty(i)) {
+            this.states[i].visible = true;
+          }
+        }
+      }
+
       this.addListener = function(listener) {
         listeners.push(listener);
       }
@@ -159,17 +202,22 @@ define(function() {
 
       this.numberOfKeys = 0;
 
+      // Public members:
+      this.states = {};
+
       // Private members:
       var descriptors = tagDescriptors;
       var listeners = [];
-      var currentStates = states;
 
       // Initialize states:
       for (var i = 0; i < descriptors.length; ++i) {
         var group = descriptors[i];
         for (var j = 0; j < group.length; ++j) {
           var tag = group[j];
-          states[tag.name] = tag.initialState;
+          this.states[tag.name] = {
+            selected: tag.initialState,
+            visible: !tag.advanced, // hide advanced tags by default
+          };
           ++this.numberOfKeys;
         }
       }
