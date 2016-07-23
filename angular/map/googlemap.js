@@ -292,8 +292,11 @@ define(['angular/map/declutterer'], function(declutterer) {
           }
 
           for (var i = 0; i < that.tagKeys.length; ++i) {
-            infoContent += '<a class="infowindow-tag" href="' + onTagClickScript + '">#'
-              + that.tagKeys[i] + '</a> ';
+            var tagKey = that.tagKeys[i];
+            if (getTagDescriptorByKey(tagKey).descriptive) {
+              infoContent += '<a class="infowindow-tag" href="' + onTagClickScript + '">#'
+                + tagKey + '</a> ';
+            }
           }
 
           var infoWindow = new google.maps.InfoWindow({

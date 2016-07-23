@@ -5,6 +5,7 @@
       "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1494-wht-circle-blank_white.png' />",
       "icon": "assets/pics/thirdparty/1494-wht-circle-blank",
       "advanced": false,
+      "descriptive": true,
       "initialState": true
     },
     {
@@ -12,6 +13,7 @@
       "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1494-wht-circle-blank_white.png' />",
       "icon": "assets/pics/thirdparty/1494-wht-circle-blank",
       "advanced": false,
+      "descriptive": true,
       "initialState": true
     },
     {
@@ -19,6 +21,7 @@
       "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1497-wht-diamond-blank_white.png' />",
       "icon": "assets/pics/thirdparty/1497-wht-diamond-blank",
       "advanced": false,
+      "descriptive": true,
       "initialState": false
     },
     {
@@ -26,6 +29,7 @@
       "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1496-wht-square-blank_white.png' />",
       "icon": "assets/pics/thirdparty/1496-wht-square-blank",
       "advanced": false,
+      "descriptive": true,
       "initialState": false
     },
     {
@@ -33,6 +37,7 @@
       "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1496-wht-square-blank_white.png' />",
       "icon": "assets/pics/thirdparty/1496-wht-square-blank",
       "advanced": false,
+      "descriptive": true,
       "initialState": false
     },
     {
@@ -40,6 +45,7 @@
       "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1495-wht-star-blank_white.png' />",
       "icon": "assets/pics/thirdparty/1495-wht-star-blank",
       "advanced": true,
+      "descriptive": true,
       "initialState": false
     },
     {
@@ -47,6 +53,7 @@
       "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1493-wht-blank_maps_white.png' />",
       "icon": "assets/pics/thirdparty/1493-wht-blank_maps",
       "advanced": false,
+      "descriptive": true,
       "initialState": false
     }
   ],
@@ -56,6 +63,7 @@
       "desc": "<i class='fa fa-map-marker fa-lg map-marker-default'></i>",
       "color": "gray",
       "advanced": false,
+      "descriptive": true,
       "initialState": true
     },
     {
@@ -63,6 +71,7 @@
       "desc": "<i class='fa fa-map-marker fa-lg map-marker-outdoor'></i>",
       "color": "cyan",
       "advanced": false,
+      "descriptive": true,
       "initialState": true
     }
   ],
@@ -72,6 +81,7 @@
       "desc": "<i class='fa fa-map-marker fa-lg map-marker-great'></i>",
       "color": "red",
       "advanced": true,
+      "descriptive": false,
       "initialState": true
     },
     {
@@ -79,6 +89,7 @@
       "desc": "<i class='fa fa-map-marker fa-lg map-marker-default'></i>",
       "color": "gray",
       "advanced": true,
+      "descriptive": false,
       "initialState": false
     }
   ],
@@ -88,6 +99,7 @@
       "desc": "<i class='fa fa-map-marker fa-lg map-marker-default'></i>",
       "color": "gray",
       "advanced": true,
+      "descriptive": false,
       "initialState": true
     },
     {
@@ -95,6 +107,7 @@
       "desc": "<i class='fa fa-map-marker fa-lg map-marker-not-aure'></i>",
       "color": "orange",
       "advanced": true,
+      "descriptive": false,
       "initialState": true
     },
     {
@@ -102,6 +115,7 @@
       "desc": "<i class='fa fa-map-marker fa-lg map-marker-not-aure'></i>",
       "color": "orange",
       "advanced": true,
+      "descriptive": false,
       "initialState": false
     },
     {
@@ -109,6 +123,7 @@
       "desc": "<i class='fa fa-map-marker fa-lg map-marker-not-aure'></i>",
       "color": "orange",
       "advanced": true,
+      "descriptive": false,
       "initialState": false
     }
   ]
