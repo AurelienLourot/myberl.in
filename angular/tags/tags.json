@@ -116,7 +116,7 @@
       "color": "orange",
       "advanced": true,
       "descriptive": false,
-      "initialState": false
+      "initialState": true
     },
     {
       "name": "other",
