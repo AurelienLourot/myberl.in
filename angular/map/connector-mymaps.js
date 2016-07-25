@@ -9,7 +9,7 @@ var Connector = (function() {
   function Connector(mapId, tags, $http, successCallback) {
 
     // See http://stackoverflow.com/questions/29603652/google-maps-api-google-maps-engine-my-maps :
-    $http.get('http://cors.io/?u=https://www.google.com/maps/d/kml?mid=' + mapId + '%26forcekml=1')
+    $http.get('https://crossorigin.me/https://www.google.com/maps/d/kml?mid=' + mapId + '&forcekml=1')
       .then(function success(response) {
 
         var result = [];
