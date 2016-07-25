@@ -55,6 +55,15 @@
       "advanced": false,
       "descriptive": true,
       "initialState": false
+    },
+    {
+      "name": "lake",
+      "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1493-wht-blank_maps_purple.png' />",
+      "icon": "assets/pics/thirdparty/1493-wht-blank_maps",
+      "color": "purple",
+      "advanced": true,
+      "descriptive": true,
+      "initialState": false
     }
   ],
   [

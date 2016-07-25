@@ -432,5 +432,11 @@ define(['angular/map/declutterer'], function(declutterer) {
 
     // File containing all the marker descriptors:
     markerDescriptors: requirejs.toUrl('angular/map/markers.json'),
+
+    // Franzi's lake map:
+    lakeMap: {
+      id: '1S_guQBQudaPzIgRybK3VIPYwRL0',
+      tags: ['lake', 'outdoor', 'franzi', 'great'],
+    },
   };
 });

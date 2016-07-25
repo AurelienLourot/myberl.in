@@ -1,7 +1,7 @@
 'use strict';
 
-define(['angular/map/googlemap', 'angular/tags/app', 'angular/status/app'],
-       function(googlemap, tags, status) {
+define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/tags/app',
+        'angular/status/app'], function(googlemap, mymaps, tags, status) {
   var app = angular.module('map', ['tags', 'status']);
 
   app.directive('map', ['tagsModuleIsReady', 'getTagDescriptorByKey', 'addListener', 'areMatching',
@@ -25,27 +25,33 @@ define(['angular/map/googlemap', 'angular/tags/app', 'angular/status/app'],
           var addMarkersToMap = function(resolve, reject) {
             console.log('Loading markers...');
             $http.get(googlemap.markerDescriptors).success(function(data) {
-              console.log('Markers found.');
+              console.log(data.length + ' JSON markers found.');
+              new mymaps.Connector(googlemap.lakeMap.id, googlemap.lakeMap.tags, $http,
+                                   function(myMapsData) {
+                console.log(myMapsData.length + ' MyMaps markers found.');
 
-              var deregisterWatch = scope.$watch(tagsModuleIsReady, function(ready) {
-                if (ready) {
-                  deregisterWatch();
+                data = data.concat(myMapsData);
 
-                  for (var i = 0; i < data.length; ++i) {
-                    googleMap.addMarker(new googlemap.Marker(data[i], getTagDescriptorByKey,
-                                                             googleMap.gPlaces, scope.onTagClick));
+                var deregisterWatch = scope.$watch(tagsModuleIsReady, function(ready) {
+                  if (ready) {
+                    deregisterWatch();
+
+                    for (var i = 0; i < data.length; ++i) {
+                      googleMap.addMarker(new googlemap.Marker(data[i], getTagDescriptorByKey,
+                                                               googleMap.gPlaces, scope.onTagClick));
+                    }
+
+                    var showHideMarkers = function() {
+                      googleMap.showHideMarkers(areMatching);
+                    }
+                    addListener(showHideMarkers);
+                    showHideMarkers();
+                    googleMap.dbg_check_markers_are_visible();
+
+                    console.log('Markers added to ' + scope.id + '.');
+                    resolve();
                   }
-
-                  var showHideMarkers = function() {
-                    googleMap.showHideMarkers(areMatching);
-                  }
-                  addListener(showHideMarkers);
-                  showHideMarkers();
-                  googleMap.dbg_check_markers_are_visible();
-
-                  console.log('Markers added to ' + scope.id + '.');
-                  resolve();
-                }
+                });
               });
             });
           };
