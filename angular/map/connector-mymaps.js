@@ -15,17 +15,6 @@ var Connector = (function() {
         var result = [];
 
         try {
-          //FIXME: JSON doesn't support arrays of less than two elements :( Use another XML parser?
-          function asArray(thing) {
-            var res = thing;
-            if (typeof res == "undefined") {
-              res = [];
-            } else if (!$.isArray(res)) {
-              res = [res,];
-            }
-            return res;
-          }
-
           var folders = asArray((new X2JS).xml_str2json(response.data).kml.Document.Folder);
           var markers = [];
           for (var i = 0; i < folders.length; ++i) {
@@ -60,6 +49,18 @@ var Connector = (function() {
       });
 
   };
+
+  //FIXME: Hack for JSON, which doesn't support arrays of less than two elements :( Use another XML
+  //       parser?
+  function asArray(thing) {
+    var res = thing;
+    if (typeof res == "undefined") {
+      res = [];
+    } else if (!$.isArray(res)) {
+      res = [res,];
+    }
+    return res;
+  }
 
   return Connector;
 })();
