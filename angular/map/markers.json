@@ -1889,5 +1889,14 @@
       "lng": 13.453205
     },
     "tags": ["club", "great", "indoor", "aure"]
+  },
+  {
+    "title": "Hasenschänke",
+    "comment": "Drink booth",
+    "position": {
+      "lat": 52.482629,
+      "lng": 13.416145
+    },
+    "tags": ["bar", "outdoor", "good", "aure"]
   }
 ]
