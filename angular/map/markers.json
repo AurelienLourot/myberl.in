@@ -1898,5 +1898,15 @@
       "lng": 13.416145
     },
     "tags": ["bar", "outdoor", "good", "aure"]
+  },
+  {
+    "title": "Fish sandwiches",
+    "comment": "Several drink and food booths in the summer",
+    "ignore_errors": true,
+    "position": {
+      "lat": 52.493948,
+      "lng": 13.463579
+    },
+    "tags": ["restaurant", "bar", "outdoor", "good", "aure"]
   }
 ]
