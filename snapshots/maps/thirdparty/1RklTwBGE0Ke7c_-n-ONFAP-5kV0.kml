@@ -30,14 +30,6 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<name>3 Schwestern</name>
-				<description><![CDATA[#restaurant #bar #café #indoor #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.423416699999962,52.5036808,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
 				<name>Gastón Tapas Bar</name>
 				<description><![CDATA[#restaurant #indoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
@@ -70,14 +62,6 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<name>Defne</name>
-				<description><![CDATA[#restaurant #indoor #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.417724399999997,52.4953712,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
 				<name>Würgeengel</name>
 				<description><![CDATA[#bar #indoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
@@ -99,14 +83,6 @@
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
 					<coordinates>13.4511751,52.510394,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Oui Madame</name>
-				<description><![CDATA[#bar #restaurant #indoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.409665300000029,52.526744,0.0</coordinates>
 				</Point>
 			</Placemark>
 		</Folder>
