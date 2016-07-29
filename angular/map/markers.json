@@ -1366,7 +1366,7 @@
       "lat": 52.526744,
       "lng": 13.409665
     },
-    "tags": ["restaurant", "franzi", "good", "indoor"]
+    "tags": ["restaurant", "bar", "franzi", "great", "indoor"]
   },
   {
     "title": "I Golosi Briganti",
@@ -1661,7 +1661,7 @@
       "lat": 52.495371,
       "lng": 13.417724
     },
-    "tags": ["restaurant", "other", "indoor", "good"]
+    "tags": ["restaurant", "franzi", "indoor", "outdoor", "great"]
   },
   {
     "title": "3 Schwestern",
@@ -1670,7 +1670,7 @@
       "lat": 52.503680,
       "lng": 13.423414
     },
-    "tags": ["restaurant", "other", "indoor", "good"]
+    "tags": ["restaurant", "bar", "café", "franzi", "indoor", "outdoor", "great"]
   },
   {
     "title": "Cantina Universale",
