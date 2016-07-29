@@ -1917,5 +1917,14 @@
       "lng": 13.423655
     },
     "tags": ["restaurant", "other", "indoor", "good"]
+  },
+  {
+    "title": "Kala",
+    "comment": "Fish",
+    "position": {
+      "lat": 52.475910,
+      "lng": 13.425985
+    },
+    "tags": ["restaurant", "franzi", "indoor", "good"]
   }
 ]
