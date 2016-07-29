@@ -1951,5 +1951,14 @@
       "lng": 13.443459
     },
     "tags": ["cafe", "other", "great", "indoor", "outdoor"]
+  },
+  {
+    "title": "KIKI SOL",
+    "comment": "Student bar",
+    "position": {
+      "lat": 52.544135,
+      "lng": 13.368908
+    },
+    "tags": ["bar", "other", "good", "indoor"]
   }
 ]
