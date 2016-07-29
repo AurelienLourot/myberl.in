@@ -1935,5 +1935,13 @@
       "lng": 13.426115
     },
     "tags": ["restaurant", "other", "indoor", "good"]
+  },
+  {
+    "title": "Kiez Vegan",
+    "position": {
+      "lat": 52.490502,
+      "lng": 13.409582
+    },
+    "tags": ["restaurant", "other", "indoor", "good"]
   }
 ]
