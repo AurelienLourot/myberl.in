@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>Franzi's Berl.in</name>
+		<description><![CDATA[]]></description>
+		<Folder>
+			<name>Untitled layer</name>
+			<Placemark>
+				<name>Kurhaus Ponte Rosa</name>
+				<description><![CDATA[#bar #restaurant #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.373792200000025,52.4882976,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>BRLO Brwhouse</name>
+				<description><![CDATA[#bar #restaurant #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.373304700000062,52.5002514,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Erben Rooftop Winebar</name>
+				<description><![CDATA[#bar #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.452879800000005,52.4796817,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>3 Schwestern</name>
+				<description><![CDATA[#restaurant #bar #café #indoor #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.423416699999962,52.5036808,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Gastón Tapas Bar</name>
+				<description><![CDATA[#restaurant #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.435700099999963,52.4861973,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rotbart</name>
+				<description><![CDATA[#bar #café #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.449187299999949,52.4742213,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Gasthaus Figl</name>
+				<description><![CDATA[#restaurant #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.41757789999997,52.4904048,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Room 77</name>
+				<description><![CDATA[#bar #restaurant #indoor #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.418012099999942,52.49311580000001,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Defne</name>
+				<description><![CDATA[#restaurant #indoor #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.417724399999997,52.4953712,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Würgeengel</name>
+				<description><![CDATA[#bar #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.41667510000002,52.5010774,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>ORA</name>
+				<description><![CDATA[#café #bar #restaurant #indoor #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.41591870000002,52.5013856,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Fitcher's Vogel</name>
+				<description><![CDATA[#bar #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.4511751,52.510394,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Oui Madame</name>
+				<description><![CDATA[#bar #restaurant #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.409665300000029,52.526744,0.0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Style id='icon-503-DB4436-normal'>
+			<IconStyle>
+				<color>ff3644DB</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-503-DB4436-highlight'>
+			<IconStyle>
+				<color>ff3644DB</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-503-DB4436'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-503-DB4436-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-503-DB4436-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+	</Document>
+</kml>

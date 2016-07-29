@@ -27,30 +27,35 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/tags/a
             $http.get(googlemap.markerDescriptors).success(function(data) {
               console.log(data.length + ' JSON markers found.');
               new mymaps.Connector(googlemap.lakeMap.id, googlemap.lakeMap.tags, $http,
-                                   function(myMapsData) {
-                console.log(myMapsData.length + ' MyMaps markers found.');
+                                   function(lakeMyMapsData) {
+                console.log(lakeMyMapsData.length + " MyMaps markers found in Franzi's lake map.");
+                data = data.concat(lakeMyMapsData);
+                new mymaps.Connector(googlemap.franziMap.id, googlemap.franziMap.tags, $http,
+                                     function(franziMyMapsData) {
+                  console.log(franziMyMapsData.length
+                              + " MyMaps markers found in Franzi's Berl.in map.");
+                  data = data.concat(franziMyMapsData);
 
-                data = data.concat(myMapsData);
+                  var deregisterWatch = scope.$watch(tagsModuleIsReady, function(ready) {
+                    if (ready) {
+                      deregisterWatch();
 
-                var deregisterWatch = scope.$watch(tagsModuleIsReady, function(ready) {
-                  if (ready) {
-                    deregisterWatch();
+                      for (var i = 0; i < data.length; ++i) {
+                        googleMap.addMarker(new googlemap.Marker(
+                          data[i], getTagDescriptorByKey, googleMap.gPlaces, scope.onTagClick));
+                      }
 
-                    for (var i = 0; i < data.length; ++i) {
-                      googleMap.addMarker(new googlemap.Marker(data[i], getTagDescriptorByKey,
-                                                               googleMap.gPlaces, scope.onTagClick));
+                      var showHideMarkers = function() {
+                        googleMap.showHideMarkers(areMatching);
+                      }
+                      addListener(showHideMarkers);
+                      showHideMarkers();
+                      googleMap.dbg_check_markers_are_visible();
+
+                      console.log('Markers added to ' + scope.id + '.');
+                      resolve();
                     }
-
-                    var showHideMarkers = function() {
-                      googleMap.showHideMarkers(areMatching);
-                    }
-                    addListener(showHideMarkers);
-                    showHideMarkers();
-                    googleMap.dbg_check_markers_are_visible();
-
-                    console.log('Markers added to ' + scope.id + '.');
-                    resolve();
-                  }
+                  });
                 });
               });
             });

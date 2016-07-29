@@ -293,7 +293,12 @@ define(['angular/map/declutterer'], function(declutterer) {
 
           for (var i = 0; i < that.tagKeys.length; ++i) {
             var tagKey = that.tagKeys[i];
-            if (getTagDescriptorByKey(tagKey).descriptive) {
+            var tagDescriptor = getTagDescriptorByKey(tagKey);
+            if (!tagDescriptor) {
+              error("Marker has an undeclared tag '" + tagKey + "'.");
+              continue;
+            }
+            if (tagDescriptor.descriptive) {
               infoContent += '<a class="infowindow-tag" href="' + onTagClickScript + '">#'
                 + tagKey + '</a> ';
             }
@@ -389,7 +394,13 @@ define(['angular/map/declutterer'], function(declutterer) {
       var url = null;
       var color = 'gray';
       for (var key = tagKeys.length - 1; key >= 0; --key) {
-        var descriptor = getTagDescriptorByKey(tagKeys[key]);
+        var tagKey = tagKeys[key];
+        var descriptor = getTagDescriptorByKey(tagKey);
+        if (!descriptor) {
+          error("Marker has an undeclared tag '" + tagKey + "'.");
+          continue;
+        }
+
         // If the descriptor has an icon, overtake it:
         if (descriptor.icon) {
           url = descriptor.icon;
@@ -437,6 +448,12 @@ define(['angular/map/declutterer'], function(declutterer) {
     lakeMap: {
       id: '1S_guQBQudaPzIgRybK3VIPYwRL0',
       tags: ['lake', 'outdoor', 'franzi', 'great'],
+    },
+
+    // Franzi's Berl.in map:
+    franziMap: {
+      id: '1RklTwBGE0Ke7c_-n-ONFAP-5kV0',
+      tags: ['franzi', 'great'],
     },
   };
 });

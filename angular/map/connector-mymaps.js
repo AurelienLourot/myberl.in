@@ -26,13 +26,28 @@ var Connector = (function() {
           for (var i = 0; i < markers.length; ++i) {
             var receivedMarker = markers[i];
             var receivedCoordinates = /(.*),(.*),(.*)/.exec(receivedMarker.Point.coordinates);
+
+            var convertedTags = tags.slice();
+            if (receivedMarker.description) {
+              var receivedWords = receivedMarker.description.split(' ');
+              for (var j = 0; j < receivedWords.length; ++j) {
+                var word = receivedWords[j];
+                if (word.startsWith('#')) {
+                  var tag = word.slice(1);
+                  if ($.inArray(tag, convertedTags) < 0) { // if not already in the set of tags
+                    convertedTags.push(tag);
+                  }
+                }
+              }
+            }
+
             var convertedMarker = {
               title: receivedMarker.name,
               position: {
                 lat: parseFloat(receivedCoordinates[2]),
                 lng: parseFloat(receivedCoordinates[1]),
               },
-              tags: tags,
+              tags: convertedTags,
             };
             result.push(convertedMarker);
           }
