@@ -1908,5 +1908,14 @@
       "lng": 13.463579
     },
     "tags": ["restaurant", "bar", "outdoor", "good", "aure"]
+  },
+  {
+    "title": "Caligari",
+    "comment": "Italian",
+    "position": {
+      "lat": 52.475838,
+      "lng": 13.423655
+    },
+    "tags": ["restaurant", "other", "indoor", "good"]
   }
 ]
