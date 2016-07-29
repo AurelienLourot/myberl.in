@@ -1943,5 +1943,13 @@
       "lng": 13.409582
     },
     "tags": ["restaurant", "other", "indoor", "good"]
+  },
+  {
+    "title": "Café Wendel",
+    "position": {
+      "lat": 52.500543,
+      "lng": 13.443459
+    },
+    "tags": ["cafe", "other", "great", "indoor", "outdoor"]
   }
 ]
