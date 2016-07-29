@@ -1926,5 +1926,14 @@
       "lng": 13.425985
     },
     "tags": ["restaurant", "franzi", "indoor", "good"]
+  },
+  {
+    "title": "Fuchs und Fähe",
+    "comment": "Sandwiches",
+    "position": {
+      "lat": 52.475926,
+      "lng": 13.426115
+    },
+    "tags": ["restaurant", "other", "indoor", "good"]
   }
 ]
