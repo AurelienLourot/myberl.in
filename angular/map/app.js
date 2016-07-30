@@ -50,7 +50,6 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/tags/a
                       }
                       addListener(showHideMarkers);
                       showHideMarkers();
-                      googleMap.dbg_check_markers_are_visible();
 
                       console.log('Markers added to ' + scope.id + '.');
                       resolve();

@@ -54,15 +54,6 @@ define(['angular/map/declutterer'], function(declutterer) {
         }
       };
 
-      this.dbg_check_markers_are_visible = function dbg_check_markers_are_visible() {
-        for (var i = 0; i < markers.length; ++i) {
-          if (markers[i].isVisible()) {
-            return;
-          }
-        }
-        error('No marker visible.');
-      };
-
       var deviceIsSlow = (function() {
         var labelColor = 'warning';
         var labelContent = '<i class="fa fa-spinner fa-spin fa-2x"></i>';
@@ -379,7 +370,6 @@ define(['angular/map/declutterer'], function(declutterer) {
       // Public members:
       this.tagKeys = descriptor.tags;
       this.dbg_clickListener = clickListener;
-      this.dbg_descriptor = descriptor;
     };
 
     // Returns the best possible icon object to be inserted in the google marker options, based on
