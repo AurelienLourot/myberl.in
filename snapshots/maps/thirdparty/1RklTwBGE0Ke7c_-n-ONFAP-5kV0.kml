@@ -85,6 +85,126 @@
 					<coordinates>13.4511751,52.510394,0.0</coordinates>
 				</Point>
 			</Placemark>
+			<Placemark>
+				<name>Briefmarkenweine</name>
+				<description><![CDATA[#restaurant #bar #indoor #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.442709700000023,52.51754,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Olio Sale Pepe</name>
+				<description><![CDATA[#restaurant #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.361877999999933,52.490216,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Clärchens Ballhaus</name>
+				<description><![CDATA[#restaurant #bar #indoor #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.39681059999998,52.5266488,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>CC Chagall UG (haftungsbeschränkt)</name>
+				<description><![CDATA[#bar #restaurant #indoor #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.412662299999965,52.53135899999999,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>I Due Forni</name>
+				<description><![CDATA[#restaurant #indoor #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.412533800000006,52.5307877,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Il Ritrovo - Cucina Casalinga Popolare</name>
+				<description><![CDATA[#restaurant #indoor #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.458197599999949,52.50980449999999,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Wahrhaft Nahrhaft</name>
+				<description><![CDATA[#cafe #indoor #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.456378800000039,52.50755429999999,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Schankwirtschaft Laidak</name>
+				<description><![CDATA[#bar #cafe #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.428477799999996,52.4796914,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Twinpigs</name>
+				<description><![CDATA[#bar #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.431930999999963,52.48056099999999,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Lipopette</name>
+				<description><![CDATA[#cafe #bar #restaurant #brunch #indoor #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.427143699999988,52.4702224,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Gelegenheiten</name>
+				<description><![CDATA[#bar #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.439368999999942,52.483988,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nathanja &amp; Heinrich</name>
+				<description><![CDATA[#cafe #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.436748699999953,52.4873749,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Humus &amp; Baba Ghanoush</name>
+				<description><![CDATA[#restaurant #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.401790000000005,52.49069,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Seerose</name>
+				<description><![CDATA[#restaurant #cafe #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.407646200000045,52.4896137,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>KAFFEE FAHRRAD LOKAL A.HORN</name>
+				<description><![CDATA[#cafe #brunch # indoor #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.405389600000035,52.4959095,0.0</coordinates>
+				</Point>
+			</Placemark>
 		</Folder>
 		<Style id='icon-503-DB4436-normal'>
 			<IconStyle>
