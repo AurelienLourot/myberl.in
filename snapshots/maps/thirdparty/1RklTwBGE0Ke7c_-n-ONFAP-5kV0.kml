@@ -135,7 +135,7 @@
 			</Placemark>
 			<Placemark>
 				<name>Wahrhaft Nahrhaft</name>
-				<description><![CDATA[#cafe #indoor #outdoor]]></description>
+				<description><![CDATA[#café #indoor #outdoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
 					<coordinates>13.456378800000039,52.50755429999999,0.0</coordinates>
@@ -143,7 +143,7 @@
 			</Placemark>
 			<Placemark>
 				<name>Schankwirtschaft Laidak</name>
-				<description><![CDATA[#bar #cafe #indoor]]></description>
+				<description><![CDATA[#bar #café #indoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
 					<coordinates>13.428477799999996,52.4796914,0.0</coordinates>
@@ -159,7 +159,7 @@
 			</Placemark>
 			<Placemark>
 				<name>Lipopette</name>
-				<description><![CDATA[#cafe #bar #restaurant #brunch #indoor #outdoor]]></description>
+				<description><![CDATA[#café #bar #restaurant #brunch #indoor #outdoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
 					<coordinates>13.427143699999988,52.4702224,0.0</coordinates>
@@ -175,7 +175,7 @@
 			</Placemark>
 			<Placemark>
 				<name>Nathanja &amp; Heinrich</name>
-				<description><![CDATA[#cafe #indoor]]></description>
+				<description><![CDATA[#café #indoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
 					<coordinates>13.436748699999953,52.4873749,0.0</coordinates>
@@ -191,7 +191,7 @@
 			</Placemark>
 			<Placemark>
 				<name>Seerose</name>
-				<description><![CDATA[#restaurant #cafe #indoor]]></description>
+				<description><![CDATA[#restaurant #café #indoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
 					<coordinates>13.407646200000045,52.4896137,0.0</coordinates>
@@ -199,7 +199,7 @@
 			</Placemark>
 			<Placemark>
 				<name>KAFFEE FAHRRAD LOKAL A.HORN</name>
-				<description><![CDATA[#cafe #brunch # indoor #outdoor]]></description>
+				<description><![CDATA[#café #brunch #indoor #outdoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
 					<coordinates>13.405389600000035,52.4959095,0.0</coordinates>
