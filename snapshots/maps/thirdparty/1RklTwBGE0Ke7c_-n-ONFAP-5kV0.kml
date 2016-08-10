@@ -205,6 +205,86 @@
 					<coordinates>13.405389600000035,52.4959095,0.0</coordinates>
 				</Point>
 			</Placemark>
+			<Placemark>
+				<name>Roamers</name>
+				<description><![CDATA[#café #brunch #indoor #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.429323000000068,52.48553,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Berlinburger International</name>
+				<description><![CDATA[#restaurant #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.430841600000008,52.4864764,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tristeza</name>
+				<description><![CDATA[#bar #indoor #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.430856800000015,52.4864952,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Schillingbar</name>
+				<description><![CDATA[#bar #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.428589299999999,52.4882094,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Sahara Imbiss</name>
+				<description><![CDATA[#restaurant #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.428629999999998,52.48849,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Geist im Glas</name>
+				<description><![CDATA[#bar #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.424802,52.490117,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>OLIVIO Pizza Pasta Bar</name>
+				<description><![CDATA[#restaurant #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.421259299999974,52.4919848,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hallmann und Klee</name>
+				<description><![CDATA[#restaurant #brunch #café #indoor #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.44973959999993,52.47383629999999,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Cafe Dritter Raum</name>
+				<description><![CDATA[#brunch #café #indoor #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.448065400000019,52.4771175,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Prachtwerk</name>
+				<description><![CDATA[#bar #café #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.438736199999994,52.47905579999999,0.0</coordinates>
+				</Point>
+			</Placemark>
 		</Folder>
 		<Style id='icon-503-DB4436-normal'>
 			<IconStyle>
