@@ -6,7 +6,7 @@
 		<Folder>
 			<name>Untitled layer</name>
 			<Placemark>
-				<name>Kurhaus Ponte Rosa</name>
+				<name>Ponte Rosa</name>
 				<description><![CDATA[#bar #restaurant #outdoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
@@ -14,7 +14,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<name>BRLO Brwhouse</name>
+				<name>BRLO</name>
 				<description><![CDATA[#bar #restaurant #outdoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
@@ -22,7 +22,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<name>Erben Rooftop Winebar</name>
+				<name>Erben</name>
 				<description><![CDATA[#bar #outdoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
@@ -30,7 +30,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<name>Gastón Tapas Bar</name>
+				<name>Gastón</name>
 				<description><![CDATA[#restaurant #indoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
@@ -46,7 +46,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<name>Gasthaus Figl</name>
+				<name>Figl</name>
 				<description><![CDATA[#restaurant #indoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
@@ -110,7 +110,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<name>CC Chagall UG (haftungsbeschränkt)</name>
+				<name>Chagall</name>
 				<description><![CDATA[#bar #restaurant #indoor #outdoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
@@ -126,7 +126,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<name>Il Ritrovo - Cucina Casalinga Popolare</name>
+				<name>Il Ritrovo</name>
 				<description><![CDATA[#restaurant #indoor #outdoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
@@ -142,7 +142,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<name>Schankwirtschaft Laidak</name>
+				<name>Laidak</name>
 				<description><![CDATA[#bar #café #indoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
@@ -198,7 +198,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<name>KAFFEE FAHRRAD LOKAL A.HORN</name>
+				<name>A.Horn</name>
 				<description><![CDATA[#café #brunch #indoor #outdoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
@@ -214,7 +214,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<name>Berlinburger International</name>
+				<name>Berlinburger</name>
 				<description><![CDATA[#restaurant #outdoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
@@ -238,7 +238,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<name>Sahara Imbiss</name>
+				<name>Sahara</name>
 				<description><![CDATA[#restaurant #outdoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
@@ -254,7 +254,7 @@
 				</Point>
 			</Placemark>
 			<Placemark>
-				<name>OLIVIO Pizza Pasta Bar</name>
+				<name>Olivio</name>
 				<description><![CDATA[#restaurant #outdoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
