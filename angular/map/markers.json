@@ -1969,5 +1969,13 @@
       "lng": 13.457119
     },
     "tags": ["restaurant", "other", "good", "indoor"]
+  },
+  {
+    "title": "Tempelburger",
+    "position": {
+      "lat": 52.480709,
+      "lng": 13.406784
+    },
+    "tags": ["restaurant", "bar", "outdoor", "good", "aure"]
   }
 ]
