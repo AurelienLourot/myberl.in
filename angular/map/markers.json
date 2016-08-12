@@ -1977,5 +1977,13 @@
       "lng": 13.406784
     },
     "tags": ["restaurant", "bar", "outdoor", "good", "aure"]
+  },
+  {
+    "title": "The Barn",
+    "position": {
+      "lat": 52.527407,
+      "lng": 13.398183
+    },
+    "tags": ["café", "other", "indoor", "good"]
   }
 ]
