@@ -1985,5 +1985,14 @@
       "lng": 13.398183
     },
     "tags": ["café", "other", "indoor", "good"]
+  },
+  {
+    "title": "Beach restaurants",
+    "ignore_errors": true,
+    "position": {
+      "lat": 52.444773,
+      "lng": 13.626320
+    },
+    "tags": ["restaurant", "other", "outdoor", "good"]
   }
 ]
