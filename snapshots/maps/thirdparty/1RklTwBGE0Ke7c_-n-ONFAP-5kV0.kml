@@ -103,7 +103,7 @@
 			</Placemark>
 			<Placemark>
 				<name>Clärchens Ballhaus</name>
-				<description><![CDATA[#restaurant #bar #indoor #outdoor]]></description>
+				<description><![CDATA[#restaurant #bar #indoor #outdoor #romu]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
 					<coordinates>13.39681059999998,52.5266488,0.0</coordinates>
@@ -159,7 +159,7 @@
 			</Placemark>
 			<Placemark>
 				<name>Lipopette</name>
-				<description><![CDATA[#café #bar #restaurant #brunch #indoor #outdoor]]></description>
+				<description><![CDATA[#café #bar #restaurant #brunch #indoor #outdoor #aure]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
 					<coordinates>13.427143699999988,52.4702224,0.0</coordinates>
