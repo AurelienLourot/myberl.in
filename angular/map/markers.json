@@ -1960,5 +1960,14 @@
       "lng": 13.368908
     },
     "tags": ["bar", "other", "good", "indoor"]
+  },
+  {
+    "title": "Monti",
+    "comment": "Italian",
+    "position": {
+      "lat": 52.512342,
+      "lng": 13.457119
+    },
+    "tags": ["restaurant", "other", "good", "indoor"]
   }
 ]
