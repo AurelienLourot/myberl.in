@@ -1994,5 +1994,14 @@
       "lng": 13.626320
     },
     "tags": ["restaurant", "other", "outdoor", "good"]
+  },
+  {
+    "title": "Weinblatt",
+    "comment": "Turkish",
+    "position": {
+      "lat": 52.492860,
+      "lng": 13.416268
+    },
+    "tags": ["restaurant", "café", "brunch", "outdoor", "indoor", "great", "aure", "franzi"]
   }
 ]
