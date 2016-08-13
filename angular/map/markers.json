@@ -1744,14 +1744,6 @@
     "tags": ["restaurant", "other", "indoor", "good"]
   },
   {
-    "title": "Prachtwerk",
-    "position": {
-      "lat": 52.479055,
-      "lng": 13.438738
-    },
-    "tags": ["café", "bar", "other", "indoor", "good"]
-  },
-  {
     "title": "Bitte",
     "position": {
       "lat": 52.494109,
