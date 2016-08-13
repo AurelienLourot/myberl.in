@@ -31,4 +31,5 @@ $ ./aws/dns_update.sh
 
 ## Documentation
 
-[Why not just creating a map on Google or Foursquare?](doc/why.md)
+* [Why not just creating a map on Google or Foursquare?](doc/why.md)
+* [I want to add more awesome places.](doc/contrib/README.md)
