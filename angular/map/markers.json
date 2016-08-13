@@ -2003,5 +2003,14 @@
       "lng": 13.416268
     },
     "tags": ["restaurant", "café", "brunch", "outdoor", "indoor", "great", "aure", "franzi"]
+  },
+  {
+    "title": "Pasternak",
+    "comment": "Russian",
+    "position": {
+      "lat": 52.534798,
+      "lng": 13.418701
+    },
+    "tags": ["brunch", "restaurant", "café", "outdoor", "indoor", "great", "aure", "franzi"]
   }
 ]
