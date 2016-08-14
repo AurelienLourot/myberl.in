@@ -449,11 +449,12 @@
   },
   {
     "title": "Frollein Langner",
+    "comment": "WiFi",
     "position": {
       "lat": 52.473839,
       "lng": 13.425185000000056
     },
-    "tags": ["bar", "café", "great", "indoor", "aure", "franzi"]
+    "tags": ["bar", "café", "workplace", "great", "indoor", "aure", "franzi"]
   },
   {
     "title": "San Remo",
@@ -624,13 +625,14 @@
   },
   {
     "title": "nhow",
-    "comment": "Hotel lobby",
+    "comment": "Hotel lobby, WiFi",
     "place_id": "ChIJo94FP1FOqEcRnSmAefiYb6o",
+    "ignore_errors": true,
     "position": {
       "lat": 52.5011068,
       "lng": 13.450851000000057
     },
-    "tags": ["café", "indoor", "good", "aure", "romu"]
+    "tags": ["café", "workplace", "indoor", "good", "aure", "romu"]
   },
   {
     "title": "Café Provinz",

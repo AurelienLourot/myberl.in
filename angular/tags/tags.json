@@ -17,6 +17,14 @@
       "initialState": true
     },
     {
+      "name": "workplace",
+      "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1494-wht-circle-blank_white.png' />",
+      "icon": "assets/pics/thirdparty/1494-wht-circle-blank",
+      "advanced": true,
+      "descriptive": true,
+      "initialState": false
+    },
+    {
       "name": "club",
       "desc": "<img class='tag-desc' src='assets/pics/thirdparty/1497-wht-diamond-blank_white.png' />",
       "icon": "assets/pics/thirdparty/1497-wht-diamond-blank",

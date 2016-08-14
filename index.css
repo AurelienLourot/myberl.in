@@ -46,7 +46,7 @@ a:focus {
 .hidable {
   opacity: 1;
   filter: alpha(opacity=100); /* for IE <= 8 */
-  max-height: 15em;
+  max-height: 16em;
   overflow: hidden;
   transition: all 1s linear;
 }
