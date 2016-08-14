@@ -471,6 +471,11 @@ define(['angular/map/declutterer'], function(declutterer) {
         id: '1RklTwBGE0Ke7c_-n-ONFAP-5kV0',
         tags: ['franzi', 'great'],
       },
+      {
+        name: "Romu's map",
+        id: '1NXPVu6MaJ7ASWCmSOe27oXPF5rc',
+        tags: ['romu', 'great'],
+      },
     ],
   };
 });
