@@ -6,7 +6,7 @@ var Declutterer = (function() {
   // map: instance of google.maps.Map.
   // projectionFactory: creates a Projection, an object able to convert GPS coordinates to/from
   //                    pixel coordinates.
-  // markers: array of Marker's.
+  // markers: associative array of Marker's.
   // currentPositionMarker: marker showing the user's position.
   // deviceIsSlowCallback: called when device is detected to be slow.
   function Declutterer(map, projectionFactory, markers, currentPositionMarker,
@@ -58,8 +58,8 @@ var Declutterer = (function() {
       // Calculates the pixel coordinates of each marker and count the amount of visible labels.
       var numVisibleLabels = 0;
       var currentZoomLevel = map.getZoom();
-      for (var i = 0; i < markers.length; ++i) {
-        var marker = markers[i];
+      for (var id in markers) {
+        var marker = markers[id];
         numVisibleLabels += marker.isLabelVisible() ? 1 : 0;
         // Optimization: if we zoomed out a lot, keep all labels hidden by making them out of
         //               screen.
@@ -110,16 +110,18 @@ var Declutterer = (function() {
 
       // Ensures we do a minimum amount of markers, even on a slow system. Ensures as well that we
       // don't do more than the amount of markers.
-      var minNumMarkers = Math.min(minStepNumMarkers, markers.length);
+      var markerIDs = Object.keys(markers); //FIXME: Object.keys() not implemented in IE8?
+      var totalNumMarkers = markerIDs.length;
+      var minNumMarkers = Math.min(minStepNumMarkers, totalNumMarkers);
       outer:
-      for (var i = 0; i < markers.length; ++i, ++indexNextMarkerToDeclutter) {
-        indexNextMarkerToDeclutter %= markers.length;
+      for (var i = 0; i < totalNumMarkers; ++i, ++indexNextMarkerToDeclutter) {
+        indexNextMarkerToDeclutter %= totalNumMarkers;
 
         if (i >= minStepNumMarkers && nowMs() - beginMs >= maxStepDurationMs) {
           break;
         }
 
-        var markerBeingEvaluated = markers[indexNextMarkerToDeclutter];
+        var markerBeingEvaluated = markers[markerIDs[indexNextMarkerToDeclutter]];
         if (!isMarkerVisibleOnViewport(markerBeingEvaluated, viewportBounds)) {
           if (markerBeingEvaluated.isVisible()) {
             hideLabelAndAdaptTolerance(markerBeingEvaluated);
@@ -138,8 +140,8 @@ var Declutterer = (function() {
           continue;
         }
 
-        for (var j = 0; j < markers.length; ++j) {
-          var markerNotToHide = markers[j];
+        for (var id in markers) {
+          var markerNotToHide = markers[id];
           if (markerBeingEvaluated === markerNotToHide ||
               !isMarkerVisibleOnViewport(markerNotToHide, viewportBounds) ||
               !markerNotToHide.isLabelVisible()) {

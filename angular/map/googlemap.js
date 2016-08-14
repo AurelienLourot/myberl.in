@@ -10,14 +10,27 @@ define(['angular/map/declutterer'], function(declutterer) {
       // Adds a marker to the map. Will be hidden by default.
       // marker: instance of Marker.
       this.addMarker = function addMarker(marker) {
-        markers.push(marker);
+        while (marker.id in markers) {
+          console.log('"' + marker.id + '" already exists.');
+          var distance = markers[marker.id].distanceFrom(marker.getPosition());
+          console.log('Distance between them: ' + Math.floor(distance) + 'm');
+
+          if (distance < 100) {
+            error('Duplicate marker.');
+            return;
+          }
+          marker.id += '_';
+          console.log('Renaming into "' + marker.id + '".');
+        }
+        markers[marker.id] = marker;
       };
 
       // Removes all markers.
       this.clearMarkers = function clearMarkers() {
-        while (markers.length) {
-          markers.pop().setVisibleOnMap(null);
+        for (var id in markers) {
+          markers[id].setVisibleOnMap(null);
         }
+        markers = {};
       }
 
       // Shows or hides the map's markers, depending whether they are matching the current filters
@@ -25,8 +38,8 @@ define(['angular/map/declutterer'], function(declutterer) {
       // areMatching: function that takes a list of tag keys and returns true if the provided tags
       //              match the current filters.
       this.showHideMarkers = function showHideMarkers(areMatching) {
-        for (var i = 0; i < markers.length; ++i) {
-          var marker = markers[i];
+        for (var id in markers) {
+          var marker = markers[id];
           marker.setVisibleOnMap(areMatching(marker.tagKeys) ? map : null);
         }
       };
@@ -39,16 +52,16 @@ define(['angular/map/declutterer'], function(declutterer) {
 
       this.dbg_click_each_visible_marker = function dbg_click_each_visible_marker() {
         var nextDelay = 5000; // ms
-        for (var i = 0; i < markers.length; ++i) {
-          if (!markers[i].isVisible()) {
+        for (var id in markers) {
+          if (!markers[id].isVisible()) {
             continue;
           }
 
-          (function(index) {
+          (function(idCopy) {
             setTimeout(function() {
-              markers[index].dbg_clickListener();
+              markers[idCopy].dbg_clickListener();
             }, nextDelay);
-          })(i);
+          })(id);
 
           nextDelay += 2800;
         }
@@ -106,7 +119,7 @@ define(['angular/map/declutterer'], function(declutterer) {
       });
 
       var listeners = []; // listeners on map readiness.
-      var markers = [];
+      var markers = {};
       var declutteringEngine = new declutterer.Declutterer(map, projectionFactory, markers,
                                                            currentPositionMarker, deviceIsSlow);
 
@@ -193,23 +206,27 @@ define(['angular/map/declutterer'], function(declutterer) {
       this.getPosition = function getPosition() {
         if (this.isVisible()) {
           return googleMarker.getPosition();
-        } else {
-          error("getPosition(): not implemented for invisible markers yet.");
         }
+        return {
+          lat: function() {
+            return descriptor.position.lat;
+          },
+          lng: function() {
+            return descriptor.position.lng;
+          },
+        };
       }
 
-      // Private methods
-
       // Returns the distance in meters between this marker and the provided position.
-      function distanceFrom(position) {
+      this.distanceFrom = function distanceFrom(otherPosition) {
         // See https://en.wikipedia.org/wiki/Haversine_formula
 
         var earthRadius = 6371000;
 
-        var lat1 = descriptor.position.lat * Math.PI / 180;
-        var lng1 = descriptor.position.lng * Math.PI / 180;
-        var lat2 = position.lat * Math.PI / 180;
-        var lng2 = position.lng * Math.PI / 180;
+        var lat1 = this.getPosition().lat() * Math.PI / 180;
+        var lng1 = this.getPosition().lng() * Math.PI / 180;
+        var lat2 = otherPosition.lat() * Math.PI / 180;
+        var lng2 = otherPosition.lng() * Math.PI / 180;
 
         var sinMeanLat = Math.sin((lat2 - lat1) / 2);
         var sinMeanLng = Math.sin((lng2 - lng1) / 2);
@@ -218,6 +235,8 @@ define(['angular/map/declutterer'], function(declutterer) {
           sinMeanLat * sinMeanLat + Math.cos(lng1) * Math.cos(lng2) * sinMeanLng * sinMeanLng));
         return result;
       };
+
+      // Private methods
 
       // MarkerWithLabel factory.
       function createGoogleMarker() {
@@ -257,11 +276,7 @@ define(['angular/map/declutterer'], function(declutterer) {
               error('Place "' + descriptor.title + '"\'s details not found.');
             }
           } else {
-            var location = gPlace.geometry.location;
-            checkDistance({
-              lat: location.lat(),
-              lng: location.lng(),
-            });
+            checkDistance(gPlace.geometry.location);
 
             if (gPlace.permanently_closed) {
               infoContent += '<div class="infowindow-closed">Permanently closed.</div>';
@@ -339,10 +354,7 @@ define(['angular/map/declutterer'], function(declutterer) {
               }
 
               var location = results[0].geometry.location;
-              checkDistance({
-                lat: location.lat(),
-                lng: location.lng(),
-              });
+              checkDistance(results[0].geometry.location);
             }
 
             if (googlePlaceId) {
@@ -357,7 +369,7 @@ define(['angular/map/declutterer'], function(declutterer) {
         };
 
         function checkDistance(receivedPosition) {
-          var distance = distanceFrom(receivedPosition);
+          var distance = that.distanceFrom(receivedPosition);
           if (distance > tolerance) {
             error('Place "' + descriptor.title + '" is ' + distance + 'm away, at ('
                   + receivedPosition.lat + ', ' + receivedPosition.lng + ').');
@@ -368,6 +380,20 @@ define(['angular/map/declutterer'], function(declutterer) {
       })();
 
       // Public members:
+      this.id = descriptor.title.toLowerCase()
+        .replace(/[áàâãå]/g, 'a')
+        .replace(/[äæ]/g, 'ae')
+        .replace(/ç/g, 'c')
+        .replace(/[éèêë]/g, 'e')
+        .replace(/[íìîï]/g, 'e')
+        .replace(/ñ/g, 'n')
+        .replace(/[óòôõ]/g, 'o')
+        .replace(/[öœ]/g, 'oe')
+        .replace(/ß/g, 'ss')
+        .replace(/[úùû]/g, 'u')
+        .replace(/ü/g, 'ue')
+        .replace(/[ýỳŷÿ]/g, 'y')
+        .replace(/\W/g, '');
       this.tagKeys = descriptor.tags;
       this.dbg_clickListener = clickListener;
     };
