@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>Romuald's Berlin Recommendations</name>
+		<description><![CDATA[Cafes, restaurants, etc. that Romuald likes]]></description>
+		<Folder>
+			<name>Romuald's Recommendations</name>
+			<Placemark>
+				<name>Men Men</name>
+				<description><![CDATA[#restaurant #indoor #outdoor<br>Japanese.<br>Great Meals:<br> - Curry pork<br> - Avocado salad]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<Point>
+					<coordinates>13.431178799999998,52.4874164,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>PETER PANE</name>
+				<description><![CDATA[#restaurant #bar #indoor #outdoor<br>Burger / bar.<br>Vegan Burgers and Half pound sweet potato fries are great.]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<Point>
+					<coordinates>13.388398300000063,52.5208082,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Grimm-Center</name>
+				<description><![CDATA[#workplace #indoor #outdoor<br>HU Library.<br>Wifi: fast but you need "eduroam" account. Ask me to get my eduroam credentials.<br>Open from 8am to midnight during the week.<br>Not many sitting places available in the middle of the day in weekdays.]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<Point>
+					<coordinates>13.39096070000005,52.52049769999999,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>St. Oberholz</name>
+				<description><![CDATA[#workplace #café #indoor<br>Café with many people working with their laptop.<br>Free wifi.]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<Point>
+					<coordinates>13.40186790000007,52.5295148,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>betahaus</name>
+				<description><![CDATA[#workplace #café #indoor<br>Café with many people working with their laptop.<br>Free wifi.]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<Point>
+					<coordinates>13.412198499999931,52.5025407,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Amerika-Gedenkbibliothek</name>
+				<description><![CDATA[#workplace #indoor<br>Public Library.<br>Free wifi.]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<Point>
+					<coordinates>13.392449700000043,52.4965527,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Helene-Nathan-Bibliothek</name>
+				<description><![CDATA[#workplace #indoor<br>Public Library.<br>Wifi is free but often slow.<br>Always free sitting places available but outlets are often busy and not available.]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<Point>
+					<coordinates>13.432996000000003,52.4821579,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Erwin-Schrödinger-Center</name>
+				<description><![CDATA[#workplace #indoor<br>Library of HU's Adlershof campus.<br>Always sitting places available.<br>Wifi: fast but you need "eduroam" account. Ask me to get my eduroam credentials.]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<Point>
+					<coordinates>13.531867499999976,52.4308358,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Flamingo</name>
+				<description><![CDATA[#restaurant #café #indoor #outdoor<br>The Pasta-chicken box is 6 Eur and great.<br>Only open until 6pm.]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<Point>
+					<coordinates>13.385457599999995,52.519558,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>treinta y seis</name>
+				<description><![CDATA[#restaurant #indoor #outdoor<br>Great chilli con carne.<br>Expensive. But chilli con carne is 6.50 Eur.]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<Point>
+					<coordinates>13.443470599999955,52.499435,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>La Femme</name>
+				<description><![CDATA[#restaurant #brunch #indoor #outdoor #franzi<br>Turkish.<br>Closed in the evening.]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<Point>
+					<coordinates>13.423750100000007,52.49096,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Chaapa</name>
+				<description><![CDATA[#restaurant #indoor #outdoor<br>Thai.]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<Point>
+					<coordinates>13.419083600000022,52.50070419999999,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Zio Felix</name>
+				<description><![CDATA[#restaurant #indoor #outdoor<br>Pizzaria.<br>Buffalo Mozarella Pizza is great.]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<Point>
+					<coordinates>13.423625500000071,52.4737971,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Neta</name>
+				<description><![CDATA[#restaurant #indoor #outdoor<br>Mexican.<br>Great Vegan Burrito.]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<Point>
+					<coordinates>13.402326799999969,52.5307249,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Asteria</name>
+				<description><![CDATA[#restaurant #indoor #outdoor<br>Greek.<br>Great moussaka.]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<Point>
+					<coordinates>13.411744799999951,52.5415419,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Dolores</name>
+				<description><![CDATA[#restaurant #indoor #outdoor<br>Mexican.]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<Point>
+					<coordinates>13.343829400000004,52.50115619999999,0.0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Style id='icon-1899-0288D1-normal'>
+			<IconStyle>
+				<color>ffD18802</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1899-0288D1-highlight'>
+			<IconStyle>
+				<color>ffD18802</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.0</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1899-0288D1'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1899-0288D1-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1899-0288D1-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+	</Document>
+</kml>
