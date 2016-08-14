@@ -16,7 +16,7 @@ define(['angular/map/declutterer'], function(declutterer) {
           console.log('Distance between them: ' + Math.floor(distance) + 'm');
 
           if (distance < 100) {
-            error('Duplicate marker.');
+            error('Duplicate marker, skipping.');
             return;
           }
           marker.id += '_';

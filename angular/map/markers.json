@@ -946,15 +946,6 @@
     "tags": ["restaurant", "indoor", "good", "aure"]
   },
   {
-    "title": "Zio Felix",
-    "comment": "Italian",
-    "position": {
-      "lat": 52.473698,
-      "lng": 13.42358200000001
-    },
-    "tags": ["restaurant", "great", "indoor", "outdoor", "aure", "franzi", "romu"]
-  },
-  {
     "title": "Pagode",
     "comment": "Thai",
     "place_id": "ChIJSZUDPdhPqEcRgkY7H8j2lso",
@@ -1342,15 +1333,6 @@
       "lng": 13.428352
     },
     "tags": ["restaurant", "other", "good", "indoor"]
-  },
-  {
-    "title": "La Femme",
-    "place_id": "ChIJK6tjGbZPqEcR6tLh2swidpw",
-    "position": {
-      "lat": 52.490960,
-      "lng": 13.423751
-    },
-    "tags": ["brunch", "franzi", "good", "indoor"]
   },
   {
     "title": "Burrito Baby",
