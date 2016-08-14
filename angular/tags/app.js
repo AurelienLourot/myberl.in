@@ -70,6 +70,7 @@ define(function() {
 
       if (!app.tagFilters) {
         app.tagFilters = new TagFilters(data);
+        console.log('Tags module ready.');
       }
       $scope.filters = app.tagFilters;
     });
