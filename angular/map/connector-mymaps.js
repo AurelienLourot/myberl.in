@@ -29,7 +29,7 @@ var Connector = (function() {
 
             var convertedTags = tags.slice();
             if (receivedMarker.description) {
-              var receivedWords = receivedMarker.description.split(' ');
+              var receivedWords = receivedMarker.description.replace('<br>', ' ').split(' ');
               for (var j = 0; j < receivedWords.length; ++j) {
                 var word = receivedWords[j];
                 if (word.startsWith('#')) {
