@@ -111,7 +111,7 @@ a:focus {
 .map {
   position: absolute;
   top: 50px; /*FIXME: calculate based on navbar-header*/
-  bottom: 1.3em; /*FIXME: calculate based on footer*/
+  bottom: 0em;
   left: 0em;
   right: 0em;
 }
@@ -142,23 +142,6 @@ a:focus {
   top: 0;
   right: 0;
   z-index: 1031; /*FIXME: should be based on bootstrap's navbar's z-index*/
-}
-
-div.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #222; /*FIXME: use bootstrap's style*/
-  text-align: center;
-  height: 1.53846em; /*20px*/
-  font-size: 0.92857em; /*13px*/
-  z-index: 10; /*FIXME: to be above semantic UI checkboxes using 1 and 2*/
-}
-
-a.footer,
-a.footer:hover {
-  color: #9d9d9d; /*FIXME: use bootstrap's style*/
-  text-decoration: none;
 }
 
 h1 {
