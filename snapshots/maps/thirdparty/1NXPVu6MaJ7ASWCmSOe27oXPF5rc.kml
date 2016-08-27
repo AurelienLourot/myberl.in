@@ -133,6 +133,14 @@
 					<coordinates>13.343829400000004,52.50115619999999,0.0</coordinates>
 				</Point>
 			</Placemark>
+			<Placemark>
+				<name>Nepal Haus</name>
+				<description><![CDATA[#restaurant #indoor #outdoor<br>The "3 verschiedene sorten" plate is delicious.]]></description>
+				<styleUrl>#icon-1899-0288D1</styleUrl>
+				<Point>
+					<coordinates>13.38869299999999,52.492337,0.0</coordinates>
+				</Point>
+			</Placemark>
 		</Folder>
 		<Style id='icon-1899-0288D1-normal'>
 			<IconStyle>
