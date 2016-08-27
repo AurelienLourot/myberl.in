@@ -1,5 +1,19 @@
 'use strict';
 
+var timerlog;
+window.module = {};
+requirejs(['thirdparty/timerlog-0.1.4/dist/index.es5'], function(timerlog) {
+  timerlog = module.exports;
+  module = undefined;
+
+  timerlog({
+    id: 'init',
+    start_timer: true,
+    message: 'Initialization done.',
+  });
+  localStorage['timerlog'] = 1; // enables console logging
+});
+
 // Extends console.log() and console.error():
 function now() {
   function pad(str, width) {
@@ -86,6 +100,11 @@ var callListeners = function() {
   for (var i in listeners) {
     listeners[i]();
   }
+
+  timerlog({
+    id: 'init',
+    end_timer: true,
+  });
 };
 
 var loadAngularApp = (new Promise(requireAngularApp)).then(waitForAngularAppReady);
