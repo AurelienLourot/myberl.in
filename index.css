@@ -34,8 +34,12 @@ a:focus {
   color: #f66;
 }
 
-.btn-navbar {
+.btn-navbar,
+.btn-navbar:hover {
+  color: #9d9d9d; /*FIXME: use bootstrap's style*/
+  text-decoration: inherit;
   font-size: 18px; /*FIXME: same as navbar-brand*/
+  margin-right: 0.3em;
 }
 
 .well {
@@ -65,10 +69,6 @@ a:focus {
 
 .more-button {
   text-align: center;
-}
-
-.github {
-  color: #9d9d9d; /*FIXME: use bootstrap's style*/
 }
 
 .ui.checkbox {

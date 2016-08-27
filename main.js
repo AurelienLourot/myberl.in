@@ -74,7 +74,7 @@ var initJQueryPopupOverlays = function(resolve, reject) {
 var initModals = function(resolve, reject) {
   $(document).ready(function() {
     $('#help').removeClass('hidden');
-    $('#help_open').animatedModal({
+    $('.help_open').animatedModal({
       modalTarget: 'help',
       animatedIn: 'fadeIn',
       animatedOut: 'fadeOut',
