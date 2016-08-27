@@ -57,30 +57,20 @@ var waitForAngularAppReady = function(berlinApp) {
   });
 };
 
-var initJQueryPopupOverlays = function(resolve, reject) {
-  $(document).ready(function() {
-    var popups = [$('#dbg_secret')];
-    for (var i = 0; i < popups.length; ++i) {
-      var popup = popups[i];
-      popup.popup();
-      popup.removeClass('hidden');
-    }
-
-    console.log('jQuery popup overlays ready.');
-    resolve();
-  });
-};
-
 var initModals = function(resolve, reject) {
   $(document).ready(function() {
-    $('#help').removeClass('hidden');
-    $('.help_open').animatedModal({
-      modalTarget: 'help',
-      animatedIn: 'fadeIn',
-      animatedOut: 'fadeOut',
-      animationDuration: '.2s',
-      color: '#f66', //FIXME: same as .brand-my
-    });
+    $('.modal-page').removeClass('hidden');
+    var modals = ['help', 'dbg_secret'];
+    for (var i = 0; i < modals.length; ++i) {
+      var modal = modals[i];
+      $('.' + modal + '_open').animatedModal({
+        modalTarget: modal,
+        animatedIn: 'fadeIn',
+        animatedOut: 'fadeOut',
+        animationDuration: '.2s',
+        color: '#f66', //FIXME: same as .brand-my
+      });
+    }
     console.log('Modals ready.');
     resolve();
   });
@@ -99,7 +89,7 @@ var callListeners = function() {
 };
 
 var loadAngularApp = (new Promise(requireAngularApp)).then(waitForAngularAppReady);
-Promise.all([loadAngularApp, new Promise(initJQueryPopupOverlays), new Promise(initModals)])
+Promise.all([loadAngularApp, new Promise(initModals)])
   .then(clearStatusLabel)
   .then(callListeners);
 

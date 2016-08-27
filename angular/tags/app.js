@@ -241,8 +241,7 @@ define(function() {
       }
       if (lastClicked == seq.length - 1) {
         lastClicked = -1;
-        $('#filters').popup('hide');
-        $('#dbg_secret').popup('show');
+        $('.dbg_secret_open').click();
       }
     };
   })();

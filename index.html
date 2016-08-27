@@ -93,7 +93,7 @@
       </div>
     </nav>
 
-    <div id="help" class="help hidden">
+    <div id="help" class="modal-page hidden">
       <div class="closebt-container close-help">
         <img class="closebt" src="thirdparty/animated-modal-assets/closebt.svg"/>
       </div>
@@ -147,26 +147,28 @@
       </div>
     </div>
 
-    <div id="dbg_secret" class="panel panel-default hidden">
-      <div class="panel-body">
-        <button type="button" class="close dbg_secret_close" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <p><b>Debug</b></p>
-        <p><button class="btn btn-default" onclick="dbg.click_each_visible_marker();">
-          Click each visible marker
-        </button></p>
-        <p><button class="btn btn-default" onclick="dbg.disable_decluttering();">
-          Disable decluttering
-        </button></p>
-        <p><button class="btn btn-default" onclick="dbg.remove_all_markers();">
-          Remove all markers
-        </button></p>
+    <div id="dbg_secret" class="modal-page hidden">
+      <div class="closebt-container close-dbg_secret">
+        <img class="closebt" src="thirdparty/animated-modal-assets/closebt.svg"/>
       </div>
+      <h1>Debug</h1>
+      <p>
+        <button class="btn btn-default" onclick="dbg.click_each_visible_marker();">
+          Click each visible marker
+        </button>
+      </p>
+      <p>
+        <button class="btn btn-default" onclick="dbg.disable_decluttering();">
+          Disable decluttering
+        </button>
+      </p>
+      <p>
+        <button class="btn btn-default" onclick="dbg.remove_all_markers();">
+          Remove all markers
+        </button>
+      </p>
     </div>
-
-    <!-- jQuery Popup Overlay -->
-    <script src="thirdparty/jquery-popup-overlay-1.7.11/jquery.popupoverlay.js"></script>
+    <div class="hidden"><a class="dbg_secret_open" href="#dbg_secret"></a></div>
 
     <!-- http://joaopereirawd.github.io/animatedModal.js/ -->
     <script src="thirdparty/animated-modal-1.0/animatedModal.min.js"></script>
