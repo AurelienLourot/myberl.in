@@ -36,7 +36,7 @@ var waitForAngularAppReady = function(berlinApp) {
 
 var initJQueryPopupOverlays = function(resolve, reject) {
   $(document).ready(function() {
-    var popups = [$('#credits'), $('#dbg_secret')];
+    var popups = [$('#dbg_secret')];
     for (var i = 0; i < popups.length; ++i) {
       var popup = popups[i];
       popup.popup();
@@ -44,6 +44,21 @@ var initJQueryPopupOverlays = function(resolve, reject) {
     }
 
     console.log('jQuery popup overlays ready.');
+    resolve();
+  });
+};
+
+var initModals = function(resolve, reject) {
+  $(document).ready(function() {
+    $('#help').removeClass('hidden');
+    $('#help_open').animatedModal({
+      modalTarget: 'help',
+      animatedIn: 'fadeIn',
+      animatedOut: 'fadeOut',
+      animationDuration: '.2s',
+      color: '#f66', //FIXME: same as .brand-my
+    });
+    console.log('Modals ready.');
     resolve();
   });
 };
@@ -61,7 +76,8 @@ var callListeners = function() {
 };
 
 var loadAngularApp = (new Promise(requireAngularApp)).then(waitForAngularAppReady);
-Promise.all([loadAngularApp, new Promise(initJQueryPopupOverlays)]).then(clearStatusLabel)
+Promise.all([loadAngularApp, new Promise(initJQueryPopupOverlays), new Promise(initModals)])
+  .then(clearStatusLabel)
   .then(callListeners);
 
 // Collapse navbar when clicking everywhere but on the filters:

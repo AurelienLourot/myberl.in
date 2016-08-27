@@ -31,6 +31,10 @@
           href="thirdparty/semantic-ui-2.1.8/checkbox.min.css">
     <script src="thirdparty/semantic-ui-2.1.8/semantic.min.js"></script>
 
+    <!-- http://joaopereirawd.github.io/animatedModal.js/ -->
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+
     <link href="index.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -88,25 +92,62 @@
     </nav>
 
     <div class="footer">
-      <a href="" class="footer credits_open">
+      <a id="help_open" href="#help" class="footer">
         Made with <i class="fa fa-heart footer"></i> in Berlin.
       </a>
     </div>
 
-    <div id="credits" class="panel panel-default hidden">
-      <div class="panel-body">
-        <button type="button" class="close credits_close" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <p class="credits">
-          We're Franzi and <a href="http://lourot.com/" target="_blank">Aure</a>, 29 years old.
-        </p>
-        <p class="credits">
-          We like electro and we've been living in Berlin for a couple of years.
-        </p>
-        <p class="credits">
-          Enjoy the map!
-        </p>
+    <div id="help" class="help hidden">
+      <div class="closebt-container close-help">
+        <img class="closebt" src="thirdparty/animated-modal-assets/closebt.svg"/>
+      </div>
+      <h1>Made with <i class="fa fa-heart footer"></i> in Berlin by</h1>
+      <div class="container-fluid">
+        <!-- FIXME: angularize to avoid repetition -->
+        <div class="media col-sm-offset-2 col-sm-10 col-md-offset-3 col-md-9 col-lg-offset-4 col-lg-8">
+          <a href="http://lourot.com/" target="_blank">
+            <div class="media-left">
+              <img class="media-object" src="assets/pics/aure.jpg" />
+            </div>
+            <div class="media-body">
+              <h3 class="media-heading">Auré, 29</h3>
+              <h4 class="media-heading">Programmer & Place hunter</h4>
+            </div>
+          </a>
+        </div>
+        <div class="media col-sm-offset-2 col-sm-10 col-md-offset-3 col-md-9 col-lg-offset-4 col-lg-8">
+          <div class="media-left">
+            <img class="media-object" src="assets/pics/franzi.jpg" />
+          </div>
+          <div class="media-body">
+            <h3 class="media-heading">Franzi, 29</h3>
+            <h4 class="media-heading">Place hunter</h4>
+          </div>
+        </div>
+        <div class="media col-sm-offset-2 col-sm-10 col-md-offset-3 col-md-9 col-lg-offset-4 col-lg-8">
+          <a href="http://brillout.com/" target="_blank">
+            <div class="media-left">
+              <img class="media-object" src="assets/pics/romu.jpg" />
+            </div>
+            <div class="media-body">
+              <h3 class="media-heading">Romu, 29</h3>
+              <h4 class="media-heading">Place hunter</h4>
+            </div>
+          </a>
+        </div>
+        <div class="media col-sm-offset-2 col-sm-10 col-md-offset-3 col-md-9 col-lg-offset-4 col-lg-8">
+          <a href="https://github.com/AurelienLourot/myberl.in/blob/master/doc/contrib/README.md"
+             target="_blank">
+            <div class="media-left">
+              <div class="media-object">
+                <i class="fa fa-plus fa-2x"></i>
+              </div>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">I want to contribute!</h4>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -130,6 +171,9 @@
 
     <!-- jQuery Popup Overlay -->
     <script src="thirdparty/jquery-popup-overlay-1.7.11/jquery.popupoverlay.js"></script>
+
+    <!-- http://joaopereirawd.github.io/animatedModal.js/ -->
+    <script src="thirdparty/animated-modal-1.0/animatedModal.min.js"></script>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="thirdparty/bootstrap-3.3.6/js/bootstrap.min.js"></script>
