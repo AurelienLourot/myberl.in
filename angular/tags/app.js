@@ -93,7 +93,7 @@ define(function() {
             // Note that without 'onChange', a Semantic UI checkbox can't be toggled.
             var checkboxes = elm.find('.checkbox');
             if (!checkboxes.length) {
-              error('No checkboxes found.');
+              console.error('No checkboxes found.');
             }
             checkboxes.checkbox({
               onChange: function() {
@@ -117,7 +117,7 @@ define(function() {
 
   var checkModuleIsReady = function() {
     if (!app.tagFilters) {
-      error("tags module isn't ready.");
+      console.error("tags module isn't ready.");
     }
   }
 

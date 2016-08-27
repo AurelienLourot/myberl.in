@@ -52,7 +52,7 @@ var Connector = (function() {
             result.push(convertedMarker);
           }
         } catch (e) {
-          error(e.message);
+          console.error(e.message);
         } finally {
           successCallback(result);
         }

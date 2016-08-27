@@ -26,7 +26,6 @@ module.exports = function(config) {
       'thirdparty/markerwithlabel.js',
       'thirdparty/geolocation-marker.js',
       'thirdparty/x2js-1.2.0/xml2json.min.js',
-      'lib/error.js',
       'thirdparty/require.js',
       'thirdparty/jquery-popup-overlay-1.7.11/jquery.popupoverlay.js',
       'thirdparty/angularjs-1.4.4/angular.min.js',

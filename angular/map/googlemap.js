@@ -16,7 +16,7 @@ define(['angular/map/declutterer'], function(declutterer) {
           console.log('Distance between them: ' + Math.floor(distance) + 'm');
 
           if (distance < 100) {
-            error('Duplicate marker, skipping.');
+            console.error('Duplicate marker, skipping.');
             return;
           }
           marker.id += '_';
@@ -193,8 +193,8 @@ define(['angular/map/declutterer'], function(declutterer) {
             'pointer-events': visibility ? 'auto' : 'none',
           });
         } else {
-          error("setLabelVisible(" + visibility + "): marker '" + descriptor.title +
-                "' isn't visible, ignored.");
+          console.error("setLabelVisible(" + visibility + "): marker '" + descriptor.title +
+                        "' isn't visible, ignored.");
         }
       }
 
@@ -271,9 +271,9 @@ define(['angular/map/declutterer'], function(declutterer) {
 
           if (status != google.maps.places.PlacesServiceStatus.OK || !gPlace) {
             if (status == google.maps.places.PlacesServiceStatus.OVER_QUERY_LIMIT) {
-              error("API rate limit hit.");
+              console.error("API rate limit hit.");
             } else if (status != IGNORE_ERRORS) {
-              error('Place "' + descriptor.title + '"\'s details not found.');
+              console.error('Place "' + descriptor.title + '"\'s details not found.');
             }
           } else {
             checkDistance(gPlace.geometry.location);
@@ -301,7 +301,7 @@ define(['angular/map/declutterer'], function(declutterer) {
             var tagKey = that.tagKeys[i];
             var tagDescriptor = getTagDescriptorByKey(tagKey);
             if (!tagDescriptor) {
-              error("Marker has an undeclared tag '" + tagKey + "'.");
+              console.error("Marker has an undeclared tag '" + tagKey + "'.");
               continue;
             }
             if (tagDescriptor.descriptive) {
@@ -326,11 +326,11 @@ define(['angular/map/declutterer'], function(declutterer) {
             var googlePlaceId;
             if (status != google.maps.places.PlacesServiceStatus.OK || !results.length) {
               if (status == google.maps.places.PlacesServiceStatus.OVER_QUERY_LIMIT) {
-                error("API rate limit hit.");
+                console.error("API rate limit hit.");
               }
               if (!descriptor.place_id) {
                 if (!descriptor.ignore_errors) {
-                  error('Place "' + descriptor.title + '" not found.');
+                  console.error('Place "' + descriptor.title + '" not found.');
                 }
               } else {
                 // Gotten from
@@ -339,14 +339,15 @@ define(['angular/map/declutterer'], function(declutterer) {
               }
             } else {
               if (results.length > 1 && !descriptor.place_id) {
-                error('Place "' + descriptor.title + '" found ' + results.length + ' times:');
+                console.error('Place "' + descriptor.title + '" found ' + results.length
+                              + ' times:');
                 for (var i in results) {
                   console.log(results[i]);
                 }
               }
               if (descriptor.place_id) {
                 if (!descriptor.ignore_errors && descriptor.place_id != results[0].place_id) {
-                  error('Place "' + descriptor.title + '" has id ' + results[0].place_id);
+                  console.error('Place "' + descriptor.title + '" has id ' + results[0].place_id);
                 }
                 googlePlaceId = descriptor.place_id;
               } else {
@@ -371,8 +372,8 @@ define(['angular/map/declutterer'], function(declutterer) {
         function checkDistance(receivedPosition) {
           var distance = that.distanceFrom(receivedPosition);
           if (distance > tolerance) {
-            error('Place "' + descriptor.title + '" is ' + distance + 'm away, at ('
-                  + receivedPosition.lat + ', ' + receivedPosition.lng + ').');
+            console.error('Place "' + descriptor.title + '" is ' + distance + 'm away, at ('
+                          + receivedPosition.lat + ', ' + receivedPosition.lng + ').');
           }
         }
 
@@ -413,7 +414,7 @@ define(['angular/map/declutterer'], function(declutterer) {
         var tagKey = tagKeys[key];
         var descriptor = getTagDescriptorByKey(tagKey);
         if (!descriptor) {
-          error("Marker has an undeclared tag '" + tagKey + "'.");
+          console.error("Marker has an undeclared tag '" + tagKey + "'.");
           continue;
         }
 

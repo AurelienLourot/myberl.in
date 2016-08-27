@@ -1,5 +1,28 @@
 'use strict';
 
+// Extends console.log() and console.error():
+function now() {
+  function pad(str, width) {
+    return ('0'.repeat(width) + str).slice(-width);
+  }
+  var now = new Date;
+  return now.getHours() + ':' + pad(now.getMinutes(), 2) + ':' + pad(now.getSeconds(), 2) + '.'
+    + pad(now.getMilliseconds(), 3);
+}
+console.log_orig = console.log;
+console.log = function(str) {
+  console.log_orig(now() + ' ' + str);
+};
+console.error_orig = console.error;
+console.error = function(str) {
+  console.error_orig(now() + ' ' + str);
+
+  // Fail on error when testing:
+  if (typeof fail != "undefined") { // fail() is provided by jasmine when testing
+    fail(str);
+  }
+};
+
 // Constants:
 var statusLabelColor = 'success';
 var statusLabelContent = '<i class="fa fa-spinner fa-spin fa-2x"></i>';
