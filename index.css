@@ -161,13 +161,13 @@ a.footer:hover {
   text-decoration: none;
 }
 
-i.footer {
-  font-size: 0.8em;
-}
-
 h1 {
   text-align: center;
   margin: 0.8em;
+}
+
+.fa-heart {
+  font-size: 0.8em;
 }
 
 .help {
