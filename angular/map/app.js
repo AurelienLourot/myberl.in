@@ -28,26 +28,26 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/tags/a
               console.log(descriptors.length + ' JSON markers found.');
               resolve(descriptors);
             });
-          });
-
-          for (var i = 0; i < googlemap.externalGoogleMyMaps.length; ++i) {
-            var myMap = googlemap.externalGoogleMyMaps[i];
-            (function(myMapCopy) {
-              addMarkersToMap = addMarkersToMap.then(function(descriptors) {
-                return new Promise(function(resolve, reject) {
+          }).then(function addMyMapsMarkers(descriptors) {
+            var getters = [];
+            for (var i = 0; i < googlemap.externalGoogleMyMaps.length; ++i) {
+              var myMap = googlemap.externalGoogleMyMaps[i];
+              (function(myMapCopy) {
+                getters.push(new Promise(function(resolve, reject) {
                   new mymaps.Connector(myMapCopy.id, myMapCopy.tags, $http,
                                        function(myMapsDescriptors) {
                     console.log(myMapsDescriptors.length + ' MyMaps markers found in '
                                 + myMapCopy.name + '.');
                     descriptors = descriptors.concat(myMapsDescriptors);
-                    resolve(descriptors);
+                    resolve();
                   });
-                });
-              });
-            })(myMap);
-          }
-
-          addMarkersToMap = addMarkersToMap.then(function waitForTagsModuleReady(descriptors) {
+                }));
+              })(myMap);
+            }
+            return Promise.all(getters).then(function() {
+              return descriptors;
+            });
+          }).then(function waitForTagsModuleReady(descriptors) {
             return new Promise(function(resolve, reject) {
               if (tagsModuleIsReady()) {
                 resolve(descriptors);
