@@ -2,7 +2,7 @@
 
 var timerlog;
 window.module = {};
-requirejs(['thirdparty/timerlog-0.1.4/dist/index.es5'], function(timerlog) {
+requirejs(['thirdparty/timerlog-0.1.4/dist/index.es5'], function() {
   timerlog = module.exports;
   module = undefined;
 
