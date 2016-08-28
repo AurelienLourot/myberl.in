@@ -15,14 +15,6 @@ requirejs(['thirdparty/timerlog-0.1.4/dist/index.es5'], function(timerlog) {
 });
 
 // Extends console.log() and console.error():
-function now() {
-  function pad(str, width) {
-    return ('0'.repeat(width) + str).slice(-width);
-  }
-  var now = new Date;
-  return now.getHours() + ':' + pad(now.getMinutes(), 2) + ':' + pad(now.getSeconds(), 2) + '.'
-    + pad(now.getMilliseconds(), 3);
-}
 console.log_orig = console.log;
 console.log = function(str) {
   console.log_orig(now() + ' ' + str);
@@ -36,6 +28,8 @@ console.error = function(str) {
     fail(str);
   }
 };
+
+console.log('Initializing app...');
 
 // Constants:
 var statusLabelColor = 'success';

@@ -21,6 +21,7 @@ module.exports = function(config) {
       {pattern: 'assets/pics/thirdparty/*.png', included: false},
       {pattern: 'thirdparty/timerlog-0.1.4/dist/index.es5.js', included: false},
       {pattern: 'main.js', included: false},
+      'lib/time.js',
       'thirdparty/jquery-1.12.4.min.js',
       'thirdparty/semantic-ui-2.1.8/semantic.min.js',
       'https://maps.googleapis.com/maps/api/js?signed_in=true&key=AIzaSyDgo1hF6M7dGD75NQgfNXGvT422ri9ieyU&libraries=places',

@@ -89,6 +89,7 @@ define(['angular/map/declutterer'], function(declutterer) {
 
       // Private members:
       var that = this;
+      console.log('Creating Google Map...');
       var map = new google.maps.Map(document.getElementById(elemId), {
         center: berlinTvTower,
         zoom: defaultZoomLevel,
