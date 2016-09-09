@@ -23,9 +23,11 @@ console.error_orig = console.error;
 console.error = function(str) {
   console.error_orig(now() + ' ' + str);
 
-  // Fail on error when testing:
+  // Fail on error when testing or send error to Sentry in prod:
   if (typeof fail != "undefined") { // fail() is provided by jasmine when testing
     fail(str);
+  } else {
+    Raven.captureException(new Error(str));
   }
 };
 
