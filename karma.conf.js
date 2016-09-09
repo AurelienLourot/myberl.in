@@ -29,9 +29,9 @@ module.exports = function(config) {
       'thirdparty/markerwithlabel.js',
       'thirdparty/geolocation-marker.js',
       'thirdparty/x2js-1.2.0/xml2json.min.js',
+      'thirdparty/angularjs-1.4.4/angular.min.js',
       'thirdparty/require.js',
       'thirdparty/animated-modal-1.0/animatedModal.min.js',
-      'thirdparty/angularjs-1.4.4/angular.min.js',
       'thirdparty/angularjs-1.4.4/angular-animate.min.js',
       'http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-mocks.js',
 
