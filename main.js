@@ -92,15 +92,15 @@ var clearStatusLabel = function(input) {
 };
 
 var callListeners = function() {
-  console.log('[ready] App ready.');
-  for (var i in listeners) {
-    listeners[i]();
-  }
-
   timerlog({
     id: 'init',
     end_timer: true,
   });
+  console.log('[ready] App ready.');
+
+  for (var i in listeners) {
+    listeners[i]();
+  }
 };
 
 var loadAngularApp = (new Promise(requireAngularApp)).then(waitForAngularAppReady);
