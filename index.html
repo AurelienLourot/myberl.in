@@ -22,7 +22,9 @@
     <!-- Sentry -->
     <script src="https://cdn.ravenjs.com/3.7.0/raven.min.js"></script>
     <script>
-      Raven.config('https://0200db7f5988481ca976c5e0a900d689@sentry.io/98062').install();
+      Raven.config('https://0200db7f5988481ca976c5e0a900d689@sentry.io/98062', {
+        ignoreUrls: [/localhost/,],
+      }).install();
     </script>
 
     <script src="thirdparty/polyfills.js"></script>
