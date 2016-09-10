@@ -8,7 +8,7 @@ var page = require('webpage').create();
 page.onConsoleMessage = function(msg) {
   console.log('INFO: ' + msg);
 
-  if (msg.indexOf('[ready]') > -1) {
+  if (msg.indexOf('[extReady]') > -1) {
     console.log('SUCCESS');
     phantom.exit(0);
   }

@@ -22,30 +22,11 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/tags/a
         $timeout(function () { // after browser rendering
           var googleMap = new googlemap.Map(scope.id, setStatus);
 
-          var addMarkersToMap = new Promise(function addJsonMarkers(resolve, reject) {
+          var addJsonMarkersToMap = new Promise(function getJsonMarkers(resolve, reject) {
             console.log('Loading markers...');
             $http.get(googlemap.markerDescriptors).success(function(descriptors) {
               console.log(descriptors.length + ' JSON markers found.');
               resolve(descriptors);
-            });
-          }).then(function addMyMapsMarkers(descriptors) {
-            var getters = [];
-            for (var i = 0; i < googlemap.externalGoogleMyMaps.length; ++i) {
-              var myMap = googlemap.externalGoogleMyMaps[i];
-              (function(myMapCopy) {
-                getters.push(new Promise(function(resolve, reject) {
-                  new mymaps.Connector(myMapCopy.id, myMapCopy.tags, $http,
-                                       function(myMapsDescriptors) {
-                    console.log(myMapsDescriptors.length + ' MyMaps markers found in '
-                                + myMapCopy.name + '.');
-                    descriptors = descriptors.concat(myMapsDescriptors);
-                    resolve();
-                  });
-                }));
-              })(myMap);
-            }
-            return Promise.all(getters).then(function() {
-              return descriptors;
             });
           }).then(function waitForTagsModuleReady(descriptors) {
             return new Promise(function(resolve, reject) {
@@ -60,23 +41,32 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/tags/a
                 });
               }
             });
-          }).then(function doAddMarkersToMap(descriptors) {
-            return new Promise(function(resolve, reject) {
-              for (var i = 0; i < descriptors.length; ++i) {
-                googleMap.addMarker(new googlemap.Marker(
-                  descriptors[i], getTagDescriptorByKey, googleMap.gPlaces, scope.onTagClick));
-              }
-
-              var showHideMarkers = function() {
-                googleMap.showHideMarkers(areMatching);
-              }
-              addListener(showHideMarkers);
-              showHideMarkers();
-
-              console.log('Markers added to ' + scope.id + '.');
-              resolve();
-            });
+          }).then(function addJsonMarkersToMapAndListenToFilterChanges(descriptors) {
+            addMarkersToMap(descriptors);
+            addListener(showHideMarkers);
           });
+
+          var addMyMapsMarkersToMap = function() {
+            var myMapsDescriptors = [];
+            var getters = [];
+            for (var i = 0; i < googlemap.externalGoogleMyMaps.length; ++i) {
+              var myMap = googlemap.externalGoogleMyMaps[i];
+              (function(myMapCopy) {
+                getters.push(new Promise(function(resolve, reject) {
+                  new mymaps.Connector(myMapCopy.id, myMapCopy.tags, $http, function(descriptors) {
+                    console.log(descriptors.length + ' MyMaps markers found in '
+                                + myMapCopy.name + '.');
+                    myMapsDescriptors = myMapsDescriptors.concat(descriptors);
+                    resolve();
+                  });
+                }));
+              })(myMap);
+            }
+            return Promise.all(getters).then(function() {
+              addMarkersToMap(myMapsDescriptors);
+              console.log('[extReady] External maps loaded.');
+            });
+          };
 
           var waitForMapReady = new Promise(function(resolve, reject) {
             googleMap.addListener(function() {
@@ -90,7 +80,21 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/tags/a
             }
           }
 
-          Promise.all([addMarkersToMap, waitForMapReady]).then(callListeners);
+          Promise.all([addJsonMarkersToMap, waitForMapReady]).then(callListeners)
+            .then(addMyMapsMarkersToMap);
+
+          function addMarkersToMap(descriptors) {
+            for (var i = 0; i < descriptors.length; ++i) {
+              googleMap.addMarker(new googlemap.Marker(
+                descriptors[i], getTagDescriptorByKey, googleMap.gPlaces, scope.onTagClick));
+            }
+            showHideMarkers();
+            console.log(descriptors.length + ' markers added to ' + scope.id + '.');
+          }
+
+          function showHideMarkers() {
+            googleMap.showHideMarkers(areMatching);
+          }
 
           dbg.click_each_visible_marker = function() {
             googleMap.dbg_click_each_visible_marker();
