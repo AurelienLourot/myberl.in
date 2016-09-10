@@ -92,7 +92,7 @@ var clearStatusLabel = function(input) {
 };
 
 var callListeners = function() {
-  console.log('App ready.');
+  console.log('[ready] App ready.');
   for (var i in listeners) {
     listeners[i]();
   }

@@ -45,8 +45,12 @@ $ sudo apt-get install phantomjs
 $ phantomjs --ssl-protocol=tlsv1 monitoring/load-myberl-in.js
 ```
 
-> **Note:** `phantomjs` will exit with `1` if [myberl.in](https://myberl.in) is unreachable, `0`
-> otherwise.
+In addition to sending any error to Sentry, `phantomjs` will terminate with the following exit
+values:
+
+* `0`: [myberl.in](https://myberl.in) was reachable and got ready in time.
+* `1`: myberl.in's initialization timed out.
+* `2`: myberl.in was unreachable.
 
 ## Documentation
 
