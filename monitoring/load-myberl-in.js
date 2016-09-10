@@ -1,6 +1,6 @@
 setTimeout(function() {
   console.error('FAILED: timeout.');
-  phantom.exit(2);
+  phantom.exit(1);
 }, 10000);
 
 var page = require('webpage').create();
@@ -17,6 +17,6 @@ page.onConsoleMessage = function(msg) {
 page.open('https://myberl.in', function(status) {
   if (status != 'success') {
     console.error('FAILED: unreachable?');
-    phantom.exit(1);
+    phantom.exit(2);
   }
 });
