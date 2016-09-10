@@ -1,6 +1,6 @@
 # myberl.in [![Build Status](https://travis-ci.org/AurelienLourot/myberl.in.svg?branch=master)](https://travis-ci.org/AurelienLourot/myberl.in)
 
-Source of http://myberl.in . An interactive map of bars, clubs and restaurants in Berlin.
+Source of https://myberl.in . An interactive map of bars, clubs and restaurants in Berlin.
 
 ## Serve locally
 
@@ -9,12 +9,18 @@ $ sudo npm install -g http-server
 $ http-server
 ```
 
+> **Note:** Front-end errors won't be sent to Sentry. See
+> [Monitoring/Alerting](https://github.com/AurelienLourot/myberl.in#monitoringalerting).
+
 ## Run the E2E and unit tests
 
 ```bash
 $ npm install
 $ npm test
 ```
+
+> **Note:** Front-end errors won't be sent to Sentry. See
+> [Monitoring/Alerting](https://github.com/AurelienLourot/myberl.in#monitoringalerting).
 
 ## Deploy/Update the AWS Route 53 domain
 
@@ -28,6 +34,19 @@ Default output format [None]:
 $ ./aws/dns_create.sh
 $ ./aws/dns_update.sh
 ```
+
+## Monitoring/Alerting
+
+Any front-end error is sent to [Sentry](https://sentry.io) (except when served on `*localhost*`).
+This can be leveraged by loading the webapp regularly from the console or a cronjob:
+
+```bash
+$ sudo apt-get install phantomjs
+$ phantomjs --ssl-protocol=tlsv1 monitoring/load-myberl-in.js
+```
+
+> **Note:** `phantomjs` will exit with `1` if [myberl.in](https://myberl.in) is unreachable, `0`
+> otherwise.
 
 ## Documentation
 
