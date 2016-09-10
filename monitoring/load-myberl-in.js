@@ -5,6 +5,10 @@ setTimeout(function() {
 
 var page = require('webpage').create();
 
+page.onResourceError = function(e) {
+  console.log('ERROR: ' + e.errorString);
+};
+
 page.onConsoleMessage = function(msg) {
   console.log('INFO: ' + msg);
 
