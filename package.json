@@ -6,6 +6,8 @@
     "url": "https://github.com/AurelienLourot/myberl.in.git"
   },
   "scripts": {
+    "karma": "./node_modules/karma/bin/karma start",
+    "loadmyberlin": "phantomjs --ssl-protocol=tlsv1 monitoring/load-myberl-in.js",
     "test": "./node_modules/karma/bin/karma start && phantomjs --ignore-ssl-errors=true monitoring/load-myberl-in.js"
   },
   "devDependencies": {

@@ -1,4 +1,5 @@
 /node_modules
+/npm-debug.log
 
 # see http://askubuntu.com/questions/144408/what-is-the-file-c-nppdf32log-debuglog-txt :
 *nppdf32Log*

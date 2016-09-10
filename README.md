@@ -16,7 +16,7 @@ $ http-server
 
 ```bash
 $ npm install
-$ npm test
+$ npm run-script karma
 ```
 
 > **Note:** Front-end errors won't be sent to Sentry. See
@@ -42,15 +42,13 @@ This can be leveraged by loading the webapp regularly from the console or a cron
 
 ```bash
 $ sudo apt-get install phantomjs
-$ phantomjs --ssl-protocol=tlsv1 monitoring/load-myberl-in.js
+$ npm run-script loadmyberlin
 ```
 
-In addition to sending any error to Sentry, `phantomjs` will terminate with the following exit
-values:
+In addition to sending any error to Sentry, `npm` will terminate with a non-null exit value if:
 
-* `0`: [myberl.in](https://myberl.in) was reachable and got ready in time.
-* `1`: myberl.in's initialization timed out.
-* `2`: myberl.in was unreachable.
+* [myberl.in](https://myberl.in)'s initialization times out, or
+* myberl.in is unreachable.
 
 ## Documentation
 
