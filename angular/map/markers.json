@@ -310,6 +310,7 @@
   },
   {
     "title": "Mein Haus am See",
+    "place_id": "ChIJo8Da9-RRqEcRp1K4g7WXtZQ",
     "position": {
       "lat": 52.530007,
       "lng": 13.400766999999975
@@ -396,6 +397,9 @@
   },
   {
     "title": "Kuschlowski",
+    "ignore_errors": true,
+    "place_id": "ChIJAbkQ6LBPqEcRPCVqo5pACnk",
+    "website": "https://www.facebook.com/pages/Kuschlowski/155923657775508",
     "position": {
       "lat": 52.48782,
       "lng": 13.431100000000015
@@ -1192,10 +1196,10 @@
   {
     "title": "Mauerpark",
     "comment": "Flea market",
-    "place_id": "ChIJd-d5Rx1SqEcRgCz33OsCSZQ",
+    "place_id": "ChIJCydkxPlRqEcRAVlBoABIR_0",
     "position": {
-      "lat": 52.5424,
-      "lng": 13.40335200000004
+      "lat": 52.541234,
+      "lng": 13.402439
     },
     "tags": ["sightseeing", "bar", "restaurant", "outdoor", "great", "aure", "franzi", "romu"]
   },
@@ -1468,6 +1472,7 @@
   {
     "title": "Monkey Bar",
     "comment": "Hip hotel bar with view",
+    "place_id": "ChIJ-RAVYVVQqEcRPZ3e-XXyPbg",
     "position": {
       "lat": 52.505671,
       "lng": 13.337896
