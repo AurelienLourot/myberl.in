@@ -5,6 +5,11 @@
     "type": "git",
     "url": "https://github.com/AurelienLourot/myberl.in.git"
   },
+  "_note": [
+    "We let 'npm test' run phantomjs against the production app instead of localhost because we",
+    "don't use it for testing but for monitoring. Thus each time Travis CI will run the karma",
+    "tests it will use the opportunity to do the monitoring."
+  ],
   "scripts": {
     "karma": "./node_modules/karma/bin/karma start",
     "loadmyberlin": "phantomjs --ssl-protocol=tlsv1 monitoring/load-myberl-in.js",
