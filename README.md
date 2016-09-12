@@ -10,7 +10,7 @@ $ http-server
 ```
 
 > **Note:** Front-end errors won't be sent to Sentry. See
-> [Monitoring/Alerting](https://github.com/AurelienLourot/myberl.in#monitoringalerting).
+> [Monitoring/Alerting](#monitoringalerting).
 
 ## Run the E2E and unit tests
 
@@ -20,7 +20,7 @@ $ npm run-script karma
 ```
 
 > **Note:** Front-end errors won't be sent to Sentry. See
-> [Monitoring/Alerting](https://github.com/AurelienLourot/myberl.in#monitoringalerting).
+> [Monitoring/Alerting](#monitoringalerting).
 
 ## Deploy/Update the AWS Route 53 domain
 
