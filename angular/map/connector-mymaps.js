@@ -45,7 +45,8 @@ var Connector = (function() {
             }
 
             var convertedMarker = {
-              title: receivedMarker.name,
+              // On IE11, titles containing `- ` are of type Object, thus the need to cast:
+              title: '' + receivedMarker.name,
               position: {
                 lat: parseFloat(receivedCoordinates[2]),
                 lng: parseFloat(receivedCoordinates[1]),
