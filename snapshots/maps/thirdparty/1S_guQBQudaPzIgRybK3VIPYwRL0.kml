@@ -145,6 +145,13 @@
 					<coordinates>13.87494909999998,52.581824,0.0</coordinates>
 				</Point>
 			</Placemark>
+			<Placemark>
+				<name>Stechlin See</name>
+				<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+				<Point>
+					<coordinates>13.023303499999997,53.1520282,0.0</coordinates>
+				</Point>
+			</Placemark>
 		</Folder>
 		<Folder>
 			<name>Untitled layer</name>
