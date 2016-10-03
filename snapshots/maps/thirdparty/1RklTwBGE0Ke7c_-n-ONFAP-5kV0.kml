@@ -285,6 +285,30 @@
 					<coordinates>13.438736199999994,52.47905579999999,0.0</coordinates>
 				</Point>
 			</Placemark>
+			<Placemark>
+				<name>Die Apotheken Bar</name>
+				<description><![CDATA[#bar #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.423943799999961,52.5017431,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Südblock</name>
+				<description><![CDATA[#bar #indoor #outdoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.416900400000031,52.49862279999999,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Marabu</name>
+				<description><![CDATA[#bar #indoor]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.43853439999998,52.4976996,0.0</coordinates>
+				</Point>
+			</Placemark>
 		</Folder>
 		<Style id='icon-503-DB4436-normal'>
 			<IconStyle>
