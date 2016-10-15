@@ -31,6 +31,12 @@ console.error = function(str) {
   }
 };
 
+// Sends unhandled promise rejections to Sentry (see
+// https://github.com/getsentry/raven-js/issues/424 ):
+window.onunhandledrejection = function(event) {
+  console.error(event);
+};
+
 console.log('Initializing app...');
 
 // Constants:
