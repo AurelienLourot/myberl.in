@@ -22,6 +22,13 @@ define(['angular/map/app', 'angular/tags/app', 'angular/status/app'], function(m
     }
   }]);
 
+  // See https://docs.angularjs.org/api/ng/service/$exceptionHandler :
+  app.factory('$exceptionHandler', function() {
+    return function(exception, cause) {
+      console.error(exception.stack ? exception.stack : exception);
+    };
+  });
+
   // Adds a listener on module readiness.
   var addListener = function(listener) {
     listeners.push(listener);
