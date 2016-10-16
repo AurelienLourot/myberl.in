@@ -114,7 +114,7 @@ Promise.all([loadAngularApp, new Promise(initModals)])
   .then(clearStatusLabel)
   .then(callListeners)
   .catch(function(e) {
-    console.error(e);
+    console.error(e.stack ? e.stack : e);
   });
 
 // Collapse navbar when clicking everywhere but on the filters:
