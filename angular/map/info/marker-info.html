@@ -1,0 +1,25 @@
+<div class="info info-pic"><!-- no pic yet --></div>
+<div class="info info-title">
+  <h4>{{ state.marker.getTitle() }}</h4>
+  <table data-ng-hide="!state.marker.getComment()">
+    <tr>
+      <td class="info-comment">//</td>
+      <td class="info-comment">{{ state.marker.getComment() }}</td>
+    </tr>
+  </table>
+</div>
+<div data-ng-hide="!state.marker.getOpenness()"
+     class="info info-openness info-{{ info.getOpennessClass() }}">
+  {{ info.getHumanReadableOpenness() }}.
+</div>
+<div data-ng-hide="!state.marker.getWebsite()" class="info">
+  <a target="_blank" href="{{ state.marker.getWebsite() }}">{{ state.marker.getWebsite() }}</a>
+</div>
+<div data-ng-hide="!state.marker.getAddress()" class="info info-address">
+  {{ state.marker.getAddress() }}
+</div>
+<div class="info">
+  <span data-ng-repeat="tag in state.marker.tagKeys" data-ng-show="info.isTagDescriptive(tag)">
+    <a data-ng-click="info.onTagClick()" href="">#{{ tag }}</a>&nbsp;
+  </span>
+</div>

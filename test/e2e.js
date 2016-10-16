@@ -16,7 +16,7 @@ describe('app', function() {
   width: 300px;     \
 }                   \
 </style>            \
-<div id="fixture"><map on-tag-click=""></map><tag-filters></tag-filters></div>';
+<div id="fixture"><map on-marker-click=""></map><tag-filters></tag-filters></div>';
     document.body.insertAdjacentHTML('afterbegin', fixture);
 
     // On Firefox 45.0 the app gets easily ready within 5 seconds but on Travis CI they use Firefox

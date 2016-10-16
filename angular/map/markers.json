@@ -1751,8 +1751,9 @@
   },
   {
     "title": "Picnic",
-    "comment": "Drink booth, <a class='infowindow-website' target='_blank' href='http://picnic-berlin.com/'>picnic-berlin.com</a>",
+    "comment": "Drink booth",
     "ignore_errors": true,
+    "website": "http://picnic-berlin.com/",
     "position": {
       "lat": 52.470714,
       "lng": 13.419397

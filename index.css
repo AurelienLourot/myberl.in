@@ -1,7 +1,6 @@
 td {
   padding-left: 0.5em;
   padding-bottom: 0.2em;
-  text-align: right;
 }
 
 a,
@@ -67,6 +66,10 @@ a:focus {
   margin-right: auto;
 }
 
+td.filter {
+  text-align: right;
+}
+
 .more-button {
   text-align: center;
 }
@@ -74,6 +77,53 @@ a:focus {
 .ui.checkbox {
   display: block;
   margin: 0em;
+}
+
+.ui.sidebar {
+  background-color: white;
+}
+
+h4 {
+  margin-bottom: 0.2em;
+}
+
+.info {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
+}
+
+.info-pic {
+  background-color: #faa; /*FIXME: same as media-object*/
+  min-height: 7em;
+}
+
+.info-title {
+  background-color: #f66; /*FIXME: same as .brand-my*/
+  color: white;
+  padding-bottom: 1em; /*FIXME: same as .info*/
+}
+
+.info-comment {
+  vertical-align: top;
+}
+
+.info-openness {
+  font-weight: bold;
+}
+
+.info-open {
+  color: green;
+}
+
+.info-closed {
+  color: red;
+}
+
+.info-address {
+  /* On Chromium 48, text is sometimes invisible when italic.
+  font-style: italic;*/
+  color: #555;
 }
 
 .map-label {
@@ -114,27 +164,6 @@ a:focus {
   bottom: 0em;
   left: 0em;
   right: 0em;
-}
-
-.infowindow-title {
-  font-weight: bold;
-}
-
-.infowindow-address,
-.infowindow-comment {
-  /* On Chromium 48, text is sometimes invisible when italic.
-  font-style: italic;*/
-  color: #555;
-}
-
-.infowindow-closed {
-  font-weight: bold;
-  color: red;
-}
-
-.infowindow-open {
-  font-weight: bold;
-  color: green;
 }
 
 .status-label {

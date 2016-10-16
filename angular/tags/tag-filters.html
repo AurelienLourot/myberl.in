@@ -4,9 +4,9 @@
       <div class="well hidable" data-ng-hide="filters.areAllHidden(group.getChildren())">
         <table class="filter-group filter-control">
           <tr class="hidable" data-ng-repeat="tag in group" data-ng-show="filters.states[tag.name].visible">
-            <td>#{{ tag.name }}</td>
-            <td data-ng-bind-html="tag.desc | rawHtml"></td>
-            <td><div class="ui fitted toggle checkbox">
+            <td class="filter">#{{ tag.name }}</td>
+            <td class="filter" data-ng-bind-html="tag.desc | rawHtml"></td>
+            <td class="filter"><div class="ui fitted toggle checkbox">
                 <input type="checkbox" tabindex="0" name="{{ tag.name }}"
                        data-ng-model="filters.states[tag.name].selected" />
                 <label></label>

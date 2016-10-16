@@ -73,6 +73,32 @@ var waitForAngularAppReady = function(berlinApp) {
   });
 };
 
+var initBars = function(resolve, reject) {
+  $(document).ready(function() {
+    // Collapse navbar when clicking everywhere but on the filters:
+    $('body').on('click', null, null, function(e) {
+      if ($(e.target).closest('.filter-control').length == 0) {
+        $('#navbar').collapse('hide');
+      }
+    });
+
+    // Collapse sidebar when clicking everywhere but on the markers:
+    //FIXME: panning the map triggers 'click'
+    $('body').on('click', null, null, function(e) {
+      if ($(e.target).closest('.gmnoprint').length == 0) {
+        $('.ui.sidebar').sidebar('hide')
+      }
+    });
+
+    $('.ui.sidebar')
+      .sidebar('setting', 'dimPage', false)
+      .sidebar('setting', 'closable', false);
+
+    console.log('Bars ready.');
+    resolve();
+  });
+};
+
 var initModals = function(resolve, reject) {
   $(document).ready(function() {
     $('.modal-page').removeClass('hidden');
@@ -110,19 +136,12 @@ var callListeners = function() {
 };
 
 var loadAngularApp = (new Promise(requireAngularApp)).then(waitForAngularAppReady);
-Promise.all([loadAngularApp, new Promise(initModals)])
+Promise.all([loadAngularApp, new Promise(initBars), new Promise(initModals)])
   .then(clearStatusLabel)
   .then(callListeners)
   .catch(function(e) {
     console.error(e.stack ? e.stack : e);
   });
-
-// Collapse navbar when clicking everywhere but on the filters:
-$('body').on('click', null, null, function(e) {
-  if ($(e.target).closest('.filter-control').length == 0) {
-    $('#navbar').collapse('hide');
-  }
-});
 
 define({
   addListener: addListener,

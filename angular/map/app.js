@@ -1,18 +1,20 @@
 'use strict';
 
-define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/tags/app',
-        'angular/status/app'], function(googlemap, mymaps, tags, status) {
-  var app = angular.module('map', ['tags', 'status']);
+define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/info/app',
+        'angular/tags/app', 'angular/status/app'],
+       function(googlemap, mymaps, info, tags, status) {
+  var app = angular.module('map', ['info', 'tags', 'status']);
 
-  app.directive('map', ['tagsModuleIsReady', 'getTagDescriptorByKey', 'addListener', 'areMatching',
-                        'setStatus', '$http', '$timeout', '$interval',
-                        function(tagsModuleIsReady, getTagDescriptorByKey, addListener, areMatching,
-                                 setStatus, $http, $timeout, $interval) {
+  app.directive(
+    'map', ['tagsModuleIsReady', 'getTagDescriptorByKey', 'addListener', 'areMatching',
+            'setCurrentMarker', 'setStatus', '$http', '$timeout', '$interval',
+            function(tagsModuleIsReady, getTagDescriptorByKey, addListener, areMatching,
+                     setCurrentMarker, setStatus, $http, $timeout, $interval) {
     return {
       restrict: 'E',
       templateUrl: requirejs.toUrl('angular/map/map.html'),
       scope: {
-        onTagClick: '@', // e.g. 'javascript: myFunction();'
+        onMarkerClick: '@', // e.g. 'javascript: myFunction();'
       },
       controller: ['$scope', function($scope) {
         $scope.id = 'map-' + uid();
@@ -86,10 +88,16 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/tags/a
           function addMarkersToMap(descriptors) {
             for (var i = 0; i < descriptors.length; ++i) {
               googleMap.addMarker(new googlemap.Marker(
-                descriptors[i], getTagDescriptorByKey, googleMap.gPlaces, scope.onTagClick));
+                descriptors[i], getTagDescriptorByKey, googleMap.gPlaces, onMarkerClick));
             }
             showHideMarkers();
             console.log(descriptors.length + ' markers added to ' + scope.id + '.');
+
+            // marker: instance of googlemap.Marker.
+            function onMarkerClick(marker) {
+              setCurrentMarker(marker);
+              eval(scope.onMarkerClick);
+            }
           }
 
           function showHideMarkers() {

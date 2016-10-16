@@ -148,18 +148,13 @@ define(['angular/map/declutterer'], function(declutterer) {
     // gPlaces: instance of google.maps.places.PlacesService .
     // getTagDescriptorByKey: a function taking a tag key as argument and returning the
     //                        corresponding tag descriptor.
-    // onTagClickScript: script to be run when clicking on a tag (in the info window), e.g.
-    //                   'javascript: myFunction();'.
-    function Marker(descriptor, getTagDescriptorByKey, gPlaces, onTagClickScript) {
+    // onMarkerClick: listener to be called when clicking on a marker. Takes an instance of Marker
+    //                as argument.
+    function Marker(descriptor, getTagDescriptorByKey, gPlaces, onMarkerClick) {
 
       // Shows or hides the marker.
       // map: instance of google.maps.Map or null.
       this.setVisibleOnMap = function setVisibleOnMap(map) {
-        if (!map) { // hiding
-          // Looks like info windows of hidden markers can't get closed, so we don't take the risk:
-          closeAnyOpenInfoWindow();
-        }
-
         var justCreated = false;
         if (!googleMarker && map) {
           googleMarker = createGoogleMarker();
@@ -240,6 +235,30 @@ define(['angular/map/declutterer'], function(declutterer) {
         return result;
       };
 
+      this.getTitle = function getTitle() {
+        return descriptor.title;
+      };
+
+      this.getComment = function getComment() {
+        return descriptor.comment;
+      };
+
+      this.getOpenness = function getOpenness() {
+        return externalInfo.openness || '';
+      };
+
+      this.getAddress = function getAddress() {
+        return externalInfo.address || '';
+      };
+
+      this.getWebsite = function getWebsite() {
+        if (!descriptor.ignore_errors && descriptor.website && externalInfo.website
+            && descriptor.website != externalInfo.website) {
+          console.error('[ext] ' + descriptor.title + ' has conflicting websites.');
+        }
+        return descriptor.website || externalInfo.website || '';
+      };
+
       // Private methods
 
       // MarkerWithLabel factory.
@@ -260,68 +279,13 @@ define(['angular/map/declutterer'], function(declutterer) {
       // Private members:
       var that = this;
       var googleMarker = null;
-      var clickListener = (function() {
+      var externalInfo = {}; // from Google
+      var clickListener = function clickListener() {
+        fetchExternalInfo();
+        onMarkerClick(that);
 
-        var IGNORE_ERRORS = "ignore";
-
-        function openInfoWindow(gPlace, status) {
-          closeAnyOpenInfoWindow();
-
-          var infoContent = '<div><span class="infowindow-title">' + descriptor.title + '</span>';
-          if (descriptor.comment) {
-            infoContent += '<span class="infowindow-comment"> // ' + descriptor.comment + '</span>';
-          }
-          infoContent += '</div>';
-
-          if (status != google.maps.places.PlacesServiceStatus.OK || !gPlace) {
-            if (status == google.maps.places.PlacesServiceStatus.OVER_QUERY_LIMIT) {
-              console.error("API rate limit hit.");
-            } else if (status != IGNORE_ERRORS) {
-              console.error('Place "' + descriptor.title + '"\'s details not found.');
-            }
-          } else {
-            checkDistance(gPlace.geometry.location);
-
-            if (gPlace.permanently_closed) {
-              infoContent += '<div class="infowindow-closed">Permanently closed.</div>';
-            } else if (gPlace.opening_hours) {
-              if (gPlace.opening_hours.open_now) {
-                infoContent += '<div class="infowindow-open">Open now.</div>';
-              } else {
-                infoContent += '<div class="infowindow-closed">Closed now.</div>';
-              }
-            }
-            if (gPlace.website) {
-              infoContent += '<a class="infowindow-website" target="_blank" href="'
-                + gPlace.website + '">' + gPlace.website + '</a>';
-            }
-            if (gPlace.formatted_address) {
-              infoContent += '<div class="infowindow-address">' + gPlace.formatted_address
-                + '</div>';
-            }
-          }
-
-          for (var i = 0; i < that.tagKeys.length; ++i) {
-            var tagKey = that.tagKeys[i];
-            var tagDescriptor = getTagDescriptorByKey(tagKey);
-            if (!tagDescriptor) {
-              console.error("Marker has an undeclared tag '" + tagKey + "'.");
-              continue;
-            }
-            if (tagDescriptor.descriptive) {
-              infoContent += '<a class="infowindow-tag" href="' + onTagClickScript + '">#'
-                + tagKey + '</a> ';
-            }
-          }
-
-          var infoWindow = new google.maps.InfoWindow({
-            content: infoContent,
-          });
-          infoWindow.open(googleMarker.map, googleMarker);
-          currentlyOpenInfoWindow = infoWindow;
-        };
-
-        var listener = function listener() {
+        // Populates externalInfo.
+        function fetchExternalInfo() {
           gPlaces.nearbySearch({
             location: descriptor.position,
             radius: tolerance,
@@ -330,11 +294,11 @@ define(['angular/map/declutterer'], function(declutterer) {
             var googlePlaceId;
             if (status != google.maps.places.PlacesServiceStatus.OK || !results.length) {
               if (status == google.maps.places.PlacesServiceStatus.OVER_QUERY_LIMIT) {
-                console.error("API rate limit hit.");
+                console.error("[ext] API rate limit hit.");
               }
               if (!descriptor.place_id) {
                 if (!descriptor.ignore_errors) {
-                  console.error('Place "' + descriptor.title + '" not found.');
+                  console.error('[ext] Place "' + descriptor.title + '" not found.');
                 }
               } else {
                 // Gotten from
@@ -343,15 +307,17 @@ define(['angular/map/declutterer'], function(declutterer) {
               }
             } else {
               if (results.length > 1 && !descriptor.place_id) {
-                console.error('Place "' + descriptor.title + '" found ' + results.length
-                              + ' times:');
                 for (var i in results) {
-                  console.log(results[i]);
+                  var result = results[i];
+                  console.log('[ext] ' + result.name + ': ' + result.place_id);
                 }
+                console.error('[ext] Place "' + descriptor.title + '" found ' + results.length
+                              + ' times. See above.');
               }
               if (descriptor.place_id) {
                 if (!descriptor.ignore_errors && descriptor.place_id != results[0].place_id) {
-                  console.error('Place "' + descriptor.title + '" has id ' + results[0].place_id);
+                  console.error('[ext] Place "' + descriptor.title + '" has id '
+                                + results[0].place_id + '("' + results[0].name + '").');
                 }
                 googlePlaceId = descriptor.place_id;
               } else {
@@ -363,26 +329,54 @@ define(['angular/map/declutterer'], function(declutterer) {
             }
 
             if (googlePlaceId) {
-              // console.log(descriptor.title + ' has id ' + googlePlaceId);
+              console.log('[ext] ' + descriptor.title + ' has id ' + googlePlaceId);
               gPlaces.getDetails({
                 placeId: googlePlaceId,
-              }, openInfoWindow);
+              }, storeGPlaceDetails);
             } else {
-              openInfoWindow(null, descriptor.ignore_errors ? IGNORE_ERRORS : null);
+              var log = (descriptor.ignore_errors ? console.log : console.error);
+              log('[ext] ' + descriptor.title + ' has no id.');
+            }
+
+            function storeGPlaceDetails(gPlace, status) {
+              if (status != google.maps.places.PlacesServiceStatus.OK || !gPlace) {
+                if (status == google.maps.places.PlacesServiceStatus.OVER_QUERY_LIMIT) {
+                  console.error('[ext] API rate limit hit.');
+                  return;
+                }
+                var log = (descriptor.ignore_errors ? console.log : console.error);
+                log('[ext] Place "' + descriptor.title + '"\'s details not found.');
+                return;
+              }
+
+              checkDistance(gPlace.geometry.location);
+
+              externalInfo.openness =
+                (gPlace.permanently_closed
+                 ? 'PERMANENTLY_CLOSED'
+                 : (gPlace.opening_hours
+                    ? (gPlace.opening_hours.open_now
+                       ? 'OPEN_NOW'
+                       : 'CLOSED_NOW')
+                    : ''));
+              externalInfo.website = gPlace.website;
+              externalInfo.address = gPlace.formatted_address;
+
+              console.log('[ext] ' + descriptor.title + "'s external info retrieved from "
+                          + gPlace.name + '.');
+            };
+
+            function checkDistance(receivedPosition) {
+              var distance = that.distanceFrom(receivedPosition);
+              if (distance > tolerance) {
+                console.error('[ext] Place "' + descriptor.title + '" is ' + distance
+                              + 'm away, at (' + receivedPosition.lat() + ', '
+                              + receivedPosition.lng() + ').');
+              }
             }
           });
-        };
-
-        function checkDistance(receivedPosition) {
-          var distance = that.distanceFrom(receivedPosition);
-          if (distance > tolerance) {
-            console.error('Place "' + descriptor.title + '" is ' + distance + 'm away, at ('
-                          + receivedPosition.lat + ', ' + receivedPosition.lng + ').');
-          }
         }
-
-        return listener;
-      })();
+      };
 
       // Public members:
       this.id = descriptor.title.toLowerCase()
@@ -441,16 +435,8 @@ define(['angular/map/declutterer'], function(declutterer) {
       };
     };
 
-    function closeAnyOpenInfoWindow() {
-      if (currentlyOpenInfoWindow) {
-        currentlyOpenInfoWindow.close();
-        currentlyOpenInfoWindow = null;
-      }
-    };
-
     // Private static members:
     var tolerance = 80; // meters
-    var currentlyOpenInfoWindow;
 
     return Marker;
   })();
