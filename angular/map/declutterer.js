@@ -8,13 +8,14 @@ var Declutterer = (function() {
   //                    pixel coordinates.
   // markers: associative array of Marker's.
   // currentPositionMarker: marker showing the user's position.
+  // $interval: angular $interval service.
   // deviceIsSlowCallback: called when device is detected to be slow.
-  function Declutterer(map, projectionFactory, markers, currentPositionMarker,
+  function Declutterer(map, projectionFactory, markers, currentPositionMarker, $interval,
                        deviceIsSlowCallback) {
 
     // Stops the engine.
     this.stop = function stop() {
-      clearInterval(tickIntervalId);
+      $interval.cancel(tickIntervalPromise);
     };
 
     // Called periodically. Must have a short execution time.
@@ -39,8 +40,8 @@ var Declutterer = (function() {
       // Slow down if possible:
       if (periodMs < slowPeriodMs) {
         periodMs = slowPeriodMs;
-        clearInterval(tickIntervalId);
-        tickIntervalId = setInterval(tick, periodMs);
+        $interval.cancel(tickIntervalPromise);
+        tickIntervalPromise = $interval(tick, periodMs);
       }
 
       deviceIsSlowCallback();
@@ -168,7 +169,7 @@ var Declutterer = (function() {
 
     // Private members:
     var periodMs = normalPeriodMs;
-    var tickIntervalId = setInterval(tick, periodMs);
+    var tickIntervalPromise = $interval(tick, periodMs);
     var indexNextMarkerToDeclutter = 0;
     var endLastTickMs = 0;
     var tolerance = defaultTolerance; // ~ minimum distance between markers for showing their labels

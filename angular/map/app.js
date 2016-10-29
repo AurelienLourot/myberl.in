@@ -5,9 +5,9 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/tags/a
   var app = angular.module('map', ['tags', 'status']);
 
   app.directive('map', ['tagsModuleIsReady', 'getTagDescriptorByKey', 'addListener', 'areMatching',
-                        'setStatus', '$http', '$timeout',
+                        'setStatus', '$http', '$timeout', '$interval',
                         function(tagsModuleIsReady, getTagDescriptorByKey, addListener, areMatching,
-                                 setStatus, $http, $timeout) {
+                                 setStatus, $http, $timeout, $interval) {
     return {
       restrict: 'E',
       templateUrl: requirejs.toUrl('angular/map/map.html'),
@@ -20,7 +20,7 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/tags/a
       controllerAs: 'map',
       link: function(scope, elm, attrs, ctrl) {
         $timeout(function () { // after browser rendering
-          var googleMap = new googlemap.Map(scope.id, setStatus);
+          var googleMap = new googlemap.Map(scope.id, setStatus, $timeout, $interval);
 
           var addJsonMarkersToMap = new Promise(function getJsonMarkers(resolve, reject) {
             console.log('Loading markers...');

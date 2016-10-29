@@ -5,7 +5,9 @@ define(['angular/map/declutterer'], function(declutterer) {
     // Creates a google map with no marker (yet).
     // elemId: already existing element id where to draw the google map.
     // setStatus: function for setting the application status.
-    function Map(elemId, setStatus) {
+    // $timeout: angular $timeout service.
+    // $interval: angular $interval service.
+    function Map(elemId, setStatus, $timeout, $interval) {
 
       // Adds a marker to the map. Will be hidden by default.
       // marker: instance of Marker.
@@ -58,7 +60,7 @@ define(['angular/map/declutterer'], function(declutterer) {
           }
 
           (function(idCopy) {
-            setTimeout(function() {
+            $timeout(function() {
               markers[idCopy].dbg_clickListener();
             }, nextDelay);
           })(id);
@@ -72,18 +74,18 @@ define(['angular/map/declutterer'], function(declutterer) {
         var labelContent = '<i class="fa fa-spinner fa-spin fa-2x"></i>';
 
         function clearStatus() {
-          clearStatusTimeoutId = null
+          clearStatusTimeoutPromise = null
           setStatus(labelColor, labelContent, /*clear=*/true);
         }
-        var clearStatusTimeoutId = null;
+        var clearStatusTimeoutPromise = null;
 
         return function() {
           isDeviceSlow = true;
           setStatus(labelColor, '<i class="fa fa-spinner fa-spin fa-2x"></i>');
-          if (clearStatusTimeoutId) {
-            clearTimeout(clearStatusTimeoutId);
+          if (clearStatusTimeoutPromise) {
+            $timeout.cancel(clearStatusTimeoutPromise);
           }
-          clearStatusTimeoutId = setTimeout(clearStatus, 3000);
+          clearStatusTimeoutPromise = $timeout(clearStatus, 3000);
         };
       })();
 
@@ -121,8 +123,9 @@ define(['angular/map/declutterer'], function(declutterer) {
 
       var listeners = []; // listeners on map readiness.
       var markers = {};
-      var declutteringEngine = new declutterer.Declutterer(map, projectionFactory, markers,
-                                                           currentPositionMarker, deviceIsSlow);
+      var declutteringEngine
+        = new declutterer.Declutterer(map, projectionFactory, markers, currentPositionMarker,
+                                      $interval, deviceIsSlow);
 
       // Public members:
       this.gPlaces = new google.maps.places.PlacesService(map);
