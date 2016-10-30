@@ -1,4 +1,4 @@
-<div class="info info-pic"><!-- no pic yet --></div>
+<div class="info info-pic hidden-xs"><!-- no pic yet --></div>
 <div class="info info-title">
   <h4>{{ state.marker.getTitle() }}</h4>
   <table data-ng-hide="!state.marker.getComment()">
@@ -18,7 +18,7 @@
 <div data-ng-hide="!state.marker.getAddress()" class="info info-address">
   {{ state.marker.getAddress() }}
 </div>
-<div class="info">
+<div class="info info-tags">
   <span data-ng-repeat="tag in state.marker.tagKeys" data-ng-show="info.isTagDescriptive(tag)">
     <a data-ng-click="info.onTagClick()" href="">#{{ tag }}</a>&nbsp;
   </span>

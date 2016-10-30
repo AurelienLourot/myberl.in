@@ -79,11 +79,15 @@
   </head>
   <body>
 
-    <div class="ui sidebar">
+    <div class="ui sidebar hidden-xs">
+      <marker-info on-tag-click="javascript: $('#navbar').collapse('show');"></marker-info>
+    </div>
+    <div class="ui sidebar bottom visible-xs">
+      <!-- FIXME: duplicates previous sidebar -->
       <marker-info on-tag-click="javascript: $('#navbar').collapse('show');"></marker-info>
     </div>
     <div class="pusher">
-      <map on-marker-click="javascript: $('.ui.sidebar').sidebar('show'); $('#navbar').collapse('hide');">
+      <map on-marker-click="javascript: showSidebar(); $('#navbar').collapse('hide');">
       </map>
 
       <nav class="navbar navbar-inverse">

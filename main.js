@@ -84,18 +84,37 @@ var initBars = function(resolve, reject) {
 
     // Collapse sidebar when clicking everywhere but on the markers:
     //FIXME: panning the map triggers 'click'
+    var sidebarSelector = '.ui.sidebar';
     $('body').on('click', null, null, function(e) {
       if ($(e.target).closest('.gmnoprint').length == 0) {
-        $('.ui.sidebar').sidebar('hide')
+        $(sidebarSelector).sidebar('hide');
       }
     });
 
-    $('.ui.sidebar')
+    var pushTransition = {
+      left:   'push',
+      bottom: 'push',
+    };
+    $(sidebarSelector)
       .sidebar('setting', 'dimPage', false)
-      .sidebar('setting', 'closable', false);
+      .sidebar('setting', 'closable', false)
+      .sidebar('setting', 'defaultTransition', {
+        computer: pushTransition,
+        mobile:   pushTransition,
+      });
+    window.showSidebar = showSidebar;
 
     console.log('Bars ready.');
     resolve();
+
+    function showSidebar() {
+      // We actually have two sidebars and show the one or the other based on the screen size. The
+      // one with `display: none` has been hidden by Bootstrap, so we want to show the other one.
+      //FIXME: resizing the screen while a sidebar is open breaks the push transition.
+      $(sidebarSelector).filter(function() {
+        return $(this).css('display') != 'none';
+      }).sidebar('show').sidebar('push page');
+    }
   });
 };
 
