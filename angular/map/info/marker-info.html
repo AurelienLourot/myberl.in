@@ -14,7 +14,7 @@
 </div>
 <div data-ng-hide="!state.marker.getWebsite()" class="info">
   <a class="btn-bar" target="_blank"
-     href="{{ state.marker.getWebsite() }}"><i class="fa fa-globe fa-2x"></i></a>
+     href="{{ state.marker.getWebsite() }}"><i class="fa fa-{{ info.getWebsiteIcon() }} fa-2x"></i></a>
 </div>
 <div data-ng-hide="!state.marker.getAddress()" class="info info-address">
   {{ state.marker.getAddress() }}

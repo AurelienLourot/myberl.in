@@ -45,6 +45,18 @@ define(['angular/tags/app'], function(tags) {
       return openness;
     };
 
+    controller.getWebsiteIcon = function getWebsiteIcon() {
+      var website = state.marker ? state.marker.getWebsite() : '';
+      return ~website.indexOf('facebook') ? 'facebook-square'
+           : ~website.indexOf('foursquare') ? 'foursquare'
+           : ~website.indexOf('plus.google') ? 'google-plus'
+           : ~website.indexOf('instagram') ? 'instagram'
+           : ~website.indexOf('tripadvisor') ? 'tripadvisor'
+           : ~website.indexOf('twitter') ? 'twitter'
+           : ~website.indexOf('yelp') ? 'yelp'
+           : 'globe';
+    }
+
     controller.isTagVisible = function isTagVisible(tagKey) {
       if (state.showAllTags) {
         return true;
