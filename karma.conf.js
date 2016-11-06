@@ -25,7 +25,7 @@ module.exports = function(config) {
       'thirdparty/polyfills.js',
       'thirdparty/jquery-1.12.4.min.js',
       'thirdparty/semantic-ui-2.1.8/semantic.min.js',
-      'https://maps.googleapis.com/maps/api/js?signed_in=true&key=AIzaSyDgo1hF6M7dGD75NQgfNXGvT422ri9ieyU&libraries=places',
+      'https://maps.googleapis.com/maps/api/js?key=AIzaSyDgo1hF6M7dGD75NQgfNXGvT422ri9ieyU&libraries=places',
       'thirdparty/markerwithlabel.js',
       'thirdparty/geolocation-marker.js',
       'thirdparty/x2js-1.2.0/xml2json.min.js',
