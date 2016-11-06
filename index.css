@@ -33,8 +33,8 @@ a:focus {
   color: #f66;
 }
 
-.btn-navbar,
-.btn-navbar:hover {
+.btn-bar,
+.btn-bar:hover {
   color: #9d9d9d; /*FIXME: use bootstrap's style*/
   text-decoration: inherit;
   font-size: 18px; /*FIXME: same as navbar-brand*/
