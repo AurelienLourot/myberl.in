@@ -7,13 +7,16 @@ define(['angular/tags/app'], function(tags) {
   app.factory('setCurrentMarker', function() {
     // m: instance of googlemap.Marker.
     return function(m) {
-      state.marker = m;
+      if (m != state.marker) {
+        state.marker = m;
+        state.showAllTags = false;
 
-      // This service can be called outside of an angular turn, e.g. from a Google Maps marker click
-      // listener, so we need to let angular refresh the view:
-      for (var i = 0; i < scopes.length; ++i) {
-        var scope = scopes[i];
-        scope.$apply(scope.state.marker = state.marker);
+        // This service can be called outside of an angular turn, e.g. from a Google Maps marker
+        // click listener, so we need to let angular refresh the view:
+        for (var i = 0; i < scopes.length; ++i) {
+          var scope = scopes[i];
+          scope.$apply(scope.state.marker = state.marker);
+        }
       }
     };
   });
@@ -42,7 +45,11 @@ define(['angular/tags/app'], function(tags) {
       return openness;
     };
 
-    controller.isTagDescriptive = function isTagDescriptive(tagKey) {
+    controller.isTagVisible = function isTagVisible(tagKey) {
+      if (state.showAllTags) {
+        return true;
+      }
+
       var tagDescriptor = getTagDescriptorByKey(tagKey);
       if (!tagDescriptor) {
         console.error("Marker '" + state.marker.getTitle() + "' has an undeclared tag '" + tagKey

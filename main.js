@@ -82,11 +82,12 @@ var initBars = function(resolve, reject) {
       }
     });
 
-    // Collapse sidebar when clicking everywhere but on the markers:
+    // Collapse sidebar when clicking everywhere but on the markers or on some marker info control:
     //FIXME: panning the map triggers 'click'
     var sidebarSelector = '.ui.sidebar';
     $('body').on('click', null, null, function(e) {
-      if ($(e.target).closest('.gmnoprint').length == 0) {
+      if ($(e.target).closest('.gmnoprint').length == 0 &&
+          $(e.target).closest('.info-control').length == 0) {
         $(sidebarSelector).sidebar('hide');
       }
     });

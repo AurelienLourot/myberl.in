@@ -19,7 +19,11 @@
   {{ state.marker.getAddress() }}
 </div>
 <div class="info info-tags">
-  <span data-ng-repeat="tag in state.marker.tagKeys" data-ng-show="info.isTagDescriptive(tag)">
+  <!-- FIXME: we can't use the `hidable` class here. Otherwise when switching between markers, the
+              previous tags remain shown for a second. -->
+  <span data-ng-repeat="tag in state.marker.tagKeys" data-ng-show="info.isTagVisible(tag)">
     <a data-ng-click="info.onTagClick()" href="">#{{ tag }}</a>&nbsp;
   </span>
+  <a href="" class="info-control" data-ng-hide="state.showAllTags"
+     data-ng-click="state.showAllTags = true">...</a>
 </div>
