@@ -9,63 +9,65 @@ var Connector = (function() {
   function Connector(mapId, tags, $http, successCallback) {
 
     // See http://stackoverflow.com/questions/29603652/google-maps-api-google-maps-engine-my-maps :
-    $http.get('https://crossorigin.me/https://www.google.com/maps/d/kml?mid=' + mapId + '&forcekml=1')
-      .then(function success(response) {
+    var url = 'https://crossorigin.me/https://www.google.com/maps/d/kml?mid=' + mapId
+      + '&forcekml=1';
+    $http.get(url).then(function success(response) {
 
-        var result = [];
+      var result = [];
 
-        try {
-          var folders = asArray((new X2JS).xml_str2json(response.data).kml.Document.Folder);
-          var markers = [];
-          for (var i = 0; i < folders.length; ++i) {
-            var folder = folders[i];
-            var folderMarkers = asArray(folder.Placemark);
-            markers = markers.concat(folderMarkers);
-          }
+      try {
+        var folders = asArray((new X2JS).xml_str2json(response.data).kml.Document.Folder);
+        var markers = [];
+        for (var i = 0; i < folders.length; ++i) {
+          var folder = folders[i];
+          var folderMarkers = asArray(folder.Placemark);
+          markers = markers.concat(folderMarkers);
+        }
 
-          for (var i = 0; i < markers.length; ++i) {
-            var receivedMarker = markers[i];
-            var receivedCoordinates = /(.*),(.*),(.*)/.exec(receivedMarker.Point.coordinates);
+        for (var i = 0; i < markers.length; ++i) {
+          var receivedMarker = markers[i];
+          var receivedCoordinates = /(.*),(.*),(.*)/.exec(receivedMarker.Point.coordinates);
 
-            var convertedTags = tags.slice();
-            if (receivedMarker.description) {
-              // On IE11, descriptions containing `- ` are of type Array, thus the need to join():
-              var description = typeof receivedMarker.description === 'string' ?
-                receivedMarker.description : receivedMarker.description.__cdata.join('');
-              var receivedWords = description.replace('<br>', ' ').split(' ');
-              for (var j = 0; j < receivedWords.length; ++j) {
-                var word = receivedWords[j];
-                if (word.startsWith('#')) {
-                  var tag = word.slice(1);
-                  if ($.inArray(tag, convertedTags) < 0) { // if not already in the set of tags
-                    convertedTags.push(tag);
-                  }
+          var convertedTags = tags.slice();
+          if (receivedMarker.description) {
+            // On IE11, descriptions containing `- ` are of type Array, thus the need to join():
+            var description = typeof receivedMarker.description === 'string' ?
+              receivedMarker.description : receivedMarker.description.__cdata.join('');
+            var receivedWords = description.replace('<br>', ' ').split(' ');
+            for (var j = 0; j < receivedWords.length; ++j) {
+              var word = receivedWords[j];
+              if (word.startsWith('#')) {
+                var tag = word.slice(1);
+                if ($.inArray(tag, convertedTags) < 0) { // if not already in the set of tags
+                  convertedTags.push(tag);
                 }
               }
             }
-
-            var convertedMarker = {
-              // On IE11, titles containing `- ` are of type Object, thus the need to cast:
-              title: '' + receivedMarker.name,
-              position: {
-                lat: parseFloat(receivedCoordinates[2]),
-                lng: parseFloat(receivedCoordinates[1]),
-              },
-              tags: convertedTags,
-            };
-            result.push(convertedMarker);
           }
-        } catch (e) {
-          console.error(e.message);
-        } finally {
-          successCallback(result);
+
+          var convertedMarker = {
+            // On IE11, titles containing `- ` are of type Object, thus the need to cast:
+            title: '' + receivedMarker.name,
+            position: {
+              lat: parseFloat(receivedCoordinates[2]),
+              lng: parseFloat(receivedCoordinates[1]),
+            },
+            tags: convertedTags,
+          };
+          result.push(convertedMarker);
         }
+      } catch (e) {
+        console.error(e.message);
+      } finally {
+        successCallback(result);
+      }
 
-      }, function error(response) {
+    }, function error(response) {
 
-        successCallback([]);
+      console.error('Could not load ' + url);
+      successCallback([]);
 
-      });
+    });
 
   };
 
