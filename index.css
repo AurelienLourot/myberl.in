@@ -186,6 +186,12 @@ h1 {
   font-size: 0.8em;
 }
 
+.img-2x { /* same size as fa-2x */
+  font-size: 2em;
+  height: 1em;
+  vertical-align: top;
+}
+
 .modal-page {
   color: white;
   padding-top: 1em;

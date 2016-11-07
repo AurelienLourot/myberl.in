@@ -259,6 +259,10 @@ define(['angular/map/declutterer'], function(declutterer) {
         return descriptor.website || externalInfo.website || '';
       };
 
+      this.getGMapsUrl = function getGMapsUrl() {
+        return externalInfo.gMapsUrl || '';
+      };
+
       // Private methods
 
       // MarkerWithLabel factory.
@@ -361,6 +365,7 @@ define(['angular/map/declutterer'], function(declutterer) {
                     : ''));
               externalInfo.website = gPlace.website;
               externalInfo.address = gPlace.formatted_address;
+              externalInfo.gMapsUrl = gPlace.url;
 
               console.log('[ext] ' + descriptor.title + "'s external info retrieved from "
                           + gPlace.name + '.');
