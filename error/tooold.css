@@ -1,0 +1,16 @@
+body {
+  background-image: url("../assets/pics/gmaps_bg.png");
+  background-size: cover;
+}
+
+.jumbotron {
+  background-color: white;
+}
+
+.fa {
+  margin-right: 0.3em;
+}
+
+.btn {
+  margin-top: 1em;
+}

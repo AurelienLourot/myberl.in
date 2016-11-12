@@ -1,0 +1,13 @@
+.navbar-header {
+  background-color: #222; /*FIXME: use bootstrap's style*/
+}
+
+.brand {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.55556em; /*28px*/
+  color: white;
+}
+
+.brand-my {
+  color: #f66;
+}

@@ -28,6 +28,8 @@
       }).install();
     </script>
 
+    <script src="lib/console.js"></script>
+
     <script src="thirdparty/jquery-1.12.4.min.js"></script>
 
     <link rel="stylesheet" type="text/css" class="ui"
@@ -53,6 +55,7 @@
     <link rel="stylesheet"
           href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
 
+    <link href="style.css" rel="stylesheet">
     <link href="index.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -72,6 +75,17 @@
 
     <script src="thirdparty/x2js-1.2.0/xml2json.min.js"></script>
 
+    <script>
+      // Safari 5.0 doesn't support methods named `catch` (reserved keyword) and will fail on
+      // parsing `angularjs-1.4.4/angular.min.js` because of that.
+      new Promise(function() {}).catch();
+      window.catchSupported = true;
+    </script>
+    <script>
+      if (!window.catchSupported) {
+        window.location.replace('error/tooold.html');
+      }
+    </script>
     <script src="thirdparty/angularjs-1.4.4/angular.min.js"></script>
     <script src="thirdparty/angularjs-1.4.4/angular-animate.min.js"></script>
 
