@@ -1,3 +1,7 @@
+.pushable > .pusher {
+  height: 100vh; /* necessary on Mobile Safari 7.0 */
+}
+
 td {
   padding-left: 0.5em;
   padding-bottom: 0.2em;
