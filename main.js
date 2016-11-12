@@ -137,6 +137,9 @@ Promise.all([loadAngularApp, new Promise(initBars), new Promise(initModals)])
   .then(clearStatusLabel)
   .then(callListeners)
   .catch(function(e) {
+    if (e.sourceURL && e.line) {
+      console.log('Error at ' + e.sourceURL + ':' + e.line);
+    }
     console.error(e.stack ? e.stack : e);
   });
 
