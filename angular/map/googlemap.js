@@ -33,7 +33,7 @@ define(['angular/map/declutterer'], function(declutterer) {
           markers[id].setVisibleOnMap(null);
         }
         markers = {};
-      }
+      };
 
       // Shows or hides the map's markers, depending whether they are matching the current filters
       // or not.
@@ -171,7 +171,7 @@ define(['angular/map/declutterer'], function(declutterer) {
           // Let it be garbage collected:
           googleMarker = null;
         }
-      }
+      };
 
       this.isVisible = function isVisible() {
         return !!googleMarker && !!googleMarker.map;
@@ -195,12 +195,12 @@ define(['angular/map/declutterer'], function(declutterer) {
           console.error("setLabelVisible(" + visibility + "): marker '" + descriptor.title +
                         "' isn't visible, ignored.");
         }
-      }
+      };
 
       this.isLabelVisible = function isLabelVisible() {
         return this.isVisible() && googleMarker.labelVisible &&
           googleMarker.get('labelStyle').opacity >= 0.5;
-      }
+      };
 
       this.getPosition = function getPosition() {
         if (this.isVisible()) {
@@ -214,7 +214,7 @@ define(['angular/map/declutterer'], function(declutterer) {
             return descriptor.position.lng;
           },
         };
-      }
+      };
 
       // Returns the distance in meters between this marker and the provided position.
       this.distanceFrom = function distanceFrom(otherPosition) {
