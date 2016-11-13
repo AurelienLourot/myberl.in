@@ -12,6 +12,10 @@ a:focus {
   outline: 0;
 }
 
+.navbar-header > .pull-right {
+  margin-right: 10px; /* same as .navbar-btn.btn-sm's margin-top and margin-bottom */
+}
+
 .navbar-toggle {
   float: left;
   margin-left: 15px; /*FIXME: same as original margin-right*/

@@ -3,19 +3,27 @@
 define(['angular/tags/app'], function(tags) {
   var app = angular.module('info', ['tags']);
 
+  // Service for setting the list of known markers.
+  app.factory('setMarkers', function() {
+    // markers: dict of googlemap.Marker.
+    return function(markers) {
+      state.markers = markers;
+    };
+  });
+
   // Service for setting the current marker to display.
   app.factory('setCurrentMarker', function() {
-    // m: instance of googlemap.Marker.
-    return function(m) {
-      if (m != state.marker) {
-        state.marker = m;
+    // marker: marker ID as string (key of state.markers).
+    return function(marker) {
+      if (marker != state.currentMarker) {
+        state.currentMarker = marker;
         state.showAllTags = false;
 
         // This service can be called outside of an angular turn, e.g. from a Google Maps marker
         // click listener, so we need to let angular refresh the view:
         for (var i = 0; i < scopes.length; ++i) {
           var scope = scopes[i];
-          scope.$apply(scope.state.marker = state.marker);
+          scope.$apply(scope.state.currentMarker = state.currentMarker);
         }
       }
     };
@@ -29,11 +37,13 @@ define(['angular/tags/app'], function(tags) {
     var controller = this;
 
     controller.getOpennessClass = function getOpennessClass() {
-      return state.marker && state.marker.getOpenness() == 'OPEN_NOW' && 'open' || 'closed';
+      return state.markers && state.currentMarker
+        && state.markers[state.currentMarker].getOpenness() == 'OPEN_NOW' && 'open' || 'closed';
     };
 
     controller.getHumanReadableOpenness = function getHumanReadableOpenness() {
-      var openness = state.marker && state.marker.getOpenness() || '';
+      var openness = state.markers && state.currentMarker
+        && state.markers[state.currentMarker].getOpenness() || '';
       switch (openness) {
         case 'PERMANENTLY_CLOSED':
           return 'Permanently closed';
@@ -46,7 +56,8 @@ define(['angular/tags/app'], function(tags) {
     };
 
     controller.getWebsiteIcon = function getWebsiteIcon() {
-      var website = state.marker ? state.marker.getWebsite() : '';
+      var website = state.markers && state.currentMarker
+        && state.markers[state.currentMarker].getWebsite() || '';
       return ~website.indexOf('facebook') ? 'facebook-square'
            : ~website.indexOf('foursquare') ? 'foursquare'
            : ~website.indexOf('plus.google') ? 'google-plus'
@@ -64,8 +75,8 @@ define(['angular/tags/app'], function(tags) {
 
       var tagDescriptor = getTagDescriptorByKey(tagKey);
       if (!tagDescriptor) {
-        console.error("Marker '" + state.marker.getTitle() + "' has an undeclared tag '" + tagKey
-                      + "'.");
+        console.error("Marker '" + state.markers[state.currentMarker].getTitle()
+                      + "' has an undeclared tag '" + tagKey + "'.");
         return false;
       }
       return tagDescriptor.descriptive;
@@ -85,6 +96,25 @@ define(['angular/tags/app'], function(tags) {
       },
       controller: 'infoCtrl',
       controllerAs: 'info',
+    };
+  });
+
+  app.controller('listCtrl', ['$scope', function($scope) {
+    $scope.state = state;
+
+    var controller = this;
+
+    controller.getAmount = function getAmount() {
+      return state.markers ? Object.keys(state.markers).length : 0;
+    };
+  }]);
+
+  app.directive('markerAmount', function() {
+    return {
+      restrict: 'E',
+      templateUrl: requirejs.toUrl('angular/map/info/marker-amount.html'),
+      controller: 'listCtrl',
+      controllerAs: 'list',
     };
   });
 

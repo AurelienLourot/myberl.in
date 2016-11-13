@@ -27,6 +27,10 @@ define(['angular/map/declutterer'], function(declutterer) {
         markers[marker.id] = marker;
       };
 
+      this.getMarkers = function getMarkers() {
+        return markers;
+      };
+
       // Removes all markers.
       this.clearMarkers = function clearMarkers() {
         for (var id in markers) {

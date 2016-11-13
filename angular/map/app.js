@@ -7,9 +7,9 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/in
 
   app.directive(
     'map', ['tagsModuleIsReady', 'getTagDescriptorByKey', 'addListener', 'areMatching',
-            'setCurrentMarker', 'setStatus', '$http', '$timeout', '$interval',
+            'setMarkers', 'setCurrentMarker', 'setStatus', '$http', '$timeout', '$interval',
             function(tagsModuleIsReady, getTagDescriptorByKey, addListener, areMatching,
-                     setCurrentMarker, setStatus, $http, $timeout, $interval) {
+                     setMarkers, setCurrentMarker, setStatus, $http, $timeout, $interval) {
     return {
       restrict: 'E',
       templateUrl: requirejs.toUrl('angular/map/map.html'),
@@ -45,6 +45,7 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/in
             });
           }).then(function addJsonMarkersToMapAndListenToFilterChanges(descriptors) {
             addMarkersToMap(descriptors);
+            setMarkers(googleMap.getMarkers());
             addListener(showHideMarkers);
           });
 
@@ -95,7 +96,7 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/in
 
             // marker: instance of googlemap.Marker.
             function onMarkerClick(marker) {
-              setCurrentMarker(marker);
+              setCurrentMarker(marker.id);
               eval(scope.onMarkerClick);
             }
           }
