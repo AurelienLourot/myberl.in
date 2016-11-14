@@ -99,7 +99,7 @@ var initBars = function(resolve, reject) {
 var initModals = function(resolve, reject) {
   $(document).ready(function() {
     $('.modal-page').removeClass('hidden');
-    var modals = ['help', 'dbg_secret'];
+    var modals = ['help', 'marker_list', 'dbg_secret'];
     for (var i = 0; i < modals.length; ++i) {
       var modal = modals[i];
       $('.' + modal + '_open').animatedModal({

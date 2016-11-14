@@ -8,6 +8,13 @@ define(['angular/tags/app'], function(tags) {
     // markers: dict of googlemap.Marker.
     return function(markers) {
       state.markers = markers;
+
+      // This service can be called outside of an angular turn, e.g. from a promise, so we need to
+      // let angular refresh the view:
+      for (var i = 0; i < scopes.length; ++i) {
+        var scope = scopes[i];
+        scope.$apply(scope.state.markers = state.markers);
+      }
     };
   });
 
@@ -101,11 +108,15 @@ define(['angular/tags/app'], function(tags) {
 
   app.controller('listCtrl', ['$scope', function($scope) {
     $scope.state = state;
+    scopes.push($scope);
 
     var controller = this;
 
     controller.getAmount = function getAmount() {
       return state.markers ? Object.keys(state.markers).length : 0;
+    };
+
+    controller.onMarkerClick = function onMarkerClick(marker) {
     };
   }]);
 
@@ -113,6 +124,15 @@ define(['angular/tags/app'], function(tags) {
     return {
       restrict: 'E',
       templateUrl: requirejs.toUrl('angular/map/info/marker-amount.html'),
+      controller: 'listCtrl',
+      controllerAs: 'list',
+    };
+  });
+
+  app.directive('markerList', function() {
+    return {
+      restrict: 'E',
+      templateUrl: requirejs.toUrl('angular/map/info/marker-list.html'),
       controller: 'listCtrl',
       controllerAs: 'list',
     };

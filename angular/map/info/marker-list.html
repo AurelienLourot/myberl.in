@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <!-- FIXME: order alphabetically using the `| toArray | orderBy ...` filter described here:
+              https://github.com/angular/angular.js/issues/1286 -->
+  <div data-ng-repeat="marker in state.markers">
+    <button class="btn btn-default btn-marker-list" data-ng-disabled="!marker.isVisible()"
+            data-ng-click="list.onMarkerClick(marker)">
+      <table>
+        <tr>
+          <td>
+            <span class="glyphicon glyphicon-map-marker btn-marker-list-main-item"
+                  aria-hidden="true"></span>
+          </td>
+          <td>
+            <span class="btn-marker-list-main-item">{{ marker.getTitle() }}</span>
+            <span data-ng-repeat="tag in marker.tagKeys" class="btn-marker-list-tag">
+              #{{ tag }}
+            </span>
+          </td>
+        </tr>
+      </table>
+    </button>
+  </div>
+</div>

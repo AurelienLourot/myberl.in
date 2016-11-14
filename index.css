@@ -2,11 +2,6 @@
   height: 100vh; /* necessary on Mobile Safari 7.0 */
 }
 
-td {
-  padding-left: 0.5em;
-  padding-bottom: 0.2em;
-}
-
 a,
 a:focus {
   outline: 0;
@@ -35,6 +30,21 @@ a:focus {
   margin-right: 0.3em;
 }
 
+.btn-marker-list {
+  margin-bottom: 0.5em;
+  text-align: left;
+  white-space: normal;
+  width: 100%;
+}
+
+.btn-marker-list-main-item {
+  margin-right: 1em;
+}
+
+.btn-marker-list-tag {
+  color: #9d9d9d; /*FIXME: use bootstrap's style*/
+}
+
 .well {
   margin-bottom: 10px;
   margin-top: 10px;
@@ -61,6 +71,8 @@ a:focus {
 }
 
 td.filter {
+  padding-left: 0.5em;
+  padding-bottom: 0.2em;
   text-align: right;
 }
 
@@ -103,6 +115,7 @@ h4 {
 }
 
 .info-comment {
+  padding-left: 0.5em;
   vertical-align: top;
 }
 

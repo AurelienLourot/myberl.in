@@ -117,11 +117,12 @@
             <div class="navbar-brand">
               <span class="brand"><span class="brand-my">MY</span>BERL.IN</span>
             </div>
-            <button class="btn btn-default btn-sm navbar-btn pull-right">
+            <a class="btn btn-default btn-sm navbar-btn pull-right marker_list_open"
+               href="#marker_list">
               <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> |
               <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
               <marker-amount></marker-amount>
-            </button>
+            </a>
           </div>
           <div id="navbar" class="collapse navbar-collapse">
             <tag-filters></tag-filters>
@@ -194,6 +195,13 @@
           </a>
         </div>
       </div>
+    </div>
+
+    <div id="marker_list" class="modal-page hidden">
+      <div class="closebt-container close-marker_list">
+        <img class="closebt" src="thirdparty/animated-modal-assets/closebt.svg"/>
+      </div>
+      <marker-list></marker-list>
     </div>
 
     <div id="dbg_secret" class="modal-page hidden">
