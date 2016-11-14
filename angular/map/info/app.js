@@ -117,6 +117,8 @@ define(['angular/tags/app'], function(tags) {
     };
 
     controller.onMarkerClick = function onMarkerClick(marker) {
+      marker.panTo();
+      eval($scope.onMarkerClick);
     };
   }]);
 
@@ -133,6 +135,9 @@ define(['angular/tags/app'], function(tags) {
     return {
       restrict: 'E',
       templateUrl: requirejs.toUrl('angular/map/info/marker-list.html'),
+      scope: {
+        onMarkerClick: '@', // e.g. 'javascript: myFunction();'
+      },
       controller: 'listCtrl',
       controllerAs: 'list',
     };

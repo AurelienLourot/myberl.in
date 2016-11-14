@@ -220,6 +220,15 @@ define(['angular/map/declutterer'], function(declutterer) {
         };
       };
 
+      this.panTo = function panTo() {
+        if (!this.isVisible()) {
+          console.error("panTo(): marker '" + descriptor.title + "' isn't visible, ignored.");
+          return;
+        }
+        googleMarker.map.setZoom(panZoomLevel);
+        googleMarker.map.panTo(this.getPosition());
+      };
+
       // Returns the distance in meters between this marker and the provided position.
       this.distanceFrom = function distanceFrom(otherPosition) {
         // See https://en.wikipedia.org/wiki/Haversine_formula
@@ -444,8 +453,9 @@ define(['angular/map/declutterer'], function(declutterer) {
       };
     };
 
-    // Private static members:
+    // Private constants:
     var tolerance = 80; // meters
+    var panZoomLevel = 15;
 
     return Marker;
   })();
