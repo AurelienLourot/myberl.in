@@ -51,7 +51,7 @@ var Declutterer = (function() {
     function doTick() {
       var beginMs = nowMs();
 
-      var projection = projectionFactory.getProjection();
+      var projection = projectionFactory.getProjection && projectionFactory.getProjection();
       if (!projection) {
         return; // initialization isn't done yet
       }

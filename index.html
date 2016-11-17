@@ -23,9 +23,10 @@
     <!-- Sentry -->
     <script src="https://cdn.ravenjs.com/3.7.0/raven.min.js"></script>
     <script>
-      Raven.config('https://0200db7f5988481ca976c5e0a900d689@sentry.io/98062', {
-        ignoreUrls: [/localhost/,],
-      }).install();
+      Raven && Raven.config(
+        'https://0200db7f5988481ca976c5e0a900d689@sentry.io/98062', {
+          ignoreUrls: [/localhost/,],
+        }).install();
     </script>
 
     <script src="lib/console.js"></script>
@@ -69,8 +70,24 @@
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgo1hF6M7dGD75NQgfNXGvT422ri9ieyU&libraries=places">
     </script>
+    <script>
+      if (window.google) {
+        console.log('Google Maps loaded.');
+      } else {
+        console.error('Failed to load Google Maps.');
+        window.google = null;
+      }
+    </script>
     <script src="thirdparty/markerwithlabel.js"></script>
     <script src="thirdparty/geolocation-marker.js"></script>
+    <script>
+      if (window.GeolocationMarker) {
+        console.log('GeolocationMarker loaded.');
+      } else {
+        console.error('Failed to load GeolocationMarker.');
+        window.GeolocationMarker = null;
+      }
+    </script>
 
     <script src="thirdparty/x2js-1.2.0/xml2json.min.js"></script>
 

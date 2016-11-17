@@ -96,13 +96,13 @@ define(['angular/map/declutterer'], function(declutterer) {
       // Private members:
       var that = this;
       console.log('Creating Google Map...');
-      var map = new google.maps.Map(document.getElementById(elemId), {
+      var map = google && new google.maps.Map(document.getElementById(elemId), {
         center: berlinTvTower,
         zoom: defaultZoomLevel,
         mapTypeControl: false,
         streetViewControl: false,
       });
-      map.addListener('tilesloaded', (function() {
+      map && map.addListener('tilesloaded', (function() {
         var firstTime = true;
         return function() {
           if (firstTime) {
@@ -115,11 +115,11 @@ define(['angular/map/declutterer'], function(declutterer) {
         };
       })());
 
-      var projectionFactory = new google.maps.OverlayView();
+      var projectionFactory = google ? new google.maps.OverlayView() : {};
       projectionFactory.draw = function draw(){};
-      projectionFactory.setMap(map);
+      projectionFactory.setMap && projectionFactory.setMap(map);
 
-      var currentPositionMarker = new GeolocationMarker(map, { // marker_opts
+      var currentPositionMarker = GeolocationMarker && new GeolocationMarker(map, { // marker_opts
         zIndex: 600, // above other markers
       }, { // circle_opts
         fillOpacity: 0.0,
@@ -132,7 +132,7 @@ define(['angular/map/declutterer'], function(declutterer) {
                                       $interval, deviceIsSlow);
 
       // Public members:
-      this.gPlaces = new google.maps.places.PlacesService(map);
+      this.gPlaces = google && new google.maps.places.PlacesService(map);
       this.dbg_declutteringEngine = declutteringEngine;
     };
 
