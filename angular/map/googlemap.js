@@ -85,7 +85,7 @@ define(['angular/map/declutterer'], function(declutterer) {
 
         return function() {
           isDeviceSlow = true;
-          setStatus(labelColor, '<i class="fa fa-spinner fa-spin fa-2x"></i>');
+          setStatus(labelColor, labelContent);
           if (clearStatusTimeoutPromise) {
             $timeout.cancel(clearStatusTimeoutPromise);
           }
