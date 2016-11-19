@@ -7,9 +7,9 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/in
 
   app.directive(
     'map', ['tagsModuleIsReady', 'getTagDescriptorByKey', 'addListener', 'areMatching',
-            'setMarkers', 'setCurrentMarker', 'setStatus', '$http', '$timeout', '$interval',
+            'addMarkersToList', 'setCurrentMarker', 'setStatus', '$http', '$timeout', '$interval',
             function(tagsModuleIsReady, getTagDescriptorByKey, addListener, areMatching,
-                     setMarkers, setCurrentMarker, setStatus, $http, $timeout, $interval) {
+                     addMarkersToList, setCurrentMarker, setStatus, $http, $timeout, $interval) {
     return {
       restrict: 'E',
       templateUrl: requirejs.toUrl('angular/map/map.html'),
@@ -45,7 +45,7 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/in
             });
           }).then(function addJsonMarkersToMapAndListenToFilterChanges(descriptors) {
             addMarkersToMap(descriptors);
-            setMarkers(googleMap.getMarkers());
+            addMarkersToList(googleMap.getMarkers());
             addListener(showHideMarkers);
           });
 
@@ -67,6 +67,7 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/in
             }
             return Promise.all(getters).then(function() {
               addMarkersToMap(myMapsDescriptors);
+              addMarkersToList(googleMap.getMarkers());
               console.log('[extReady] External maps loaded.');
             });
           };
@@ -96,7 +97,7 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/in
 
             // marker: instance of googlemap.Marker.
             function onMarkerClick(marker) {
-              setCurrentMarker(marker.id);
+              setCurrentMarker(marker);
               eval(scope.onMarkerClick);
             }
           }

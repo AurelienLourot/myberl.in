@@ -1,4 +1,8 @@
 <div class="container-fluid">
+  <div data-ng-hide="state.isMarkerListComplete" class="loading-marker-list">
+    <i class="fa fa-spinner fa-spin fa-2x"></i>
+  </div>
+
   <!-- FIXME: order alphabetically using the `| toArray | orderBy ...` filter described here:
               https://github.com/angular/angular.js/issues/1286 -->
   <div data-ng-repeat="marker in state.markers">

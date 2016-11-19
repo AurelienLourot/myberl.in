@@ -1,36 +1,36 @@
 <div class="info info-pic hidden-xs"><!-- no pic yet --></div>
 <div class="info info-title">
-  <h4>{{ state.markers[state.currentMarker].getTitle() }}</h4>
-  <table data-ng-hide="!state.markers[state.currentMarker].getComment()">
+  <h4>{{ state.currentMarker.getTitle() }}</h4>
+  <table data-ng-hide="!state.currentMarker.getComment()">
     <tr>
       <td class="info-comment">//</td>
-      <td class="info-comment">{{ state.markers[state.currentMarker].getComment() }}</td>
+      <td class="info-comment">{{ state.currentMarker.getComment() }}</td>
     </tr>
   </table>
 </div>
-<div data-ng-hide="!state.markers[state.currentMarker].getOpenness()"
+<div data-ng-hide="!state.currentMarker.getOpenness()"
      class="info info-openness info-{{ info.getOpennessClass() }}">
   {{ info.getHumanReadableOpenness() }}.
 </div>
-<div data-ng-hide="!state.markers[state.currentMarker].getWebsite() && !state.marker.getGMapsUrl()"
+<div data-ng-hide="state.currentMarker.getWebsite() && !state.currentMarker.getGMapsUrl()"
      class="info">
-  <a data-ng-hide="!state.markers[state.currentMarker].getWebsite()" class="btn-bar" target="_blank"
-     title="Website" href="{{ state.markers[state.currentMarker].getWebsite() }}">
+  <a data-ng-hide="!state.currentMarker.getWebsite()" class="btn-bar" target="_blank"
+     title="Website" href="{{ state.currentMarker.getWebsite() }}">
     <i class="fa fa-{{ info.getWebsiteIcon() }} fa-2x"></i>
   </a>
-  <a data-ng-hide="!state.markers[state.currentMarker].getGMapsUrl()" class="btn-bar"
+  <a data-ng-hide="!state.currentMarker.getGMapsUrl()" class="btn-bar"
      target="_blank" title="Google Maps"
-     href="{{ state.markers[state.currentMarker].getGMapsUrl() }}">
+     href="{{ state.currentMarker.getGMapsUrl() }}">
     <img class="img-2x" src="assets/pics/gmaps_logo.png" />
   </a>
 </div>
-<div data-ng-hide="!state.markers[state.currentMarker].getAddress()" class="info info-address">
-  {{ state.markers[state.currentMarker].getAddress() }}
+<div data-ng-hide="!state.currentMarker.getAddress()" class="info info-address">
+  {{ state.currentMarker.getAddress() }}
 </div>
 <div class="info info-tags">
   <!-- FIXME: we can't use the `hidable` class here. Otherwise when switching between markers, the
               previous tags remain shown for a second. -->
-  <span data-ng-repeat="tag in state.markers[state.currentMarker].tagKeys"
+  <span data-ng-repeat="tag in state.currentMarker.tagKeys"
         data-ng-show="info.isTagVisible(tag)">
     <a data-ng-click="info.onTagClick()" href="">#{{ tag }}</a>&nbsp;
   </span>

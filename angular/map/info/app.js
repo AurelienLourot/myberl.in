@@ -3,26 +3,35 @@
 define(['angular/tags/app'], function(tags) {
   var app = angular.module('info', ['tags']);
 
-  // Service for setting the list of known markers.
-  app.factory('setMarkers', function() {
+  // Service for adding markers to the list of known markers.
+  app.factory('addMarkersToList', ['$timeout', function($timeout) {
     // markers: dict of googlemap.Marker.
     return function(markers) {
-      state.markers = markers;
+      state.pendingMarkers = $.extend(state.pendingMarkers, markers);
+      state.isMarkerListComplete = false;
+      processPendingMarkers();
 
-      // This service can be called outside of an angular turn, e.g. from a promise, so we need to
-      // let angular refresh the view:
-      for (var i = 0; i < scopes.length; ++i) {
-        var scope = scopes[i];
-        scope.$apply(scope.state.markers = state.markers);
+      // We defer for ng-repeat performance reasons:
+      function processPendingMarkers() {
+        $timeout(function() {
+          var firstMarker = Object.keys(state.pendingMarkers)[0];
+          if (firstMarker) {
+            state.markers[firstMarker] = state.pendingMarkers[firstMarker];
+            delete state.pendingMarkers[firstMarker];
+            processPendingMarkers();
+          } else {
+            state.isMarkerListComplete = true;
+          }
+        });
       }
     };
-  });
+  }]);
 
   // Service for setting the current marker to display.
   app.factory('setCurrentMarker', function() {
-    // marker: marker ID as string (key of state.markers).
+    // marker: instance of googlemap.Marker.
     return function(marker) {
-      if (marker != state.currentMarker) {
+      if (!state.currentMarker || state.currentMarker.id != marker.id) {
         state.currentMarker = marker;
         state.showAllTags = false;
 
@@ -44,13 +53,12 @@ define(['angular/tags/app'], function(tags) {
     var controller = this;
 
     controller.getOpennessClass = function getOpennessClass() {
-      return state.markers && state.currentMarker
-        && state.markers[state.currentMarker].getOpenness() == 'OPEN_NOW' && 'open' || 'closed';
+      return state.currentMarker
+        && state.currentMarker.getOpenness() == 'OPEN_NOW' && 'open' || 'closed';
     };
 
     controller.getHumanReadableOpenness = function getHumanReadableOpenness() {
-      var openness = state.markers && state.currentMarker
-        && state.markers[state.currentMarker].getOpenness() || '';
+      var openness = state.currentMarker && state.currentMarker.getOpenness() || '';
       switch (openness) {
         case 'PERMANENTLY_CLOSED':
           return 'Permanently closed';
@@ -63,8 +71,7 @@ define(['angular/tags/app'], function(tags) {
     };
 
     controller.getWebsiteIcon = function getWebsiteIcon() {
-      var website = state.markers && state.currentMarker
-        && state.markers[state.currentMarker].getWebsite() || '';
+      var website = state.currentMarker && state.currentMarker.getWebsite() || '';
       return ~website.indexOf('facebook') ? 'facebook-square'
            : ~website.indexOf('foursquare') ? 'foursquare'
            : ~website.indexOf('plus.google') ? 'google-plus'
@@ -82,8 +89,8 @@ define(['angular/tags/app'], function(tags) {
 
       var tagDescriptor = getTagDescriptorByKey(tagKey);
       if (!tagDescriptor) {
-        console.error("Marker '" + state.markers[state.currentMarker].getTitle()
-                      + "' has an undeclared tag '" + tagKey + "'.");
+        console.error("Marker '" + state.currentMarker.getTitle() + "' has an undeclared tag '"
+                      + tagKey + "'.");
         return false;
       }
       return tagDescriptor.descriptive;
@@ -144,6 +151,9 @@ define(['angular/tags/app'], function(tags) {
   });
 
   // Module state and scopes.
-  var state = {};
+  var state = {
+    markers: {},
+    pendingMarkers: {}, // to be added to `markers` deferred
+  };
   var scopes = [];
 });
