@@ -27,11 +27,18 @@
         'https://0200db7f5988481ca976c5e0a900d689@sentry.io/98062', {
           ignoreUrls: [/localhost/,],
         }).install();
+      console.log(now() + ' Raven loaded.');
     </script>
 
     <script src="lib/console.js"></script>
+    <script>
+      console.log('console.*() redefined.');
+    </script>
 
     <script src="thirdparty/jquery-1.12.4.min.js"></script>
+    <script>
+      console.log('jQuery loaded.');
+    </script>
 
     <link rel="stylesheet" type="text/css" class="ui"
           href="thirdparty/semantic-ui-2.1.8/semantic.min.css">
@@ -40,17 +47,29 @@
     <link rel="stylesheet" type="text/css" class="ui"
           href="thirdparty/semantic-ui-2.1.8/sidebar.min.css">
     <script src="thirdparty/semantic-ui-2.1.8/semantic.min.js"></script>
+    <script>
+      console.log('SemanticUI loaded.');
+    </script>
 
     <!-- Bootstrap -->
     <link href="thirdparty/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+      console.log('Bootstrap loaded.');
+    </script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"
           type="text/css">
+    <script>
+      console.log('Google Fonts loaded.');
+    </script>
 
     <!-- Font Awesome -->
     <link href="thirdparty/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+      console.log('FontAwesome loaded.');
+    </script>
 
     <!-- http://joaopereirawd.github.io/animatedModal.js/ -->
     <link rel="stylesheet" href="thirdparty/animate.css/animate.min.css">
@@ -67,6 +86,9 @@
 
     <!-- Make sure we have Promises -->
     <script src="thirdparty/bluebird.min.js"></script>
+    <script>
+      console.log('bluebird loaded.');
+    </script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgo1hF6M7dGD75NQgfNXGvT422ri9ieyU&libraries=places">
     </script>
@@ -90,6 +112,9 @@
     </script>
 
     <script src="thirdparty/x2js-1.2.0/xml2json.min.js"></script>
+    <script>
+      console.log('x2js loaded.');
+    </script>
 
     <script>
       // Safari 5.0 doesn't support methods named `catch` (reserved keyword) and will fail on
@@ -104,6 +129,9 @@
     </script>
     <script src="thirdparty/angularjs-1.4.4/angular.min.js"></script>
     <script src="thirdparty/angularjs-1.4.4/angular-animate.min.js"></script>
+    <script>
+      console.log('AngularJS loaded.');
+    </script>
 
     <script data-main="main.js" src="thirdparty/require.js"></script>
   </head>
