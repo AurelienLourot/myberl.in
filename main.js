@@ -1,7 +1,7 @@
 'use strict';
 
 window.module = {};
-define(['thirdparty/timerlog-0.1.4/dist/index.es5'], function(timerlog) {
+define(['thirdparty/timerlog-0.1.4/dist/index.es5', 'angular/app'], function(timerlog, berlin) {
   timerlog = module.exports;
   module = undefined;
 
@@ -11,12 +11,17 @@ define(['thirdparty/timerlog-0.1.4/dist/index.es5'], function(timerlog) {
     message: 'Initialization done.',
   });
   localStorage['timerlog'] = 1; // enables console logging
-
   console.log('Initializing app...');
 
-  // Constants:
+  window.dbg = berlin.dbg;
+
+  // Replaces 'ng-app="berlin"', see
+  // http://www.sitepoint.com/using-requirejs-angularjs-applications/ :
+  angular.bootstrap(document, ['berlin']);
+
   var statusLabelColor = 'success';
   var statusLabelContent = '<i class="fa fa-spinner fa-spin fa-2x"></i>';
+  berlin.status.set(statusLabelColor, statusLabelContent);
 
   // Adds a listener on module readiness.
   var addListener = function(listener) {
@@ -25,26 +30,9 @@ define(['thirdparty/timerlog-0.1.4/dist/index.es5'], function(timerlog) {
 
   var listeners = [];
 
-  var requireAngularApp = function(resolve, reject) {
-    requirejs(['angular/app'], function(berlin) {
-      console.log('Angular app imported.');
-
-      // Replaces 'ng-app="berlin"', see
-      // http://www.sitepoint.com/using-requirejs-angularjs-applications/ :
-      angular.bootstrap(document, ['berlin']);
-
-      berlin.status.set(statusLabelColor, statusLabelContent);
-
-      window.dbg = berlin.dbg;
-      resolve(berlin);
-    });
-  };
-
-  var waitForAngularAppReady = function(berlinApp) {
-    return new Promise(function(resolve, reject) {
-      berlinApp.addListener(function() {
-        resolve(berlinApp);
-      });
+  var waitForAngularAppReady = function(resolve, reject) {
+    berlin.addListener(function() {
+      resolve();
     });
   };
 
@@ -114,9 +102,8 @@ define(['thirdparty/timerlog-0.1.4/dist/index.es5'], function(timerlog) {
     });
   };
 
-  var clearStatusLabel = function(input) {
-    var berlinApp = input[0];
-    berlinApp.status.clear(statusLabelColor, statusLabelContent);
+  var clearStatusLabel = function() {
+    berlin.status.clear(statusLabelColor, statusLabelContent);
   };
 
   var callListeners = function() {
@@ -131,8 +118,7 @@ define(['thirdparty/timerlog-0.1.4/dist/index.es5'], function(timerlog) {
     }
   };
 
-  var loadAngularApp = (new Promise(requireAngularApp)).then(waitForAngularAppReady);
-  Promise.all([loadAngularApp, new Promise(initBars), new Promise(initModals)])
+  Promise.all([new Promise(waitForAngularAppReady), new Promise(initBars), new Promise(initModals)])
     .then(clearStatusLabel)
     .then(callListeners)
     .catch(function(e) {
