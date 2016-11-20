@@ -1,13 +1,12 @@
 'use strict';
 
-define(['angular/map/declutterer'], function(declutterer) {
+define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, device) {
   var Map = (function() {
     // Creates a google map with no marker (yet).
     // elemId: already existing element id where to draw the google map.
-    // setStatus: function for setting the application status.
     // $timeout: angular $timeout service.
     // $interval: angular $interval service.
-    function Map(elemId, setStatus, $timeout, $interval) {
+    function Map(elemId, $timeout, $interval) {
 
       // Adds a marker to the map. Will be hidden by default.
       // marker: instance of Marker.
@@ -73,26 +72,6 @@ define(['angular/map/declutterer'], function(declutterer) {
         }
       };
 
-      var deviceIsSlow = (function() {
-        var labelColor = 'warning';
-        var labelContent = '<i class="fa fa-spinner fa-spin fa-2x"></i>';
-
-        function clearStatus() {
-          clearStatusTimeoutPromise = null
-          setStatus(labelColor, labelContent, /*clear=*/true);
-        }
-        var clearStatusTimeoutPromise = null;
-
-        return function() {
-          isDeviceSlow = true;
-          setStatus(labelColor, labelContent);
-          if (clearStatusTimeoutPromise) {
-            $timeout.cancel(clearStatusTimeoutPromise);
-          }
-          clearStatusTimeoutPromise = $timeout(clearStatus, 3000);
-        };
-      })();
-
       // Private members:
       var that = this;
       console.log('Creating Google Map...');
@@ -129,7 +108,7 @@ define(['angular/map/declutterer'], function(declutterer) {
       var markers = {};
       var declutteringEngine
         = new declutterer.Declutterer(map, projectionFactory, markers, currentPositionMarker,
-                                      $interval, deviceIsSlow);
+                                      $interval);
 
       // Public members:
       this.gPlaces = google && new google.maps.places.PlacesService(map);
@@ -187,7 +166,7 @@ define(['angular/map/declutterer'], function(declutterer) {
         if (this.isVisible()) {
           // set() triggers a refresh, while just setting the property doesn't, see
           // MarkerWithLabel's implementation.
-          if (isDeviceSlow) {
+          if (device.isSlow()) {
             // Prevents opacity transition and uses less memory when visibility is false:
             googleMarker.set('labelVisible', visibility);
           }
@@ -459,9 +438,6 @@ define(['angular/map/declutterer'], function(declutterer) {
 
     return Marker;
   })();
-
-  // true when it has been detected that the frontend device is slow:
-  var isDeviceSlow = false;
 
   return {
     Map: Map,

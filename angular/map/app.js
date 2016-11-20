@@ -1,15 +1,15 @@
 'use strict';
 
-define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/info/app',
-        'angular/tags/app', 'angular/status/app'],
-       function(googlemap, mymaps, info, tags, status) {
+define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/device',
+        'angular/map/info/app', 'angular/tags/app', 'angular/status/app'],
+       function(googlemap, mymaps, device, info, tags, status) {
   var app = angular.module('map', ['info', 'tags', 'status']);
 
   app.directive(
     'map', ['tagsModuleIsReady', 'getTagDescriptorByKey', 'addListener', 'areMatching',
-            'addMarkersToList', 'setCurrentMarker', 'setStatus', '$http', '$timeout', '$interval',
+            'addMarkersToList', 'setCurrentMarker', '$http', '$timeout', '$interval',
             function(tagsModuleIsReady, getTagDescriptorByKey, addListener, areMatching,
-                     addMarkersToList, setCurrentMarker, setStatus, $http, $timeout, $interval) {
+                     addMarkersToList, setCurrentMarker, $http, $timeout, $interval) {
     return {
       restrict: 'E',
       templateUrl: requirejs.toUrl('angular/map/map.html'),
@@ -22,7 +22,7 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/in
       controllerAs: 'map',
       link: function(scope, elm, attrs, ctrl) {
         $timeout(function () { // after browser rendering
-          var googleMap = new googlemap.Map(scope.id, setStatus, $timeout, $interval);
+          var googleMap = new googlemap.Map(scope.id, $timeout, $interval);
 
           var addJsonMarkersToMap = new Promise(function getJsonMarkers(resolve, reject) {
             console.log('Loading markers...');
@@ -86,6 +86,26 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/in
 
           Promise.all([addJsonMarkersToMap, waitForMapReady]).then(callListeners)
             .then(addMyMapsMarkersToMap);
+
+          // Change the app's status when the frontend device is detected to be slow:
+          device.addListener((function() {
+            var labelColor = 'warning';
+            var labelContent = '<i class="fa fa-spinner fa-spin fa-2x"></i>';
+            var clearStatusTimeoutPromise = null;
+
+            return function() {
+              status.set(labelColor, labelContent);
+              if (clearStatusTimeoutPromise) {
+                $timeout.cancel(clearStatusTimeoutPromise);
+              }
+              clearStatusTimeoutPromise = $timeout(clearStatus, 3000);
+            };
+
+            function clearStatus() {
+              clearStatusTimeoutPromise = null
+              status.clear(labelColor, labelContent);
+            }
+          })());
 
           function addMarkersToMap(descriptors) {
             for (var i = 0; i < descriptors.length; ++i) {
