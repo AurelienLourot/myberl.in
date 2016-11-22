@@ -1,18 +1,28 @@
 'use strict';
 
-define(['angular/tags/app'], function(tags) {
+define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
   var app = angular.module('info', ['tags']);
 
   // Service for adding markers to the list of known markers.
   app.factory('addMarkersToList', ['$timeout', function($timeout) {
     // markers: dict of googlemap.Marker.
     return function(markers) {
+      // For time measurement:
+      var numCalls = 0;
+      var totalProcessingTimeMs = 0;
+      var lastCallTimeMs = null;
+
       state.pendingMarkers = $.extend(state.pendingMarkers, markers);
       state.isMarkerListComplete = false;
       processPendingMarkers();
 
       // We defer for ng-repeat performance reasons:
       function processPendingMarkers() {
+        measurePerformance();
+        if (device.isSlow()) {
+          return;
+        }
+
         $timeout(function() {
           var firstMarker = Object.keys(state.pendingMarkers)[0];
           if (firstMarker) {
@@ -23,6 +33,23 @@ define(['angular/tags/app'], function(tags) {
             state.isMarkerListComplete = true;
           }
         });
+
+        function measurePerformance() {
+          var now = nowMs();
+          if (lastCallTimeMs) {
+            ++numCalls;
+            totalProcessingTimeMs += now - lastCallTimeMs;
+          }
+          lastCallTimeMs = now;
+          if (numCalls > 30) { // enough data to analyse performance
+            var meanProcessingTimeMs = totalProcessingTimeMs / numCalls;
+            if (meanProcessingTimeMs > 300) {
+              console.log('Device is slow. It needs ' + meanProcessingTimeMs + 'ms to add a marker'
+                          + ' to the list.');
+              device.setSlow();
+            }
+          }
+        }
       }
     };
   }]);

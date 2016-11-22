@@ -178,11 +178,6 @@ define(['angular/map/device'], function(device) {
 
     };
 
-    // Returns the current time in milliseconds since the epoch.
-    function nowMs() {
-      return (new Date).getTime();
-    };
-
     // Private constants:
     var normalPeriodMs = 2000;
     var slowPeriodMs = 2 * normalPeriodMs;
