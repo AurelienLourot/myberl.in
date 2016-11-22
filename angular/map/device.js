@@ -11,6 +11,7 @@ var listeners = [];
 
 function setSlow() {
   deviceIsSlow = true;
+  $('.hide-when-slow').hide();
   for (var i in listeners) {
     listeners[i]();
   }
