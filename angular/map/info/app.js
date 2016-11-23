@@ -3,6 +3,8 @@
 define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
   var app = angular.module('info', ['tags']);
 
+  device.addListener(handleSlowDevice);
+
   // Service for adding markers to the list of known markers.
   app.factory('addMarkersToList', ['$timeout', function($timeout) {
     // markers: dict of googlemap.Marker.
@@ -183,4 +185,9 @@ define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
     pendingMarkers: {}, // to be added to `markers` deferred
   };
   var scopes = [];
+
+  function handleSlowDevice() {
+    state.markers = {};
+    state.pendingMarkers = {};
+  }
 });
