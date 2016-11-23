@@ -11,8 +11,12 @@ var Connector = (function() {
     // See http://stackoverflow.com/questions/29603652/google-maps-api-google-maps-engine-my-maps :
     var url = 'https://crossorigin.me/https://www.google.com/maps/d/kml?mid=' + mapId
       + '&forcekml=1';
-    $http.get(url).then(function success(response) {
 
+    var backupUrl = '/snapshots/maps/thirdparty/' + mapId + '.kml';
+
+    $http.get(url).then(success, errorOnCorsProxy);
+
+    function success(response) {
       var result = [];
 
       try {
@@ -61,13 +65,17 @@ var Connector = (function() {
       } finally {
         successCallback(result);
       }
+    }
 
-    }, function error(response) {
+    function errorOnCorsProxy(response) {
+      console.error('Could not load ' + url + ' . Falling back to ' + backupUrl);
+      $http.get(backupUrl).then(success, errorOnBackup);
+    }
 
-      console.error('Could not load ' + url);
+    function errorOnBackup(response) {
+      console.error('Could not load ' + backupUrl);
       successCallback([]);
-
-    });
+    }
 
   };
 
