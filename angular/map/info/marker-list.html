@@ -21,9 +21,11 @@
             <span data-ng-repeat="tag in marker.tagKeys" class="btn-marker-list-tag">
               <span data-ng-hide="$first">&middot;</span>
               <!-- FIXME: I shouldn't be doing the 2-way data binding myself: -->
-              <input type="checkbox" data-ng-hide="isSelected(tag) || marker.isVisible()"
-                     data-ng-checked="isSelected(tag)" data-ng-click="select(tag)"/>
-              <span data-ng-class="tagCssClass(tag)">#{{ tag }}</span>
+              <label data-ng-click="select(tag)">
+                <input type="checkbox" data-ng-hide="isSelected(tag) || marker.isVisible()"
+                       data-ng-checked="isSelected(tag)"/>
+                <span data-ng-class="tagCssClass(tag)">#{{ tag }}</span>
+              </label>
             </span>
           </td>
         </tr>
