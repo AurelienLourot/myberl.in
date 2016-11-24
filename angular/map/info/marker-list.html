@@ -6,8 +6,8 @@
   <!-- FIXME: order alphabetically using the `| toArray | orderBy ...` filter described here:
               https://github.com/angular/angular.js/issues/1286 -->
   <div data-ng-repeat="marker in state.markers">
-    <!-- We can't use 'button' instead of 'span' because on Firefox, checkboxes inside buttons can't
-         be toggled.: -->
+    <!-- We can't use 'button' instead of 'span' because on Firefox, elements within a disabled
+         button can't be clicked: -->
     <span class="btn btn-default btn-marker-list" data-ng-disabled="!marker.isVisible()"
           data-ng-click="marker.isVisible() && list.onMarkerClick(marker)">
       <table>
@@ -20,12 +20,9 @@
             <span class="btn-marker-list-main-item">{{ marker.getTitle() }}</span>
             <span data-ng-repeat="tag in marker.tagKeys" class="btn-marker-list-tag">
               <span data-ng-hide="$first">&middot;</span>
-              <!-- FIXME: I shouldn't be doing the 2-way data binding myself: -->
-              <label data-ng-click="select(tag)">
-                <input type="checkbox" data-ng-hide="isSelected(tag) || marker.isVisible()"
-                       data-ng-checked="isSelected(tag)"/>
-                <span data-ng-class="tagCssClass(tag)">#{{ tag }}</span>
-              </label>
+              <span data-ng-class="tagCssClass(tag)" data-ng-click="select(tag)">
+                <i class="fa fa-square-o" data-ng-hide="isSelected(tag) || marker.isVisible()"></i>
+                #{{ tag }}</span>
             </span>
           </td>
         </tr>

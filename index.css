@@ -46,6 +46,7 @@ a:focus {
 }
 
 .btn-marker-list-tag-unselected {
+  cursor: pointer;
   text-decoration: line-through;
 }
 
