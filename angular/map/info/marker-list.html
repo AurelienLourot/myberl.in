@@ -6,8 +6,10 @@
   <!-- FIXME: order alphabetically using the `| toArray | orderBy ...` filter described here:
               https://github.com/angular/angular.js/issues/1286 -->
   <div data-ng-repeat="marker in state.markers">
-    <button class="btn btn-default btn-marker-list" data-ng-disabled="!marker.isVisible()"
-            data-ng-click="list.onMarkerClick(marker)">
+    <!-- We can't use 'button' instead of 'span' because on Firefox, checkboxes inside buttons can't
+         be toggled.: -->
+    <span class="btn btn-default btn-marker-list" data-ng-disabled="!marker.isVisible()"
+          data-ng-click="marker.isVisible() && list.onMarkerClick(marker)">
       <table>
         <tr>
           <td>
@@ -26,6 +28,6 @@
           </td>
         </tr>
       </table>
-    </button>
+    </span>
   </div>
 </div>
