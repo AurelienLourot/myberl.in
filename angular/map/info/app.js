@@ -143,19 +143,8 @@ define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
   });
 
   app.controller('listCtrl', ['$scope', function($scope) {
-    $scope.state = state;
-    scopes.push($scope);
-
     var controller = this;
-
-    controller.getAmount = function getAmount() {
-      return state.markers ? Object.keys(state.markers).length : 0;
-    };
-
-    controller.onMarkerClick = function onMarkerClick(marker) {
-      marker.panTo();
-      eval($scope.onMarkerClick);
-    };
+    listCtrl(controller, $scope);
   }]);
 
   app.directive('markerAmount', function() {
@@ -167,17 +156,27 @@ define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
     };
   });
 
-  app.directive('markerList', function() {
+  app.directive('markerList', ['isSelected', 'select', function(isSelected, select) {
     return {
       restrict: 'E',
       templateUrl: requirejs.toUrl('angular/map/info/marker-list.html'),
       scope: {
         onMarkerClick: '@', // e.g. 'javascript: myFunction();'
       },
-      controller: 'listCtrl',
+      controller: ['$scope', function($scope) {
+        var controller = this;
+        listCtrl(controller, $scope);
+        $scope.isSelected = isSelected;
+        $scope.select = select;
+        $scope.tagCssClass = tagCssClass;
+
+        function tagCssClass(tagKey) {
+          return isSelected(tagKey) ? '' : 'btn-marker-list-tag-unselected';
+        }
+      }],
       controllerAs: 'list',
     };
-  });
+  }]);
 
   // Module state and scopes.
   var state = {
@@ -185,6 +184,20 @@ define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
     pendingMarkers: {}, // to be added to `markers` deferred
   };
   var scopes = [];
+
+  function listCtrl(controller, $scope) {
+    $scope.state = state;
+    scopes.push($scope);
+
+    controller.getAmount = function getAmount() {
+      return state.markers ? Object.keys(state.markers).length : 0;
+    };
+
+    controller.onMarkerClick = function onMarkerClick(marker) {
+      marker.panTo();
+      eval($scope.onMarkerClick);
+    };
+  }
 
   function handleSlowDevice() {
     state.markers = {};

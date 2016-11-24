@@ -45,6 +45,10 @@ a:focus {
   color: #9d9d9d; /*FIXME: use bootstrap's style*/
 }
 
+.btn-marker-list-tag-unselected {
+  text-decoration: line-through;
+}
+
 .loading-marker-list {
   text-align: center;
 }

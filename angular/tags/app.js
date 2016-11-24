@@ -18,6 +18,23 @@ define(function() {
     };
   });
 
+  // Service for knowing whether a tag is selected or not.
+  app.factory('isSelected', function() {
+    return function(tagKey) {
+      checkModuleIsReady();
+      return app.tagFilters.states[tagKey].selected;
+    };
+  });
+
+  // Service for selecting a tag.
+  app.factory('select', function() {
+    return function(tagKey) {
+      checkModuleIsReady();
+      app.tagFilters.states[tagKey].selected = true;
+      app.tagFilters.callListeners();
+    };
+  });
+
   // Service for getting a tag descriptor by key.
   app.factory('getTagDescriptorByKey', function() {
     return function(key) {
