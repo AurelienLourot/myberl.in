@@ -2046,5 +2046,14 @@
       "lng": 13.385340
     },
     "tags": ["restaurant", "bar", "franzi", "good", "indoor"]
+  },
+  {
+    "title": "Berliner Republik",
+    "comment": "German food",
+    "position": {
+      "lat": 52.521350,
+      "lng": 13.385746
+    },
+    "tags": ["restaurant", "bar", "franzi", "good", "indoor", "outdoor"]
   }
 ]
