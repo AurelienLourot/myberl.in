@@ -2131,5 +2131,14 @@
       "lng": 13.316795
     },
     "tags": ["restaurant", "other", "indoor", "good"]
+  },
+  {
+    "title": "Ssam",
+    "comment": "Korean BBQ",
+    "position": {
+      "lat": 52.494250,
+      "lng": 13.421643
+    },
+    "tags": ["restaurant", "aure", "indoor", "good"]
   }
 ]
