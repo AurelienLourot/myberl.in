@@ -89,7 +89,7 @@
       "color": "cyan",
       "advanced": false,
       "descriptive": true,
-      "initialState": true
+      "initialState": false
     }
   ],
   [
