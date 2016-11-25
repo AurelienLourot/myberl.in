@@ -140,7 +140,7 @@ h4 {
   color: red;
 }
 
-.info-address {
+.info-address, .info-opening-hours {
   /* On Chromium 48, text is sometimes invisible when italic.
   font-style: italic;*/
   color: #555;

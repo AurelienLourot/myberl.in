@@ -99,6 +99,10 @@ define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
       return openness;
     };
 
+    controller.getOpeningHours = function getOpeningHours() {
+      return state.currentMarker && state.currentMarker.getOpeningHours();
+    };
+
     controller.getWebsiteIcon = function getWebsiteIcon() {
       var website = state.currentMarker && state.currentMarker.getWebsite() || '';
       return ~website.indexOf('facebook') ? 'facebook-square'
@@ -139,6 +143,9 @@ define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
       },
       controller: 'infoCtrl',
       controllerAs: 'info',
+      link: function(scope, elm, attrs, ctrl) {
+        $('.ui.accordion.info-control').accordion();
+      },
     };
   });
 

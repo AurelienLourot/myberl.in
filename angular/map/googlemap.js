@@ -239,6 +239,10 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
         return externalInfo.openness || '';
       };
 
+      this.getOpeningHours = function getOpeningHours() {
+        return externalInfo.openingHours || [];
+      };
+
       this.getAddress = function getAddress() {
         return externalInfo.address || '';
       };
@@ -355,6 +359,11 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
                        ? 'OPEN_NOW'
                        : 'CLOSED_NOW')
                     : ''));
+              externalInfo.openingHours = gPlace.opening_hours && gPlace.opening_hours.weekday_text;
+              if (!~externalInfo.openness.indexOf('NOW') && externalInfo.openingHours) {
+                console.error(descriptor.title + ' has opening hours but no openness.');
+              }
+
               externalInfo.website = gPlace.website;
               externalInfo.address = gPlace.formatted_address;
               externalInfo.gMapsUrl = gPlace.url;

@@ -1,4 +1,5 @@
 <div class="info info-pic hidden-xs"><!-- no pic yet --></div>
+
 <div class="info info-title">
   <h4>{{ state.currentMarker.getTitle() }}</h4>
   <table data-ng-hide="!state.currentMarker.getComment()">
@@ -8,10 +9,24 @@
     </tr>
   </table>
 </div>
-<div data-ng-hide="!state.currentMarker.getOpenness()"
+
+<div data-ng-show="!info.getOpeningHours().length && state.currentMarker.getOpenness()"
      class="info info-openness info-{{ info.getOpennessClass() }}">
   {{ info.getHumanReadableOpenness() }}.
 </div>
+<div class="ui accordion info-control"
+     data-ng-show="info.getOpeningHours().length && state.currentMarker.getOpenness()">
+  <!-- Note: `ui title` instead of just `title` is a trick so SemanticUI doesn't apply its own
+             style. Same for `ui content`. -->
+  <div class="ui title info info-openness info-{{ info.getOpennessClass() }}">
+    {{ info.getHumanReadableOpenness() }}.
+    <i class="dropdown icon"></i>
+  </div>
+  <div class="ui content info info-opening-hours">
+    <div data-ng-repeat="range in info.getOpeningHours()">{{ range }}</div>
+  </div>
+</div>
+
 <div data-ng-hide="state.currentMarker.getWebsite() && !state.currentMarker.getGMapsUrl()"
      class="info">
   <a data-ng-hide="!state.currentMarker.getWebsite()" class="btn-bar" target="_blank"
@@ -24,9 +39,11 @@
     <img class="img-2x" src="assets/pics/gmaps_logo.png" />
   </a>
 </div>
+
 <div data-ng-hide="!state.currentMarker.getAddress()" class="info info-address">
   {{ state.currentMarker.getAddress() }}
 </div>
+
 <div class="info info-tags">
   <!-- FIXME: we can't use the `hidable` class here. Otherwise when switching between markers, the
               previous tags remain shown for a second. -->
