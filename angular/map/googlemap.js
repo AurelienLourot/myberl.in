@@ -244,6 +244,10 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
         descriptor.comment = comment;
       };
 
+      this.setPlaceId = function setPlaceId(placeId) {
+        descriptor.place_id = placeId;
+      };
+
       this.getOpenness = function getOpenness() {
         return externalInfo.openness || '';
       };
@@ -326,7 +330,7 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
               if (descriptor.place_id) {
                 if (!descriptor.ignore_errors && descriptor.place_id != results[0].place_id) {
                   console.error('[ext] Place "' + descriptor.title + '" has id '
-                                + results[0].place_id + '("' + results[0].name + '").');
+                                + results[0].place_id + ' ("' + results[0].name + '").');
                 }
                 googlePlaceId = descriptor.place_id;
               } else {
