@@ -171,9 +171,9 @@ define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
     };
   });
 
-  app.controller('listCtrl', ['$scope', function($scope) {
+  app.controller('listCtrl', ['$scope', '$timeout', function($scope, $timeout) {
     var controller = this;
-    listCtrl(controller, $scope);
+    listCtrl(controller, $scope, $timeout);
   }]);
 
   app.directive('markerAmount', function() {
@@ -192,9 +192,9 @@ define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
       scope: {
         onMarkerClick: '@', // e.g. 'javascript: myFunction();'
       },
-      controller: ['$scope', function($scope) {
+      controller: ['$scope', '$timeout', function($scope, $timeout) {
         var controller = this;
-        listCtrl(controller, $scope);
+        listCtrl(controller, $scope, $timeout);
         $scope.isSelected = isSelected;
         $scope.select = select;
         $scope.tagCssClass = tagCssClass;
@@ -215,7 +215,7 @@ define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
   };
   var scopes = [];
 
-  function listCtrl(controller, $scope) {
+  function listCtrl(controller, $scope, $timeout) {
     $scope.state = state;
     scopes.push($scope);
 
@@ -224,8 +224,11 @@ define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
     };
 
     controller.onMarkerClick = function onMarkerClick(marker) {
-      marker.panTo();
-      eval($scope.onMarkerClick);
+      // It sometimes hangs, so calling this deferred is an attempt to fix this:
+      $timeout(function() {
+        marker.panTo();
+        eval($scope.onMarkerClick);
+      });
     };
 
     controller.showsAllTags = function showsAllTags(marker) {
