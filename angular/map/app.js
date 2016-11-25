@@ -1,8 +1,8 @@
 'use strict';
 
-define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/device',
-        'angular/map/info/app', 'angular/tags/app', 'angular/status/app'],
-       function(googlemap, mymaps, device, info, tags, status) {
+define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/marker-patches',
+        'angular/map/device', 'angular/map/info/app', 'angular/tags/app', 'angular/status/app'],
+       function(googlemap, mymaps, patches, device, info, tags, status) {
   var app = angular.module('map', ['info', 'tags', 'status']);
 
   app.directive(
@@ -68,7 +68,7 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/de
             return Promise.all(getters).then(function() {
               addMarkersToMap(myMapsDescriptors);
               addMarkersToList(googleMap.getMarkers());
-              console.log('[extReady] External maps loaded.');
+              console.log('External maps loaded.');
             });
           };
 
@@ -82,10 +82,15 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/de
             for (var i in listeners) {
               listeners[i](scope.id);
             }
-          }
+          };
+
+          var applyPatches = function() {
+            googleMap.applyPatches(patches.patch);
+            console.log('[extReady] Patches applied.');
+          };
 
           Promise.all([addJsonMarkersToMap, waitForMapReady]).then(callListeners)
-            .then(addMyMapsMarkersToMap);
+            .then(addMyMapsMarkersToMap).then(applyPatches);
 
           // Change the app's status when the frontend device is detected to be slow:
           device.addListener((function() {

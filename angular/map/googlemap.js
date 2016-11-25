@@ -26,6 +26,11 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
         markers[marker.id] = marker;
       };
 
+      // Apply the provided patches to the markers.
+      this.applyPatches = function applyPatches(patches) {
+        patches(markers);
+      };
+
       this.getMarkers = function getMarkers() {
         return markers;
       };
@@ -233,6 +238,10 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
 
       this.getComment = function getComment() {
         return descriptor.comment;
+      };
+
+      this.setComment = function setComment(comment) {
+        descriptor.comment = comment;
       };
 
       this.getOpenness = function getOpenness() {
