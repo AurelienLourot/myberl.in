@@ -2177,5 +2177,13 @@
       "lng": 13.412756
     },
     "tags": ["restaurant", "great", "indoor", "aure"]
+  },
+  {
+    "title": "Hüftgold",
+    "position": {
+      "lat": 52.505604,
+      "lng": 13.469499
+    },
+    "tags": ["bar", "great", "indoor", "aure", "franzi"]
   }
 ]
