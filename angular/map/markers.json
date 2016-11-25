@@ -2072,5 +2072,14 @@
       "lng": 13.411259
     },
     "tags": ["brunch", "restaurant", "other", "indoor", "good"]
+  },
+  {
+    "title": "Schiller Bar",
+    "place_id": "ChIJt40WdL5PqEcRGO3IGXFYcvY",
+    "position": {
+      "lat": 52.477382,
+      "lng": 13.423574
+    },
+    "tags": ["bar", "franzi", "indoor", "good"]
   }
 ]
