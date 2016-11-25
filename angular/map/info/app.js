@@ -28,7 +28,20 @@ define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
         $timeout(function() {
           var firstMarker = Object.keys(state.pendingMarkers)[0];
           if (firstMarker) {
-            state.markers[firstMarker] = state.pendingMarkers[firstMarker];
+            // Make a tiny copy of the marker so angular can process it faster:
+            var orig = state.pendingMarkers[firstMarker];
+            state.markers[firstMarker] = {
+              id: firstMarker,
+              title: orig.getTitle(),
+              tagKeys: orig.tagKeys,
+              isVisible: function() {
+                return orig.isVisible();
+              },
+              panTo: function() {
+                orig.panTo();
+              },
+            };
+
             delete state.pendingMarkers[firstMarker];
             processPendingMarkers();
           } else {
