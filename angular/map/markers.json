@@ -2140,5 +2140,14 @@
       "lng": 13.421643
     },
     "tags": ["restaurant", "aure", "indoor", "good"]
+  },
+  {
+    "title": "Tabibito",
+    "comment": "Sushi",
+    "position": {
+      "lat": 52.482892,
+      "lng": 13.431535
+    },
+    "tags": ["restaurant", "other", "indoor", "good"]
   }
 ]
