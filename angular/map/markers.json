@@ -1994,5 +1994,13 @@
       "lng": 13.418701
     },
     "tags": ["brunch", "restaurant", "café", "outdoor", "indoor", "great", "aure", "franzi"]
+  },
+  {
+    "title": "Piccalilly",
+    "position": {
+      "lat": 52.488262,
+      "lng": 13.428636
+    },
+    "tags": ["café", "restaurant", "great", "outdoor", "indoor", "aure"]
   }
 ]
