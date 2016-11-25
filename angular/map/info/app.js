@@ -62,7 +62,7 @@ define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
     return function(marker) {
       if (!state.currentMarker || state.currentMarker.id != marker.id) {
         state.currentMarker = marker;
-        state.showAllTags = false;
+        state.markersShowingAllTags = [];
 
         // This service can be called outside of an angular turn, e.g. from a Google Maps marker
         // click listener, so we need to let angular refresh the view:
@@ -115,8 +115,13 @@ define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
            : 'globe';
     }
 
+    controller.showsAllTags = function showsAllTags() {
+      return !!state.currentMarker
+        && !!~state.markersShowingAllTags.indexOf(state.currentMarker.id);
+    };
+
     controller.isTagVisible = function isTagVisible(tagKey) {
-      if (state.showAllTags) {
+      if (controller.showsAllTags()) {
         return true;
       }
 
@@ -189,6 +194,7 @@ define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
   var state = {
     markers: {},
     pendingMarkers: {}, // to be added to `markers` deferred
+    markersShowingAllTags : [], // marker IDs for which we want to show all tags
   };
   var scopes = [];
 
@@ -203,6 +209,10 @@ define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
     controller.onMarkerClick = function onMarkerClick(marker) {
       marker.panTo();
       eval($scope.onMarkerClick);
+    };
+
+    controller.showsAllTags = function showsAllTags(marker) {
+      return !!~state.markersShowingAllTags.indexOf(marker.id);
     };
   }
 

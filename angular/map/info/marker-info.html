@@ -51,6 +51,6 @@
         data-ng-show="info.isTagVisible(tag)">
     <a data-ng-click="info.onTagClick()" href="">#{{ tag }}</a>&nbsp;
   </span>
-  <a href="" class="info-control" data-ng-hide="state.showAllTags"
-     data-ng-click="state.showAllTags = true">...</a>
+  <a href="" class="info-control" data-ng-if="!info.showsAllTags()"
+     data-ng-click="state.markersShowingAllTags.push(state.currentMarker.id)">...</a>
 </div>

@@ -18,10 +18,13 @@
           </td>
           <td>
             <span class="btn-marker-list-main-item">{{ marker.getTitle() }}</span>
-            <span data-ng-repeat="tag in marker.tagKeys" class="btn-marker-list-tag">
+            <a href="" data-ng-if="!list.showsAllTags(marker)"
+               data-ng-click="state.markersShowingAllTags.push(marker.id)">...</a>
+            <span data-ng-if="list.showsAllTags(marker)" data-ng-repeat="tag in marker.tagKeys"
+                  class="btn-marker-list-tag">
               <span data-ng-hide="$first">&middot;</span>
               <span data-ng-class="tagCssClass(tag)" data-ng-click="select(tag)">
-                <i class="fa fa-square-o" data-ng-hide="isSelected(tag) || marker.isVisible()"></i>
+                <i class="fa fa-square-o" data-ng-if="!(marker.isVisible() || isSelected(tag))"></i>
                 #{{ tag }}</span>
             </span>
           </td>
