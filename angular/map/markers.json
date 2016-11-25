@@ -2064,5 +2064,13 @@
       "lng": 13.452714
     },
     "tags": ["bar", "outdoor", "other", "good"]
+  },
+  {
+    "title": "Monsieur Ibrahim",
+    "position": {
+      "lat": 52.491313,
+      "lng": 13.411259
+    },
+    "tags": ["brunch", "restaurant", "other", "indoor", "good"]
   }
 ]
