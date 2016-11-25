@@ -1526,11 +1526,12 @@
     "tags": ["restaurant", "outdoor", "great", "aure", "franzi"]
   },
   {
-    "title": "Thai Park",
+    "title": "Thaipark",
     "comment": "Thai street food on Sunday",
+    "place_id": "ChIJf-C4NOxQqEcRm9iQ1skG3bI",
     "position": {
-      "lat": 52.492815,
-      "lng": 13.313199
+      "lat": 52.4929225,
+      "lng": 13.311735999999996
     },
     "tags": ["restaurant", "outdoor", "other", "good"]
   },
