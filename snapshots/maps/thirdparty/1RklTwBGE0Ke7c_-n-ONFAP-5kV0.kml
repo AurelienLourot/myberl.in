@@ -127,7 +127,7 @@
 			</Placemark>
 			<Placemark>
 				<name>Il Ritrovo</name>
-				<description><![CDATA[#restaurant #indoor #outdoor]]></description>
+				<description><![CDATA[#restaurant #indoor #outdoor #aure]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
 					<coordinates>13.458197599999949,52.50980449999999,0.0</coordinates>
