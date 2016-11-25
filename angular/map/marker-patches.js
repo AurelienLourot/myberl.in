@@ -10,6 +10,7 @@ function patch(markers) {
   setPlaceId('betahaus', 'ChIJqQFHjS1OqEcR8d99mafShxY');
   setPlaceId('brlo', 'ChIJoWMZoR1OqEcR_ZCD-qZZGkA');
   setComment('ilritrovo', 'Italian');
+  setPlaceId('lipopette', 'ChIJ54YiTpdPqEcR_3MWglIIzLc');
   setPlaceId('nymphensee', 'ChIJGS3gbYD7qEcRePUdNIcYvYE');
   setPlaceId('ploetzensee', 'ChIJY57G5GZRqEcRnKNEpnBZIK8');
   setPlaceId('ponterosa', 'ChIJqTH0OztQqEcRLgWCiboku0M');
