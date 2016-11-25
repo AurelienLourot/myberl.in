@@ -2002,5 +2002,14 @@
       "lng": 13.428636
     },
     "tags": ["café", "restaurant", "great", "outdoor", "indoor", "aure"]
+  },
+  {
+    "title": "SOY",
+    "comment": "Vietnamese vegan",
+    "position": {
+      "lat": 52.526005,
+      "lng": 13.411541
+    },
+    "tags": ["restaurant", "great", "indoor", "outdoor", "aure", "franzi"]
   }
 ]
