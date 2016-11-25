@@ -2159,5 +2159,13 @@
       "lng": 13.409329
     },
     "tags": ["restaurant", "bar", "outdoor", "franzi", "good"]
+  },
+  {
+    "title": "Le Bon",
+    "position": {
+      "lat": 52.491084,
+      "lng": 13.420649
+    },
+    "tags": ["restaurant", "other", "indoor", "good"]
   }
 ]
