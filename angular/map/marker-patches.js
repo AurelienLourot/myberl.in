@@ -8,6 +8,7 @@ define({
 function patch(markers) {
   setComment('ilritrovo', 'Italian');
   setPlaceId('ploetzensee', 'ChIJY57G5GZRqEcRnKNEpnBZIK8');
+  ignoreErrors('rahmersee');
 
   function setComment(id, comment) {
     try {
@@ -22,6 +23,14 @@ function patch(markers) {
       markers[id].setPlaceId(placeId);
     } catch(e) {
       console.error('Error patching ' + id + "'s place ID: " + e);
+    }
+  }
+
+  function ignoreErrors(id) {
+    try {
+      markers[id].ignoreErrors();
+    } catch(e) {
+      console.error('Error patching ' + id + "'s ignore_errors.");
     }
   }
 }

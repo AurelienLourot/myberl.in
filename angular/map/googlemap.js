@@ -244,6 +244,10 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
         descriptor.comment = comment;
       };
 
+      this.ignoreErrors = function ignoreErrors() {
+        descriptor.ignore_errors = true;
+      }
+
       this.setPlaceId = function setPlaceId(placeId) {
         descriptor.place_id = placeId;
       };
