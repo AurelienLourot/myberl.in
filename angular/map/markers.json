@@ -2167,5 +2167,15 @@
       "lng": 13.420649
     },
     "tags": ["restaurant", "other", "indoor", "good"]
+  },
+  {
+    "title": "Zum Mitterhofer",
+    "comment": "Austrian food",
+    "place_id": "ChIJwTM6w85PqEcR7SgPYd18GtA",
+    "position": {
+      "lat": 52.491215,
+      "lng": 13.412756
+    },
+    "tags": ["restaurant", "great", "indoor", "aure"]
   }
 ]
