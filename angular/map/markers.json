@@ -2037,5 +2037,14 @@
       "lng": 13.392887
     },
     "tags": ["restaurant", "great", "indoor", "aure", "franzi"]
+  },
+  {
+    "title": "Ständige Vertretung",
+    "comment": "German food",
+    "position": {
+      "lat": 52.521161,
+      "lng": 13.385340
+    },
+    "tags": ["restaurant", "bar", "franzi", "good", "indoor"]
   }
 ]
