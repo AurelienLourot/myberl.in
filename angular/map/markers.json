@@ -1788,12 +1788,13 @@
   },
   {
     "title": "Soya",
+    "comment": "Vietnamese vegan",
     "ignore_errors": true,
     "position": {
       "lat": 52.498585,
       "lng": 13.442660
     },
-    "tags": ["café", "restaurant", "romu", "great", "indoor"]
+    "tags": ["restaurant", "great", "indoor", "outdoor", "aure", "franzi", "romu"]
   },
   {
     "title": "Freischwimmer",
