@@ -18,7 +18,7 @@
           </td>
           <td>
             <span class="btn-marker-list-main-item">{{ marker.getTitle() }}</span>
-            <a href="" data-ng-if="!list.showsAllTags(marker)"
+            <a href="" data-ng-if="!marker.isVisible() && !list.showsAllTags(marker)"
                data-ng-click="state.markersShowingAllTags.push(marker.id)">...</a>
             <span data-ng-if="list.showsAllTags(marker)" data-ng-repeat="tag in marker.tagKeys"
                   class="btn-marker-list-tag">
