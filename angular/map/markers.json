@@ -2028,5 +2028,14 @@
       "lng": 13.414956
     },
     "tags": ["café", "franzi", "indoor", "good"]
+  },
+  {
+    "title": "Dimokritos",
+    "comment": "Greek",
+    "position": {
+      "lat": 52.488551,
+      "lng": 13.392887
+    },
+    "tags": ["restaurant", "great", "indoor", "aure", "franzi"]
   }
 ]
