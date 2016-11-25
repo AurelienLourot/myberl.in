@@ -12,6 +12,7 @@ function patch(markers) {
   setComment('ilritrovo', 'Italian');
   setPlaceId('nymphensee', 'ChIJGS3gbYD7qEcRePUdNIcYvYE');
   setPlaceId('ploetzensee', 'ChIJY57G5GZRqEcRnKNEpnBZIK8');
+  setPlaceId('ponterosa', 'ChIJqTH0OztQqEcRLgWCiboku0M');
   ignoreErrors('rahmersee');
 
   function setComment(id, comment) {
