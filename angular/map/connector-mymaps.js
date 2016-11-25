@@ -14,7 +14,7 @@ var Connector = (function() {
 
     var backupUrl = '/snapshots/maps/thirdparty/' + mapId + '.kml';
 
-    $http.get(url).then(success, errorOnCorsProxy);
+    $http.get(url, {timeout: 5000}).then(success, errorOnCorsProxy);
 
     function success(response) {
       var result = [];
