@@ -2105,5 +2105,13 @@
       "lng": 13.397347
     },
     "tags": ["brunch", "restaurant", "great", "indoor", "outdoor", "aure", "franzi"]
+  },
+  {
+    "title": "Kremanski",
+    "position": {
+      "lat": 52.500040,
+      "lng": 13.417723
+    },
+    "tags": ["café", "great", "indoor", "outdoor", "aure", "franzi"]
   }
 ]
