@@ -2150,5 +2150,14 @@
       "lng": 13.431535
     },
     "tags": ["restaurant", "other", "indoor", "good"]
+  },
+  {
+    "title": "Luftgarten",
+    "comment": "Biergarten, currywurst",
+    "position": {
+      "lat": 52.479211,
+      "lng": 13.409329
+    },
+    "tags": ["restaurant", "bar", "outdoor", "franzi", "good"]
   }
 ]
