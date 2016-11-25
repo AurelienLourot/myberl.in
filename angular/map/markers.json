@@ -2090,5 +2090,14 @@
       "lng": 13.423570
     },
     "tags": ["bar", "franzi", "indoor", "good"]
+  },
+  {
+    "title": "Kopps",
+    "comment": "Vegan",
+    "position": {
+      "lat": 52.528823,
+      "lng": 13.397347
+    },
+    "tags": ["brunch", "restaurant", "great", "indoor", "outdoor", "aure", "franzi"]
   }
 ]
