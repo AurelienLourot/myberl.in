@@ -32,6 +32,10 @@ define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
             delete state.pendingMarkers[firstMarker];
             processPendingMarkers();
           } else {
+            if (numCalls) {
+              var meanProcessingTimeMs = totalProcessingTimeMs / numCalls;
+              console.log("Marker list's mean processing time: " + meanProcessingTimeMs + 'ms.');
+            }
             state.isMarkerListComplete = true;
           }
         });
