@@ -1976,10 +1976,11 @@
   },
   {
     "title": "Beach restaurants",
+    "place_id": "ChIJSZ6FV-Q3qEcRuQGuoK-EZ3Q",
     "ignore_errors": true,
     "position": {
-      "lat": 52.444773,
-      "lng": 13.626320
+      "lat": 52.444265,
+      "lng": 13.627026
     },
     "tags": ["restaurant", "other", "outdoor", "good"]
   },
