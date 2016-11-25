@@ -2185,5 +2185,14 @@
       "lng": 13.469499
     },
     "tags": ["bar", "great", "indoor", "aure", "franzi"]
+  },
+  {
+    "title": "Pan Bao",
+    "comment": "Vietnamese, non alcoholic",
+    "position": {
+      "lat": 52.505512,
+      "lng": 13.469845
+    },
+    "tags": ["restaurant", "great", "indoor", "aure", "franzi"]
   }
 ]
