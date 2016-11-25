@@ -2012,5 +2012,21 @@
       "lng": 13.411541
     },
     "tags": ["restaurant", "great", "indoor", "outdoor", "aure", "franzi"]
+  },
+  {
+    "title": "Einstein",
+    "position": {
+      "lat": 52.505292,
+      "lng": 13.337559
+    },
+    "tags": ["café", "indoor", "outdoor", "good", "aure"]
+  },
+  {
+    "title": "Einstein",
+    "position": {
+      "lat": 52.521140,
+      "lng": 13.414956
+    },
+    "tags": ["café", "franzi", "indoor", "good"]
   }
 ]
