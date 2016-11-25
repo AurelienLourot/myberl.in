@@ -2113,5 +2113,13 @@
       "lng": 13.417723
     },
     "tags": ["café", "great", "indoor", "outdoor", "aure", "franzi"]
+  },
+  {
+    "title": "Hafenbar",
+    "position": {
+      "lat": 52.521775,
+      "lng": 13.407241
+    },
+    "tags": ["bar", "good", "indoor", "other"]
   }
 ]
