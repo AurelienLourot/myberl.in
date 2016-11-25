@@ -2055,5 +2055,14 @@
       "lng": 13.385746
     },
     "tags": ["restaurant", "bar", "franzi", "good", "indoor", "outdoor"]
+  },
+  {
+    "title": "Haubentaucher",
+    "comment": "Sand and swimming pool",
+    "position": {
+      "lat": 52.507198,
+      "lng": 13.452714
+    },
+    "tags": ["bar", "outdoor", "other", "good"]
   }
 ]
