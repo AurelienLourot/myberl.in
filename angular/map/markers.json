@@ -1431,6 +1431,7 @@
   },
   {
     "title": "Smart Deli",
+    "ignore_errors": true,
     "comment": "Japanese",
     "position": {
       "lat": 52.527870,
