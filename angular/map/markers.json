@@ -2364,5 +2364,14 @@
       "lng": 13.442510
     },
     "tags": ["brunch", "café", "other", "great", "indoor"]
+  },
+  {
+    "title": "Datscha",
+    "comment": "Russian",
+    "position": {
+      "lat": 52.509349,
+      "lng": 13.457988
+    },
+    "tags": ["restaurant", "other", "great", "indoor"]
   }
 ]
