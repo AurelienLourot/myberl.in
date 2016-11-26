@@ -2373,5 +2373,14 @@
       "lng": 13.457988
     },
     "tags": ["restaurant", "other", "great", "indoor"]
+  },
+  {
+    "title": "Stone",
+    "comment": "Brewery",
+    "position": {
+      "lat": 52.438062,
+      "lng": 13.368270
+    },
+    "tags": ["bar", "other", "great", "indoor", "outdoor"]
   }
 ]
