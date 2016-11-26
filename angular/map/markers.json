@@ -2328,5 +2328,14 @@
       "lng": 13.418950
     },
     "tags": ["bar", "other", "good", "indoor"]
+  },
+  {
+    "title": "Zur Mieze",
+    "comment": "Café with cats",
+    "position": {
+      "lat": 52.515969,
+      "lng": 13.304878
+    },
+    "tags": ["café", "other", "good", "indoor"]
   }
 ]
