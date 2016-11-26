@@ -1936,12 +1936,13 @@
     "tags": ["restaurant", "other", "indoor", "good"]
   },
   {
-    "title": "Café Wendel",
+    "title": "Wendel",
+    "comment": "Non smoking",
     "position": {
       "lat": 52.500543,
       "lng": 13.443459
     },
-    "tags": ["café", "other", "great", "indoor", "outdoor"]
+    "tags": ["bar", "café", "great", "indoor", "outdoor", "aure", "franzi"]
   },
   {
     "title": "KIKI SOL",
