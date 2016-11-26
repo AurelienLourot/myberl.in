@@ -2202,5 +2202,14 @@
       "lng": 13.439260
     },
     "tags": ["brunch", "café", "great", "indoor", "outdoor", "aure", "franzi"]
+  },
+  {
+    "title": "Banja Luka",
+    "comment": "Biergarten",
+    "position": {
+      "lat": 52.500492,
+      "lng": 13.444114
+    },
+    "tags": ["bar", "café", "restaurant", "great", "outdoor", "indoor", "aure", "franzi"]
   }
 ]
