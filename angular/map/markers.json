@@ -2310,5 +2310,14 @@
       "lng": 13.675969
     },
     "tags": ["lake", "outdoor", "great", "romu"]
+  },
+  {
+    "title": "Holy Flat",
+    "comment": "Vegetarian",
+    "position": {
+      "lat": 52.490102,
+      "lng": 13.427028
+    },
+    "tags": ["restaurant", "romu", "great", "indoor"]
   }
 ]
