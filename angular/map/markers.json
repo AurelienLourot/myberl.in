@@ -2256,5 +2256,14 @@
       "lng": 13.327555
     },
     "tags": ["restaurant", "indoor", "good", "aure"]
+  },
+  {
+    "title": "Schwiliko",
+    "comment": "Georgian",
+    "position": {
+      "lat": 52.498664,
+      "lng": 13.446849
+    },
+    "tags": ["restaurant", "great", "indoor", "outdoor", "aure", "franzi"]
   }
 ]
