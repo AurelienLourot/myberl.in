@@ -2229,5 +2229,14 @@
       "lng": 13.469055
     },
     "tags": ["restaurant", "other", "good", "indoor"]
+  },
+  {
+    "title": "BettoMagno",
+    "comment": "Italian",
+    "position": {
+      "lat": 52.474070,
+      "lng": 13.426196
+    },
+    "tags": ["bar", "restaurant", "good", "indoor", "aure", "franzi"]
   }
 ]
