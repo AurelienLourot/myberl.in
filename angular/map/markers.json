@@ -2390,5 +2390,14 @@
       "lng": 13.445538
     },
     "tags": ["bar", "restaurant", "indoor", "outdoor", "good", "aure"]
+  },
+  {
+    "title": "Onkel Ho",
+    "comment": "Vietnamese",
+    "position": {
+      "lat": 52.546936,
+      "lng": 13.406107
+    },
+    "tags": ["restaurant", "great", "indoor", "aure", "franzi"]
   }
 ]
