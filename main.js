@@ -94,7 +94,7 @@ define(['thirdparty/timerlog-0.1.4/dist/index.es5', 'angular/app'], function(tim
           animatedIn: 'fadeIn',
           animatedOut: 'fadeOut',
           animationDuration: '.2s',
-          color: '#f66', //FIXME: same as .brand-my
+          color: '#f66', //FIXME: same as .my
         });
       }
       console.log('Modals ready.');

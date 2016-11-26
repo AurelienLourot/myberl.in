@@ -8,7 +8,7 @@ a:focus {
 }
 
 .navbar-header > .pull-right {
-  margin-right: 10px; /* same as .navbar-btn.btn-sm's margin-top and margin-bottom */
+  margin-right: 10px; /*FIXME: same as .navbar-btn.btn-sm's margin-top and margin-bottom*/
 }
 
 .navbar-toggle {
@@ -30,12 +30,12 @@ a:focus {
 .btn-bar:hover {
   color: #9d9d9d; /*FIXME: use bootstrap's style*/
   text-decoration: inherit;
-  font-size: 18px; /*FIXME: same as navbar-brand*/
+  font-size: 18px; /*FIXME: same as .navbar-brand*/
   margin-right: 0.3em;
 }
 
 .marker-approx-amount {
-  font-size: 16px; /*FIXME: same as navbar-brand*/
+  font-size: 16px; /*FIXME: same as .navbar-brand*/
   margin-top: 0.8em;
 }
 
@@ -131,7 +131,7 @@ h4 {
 }
 
 .info-title {
-  background-color: #f66; /*FIXME: same as .brand-my*/
+  background-color: #f66; /*FIXME: same as .my*/
   color: white;
   padding-bottom: 1em; /*FIXME: same as .info*/
 }
@@ -215,7 +215,7 @@ h1 {
   font-size: 0.8em;
 }
 
-.img-2x { /* same size as fa-2x */
+.img-2x { /*FIXME: same size as .fa-2x*/
   font-size: 2em;
   height: 1em;
   vertical-align: top;
@@ -243,7 +243,7 @@ h1 {
   width: 6em;
   border-width: 0.4em;
   border-style: solid;
-  border-color: #faa; /*FIXME: based on .brand-my*/
+  border-color: #faa; /*FIXME: based on .my*/
   text-align: center;
 }
 
