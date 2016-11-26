@@ -2320,5 +2320,13 @@
       "lng": 13.427028
     },
     "tags": ["restaurant", "romu", "great", "indoor"]
+  },
+  {
+    "title": "Multilayerladen",
+    "position": {
+      "lat": 52.499998,
+      "lng": 13.418950
+    },
+    "tags": ["bar", "other", "good", "indoor"]
   }
 ]
