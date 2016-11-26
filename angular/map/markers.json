@@ -2337,5 +2337,13 @@
       "lng": 13.304878
     },
     "tags": ["café", "other", "good", "indoor"]
+  },
+  {
+    "title": "Cent'Anni",
+    "position": {
+      "lat": 52.522296,
+      "lng": 13.399817
+    },
+    "tags": ["restaurant", "outdoor", "indoor", "good", "aure"]
   }
 ]
