@@ -22,12 +22,21 @@ a:focus {
   margin-bottom: 0em; /*FIXME: configurable in bootstrap?*/
 }
 
+.navbar-inverse .navbar-text {
+  color: #ddd; /*FIXME: configurable in bootstrap?*/
+}
+
 .btn-bar,
 .btn-bar:hover {
   color: #9d9d9d; /*FIXME: use bootstrap's style*/
   text-decoration: inherit;
   font-size: 18px; /*FIXME: same as navbar-brand*/
   margin-right: 0.3em;
+}
+
+.marker-approx-amount {
+  font-size: 16px; /*FIXME: same as navbar-brand*/
+  margin-top: 0.8em;
 }
 
 .btn-marker-list {
@@ -71,6 +80,10 @@ a:focus {
   opacity: 0;
   filter: alpha(opacity=0); /* for IE <= 8 */
   max-height: 0em;
+}
+
+.show-when-slow {
+  display: none;
 }
 
 .filter-group {
