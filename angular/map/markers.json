@@ -2284,5 +2284,14 @@
       "lng": 13.419442
     },
     "tags": ["restaurant", "other", "great", "indoor"]
+  },
+  {
+    "title": "Grindhouse",
+    "comment": "Burgers",
+    "position": {
+      "lat": 52.534494,
+      "lng": 13.416532
+    },
+    "tags": ["restaurant", "other", "indoor", "outdoor", "good"]
   }
 ]
