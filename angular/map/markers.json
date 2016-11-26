@@ -2418,5 +2418,15 @@
       "lng": 13.426359
     },
     "tags": ["restaurant", "great", "outdoor", "indoor", "aure", "franzi"]
+  },
+  {
+    "title": "Café am Neuen See",
+    "comment": "Biergarten, Ice stock sport (bavarian curling)",
+    "place_id": "ChIJrUoJwatRqEcRxIAAnn02nN8",
+    "position": {
+      "lat": 52.510731,
+      "lng": 13.344655
+    },
+    "tags": ["restaurant", "café", "bar", "outdoor", "indoor", "good", "aure"]
   }
 ]
