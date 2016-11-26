@@ -11,6 +11,7 @@ function patch(markers) {
   setPlaceId('brlo', 'ChIJoWMZoR1OqEcR_ZCD-qZZGkA');
   setComment('ilritrovo', 'Italian');
   setPlaceId('lipopette', 'ChIJ54YiTpdPqEcR_3MWglIIzLc');
+  setWebsite('lipopette', 'https://www.facebook.com/lipopetteberlin/');
   setPlaceId('nymphensee', 'ChIJGS3gbYD7qEcRePUdNIcYvYE');
   setPlaceId('ploetzensee', 'ChIJY57G5GZRqEcRnKNEpnBZIK8');
   setPlaceId('ponterosa', 'ChIJqTH0OztQqEcRLgWCiboku0M');
@@ -29,6 +30,14 @@ function patch(markers) {
       markers[id].setPlaceId(placeId);
     } catch(e) {
       console.error('Error patching ' + id + "'s place ID: " + e);
+    }
+  }
+
+  function setWebsite(id, website) {
+    try {
+      markers[id].setWebsite(website);
+    } catch(e) {
+      console.error('Error patching ' + id + "'s website: " + e);
     }
   }
 

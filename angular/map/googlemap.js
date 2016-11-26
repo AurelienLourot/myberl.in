@@ -272,6 +272,10 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
         return descriptor.website || externalInfo.website || '';
       };
 
+      this.setWebsite = function setWebsite(website) {
+        descriptor.website = website;
+      };
+
       this.getGMapsUrl = function getGMapsUrl() {
         return externalInfo.gMapsUrl || '';
       };
