@@ -1651,11 +1651,12 @@
   },
   {
     "title": "Defne",
+    "comment": "Turkish",
     "position": {
       "lat": 52.495371,
       "lng": 13.417724
     },
-    "tags": ["restaurant", "franzi", "indoor", "outdoor", "great"]
+    "tags": ["restaurant", "great", "indoor", "outdoor", "aure", "franzi"]
   },
   {
     "title": "3 Schwestern",
