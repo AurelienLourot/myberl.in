@@ -2400,5 +2400,14 @@
       "lng": 13.406107
     },
     "tags": ["restaurant", "great", "indoor", "aure", "franzi"]
+  },
+  {
+    "title": "Paparazzi",
+    "comment": "Italian",
+    "position": {
+      "lat": 52.539950,
+      "lng": 13.417775
+    },
+    "tags": ["restaurant", "great", "indoor", "outdoor", "aure"]
   }
 ]
