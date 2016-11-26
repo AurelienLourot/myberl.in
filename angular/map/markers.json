@@ -2355,5 +2355,14 @@
       "lng": 13.500279
     },
     "tags": ["sightseeing", "other", "good", "indoor"]
+  },
+  {
+    "title": "Vux",
+    "comment": "Vegan",
+    "position": {
+      "lat": 52.472067,
+      "lng": 13.442510
+    },
+    "tags": ["brunch", "café", "other", "great", "indoor"]
   }
 ]
