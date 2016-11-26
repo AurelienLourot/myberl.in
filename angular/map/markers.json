@@ -2265,5 +2265,14 @@
       "lng": 13.446849
     },
     "tags": ["restaurant", "great", "indoor", "outdoor", "aure", "franzi"]
+  },
+  {
+    "title": "Mmaah",
+    "comment": "Korean food to take away",
+    "position": {
+      "lat": 52.480016,
+      "lng": 13.417958
+    },
+    "tags": ["restaurant", "outdoor", "great", "aure", "franzi"]
   }
 ]
