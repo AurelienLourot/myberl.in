@@ -2247,5 +2247,14 @@
       "lng": 13.411464
     },
     "tags": ["restaurant", "bar", "café", "franzi", "great", "indoor", "outdoor"]
+  },
+  {
+    "title": "Mimino",
+    "comment": "Georgian",
+    "position": {
+      "lat": 52.504667,
+      "lng": 13.327555
+    },
+    "tags": ["restaurant", "indoor", "good", "aure"]
   }
 ]
