@@ -2238,5 +2238,14 @@
       "lng": 13.426196
     },
     "tags": ["bar", "restaurant", "good", "indoor", "aure", "franzi"]
+  },
+  {
+    "title": "An einem Sonntag im August",
+    "comment": "Vegetarian and vegan burgers",
+    "position": {
+      "lat": 52.539997,
+      "lng": 13.411464
+    },
+    "tags": ["restaurant", "bar", "café", "franzi", "great", "indoor", "outdoor"]
   }
 ]
