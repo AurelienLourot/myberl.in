@@ -2345,5 +2345,15 @@
       "lng": 13.399817
     },
     "tags": ["restaurant", "outdoor", "indoor", "good", "aure"]
+  },
+  {
+    "title": "Funkhaus Nalepastr.",
+    "comment": "Recording studio",
+    "place_id": "ChIJVWNLFS5PqEcR4gswxRYhPxY",
+    "position": {
+      "lat": 52.479542,
+      "lng": 13.500279
+    },
+    "tags": ["sightseeing", "other", "good", "indoor"]
   }
 ]
