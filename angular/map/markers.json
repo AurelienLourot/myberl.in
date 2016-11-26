@@ -2274,5 +2274,15 @@
       "lng": 13.417958
     },
     "tags": ["restaurant", "outdoor", "great", "aure", "franzi"]
+  },
+  {
+    "title": "Umami",
+    "comment": "Southeast Asian",
+    "place_id": "ChIJ0dhGlQNOqEcRWIA5f74Udu4",
+    "position": {
+      "lat": 52.534487,
+      "lng": 13.419442
+    },
+    "tags": ["restaurant", "other", "great", "indoor"]
   }
 ]
