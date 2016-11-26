@@ -2194,5 +2194,13 @@
       "lng": 13.469845
     },
     "tags": ["restaurant", "great", "indoor", "aure", "franzi"]
+  },
+  {
+    "title": "Café Rix",
+    "position": {
+      "lat": 52.476979,
+      "lng": 13.439260
+    },
+    "tags": ["brunch", "café", "great", "indoor", "outdoor", "aure", "franzi"]
   }
 ]
