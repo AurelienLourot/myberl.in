@@ -2382,5 +2382,13 @@
       "lng": 13.368270
     },
     "tags": ["bar", "other", "great", "indoor", "outdoor"]
+  },
+  {
+    "title": "Wok & Grill",
+    "position": {
+      "lat": 52.525438,
+      "lng": 13.445538
+    },
+    "tags": ["bar", "restaurant", "indoor", "outdoor", "good", "aure"]
   }
 ]
