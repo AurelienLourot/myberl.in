@@ -2220,5 +2220,14 @@
       "lng": 13.423724
     },
     "tags": ["café", "brunch", "restaurant", "other", "good", "indoor", "outdoor"]
+  },
+  {
+    "title": "Auszeit",
+    "comment": "Mediterranean food",
+    "position": {
+      "lat": 52.505252,
+      "lng": 13.469055
+    },
+    "tags": ["restaurant", "other", "good", "indoor"]
   }
 ]
