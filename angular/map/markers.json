@@ -2409,5 +2409,14 @@
       "lng": 13.417775
     },
     "tags": ["restaurant", "great", "indoor", "outdoor", "aure"]
+  },
+  {
+    "title": "Lava",
+    "comment": "Italian",
+    "position": {
+      "lat": 52.481054,
+      "lng": 13.426359
+    },
+    "tags": ["restaurant", "great", "outdoor", "indoor", "aure", "franzi"]
   }
 ]
