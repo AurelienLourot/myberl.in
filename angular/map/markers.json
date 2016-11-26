@@ -2293,5 +2293,13 @@
       "lng": 13.416532
     },
     "tags": ["restaurant", "other", "indoor", "outdoor", "good"]
+  },
+  {
+    "title": "Filmkunstbar",
+    "position": {
+      "lat": 52.496117,
+      "lng": 13.429030
+    },
+    "tags": ["bar", "club", "good", "indoor", "aure", "franzi"]
   }
 ]
