@@ -2302,5 +2302,13 @@
       "lng": 13.429030
     },
     "tags": ["bar", "club", "good", "indoor", "aure", "franzi"]
+  },
+  {
+    "title": "Kleiner Müggelsee",
+    "position": {
+      "lat": 52.429438,
+      "lng": 13.675969
+    },
+    "tags": ["lake", "outdoor", "great", "romu"]
   }
 ]
