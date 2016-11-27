@@ -54,6 +54,18 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
         }
       };
 
+      this.isGeolocated = function isGeolocated() {
+        return !!currentPositionMarker.getPosition();
+      };
+
+      this.panToCurrentPosition = function panToCurrentPosition() {
+        var currentPosition = currentPositionMarker.getPosition();
+        if (currentPosition) {
+          map.setZoom(panZoomLevel);
+          map.panTo(currentPosition);
+        }
+      };
+
       // Adds a listener on instance readiness.
       // Listeners will get `elemId` as argument.
       this.addListener = function addListener(listener) {
@@ -79,6 +91,7 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
 
       // Private members:
       var that = this;
+      var jumpControl = $('#' + elemId + '-jump-control');
       console.log('Creating Google Map...');
       var map = google && new google.maps.Map(document.getElementById(elemId), {
         center: berlinTvTower,
@@ -90,6 +103,7 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
         var firstTime = true;
         return function() {
           if (firstTime) {
+            jumpControl.show();
             console.log(elemId + ' ready.');
             for (var i in listeners) {
               listeners[i](elemId);
@@ -98,6 +112,7 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
           firstTime = false;
         };
       })());
+      map && map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(jumpControl[0]);
 
       var projectionFactory = google ? new google.maps.OverlayView() : {};
       projectionFactory.draw = function draw(){};
@@ -464,10 +479,11 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
 
     // Private constants:
     var tolerance = 80; // meters
-    var panZoomLevel = 15;
 
     return Marker;
   })();
+
+  var panZoomLevel = 15;
 
   return {
     Map: Map,

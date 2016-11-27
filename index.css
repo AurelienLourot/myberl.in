@@ -199,6 +199,25 @@ h4 {
   right: 0em;
 }
 
+.map-jump-control {
+  display: none;
+  margin-right: 9px;
+  padding: 5px;
+}
+
+/* Hide strange artifact partially covering the .map-jump-control: */
+div.gm-style-cc > div > div {
+  display: none;
+}
+
+.map-jump-control-icon {
+  background-image: url('assets/pics/thirdparty/mylocation-sprite-1x.png');
+  background-size: 180px 18px;
+  background-position: 0px 0px;
+  height: 18px;
+  width: 18px;
+}
+
 .status-label {
   position: fixed;
   top: 0;

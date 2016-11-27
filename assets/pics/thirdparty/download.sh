@@ -23,3 +23,5 @@ do
             "https://mt.googleapis.com/vt/icon/name=icons/onion/${icon}-4x.png&scale=${scale}&filter=ff${color_code}"
     done
 done
+
+curl -O https://maps.gstatic.com/tactile/mylocation/mylocation-sprite-1x.png

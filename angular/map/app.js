@@ -23,6 +23,7 @@ define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/ma
       link: function(scope, elm, attrs, ctrl) {
         $timeout(function () { // after browser rendering
           var googleMap = new googlemap.Map(scope.id, $timeout, $interval);
+          scope.googleMap = googleMap;
 
           var addJsonMarkersToMap = new Promise(function getJsonMarkers(resolve, reject) {
             console.log('Loading markers...');

@@ -1,1 +1,5 @@
 <div id="{{ id }}" class="map"></div>
+<div id="{{ id }}-jump-control" class="btn btn-default map-jump-control"
+     data-ng-click="googleMap.panToCurrentPosition()" data-ng-show="googleMap.isGeolocated()">
+  <div class="map-jump-control-icon"></div>
+</div>
