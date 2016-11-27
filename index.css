@@ -1,5 +1,5 @@
 .pushable > .pusher {
-  height: 100vh; /* necessary on Mobile Safari 7.0 */
+  min-height: 100vh; /* necessary on Mobile Safari 7.0 */
 }
 
 a,
