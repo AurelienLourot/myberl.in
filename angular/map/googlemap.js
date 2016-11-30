@@ -322,6 +322,10 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
 
         // Populates externalInfo.
         function fetchExternalInfo() {
+          if (descriptor.place_id == 'NONE') {
+            return;
+          }
+
           gPlaces.nearbySearch({
             location: descriptor.position,
             radius: tolerance,

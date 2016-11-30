@@ -293,7 +293,9 @@
   {
     "title": "Lupita Bar",
     "comment": "Ring at the door, 1st floor",
-    "ignore_errors": true,
+    "_reason": "Otherwise it will match the Monarch:",
+    "place_id": "NONE",
+    "website": "https://www.residentadvisor.net/club.aspx?id=21937",
     "position": {
       "lat": 52.4993682,
       "lng": 13.4187269

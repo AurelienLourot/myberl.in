@@ -27,7 +27,7 @@
   </div>
 </div>
 
-<div data-ng-hide="state.currentMarker.getWebsite() && !state.currentMarker.getGMapsUrl()"
+<div data-ng-hide="!state.currentMarker.getWebsite() && !state.currentMarker.getGMapsUrl()"
      class="info">
   <a data-ng-hide="!state.currentMarker.getWebsite()" class="btn-bar" target="_blank"
      title="Website" href="{{ state.currentMarker.getWebsite() }}">
