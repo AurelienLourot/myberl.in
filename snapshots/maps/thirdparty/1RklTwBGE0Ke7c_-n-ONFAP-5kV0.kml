@@ -309,6 +309,14 @@
 					<coordinates>13.43853439999998,52.4976996,0.0</coordinates>
 				</Point>
 			</Placemark>
+			<Placemark>
+				<name>Haus Schwarzenberg</name>
+				<description><![CDATA[#bar #café #indoor #outdoor ]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<Point>
+					<coordinates>13.402410499999974,52.5242343,0.0</coordinates>
+				</Point>
+			</Placemark>
 		</Folder>
 		<Style id='icon-503-DB4436-normal'>
 			<IconStyle>
