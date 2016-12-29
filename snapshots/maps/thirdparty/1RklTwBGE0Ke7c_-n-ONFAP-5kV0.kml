@@ -311,7 +311,7 @@
 			</Placemark>
 			<Placemark>
 				<name>Haus Schwarzenberg</name>
-				<description><![CDATA[#bar #café #indoor #outdoor ]]></description>
+				<description><![CDATA[#bar #café #indoor #outdoor]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
 					<coordinates>13.402410499999974,52.5242343,0.0</coordinates>
