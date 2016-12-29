@@ -9,6 +9,7 @@ function patch(markers) {
   ignoreErrors('bernsteinsee');
   setPlaceId('betahaus', 'ChIJqQFHjS1OqEcR8d99mafShxY');
   setPlaceId('brlo', 'ChIJoWMZoR1OqEcR_ZCD-qZZGkA');
+  setPlaceId('hausschwarzenberg', 'ChIJjZik3-BRqEcRYJNhq-6aGVU');
   setComment('ilritrovo', 'Italian');
   setPlaceId('lipopette', 'ChIJ54YiTpdPqEcR_3MWglIIzLc');
   setWebsite('lipopette', 'https://www.facebook.com/lipopetteberlin/');
