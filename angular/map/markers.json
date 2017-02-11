@@ -2438,5 +2438,13 @@
       "lng": 13.468156
     },
     "tags": ["other", "restaurant", "café", "bar", "indoor", "good"]
+  },
+  {
+    "title": "Crêperie Suzette",
+    "position": {
+      "lat": 52.543186,
+      "lng": 13.414872
+    },
+    "tags": ["other", "restaurant", "indoor", "good"]
   }
 ]
