@@ -2430,5 +2430,13 @@
       "lng": 13.344655
     },
     "tags": ["restaurant", "café", "bar", "outdoor", "indoor", "good", "aure"]
+  },
+  {
+    "title": "Milja & Schäfa",
+    "position": {
+      "lat": 52.504524,
+      "lng": 13.468156
+    },
+    "tags": ["other", "restaurant", "café", "bar", "indoor", "good"]
   }
 ]
