@@ -2510,5 +2510,13 @@
       "lng": 13.469496
     },
     "tags": ["restaurant", "other", "good", "indoor"]
+  },
+  {
+    "title": "Peppi Guggenheim",
+    "position": {
+      "lat": 52.484200,
+      "lng": 13.433250
+    },
+    "tags": ["bar", "great", "aure", "indoor"]
   }
 ]
