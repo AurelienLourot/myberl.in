@@ -2446,5 +2446,14 @@
       "lng": 13.414872
     },
     "tags": ["other", "restaurant", "indoor", "good"]
+  },
+  {
+    "title": "Santa Maria",
+    "comment": "Mexican",
+    "position": {
+      "lat": 52.501598,
+      "lng": 13.417700
+    },
+    "tags": ["other", "restaurant", "indoor", "good"]
   }
 ]
