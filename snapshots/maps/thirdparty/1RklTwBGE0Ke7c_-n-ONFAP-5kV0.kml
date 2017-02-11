@@ -295,7 +295,7 @@
 			</Placemark>
 			<Placemark>
 				<name>Südblock</name>
-				<description><![CDATA[#bar #indoor #outdoor]]></description>
+				<description><![CDATA[#bar #restaurant #indoor #outdoor #aure]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
 					<coordinates>13.416900400000031,52.49862279999999,0.0</coordinates>
