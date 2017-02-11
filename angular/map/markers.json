@@ -2483,5 +2483,14 @@
       "lng": 13.421285
     },
     "tags": ["restaurant", "great", "indoor", "aure", "franzi"]
+  },
+  {
+    "title": "Kropp",
+    "comment": "Fish",
+    "position": {
+      "lat": 52.481250,
+      "lng": 13.434457
+    },
+    "tags": ["restaurant", "good", "indoor", "aure", "romu"]
   }
 ]
