@@ -2455,5 +2455,15 @@
       "lng": 13.417700
     },
     "tags": ["other", "restaurant", "indoor", "good"]
+  },
+  {
+    "title": "Allegretto A Tavola",
+    "comment": "Italian",
+    "place_id": "ChIJxWJROt5RqEcR7bM6on7Ik2g",
+    "position": {
+      "lat": 52.520220,
+      "lng": 13.401669
+    },
+    "tags": ["restaurant", "café", "good", "indoor", "aure"]
   }
 ]
