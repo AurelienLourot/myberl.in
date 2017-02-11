@@ -2501,5 +2501,14 @@
       "lng": 13.415111
     },
     "tags": ["restaurant", "great", "indoor", "aure"]
+  },
+  {
+    "title": "Harapeco",
+    "comment": "Japanese",
+    "position": {
+      "lat": 52.505108,
+      "lng": 13.469496
+    },
+    "tags": ["restaurant", "other", "good", "indoor"]
   }
 ]
