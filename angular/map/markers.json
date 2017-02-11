@@ -2492,5 +2492,14 @@
       "lng": 13.434457
     },
     "tags": ["restaurant", "good", "indoor", "aure", "romu"]
+  },
+  {
+    "title": "Sol y Sombra",
+    "comment": "Tapas",
+    "position": {
+      "lat": 52.502978,
+      "lng": 13.415111
+    },
+    "tags": ["restaurant", "great", "indoor", "aure"]
   }
 ]
