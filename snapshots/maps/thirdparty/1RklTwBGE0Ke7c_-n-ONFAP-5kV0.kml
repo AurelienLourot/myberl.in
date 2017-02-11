@@ -79,7 +79,7 @@
 			</Placemark>
 			<Placemark>
 				<name>Fitcher's Vogel</name>
-				<description><![CDATA[#bar #indoor]]></description>
+				<description><![CDATA[#bar #indoor #aure]]></description>
 				<styleUrl>#icon-503-DB4436</styleUrl>
 				<Point>
 					<coordinates>13.4511751,52.510394,0.0</coordinates>
