@@ -2474,5 +2474,14 @@
       "lng": 13.429075
     },
     "tags": ["restaurant", "other", "good", "indoor"]
+  },
+  {
+    "title": "To Koutouki",
+    "comment": "Greek",
+    "position": {
+      "lat": 52.493878,
+      "lng": 13.421285
+    },
+    "tags": ["restaurant", "great", "indoor", "aure", "franzi"]
   }
 ]
