@@ -2465,5 +2465,14 @@
       "lng": 13.401669
     },
     "tags": ["restaurant", "café", "good", "indoor", "aure"]
+  },
+  {
+    "title": "Chaparro",
+    "comment": "Mexican",
+    "position": {
+      "lat": 52.498194,
+      "lng": 13.429075
+    },
+    "tags": ["restaurant", "other", "good", "indoor"]
   }
 ]
