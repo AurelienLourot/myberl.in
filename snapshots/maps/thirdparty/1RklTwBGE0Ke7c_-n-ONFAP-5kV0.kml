@@ -1,360 +1,436 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<kml xmlns='http://www.opengis.net/kml/2.2'>
-	<Document>
-		<name>Franzi's Berl.in</name>
-		<description><![CDATA[]]></description>
-		<Folder>
-			<name>Untitled layer</name>
-			<Placemark>
-				<name>Ponte Rosa</name>
-				<description><![CDATA[#bar #restaurant #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.373792200000025,52.4882976,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>BRLO</name>
-				<description><![CDATA[#bar #restaurant #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.373304700000062,52.5002514,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Erben</name>
-				<description><![CDATA[#bar #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.452879800000005,52.4796817,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Gastón</name>
-				<description><![CDATA[#restaurant #indoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.435700099999963,52.4861973,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Rotbart</name>
-				<description><![CDATA[#bar #café #indoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.449187299999949,52.4742213,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Figl</name>
-				<description><![CDATA[#restaurant #indoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.41757789999997,52.4904048,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Room 77</name>
-				<description><![CDATA[#bar #restaurant #indoor #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.418012099999942,52.49311580000001,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Würgeengel</name>
-				<description><![CDATA[#bar #indoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.41667510000002,52.5010774,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>ORA</name>
-				<description><![CDATA[#café #bar #restaurant #indoor #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.41591870000002,52.5013856,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Fitcher's Vogel</name>
-				<description><![CDATA[#bar #indoor #aure]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.4511751,52.510394,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Briefmarkenweine</name>
-				<description><![CDATA[#restaurant #bar #indoor #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.442709700000023,52.51754,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Olio Sale Pepe</name>
-				<description><![CDATA[#restaurant #indoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.361877999999933,52.490216,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Clärchens Ballhaus</name>
-				<description><![CDATA[#restaurant #bar #indoor #outdoor #romu]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.39681059999998,52.5266488,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Chagall</name>
-				<description><![CDATA[#bar #restaurant #indoor #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.412662299999965,52.53135899999999,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>I Due Forni</name>
-				<description><![CDATA[#restaurant #indoor #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.412533800000006,52.5307877,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Il Ritrovo</name>
-				<description><![CDATA[#restaurant #indoor #outdoor #aure]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.458197599999949,52.50980449999999,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Wahrhaft Nahrhaft</name>
-				<description><![CDATA[#café #indoor #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.456378800000039,52.50755429999999,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Laidak</name>
-				<description><![CDATA[#bar #café #indoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.428477799999996,52.4796914,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Twinpigs</name>
-				<description><![CDATA[#bar #indoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.431930999999963,52.48056099999999,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Lipopette</name>
-				<description><![CDATA[#café #bar #restaurant #brunch #indoor #outdoor #aure]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.427143699999988,52.4702224,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Gelegenheiten</name>
-				<description><![CDATA[#bar #indoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.439368999999942,52.483988,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Nathanja &amp; Heinrich</name>
-				<description><![CDATA[#café #indoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.436748699999953,52.4873749,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Humus &amp; Baba Ghanoush</name>
-				<description><![CDATA[#restaurant #indoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.401790000000005,52.49069,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Seerose</name>
-				<description><![CDATA[#restaurant #café #indoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.407646200000045,52.4896137,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>A.Horn</name>
-				<description><![CDATA[#café #brunch #indoor #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.405389600000035,52.4959095,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Roamers</name>
-				<description><![CDATA[#café #brunch #indoor #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.429323000000068,52.48553,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Berlinburger</name>
-				<description><![CDATA[#restaurant #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.430841600000008,52.4864764,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Tristeza</name>
-				<description><![CDATA[#bar #indoor #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.430856800000015,52.4864952,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Schillingbar</name>
-				<description><![CDATA[#bar #indoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.428589299999999,52.4882094,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Sahara</name>
-				<description><![CDATA[#restaurant #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.428629999999998,52.48849,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Geist im Glas</name>
-				<description><![CDATA[#bar #indoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.424802,52.490117,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Olivio</name>
-				<description><![CDATA[#restaurant #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.421259299999974,52.4919848,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Hallmann und Klee</name>
-				<description><![CDATA[#restaurant #brunch #café #indoor #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.44973959999993,52.47383629999999,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Dritter Raum</name>
-				<description><![CDATA[#brunch #café #indoor #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.448065400000019,52.4771175,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Prachtwerk</name>
-				<description><![CDATA[#bar #café #indoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.438736199999994,52.47905579999999,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Die Apotheken Bar</name>
-				<description><![CDATA[#bar #indoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.423943799999961,52.5017431,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Südblock</name>
-				<description><![CDATA[#bar #restaurant #indoor #outdoor #aure]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.416900400000031,52.49862279999999,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Marabu</name>
-				<description><![CDATA[#bar #indoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.43853439999998,52.4976996,0.0</coordinates>
-				</Point>
-			</Placemark>
-			<Placemark>
-				<name>Haus Schwarzenberg</name>
-				<description><![CDATA[#bar #café #indoor #outdoor]]></description>
-				<styleUrl>#icon-503-DB4436</styleUrl>
-				<Point>
-					<coordinates>13.402410499999974,52.5242343,0.0</coordinates>
-				</Point>
-			</Placemark>
-		</Folder>
-		<Style id='icon-503-DB4436-normal'>
-			<IconStyle>
-				<color>ff3644DB</color>
-				<scale>1.1</scale>
-				<Icon>
-					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
-				</Icon>
-				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
-				</hotSpot>
-			</IconStyle>
-			<LabelStyle>
-				<scale>0.0</scale>
-			</LabelStyle>
-		</Style>
-		<Style id='icon-503-DB4436-highlight'>
-			<IconStyle>
-				<color>ff3644DB</color>
-				<scale>1.1</scale>
-				<Icon>
-					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
-				</Icon>
-				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
-				</hotSpot>
-			</IconStyle>
-			<LabelStyle>
-				<scale>1.1</scale>
-			</LabelStyle>
-		</Style>
-		<StyleMap id='icon-503-DB4436'>
-			<Pair>
-				<key>normal</key>
-				<styleUrl>#icon-503-DB4436-normal</styleUrl>
-			</Pair>
-			<Pair>
-				<key>highlight</key>
-				<styleUrl>#icon-503-DB4436-highlight</styleUrl>
-			</Pair>
-		</StyleMap>
-	</Document>
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name><![CDATA[Franzi's Berl.in]]></name>
+    <description/>
+    <Style id="icon-503-DB4436-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="31" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-503-DB4436-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="16" xunits="pixels" y="31" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-503-DB4436">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-503-DB4436-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-503-DB4436-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>Ponte Rosa</name>
+        <description>#bar #restaurant #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.3737922,52.4882976,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>BRLO</name>
+        <description>#bar #restaurant #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.3733047000001,52.5002514,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Erben</name>
+        <description>#bar #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4528798,52.4796817,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Gastón</name>
+        <description>#restaurant #indoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4357001,52.4861973,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Rotbart</name>
+        <description>#bar #café #indoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4491872999999,52.4742213,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Figl</name>
+        <description>#restaurant #indoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4175779,52.4904048,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Room 77</name>
+        <description>#bar #restaurant #indoor #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4180120999999,52.4931158,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Würgeengel</name>
+        <description>#bar #indoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4166751,52.5010774,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>ORA</name>
+        <description>#café #bar #restaurant #indoor #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4159187,52.5013856,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Fitcher's Vogel]]></name>
+        <description>#bar #indoor #aure</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4511751,52.510394,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Briefmarkenweine</name>
+        <description>#restaurant #bar #indoor #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4427097,52.51754,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Olio Sale Pepe</name>
+        <description>#restaurant #indoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.3618779999999,52.490216,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Clärchens Ballhaus</name>
+        <description>#restaurant #bar #indoor #outdoor #romu</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.3968106,52.5266488,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Chagall</name>
+        <description>#bar #restaurant #indoor #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4126623,52.531359,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>I Due Forni</name>
+        <description>#restaurant #indoor #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4125338,52.5307877,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Il Ritrovo</name>
+        <description>#restaurant #indoor #outdoor #aure</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4581975999999,52.5098045,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Wahrhaft Nahrhaft</name>
+        <description>#café #indoor #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4563788,52.5075543,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Laidak</name>
+        <description>#bar #café #indoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4284778,52.4796914,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Twinpigs</name>
+        <description>#bar #indoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.431931,52.480561,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lipopette</name>
+        <description>#café #bar #restaurant #brunch #indoor #outdoor #aure</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4271437,52.4702224,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Gelegenheiten</name>
+        <description>#bar #indoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4393689999999,52.483988,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Nathanja & Heinrich]]></name>
+        <description>#café #indoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4367487,52.4873749,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Humus & Baba Ghanoush]]></name>
+        <description>#restaurant #indoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.40179,52.49069,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Seerose</name>
+        <description>#restaurant #café #indoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4076462,52.4896137,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>A.Horn</name>
+        <description>#café #brunch #indoor #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4053896,52.4959095,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Roamers</name>
+        <description>#café #brunch #indoor #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4293230000001,52.48553,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Berlinburger</name>
+        <description>#restaurant #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4308416,52.4864764,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tristeza</name>
+        <description>#bar #indoor #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4308568,52.4864952,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Schillingbar</name>
+        <description>#bar #indoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4285893,52.4882094,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sahara</name>
+        <description>#restaurant #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.42863,52.48849,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Geist im Glas</name>
+        <description>#bar #indoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.424802,52.490117,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Olivio</name>
+        <description>#restaurant #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4212593,52.4919848,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hallmann und Klee</name>
+        <description>#restaurant #brunch #café #indoor #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4497395999999,52.4738363,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Dritter Raum</name>
+        <description>#brunch #café #indoor #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4480654,52.4771175,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Prachtwerk</name>
+        <description>#bar #café #indoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4387362,52.4790558,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Die Apotheken Bar</name>
+        <description>#bar #indoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4239438,52.5017431,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Südblock</name>
+        <description>#bar #restaurant #indoor #outdoor #aure</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4169004,52.4986228,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Marabu</name>
+        <description>#bar #indoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4385344,52.4976996,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Haus Schwarzenberg</name>
+        <description>#bar #café #indoor #outdoor</description>
+        <styleUrl>#icon-503-DB4436</styleUrl>
+        <Point>
+          <coordinates>
+            13.4024105,52.5242343,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
 </kml>
