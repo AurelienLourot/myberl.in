@@ -24,7 +24,8 @@ Each place must have at least one tag from each list (otherwise it won't show up
 <!---
 FIXME: generate this list
 -->
-* `#bar`, `#café`, `#club`, `#restaurant`, `#brunch`, `#concert`, `#sightseeing`, `#lake`.
+* `#bar`, `#café`, `#workplace`, `#club`, `#restaurant`, `#brunch`, `#concert`, `#sightseeing`,
+  `#lake`.
 * `#indoor`, `#outdoor`.
 
 Some more advices:
