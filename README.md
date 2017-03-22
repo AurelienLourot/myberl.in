@@ -35,6 +35,52 @@ $ ./aws/dns_create.sh
 $ ./aws/dns_update.sh
 ```
 
+## Set up Netlify
+
+We use [Netlify](https://www.netlify.com/) to deliver the app over HTTPS. Install the
+[Netlify CLI](https://www.netlify.com/docs/cli/) and authenticate with
+
+```bash
+$ sudo npm install -g netlify-cli
+$ netlify sites # first authentication, creates ~/.netlify/
+```
+
+Create this site on Netlify:
+
+```bash
+$ netlify create -n myberl.in # already done, creates ./.netlify
+```
+
+Enable GitHub continuous deployment:
+
+```bash
+$ netlify init
+? Directory to deploy (blank for current dir): 
+? Your build command (middleman build/grunt build/etc): 
+Configuring automated deploys for
+  repo: AurelienLourot/myberl.in
+  branch: master
+  dir: .
+  cmd: N/A
+? Looking good? Yes
+? GitHub username: AurelienLourot
+? GitHub password: ********
+Preparing deploy key
+Adding deploy key to github repo
+Configuring netlify site
+Adding webhook to repository
+Success! Whenever you push to Github, netlify will build and deploy your site
+  http://myberl-in.netlify.com
+```
+
+Set the domain name:
+
+```bash
+$ netlify update -d myberl.in
+Site updated:
+  http://myberl.in
+```
+
 ## Monitoring/Alerting
 
 Any front-end error is sent to [Sentry](https://sentry.io) (except when served on `*localhost*`).
