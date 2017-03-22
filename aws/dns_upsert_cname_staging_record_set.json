@@ -1,15 +1,15 @@
 {
-  "Comment": "Updates existing CNAME record for next subdomain",
+  "Comment": "Updates existing CNAME record for staging subdomain",
   "Changes": [
     {
       "Action": "UPSERT",
       "ResourceRecordSet": {
-        "Name": "next.myberl.in.",
+        "Name": "staging.myberl.in.",
         "Type": "CNAME",
         "TTL": 300,
         "ResourceRecords": [
           {
-            "Value": "s341247851.online.de"
+            "Value": "staging-myberl-in.netlify.com"
           }
         ]
       }

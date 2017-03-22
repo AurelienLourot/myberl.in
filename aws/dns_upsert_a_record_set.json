@@ -9,7 +9,7 @@
         "TTL": 300,
         "ResourceRecords": [
           {
-            "Value": "103.203.90.2"
+            "Value": "104.198.14.52"
           }
         ]
       }
