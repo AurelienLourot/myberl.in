@@ -94,7 +94,7 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
       var jumpControl = $('#' + elemId + '-jump-control');
       console.log('Creating Google Map...');
       var map = google && new google.maps.Map(document.getElementById(elemId), {
-        center: berlinTvTower,
+        center: mapCenter,
         zoom: defaultZoomLevel,
         mapTypeControl: false,
         streetViewControl: false,
@@ -136,7 +136,7 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
     };
 
     // Private constants:
-    var berlinTvTower = {
+    var mapCenter = { // Berlin TV Tower
       lat: 52.520815,
       lng: 13.409419,
     };

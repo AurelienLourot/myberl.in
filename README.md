@@ -88,13 +88,13 @@ This can be leveraged by loading the webapp regularly from the console or a cron
 
 ```bash
 $ sudo apt-get install phantomjs
-$ npm run-script loadmyberlin
+$ npm run-script loadsite
 ```
 
 In addition to sending any error to Sentry, `npm` will terminate with a non-null exit value if:
 
-* [myberl.in](https://myberl.in)'s initialization times out, or
-* myberl.in is unreachable.
+* the app's initialization times out, or
+* [myberl.in](https://myberl.in) is unreachable.
 
 ## Documentation
 

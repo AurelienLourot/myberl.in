@@ -1,7 +1,7 @@
 'use strict';
 
 window.module = {};
-define(['thirdparty/timerlog-0.1.4/dist/index.es5', 'angular/app'], function(timerlog, berlin) {
+define(['thirdparty/timerlog-0.1.4/dist/index.es5', 'angular/app'], function(timerlog, app) {
   timerlog = module.exports;
   module = undefined;
 
@@ -13,15 +13,15 @@ define(['thirdparty/timerlog-0.1.4/dist/index.es5', 'angular/app'], function(tim
   localStorage['timerlog'] = 1; // enables console logging
   console.log('Initializing app...');
 
-  window.dbg = berlin.dbg;
+  window.dbg = app.dbg;
 
-  // Replaces 'ng-app="berlin"', see
+  // Replaces 'ng-app="app"', see
   // http://www.sitepoint.com/using-requirejs-angularjs-applications/ :
-  angular.bootstrap(document, ['berlin']);
+  angular.bootstrap(document, ['app']);
 
   var statusLabelColor = 'success';
   var statusLabelContent = '<i class="fa fa-spinner fa-spin fa-2x"></i>';
-  berlin.status.set(statusLabelColor, statusLabelContent);
+  app.status.set(statusLabelColor, statusLabelContent);
 
   // Adds a listener on module readiness.
   var addListener = function(listener) {
@@ -31,7 +31,7 @@ define(['thirdparty/timerlog-0.1.4/dist/index.es5', 'angular/app'], function(tim
   var listeners = [];
 
   var waitForAngularAppReady = function(resolve, reject) {
-    berlin.addListener(function() {
+    app.addListener(function() {
       resolve();
     });
   };
@@ -103,7 +103,7 @@ define(['thirdparty/timerlog-0.1.4/dist/index.es5', 'angular/app'], function(tim
   };
 
   var clearStatusLabel = function() {
-    berlin.status.clear(statusLabelColor, statusLabelContent);
+    app.status.clear(statusLabelColor, statusLabelContent);
   };
 
   var callListeners = function() {

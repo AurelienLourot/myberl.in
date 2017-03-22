@@ -12,8 +12,8 @@
   ],
   "scripts": {
     "karma": "./node_modules/karma/bin/karma start",
-    "loadmyberlin": "phantomjs --ssl-protocol=tlsv1 monitoring/load-myberl-in.js",
-    "test": "./node_modules/karma/bin/karma start && phantomjs --ignore-ssl-errors=true monitoring/load-myberl-in.js"
+    "loadsite": "phantomjs --ssl-protocol=tlsv1 monitoring/load-site.js",
+    "test": "./node_modules/karma/bin/karma start && phantomjs --ignore-ssl-errors=true monitoring/load-site.js"
   },
   "devDependencies": {
     "karma": "0.13.22",

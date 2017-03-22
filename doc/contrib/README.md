@@ -19,8 +19,7 @@ immediately show up there.
 
 ![tags](tags.png)
 
-Each place must have at least one tag from each list (otherwise it won't show up on
-[myberl.in](https://myberl.in/)):
+Each place must have at least one tag from each list (otherwise it won't show up in the app):
 
 <!---
 FIXME: generate this list

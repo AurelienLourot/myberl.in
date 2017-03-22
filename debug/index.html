@@ -20,13 +20,13 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgo1hF6M7dGD75NQgfNXGvT422ri9ieyU&libraries=places">
     </script>
     <script>
-      var berlinTvTower = {
+      var mapCenter = {
         lat: 52.520815,
         lng: 13.409419,
       };
 
       var map = new google.maps.Map(document.getElementById('map'), {
-        center: berlinTvTower,
+        center: mapCenter,
         zoom: 12,
         mapTypeControl: false,
         streetViewControl: false,

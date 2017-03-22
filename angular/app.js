@@ -10,7 +10,7 @@ define(['angular/map/app', 'angular/tags/app', 'angular/status/app'], function(m
     }
   });
 
-  var app = angular.module('berlin', ['map', 'tags', 'status']);
+  var app = angular.module('app', ['map', 'tags', 'status']);
 
   app.config(['$compileProvider', function($compileProvider) {
     $compileProvider.debugInfoEnabled(false);
