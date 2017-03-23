@@ -1,6 +1,8 @@
 'use strict';
 
 define(['angular/tags/app', 'angular/map/device'], function(tags, device) {
+  console.log("Initializing AngularJS module 'map/info'.");
+
   var app = angular.module('info', ['tags']);
 
   device.addListener(handleSlowDevice);

@@ -1,6 +1,8 @@
 'use strict';
 
 define(function() {
+  console.log("Initializing AngularJS module 'status'.");
+
   var app = angular.module('status', []);
 
   // Service for setting the current status.

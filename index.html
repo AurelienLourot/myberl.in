@@ -69,14 +69,6 @@
       console.log('Bootstrap loaded.');
     </script>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"
-          type="text/css">
-    <script>
-      console.log('Google Fonts loaded.');
-    </script>
-
     <!-- Font Awesome -->
     <link href="thirdparty/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <script>
@@ -146,6 +138,9 @@
     </script>
 
     <script data-main="main.js" src="thirdparty/require.js"></script>
+    <script>
+      console.log('main.js loaded.');
+    </script>
   </head>
   <body>
 
@@ -290,10 +285,34 @@
 
     <!-- http://joaopereirawd.github.io/animatedModal.js/ -->
     <script src="thirdparty/animated-modal-1.0/animatedModal.min.js"></script>
+    <script>
+      console.log('animatedModal loaded.');
+    </script>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="thirdparty/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script>
+      console.log('bootstrap loaded.');
+    </script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="thirdparty/bootstrap-assets/ie10-viewport-bug-workaround.js"></script>
+    <script>
+      console.log('ie10-viewport-bug-workaround.js loaded.');
+    </script>
+
+    <script>
+      // Defer loading of Google Fonts. See https://www.giftofspeed.com/defer-loading-css/ :
+      var fonts = ['https://fonts.googleapis.com/css?family=Open+Sans',
+                   'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300'];
+      for (var i = 0; i < fonts.length; ++i) {
+        var font = fonts[i];
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = fonts[i];
+        var firstLink = document.getElementsByTagName('link')[0];
+        firstLink.parentNode.insertBefore(link, firstLink);
+      }
+      console.log('Google Fonts loaded.');
+    </script>
   </body>
 </html>

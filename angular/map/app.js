@@ -3,6 +3,8 @@
 define(['angular/map/googlemap', 'angular/map/connector-mymaps', 'angular/map/marker-patches',
         'angular/map/device', 'angular/map/info/app', 'angular/tags/app', 'angular/status/app'],
        function(googlemap, mymaps, patches, device, info, tags, status) {
+  console.log("Initializing AngularJS module 'map'.");
+
   var app = angular.module('map', ['info', 'tags', 'status']);
 
   app.directive(

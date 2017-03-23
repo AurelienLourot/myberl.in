@@ -1,6 +1,8 @@
 'use strict';
 
 define(function() {
+  console.log("Initializing AngularJS module 'tags'.");
+
   var app = angular.module('tags', ['ngAnimate']);
 
   app.factory('tagsModuleIsReady', function() {

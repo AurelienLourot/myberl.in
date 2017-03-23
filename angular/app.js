@@ -1,6 +1,8 @@
 'use strict';
 
 define(['angular/map/app', 'angular/tags/app', 'angular/status/app'], function(map, tags, status) {
+  console.log("Initializing AngularJS module 'app'.");
+
   map.addListener(function() {
     console.log('Map module ready.');
 
