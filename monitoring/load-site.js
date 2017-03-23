@@ -1,8 +1,3 @@
-setTimeout(function() {
-  console.error('FAILED: timeout.');
-  phantom.exit(1);
-}, 10000);
-
 var page = require('webpage').create();
 
 page.onResourceError = function(e) {
@@ -17,6 +12,11 @@ page.onConsoleMessage = function(msg) {
     phantom.exit(0);
   }
 };
+
+setTimeout(function() {
+  console.error('FAILED: timeout.');
+  phantom.exit(1);
+}, 10000);
 
 page.open('https://myberl.in', function(status) {
   if (status != 'success') {
