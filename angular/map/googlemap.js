@@ -508,7 +508,6 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
       {
         name: "Franzi's Berl.in map",
         id: '1RklTwBGE0Ke7c_-n-ONFAP-5kV0',
-        tags: ['franzi', 'great'],
         tags: {
           prepend: true,
           tags: ['franzi', 'great'],
