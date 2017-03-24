@@ -500,17 +500,27 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
       {
         name: "Franzi's lake map",
         id: '1S_guQBQudaPzIgRybK3VIPYwRL0',
-        tags: ['lake', 'outdoor', 'franzi', 'great'],
+        tags: {
+          prepend: true,
+          tags: ['lake', 'outdoor', 'franzi', 'great'],
+        },
       },
       {
         name: "Franzi's Berl.in map",
         id: '1RklTwBGE0Ke7c_-n-ONFAP-5kV0',
         tags: ['franzi', 'great'],
+        tags: {
+          prepend: true,
+          tags: ['franzi', 'great'],
+        },
       },
       {
         name: "Romu's map",
         id: '1NXPVu6MaJ7ASWCmSOe27oXPF5rc',
-        tags: ['romu', 'great'],
+        tags: {
+          prepend: true,
+          tags: ['romu', 'great'],
+        },
       },
     ],
   };

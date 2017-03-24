@@ -32,7 +32,8 @@ var Connector = (function() {
           var receivedMarker = markers[i];
           var receivedCoordinates = /(.*),(.*),(.*)/.exec(receivedMarker.Point.coordinates);
 
-          var convertedTags = tags.slice();
+          var convertedTags = tags.prepend ? tags.tags.slice() : [];
+          console.log(convertedTags);
           if (receivedMarker.description) {
             // On IE11, descriptions containing `- ` are of type Array, thus the need to join():
             var description = typeof receivedMarker.description === 'string' ?
@@ -47,6 +48,9 @@ var Connector = (function() {
                 }
               }
             }
+          }
+          if (!tags.prepend) {
+            Array.prototype.push.apply(convertedTags, tags.tags);
           }
 
           var convertedMarker = {
