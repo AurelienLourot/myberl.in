@@ -10,7 +10,7 @@
         <Icon>
           <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
-        <hotSpot x="16" xunits="pixels" y="31" yunits="insetPixels"/>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
       </IconStyle>
       <LabelStyle>
         <scale>0</scale>
@@ -23,7 +23,7 @@
         <Icon>
           <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
-        <hotSpot x="16" xunits="pixels" y="31" yunits="insetPixels"/>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
       </IconStyle>
       <LabelStyle>
         <scale>1.1</scale>
@@ -46,7 +46,7 @@
         <Icon>
           <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
-        <hotSpot x="16" xunits="pixels" y="31" yunits="insetPixels"/>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
       </IconStyle>
       <LabelStyle>
         <scale>0</scale>
@@ -62,7 +62,7 @@
         <Icon>
           <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
-        <hotSpot x="16" xunits="pixels" y="31" yunits="insetPixels"/>
+        <hotSpot x="16" xunits="pixels" y="32" yunits="insetPixels"/>
       </IconStyle>
       <LabelStyle>
         <scale>1.1</scale>
