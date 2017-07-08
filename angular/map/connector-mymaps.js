@@ -33,7 +33,6 @@ var Connector = (function() {
           var receivedCoordinates = /(.*),(.*),(.*)/.exec(receivedMarker.Point.coordinates);
 
           var convertedTags = tags.prepend ? tags.tags.slice() : [];
-          console.log(convertedTags);
           if (receivedMarker.description) {
             // On IE11, descriptions containing `- ` are of type Array, thus the need to join():
             var description = typeof receivedMarker.description === 'string' ?
