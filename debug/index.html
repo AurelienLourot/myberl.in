@@ -30,6 +30,9 @@
         zoom: 12,
         mapTypeControl: false,
         streetViewControl: false,
+        // Disable 'Use two fingers to move the map' on mobile, see
+        // https://developers.google.com/maps/documentation/javascript/interaction
+        gestureHandling: 'greedy',
       });
     </script>
   </body>

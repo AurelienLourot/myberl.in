@@ -98,6 +98,9 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
         zoom: defaultZoomLevel,
         mapTypeControl: false,
         streetViewControl: false,
+        // Disable 'Use two fingers to move the map' on mobile, see
+        // https://developers.google.com/maps/documentation/javascript/interaction
+        gestureHandling: 'greedy',
       });
       map && map.addListener('tilesloaded', (function() {
         var firstTime = true;
