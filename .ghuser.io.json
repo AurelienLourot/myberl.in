@@ -1,6 +1,6 @@
 {
   "_comment": "Repo metadata for ghuser.io. See https://github.com/ghuser-io/ghuser.io/blob/master/docs/repo-settings.md",
-  "avatar_url": "https://rawgit.com/AurelienLourot/myberl.in/master/assets/pics/maps_icon.png",
+  "avatar_url": "https://cdn.jsdelivr.net/gh/AurelienLourot/myberl.in@0f0aad1f772d47601a7fc976be48df69fc06629a/assets/pics/maps_icon.png",
   "techs": ["Maps JS API", "AngularJS", "Bootstrap", "Semantic UI", "AWS", "Travis CI",
             "GitHub Pages"]
 }
