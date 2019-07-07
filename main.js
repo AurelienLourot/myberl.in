@@ -86,7 +86,7 @@ define(['thirdparty/timerlog-0.1.4/dist/index.es5', 'angular/app'], function(tim
   var initModals = function(resolve, reject) {
     $(document).ready(function() {
       $('.modal-page').removeClass('hidden');
-      var modals = ['help', 'marker_list', 'dbg_secret'];
+      var modals = ['marker_list', 'dbg_secret'];
       for (var i = 0; i < modals.length; ++i) {
         var modal = modals[i];
         $('.' + modal + '_open').animatedModal({

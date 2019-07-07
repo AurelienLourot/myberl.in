@@ -126,7 +126,7 @@ h4 {
 }
 
 .info-pic {
-  background-color: #faa; /*FIXME: same as media-object*/
+  background-color: #faa;
   min-height: 7em;
 }
 
@@ -230,10 +230,6 @@ h1 {
   margin: 0.8em;
 }
 
-.fa-heart {
-  font-size: 0.8em;
-}
-
 .img-2x { /*FIXME: same size as .fa-2x*/
   font-size: 2em;
   height: 1em;
@@ -244,26 +240,6 @@ h1 {
   color: white;
   padding-top: 1em;
   padding-bottom: 1em;
-}
-
-#help a {
-  display: block;
-  color: inherit;
-  text-decoration: inherit;
-}
-
-.media-body {
-  vertical-align: middle;
-}
-
-.media-object {
-  height: 6em;
-  line-height: 6em;
-  width: 6em;
-  border-width: 0.4em;
-  border-style: solid;
-  border-color: #faa; /*FIXME: based on .my*/
-  text-align: center;
 }
 
 #dbg_secret p {
