@@ -354,8 +354,8 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
                   var result = results[i];
                   console.log('[ext] ' + result.name + ': ' + result.place_id);
                 }
-                console.error('[ext] Place "' + descriptor.title + '" found ' + results.length
-                              + ' times. See above.');
+                console.warn('[ext] Place "' + descriptor.title + '" found ' + results.length
+                             + ' times. See above.');
               }
               if (descriptor.place_id) {
                 if (!descriptor.ignore_errors && descriptor.place_id != results[0].place_id) {
