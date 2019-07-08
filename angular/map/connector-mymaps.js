@@ -71,7 +71,7 @@ var Connector = (function() {
     }
 
     function errorOnCorsProxy(response) {
-      console.error('Could not load ' + url + ' . Falling back to ' + backupUrl);
+      console.warn('Could not load ' + url + ' . Falling back to ' + backupUrl);
       $http.get(backupUrl).then(success, errorOnBackup);
     }
 
