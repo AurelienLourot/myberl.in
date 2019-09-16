@@ -501,22 +501,6 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
 
     externalGoogleMyMaps: [
       {
-        name: "Franzi's lake map",
-        id: '1S_guQBQudaPzIgRybK3VIPYwRL0',
-        tags: {
-          prepend: true,
-          tags: ['lake', 'outdoor', 'franzi', 'great'],
-        },
-      },
-      {
-        name: "Franzi's Berl.in map",
-        id: '1RklTwBGE0Ke7c_-n-ONFAP-5kV0',
-        tags: {
-          prepend: true,
-          tags: ['franzi', 'great'],
-        },
-      },
-      {
         name: "Romu's map",
         id: '1NXPVu6MaJ7ASWCmSOe27oXPF5rc',
         tags: {

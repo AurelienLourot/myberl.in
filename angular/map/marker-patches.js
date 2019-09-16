@@ -6,17 +6,7 @@ define({
 
 // Patches the provided dictionary of instances of googlemap.Marker.
 function patch(markers) {
-  ignoreErrors('bernsteinsee');
   setPlaceId('betahaus', 'ChIJqQFHjS1OqEcR8d99mafShxY');
-  setPlaceId('brlo', 'ChIJoWMZoR1OqEcR_ZCD-qZZGkA');
-  setPlaceId('hausschwarzenberg', 'ChIJjZik3-BRqEcRYJNhq-6aGVU');
-  setComment('ilritrovo', 'Italian');
-  setPlaceId('lipopette', 'ChIJ54YiTpdPqEcR_3MWglIIzLc');
-  setWebsite('lipopette', 'https://www.facebook.com/lipopetteberlin/');
-  setPlaceId('nymphensee', 'ChIJGS3gbYD7qEcRePUdNIcYvYE');
-  setPlaceId('ploetzensee', 'ChIJY57G5GZRqEcRnKNEpnBZIK8');
-  setPlaceId('ponterosa', 'ChIJqTH0OztQqEcRLgWCiboku0M');
-  ignoreErrors('rahmersee');
 
   function setComment(id, comment) {
     try {

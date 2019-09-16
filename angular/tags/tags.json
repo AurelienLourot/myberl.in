@@ -120,14 +120,6 @@
       "initialState": true
     },
     {
-      "name": "franzi",
-      "desc": "<i class='fa fa-map-marker fa-lg map-marker-not-aure'></i>",
-      "color": "orange",
-      "advanced": true,
-      "descriptive": false,
-      "initialState": true
-    },
-    {
       "name": "romu",
       "desc": "<i class='fa fa-map-marker fa-lg map-marker-not-aure'></i>",
       "color": "orange",

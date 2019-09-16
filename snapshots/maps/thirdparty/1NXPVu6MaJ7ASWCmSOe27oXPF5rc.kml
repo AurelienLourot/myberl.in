@@ -43,7 +43,7 @@
       <name><![CDATA[Romuald's Recommendations]]></name>
       <Placemark>
         <name>Men Men</name>
-        <description><![CDATA[#restaurant #indoor #outdoor #aure #franzi<br>Japanese.<br>Great Meals:<br> - Curry pork<br> - Avocado salad]]></description>
+        <description><![CDATA[#restaurant #indoor #outdoor #aure<br>Japanese.<br>Great Meals:<br> - Curry pork<br> - Avocado salad]]></description>
         <styleUrl>#icon-1899-0288D1</styleUrl>
         <Point>
           <coordinates>
@@ -143,7 +143,7 @@
       </Placemark>
       <Placemark>
         <name>La Femme</name>
-        <description><![CDATA[#restaurant #brunch #indoor #outdoor #franzi<br>Turkish.<br>Closed in the evening.]]></description>
+        <description><![CDATA[#restaurant #brunch #indoor #outdoor<br>Turkish.<br>Closed in the evening.]]></description>
         <styleUrl>#icon-1899-0288D1</styleUrl>
         <Point>
           <coordinates>
@@ -163,7 +163,7 @@
       </Placemark>
       <Placemark>
         <name>Zio Felix</name>
-        <description><![CDATA[#restaurant #indoor #outdoor #aure #franzi<br>Italian restaurant.<br>Buffalo Mozarella Pizza is great.]]></description>
+        <description><![CDATA[#restaurant #indoor #outdoor #aure<br>Italian restaurant.<br>Buffalo Mozarella Pizza is great.]]></description>
         <styleUrl>#icon-1899-0288D1</styleUrl>
         <Point>
           <coordinates>
