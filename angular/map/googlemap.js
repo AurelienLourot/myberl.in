@@ -406,6 +406,9 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
               if (!~externalInfo.openness.indexOf('NOW') && externalInfo.openingHours) {
                 console.error(descriptor.title + ' has opening hours but no openness.');
               }
+              if (externalInfo.openness == 'PERMANENTLY_CLOSED') {
+                console.error(descriptor.title + ' is permanently closed.');
+              }
 
               externalInfo.website = gPlace.website;
               externalInfo.address = gPlace.formatted_address;
