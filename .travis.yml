@@ -2,7 +2,10 @@ language: node_js
 node_js:
   - 4
 
+# See https://stackoverflow.com/questions/55674746/travis-sh-0-cant-open-etc-init-d-xvfb :
+services:
+  - xvfb
+
 # See http://karma-runner.github.io/0.13/plus/travis.html :
 before_script:
   - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
