@@ -82,16 +82,6 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>betahaus</name>
-        <description><![CDATA[#workplace #café #indoor<br>Café with many people working with their laptop.<br>Free wifi.]]></description>
-        <styleUrl>#icon-1899-0288D1</styleUrl>
-        <Point>
-          <coordinates>
-            13.4121984999999,52.5025407,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
         <name>Amerika-Gedenkbibliothek</name>
         <description><![CDATA[#workplace #indoor<br>Public Library.<br>Free wifi.]]></description>
         <styleUrl>#icon-1899-0288D1</styleUrl>

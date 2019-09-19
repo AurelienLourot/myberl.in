@@ -1,14 +1,5 @@
 [
   {
-    "title": "Stattbad",
-    "comment": "Former swimming pool",
-    "position": {
-      "lat": 52.543852,
-      "lng": 13.372653000000016
-    },
-    "tags": ["club", "good", "indoor", "aure", "romu"]
-  },
-  {
     "title": "Fiesere Miese",
     "position": {
       "lat": 52.50563560000001,
@@ -73,14 +64,6 @@
     "tags": ["club", "great", "indoor", "outdoor", "aure", "romu"]
   },
   {
-    "title": "RAW99",
-    "position": {
-      "lat": 52.50773250000001,
-      "lng": 13.4541321
-    },
-    "tags": ["club", "indoor", "good", "aure"]
-  },
-  {
     "title": "Farbfernseher",
     "place_id": "ChIJtYYSEDVOqEcREI7E1_Hvgpo",
     "position": {
@@ -103,8 +86,8 @@
     "place_id": "ChIJfV8BVQxPqEcRCE_Pee7Qm2I",
     "comment": "Former mill factory",
     "position": {
-      "lat": 52.474664,
-      "lng": 13.457343000000037
+      "lat": 52.476287,
+      "lng": 13.457465
     },
     "tags": ["club", "indoor", "great", "outdoor", "aure"]
   },
@@ -116,14 +99,6 @@
       "lng": 13.436409400000002
     },
     "tags": ["club", "indoor", "good", "aure"]
-  },
-  {
-    "title": "Keller",
-    "position": {
-      "lat": 52.48305999999999,
-      "lng": 13.43119999999999
-    },
-    "tags": ["club", "good", "indoor", "aure"]
   },
   {
     "title": "YAAM",
@@ -142,15 +117,6 @@
       "lng": 13.422702999999956
     },
     "tags": ["club", "indoor", "good", "aure"]
-  },
-  {
-    "title": "Chalet",
-    "place_id": "ChIJh9UcgFNOqEcRMUWLnwzHdRo",
-    "position": {
-      "lat": 52.49720139999999,
-      "lng": 13.449379399999998
-    },
-    "tags": ["club", "great", "indoor", "outdoor", "aure"]
   },
   {
     "title": "Else",
@@ -197,7 +163,7 @@
   },
   {
     "title": "Sisyphos",
-    "place_id": "ChIJVysqa-VOqEcRbKb6nYHPpWc",
+    "place_id": "ChIJpwrS6d5OqEcRAwn8R8rChzU",
     "position": {
       "lat": 52.493232,
       "lng": 13.491915999999947
@@ -253,17 +219,6 @@
       "lng": 13.460999000000015
     },
     "tags": ["club", "bar", "great", "indoor", "aure", "romu"]
-  },
-  {
-    "title": "Neue Heimat",
-    "comment": "Streetfood",
-    "place_id": "ChIJ6bucpVlOqEcRTuBJQoqf2po",
-    "ignore_errors": true,
-    "position": {
-      "lat": 52.5069577,
-      "lng": 13.456146999999987
-    },
-    "tags": ["bar", "club", "restaurant", "café", "outdoor", "great", "indoor", "aure"]
   },
   {
     "title": "Bohnengold",
@@ -355,24 +310,6 @@
     "tags": ["bar", "outdoor", "great", "aure"]
   },
   {
-    "title": "Hannibal",
-    "comment": "Cheap food",
-    "position": {
-      "lat": 52.498952,
-      "lng": 13.428224
-    },
-    "tags": ["bar", "café", "restaurant", "indoor", "good", "aure"]
-  },
-  {
-    "title": "BEATmung",
-    "comment": "Belgian beer",
-    "position": {
-      "lat": 52.508736,
-      "lng": 13.455417000000011
-    },
-    "tags": ["bar", "indoor", "good", "aure"]
-  },
-  {
     "title": "Schlawinchen",
     "comment": "Kneipe",
     "position": {
@@ -437,12 +374,12 @@
     "tags": ["bar", "indoor", "good", "aure"]
   },
   {
-    "title": "Strandbar",
+    "title": "Monbijoupark",
     "comment": "Deck chairs by the river",
     "place_id": "ChIJ5wMQjudRqEcRKcmLFg-86gg",
     "position": {
-      "lat": 52.5224999,
-      "lng": 13.39480530000003
+      "lat": 52.523253,
+      "lng": 13.396473
     },
     "tags": ["bar", "outdoor", "great", "aure"]
   },
@@ -466,6 +403,7 @@
   },
   {
     "title": "San Remo",
+    "place_id": "ChIJCyNz9VFOqEcRAAhpCbX0O0A",
     "position": {
       "lat": 52.500483,
       "lng": 13.444461000000048
@@ -493,8 +431,8 @@
     "title": "Kattelbach",
     "comment": "WiFi",
     "position": {
-      "lat": 52.49994,
-      "lng": 13.432170000000042
+      "lat": 52.499811,
+      "lng": 13.4330149
     },
     "tags": ["bar", "café", "indoor", "good", "aure"]
   },
@@ -560,8 +498,8 @@
     "title": "Deck5",
     "comment": "Rooftop",
     "position": {
-      "lat": 52.54966,
-      "lng": 13.41520360000004
+      "lat": 52.5492278,
+      "lng": 13.4165387
     },
     "tags": ["bar", "café", "outdoor", "great", "aure"]
   },
@@ -652,16 +590,6 @@
     "tags": ["restaurant", "café", "great", "indoor", "outdoor", "aure"]
   },
   {
-    "title": "White Trash",
-    "place_id": "ChIJY4nhmuJRqEcR4LikbEiLXwE",
-    "comment": "Burgers",
-    "position": {
-      "lat": 52.496747,
-      "lng": 13.451949000000013
-    },
-    "tags": ["restaurant", "bar", "outdoor", "indoor", "great", "aure"]
-  },
-  {
     "title": "Las Primas",
     "comment": "Tapas",
     "position": {
@@ -681,6 +609,7 @@
   },
   {
     "title": "Engels",
+    "place_id": "ChIJFSOWpGcjZUER-6CGJ5Oak-E",
     "position": {
       "lat": 52.476666,
       "lng": 13.419905999999969
@@ -753,10 +682,10 @@
   {
     "title": "Turkish Market",
     "comment": "Flea market with food",
-    "place_id": "ChIJS1PcnLVPqEcRHoOu9kxrOYw",
+    "place_id": "ChIJoSgQbbRPqEcR1a28K99CSQ0",
     "position": {
-      "lat": 52.49514559999999,
-      "lng": 13.423243800000023
+      "lat": 52.4955686,
+      "lng": 13.4217253
     },
     "tags": ["restaurant", "bar", "outdoor", "good", "aure"]
   },
@@ -770,8 +699,8 @@
     "tags": ["restaurant", "café", "great", "indoor", "aure"]
   },
   {
-    "title": "frank und frei",
-    "comment": "Bavarian, a.k.a. Republik Berlin",
+    "title": "Republik Berlin",
+    "comment": "Biergarten",
     "position": {
       "lat": 52.510834,
       "lng": 13.417374999999993
@@ -873,8 +802,8 @@
     "title": "Chay Village",
     "comment": "Vietnamese vegetarian",
     "position": {
-      "lat": 52.514022,
-      "lng": 13.458811999999966
+      "lat": 52.5135781,
+      "lng": 13.4582282
     },
     "tags": ["restaurant", "great", "indoor", "aure"]
   },
@@ -932,7 +861,7 @@
     "tags": ["restaurant", "great", "indoor", "outdoor", "aure"]
   },
   {
-    "title": "Rundstück",
+    "title": "Rundstück Warm",
     "comment": "Burger",
     "position": {
       "lat": 52.473983,
@@ -969,11 +898,11 @@
     "tags": ["brunch", "restaurant", "great", "indoor", "aure"]
   },
   {
-    "title": "ALASKA",
+    "title": "Alaska Bar",
     "comment": "Bar with food events",
     "position": {
-      "lat": 52.48293000000001,
-      "lng": 13.428350000000023
+      "lat": 52.48293,
+      "lng": 13.42835
     },
     "tags": ["bar", "restaurant", "great", "indoor", "aure"]
   },
@@ -985,15 +914,6 @@
       "lng": 13.403440000000046
     },
     "tags": ["restaurant", "great", "indoor", "aure"]
-  },
-  {
-    "title": "The Bird",
-    "comment": "Burger",
-    "position": {
-      "lat": 52.4940301,
-      "lng": 13.4217739
-    },
-    "tags": ["restaurant", "indoor", "good", "aure"]
   },
   {
     "title": "Zimt & Mehl",
@@ -1031,6 +951,7 @@
   },
   {
     "title": "Stiege",
+    "place_id": "ChIJv_lPCjJOqEcRWJab_mVp0Js",
     "position": {
       "lat": 52.503018,
       "lng": 13.413626000000022
@@ -1063,14 +984,6 @@
       "lng": 13.418125000000032
     },
     "tags": ["restaurant", "bar", "outdoor", "good", "aure"]
-  },
-  {
-    "title": "Varadinek",
-    "position": {
-      "lat": 52.497490000000006,
-      "lng": 13.44091000000003
-    },
-    "tags": ["brunch", "great", "indoor", "aure"]
   },
   {
     "title": "Pig & Tiger",
@@ -1165,7 +1078,7 @@
     "tags": ["sightseeing", "outdoor", "good", "aure"]
   },
   {
-    "title": "Tempelhof",
+    "title": "Tempelhofer Feld",
     "comment": "Former airport",
     "position": {
       "lat": 52.47786199999999,
@@ -1176,7 +1089,6 @@
   {
     "title": "Mauerpark",
     "comment": "Flea market",
-    "place_id": "ChIJCydkxPlRqEcRAVlBoABIR_0",
     "position": {
       "lat": 52.541234,
       "lng": 13.402439
@@ -1246,14 +1158,6 @@
     "tags": ["restaurant", "good", "indoor", "aure"]
   },
   {
-    "title": "Ein Laden",
-    "position": {
-      "lat": 52.488236,
-      "lng": 13.429820
-    },
-    "tags": ["restaurant", "bar", "great", "indoor", "aure"]
-  },
-  {
     "title": "Pazzi X Pizza",
     "position": {
       "lat": 52.477330,
@@ -1263,6 +1167,7 @@
   },
   {
     "title": "Nest",
+    "place_id": "ChIJMVbdFU1OqEcRIIjvrBdYtoY",
     "position": {
       "lat": 52.497119,
       "lng": 13.439089
@@ -1403,16 +1308,6 @@
     "position": {
       "lat": 52.512756,
       "lng": 13.462281
-    },
-    "tags": ["restaurant", "other", "good", "indoor"]
-  },
-  {
-    "title": "Smart Deli",
-    "ignore_errors": true,
-    "comment": "Japanese",
-    "position": {
-      "lat": 52.527870,
-      "lng": 13.386569
     },
     "tags": ["restaurant", "other", "good", "indoor"]
   },
@@ -1639,10 +1534,10 @@
     "title": "3 Schwestern",
     "comment": "German food",
     "position": {
-      "lat": 52.503680,
-      "lng": 13.423414
+      "lat": 52.503811,
+      "lng": 13.424399
     },
-    "tags": ["restaurant", "bar", "café", "other", "indoor", "outdoor", "great"]
+    "tags": ["restaurant", "bar", "café", "great", "indoor", "outdoor", "aure"]
   },
   {
     "title": "Cantina Universale",
@@ -1751,14 +1646,6 @@
       "lng": 13.419811
     },
     "tags": ["restaurant", "other", "indoor", "good"]
-  },
-  {
-    "title": "R",
-    "position": {
-      "lat": 52.476494,
-      "lng": 13.419022
-    },
-    "tags": ["restaurant", "café", "great", "indoor", "outdoor", "aure"]
   },
   {
     "title": "Caramina",
@@ -2176,6 +2063,7 @@
   },
   {
     "title": "Banja Luka",
+    "place_id": "ChIJgciuAlJOqEcRJnjicDpXels",
     "comment": "Biergarten",
     "position": {
       "lat": 52.500492,

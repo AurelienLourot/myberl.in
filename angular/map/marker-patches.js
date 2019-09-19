@@ -6,7 +6,8 @@ define({
 
 // Patches the provided dictionary of instances of googlemap.Marker.
 function patch(markers) {
-  setPlaceId('betahaus', 'ChIJqQFHjS1OqEcR8d99mafShxY');
+  // No patch at the moment. Example:
+  // setPlaceId('betahaus', 'ChIJqQFHjS1OqEcR8d99mafShxY');
 
   function setComment(id, comment) {
     try {
