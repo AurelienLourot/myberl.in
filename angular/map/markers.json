@@ -48,29 +48,12 @@
     "tags": ["club", "indoor", "great", "aure"]
   },
   {
-    "title": "St. Georg",
-    "position": {
-      "lat": 52.50290520000001,
-      "lng": 13.407824300000016
-    },
-    "tags": ["club", "indoor", "good", "aure"]
-  },
-  {
     "title": "Suicide Circus",
     "position": {
       "lat": 52.507272,
       "lng": 13.450853000000052
     },
     "tags": ["club", "great", "indoor", "outdoor", "aure", "romu"]
-  },
-  {
-    "title": "Farbfernseher",
-    "place_id": "ChIJtYYSEDVOqEcREI7E1_Hvgpo",
-    "position": {
-      "lat": 52.499301,
-      "lng": 13.42423800000006
-    },
-    "tags": ["club", "indoor", "good", "aure"]
   },
   {
     "title": "GRETCHEN Club",
@@ -169,15 +152,6 @@
       "lng": 13.491915999999947
     },
     "tags": ["club", "great", "indoor", "outdoor", "aure"]
-  },
-  {
-    "title": "RAMPE Club",
-    "comment": "Beach",
-    "position": {
-      "lat": 52.511807,
-      "lng": 13.423103999999967
-    },
-    "tags": ["club", "outdoor", "great", "aure"]
   },
   {
     "title": "Tresor",
@@ -328,15 +302,6 @@
     "tags": ["bar", "good", "indoor", "aure"]
   },
   {
-    "title": "ROSI`S",
-    "place_id": "ChIJjbj_d1hOqEcRN4GRFzSyupM",
-    "position": {
-      "lat": 52.505008,
-      "lng": 13.462471999999934
-    },
-    "tags": ["bar", "club", "great", "indoor", "outdoor", "aure"]
-  },
-  {
     "title": "Kuschlowski",
     "ignore_errors": true,
     "place_id": "ChIJAbkQ6LBPqEcRPCVqo5pACnk",
@@ -376,7 +341,7 @@
   {
     "title": "Monbijoupark",
     "comment": "Deck chairs by the river",
-    "place_id": "ChIJ5wMQjudRqEcRKcmLFg-86gg",
+    "place_id": "ChIJCfROcedRqEcRjFRvdEEGvYY",
     "position": {
       "lat": 52.523253,
       "lng": 13.396473
@@ -446,14 +411,6 @@
     "tags": ["bar", "indoor", "good", "aure"]
   },
   {
-    "title": "Art und Weise",
-    "position": {
-      "lat": 52.472982,
-      "lng": 13.425344999999993
-    },
-    "tags": ["bar", "indoor", "great", "aure"]
-  },
-  {
     "title": "Kültürzeit",
     "position": {
       "lat": 52.508107,
@@ -485,14 +442,6 @@
       "lng": 13.427865999999995
     },
     "tags": ["bar", "indoor", "great", "aure"]
-  },
-  {
-    "title": "Teigwaren",
-    "position": {
-      "lat": 52.539462,
-      "lng": 13.406757999999968
-    },
-    "tags": ["restaurant", "café", "indoor", "good", "aure"]
   },
   {
     "title": "Deck5",
@@ -581,24 +530,6 @@
     "tags": ["café", "workplace", "indoor", "good", "aure", "romu"]
   },
   {
-    "title": "Café Provinz",
-    "comment": "Vegetarian",
-    "position": {
-      "lat": 52.490382,
-      "lng": 13.449053000000049
-    },
-    "tags": ["restaurant", "café", "great", "indoor", "outdoor", "aure"]
-  },
-  {
-    "title": "Las Primas",
-    "comment": "Tapas",
-    "position": {
-      "lat": 52.498326,
-      "lng": 13.442286999999965
-    },
-    "tags": ["restaurant", "bar", "great", "indoor", "outdoor", "aure"]
-  },
-  {
     "title": "De Noantri",
     "comment": "Italian",
     "position": {
@@ -627,15 +558,6 @@
     "tags": ["restaurant", "bar", "café", "outdoor", "indoor", "great", "aure"]
   },
   {
-    "title": "Café Futuro",
-    "comment": "Bar with food events",
-    "position": {
-      "lat": 52.48788,
-      "lng": 13.432310000000031
-    },
-    "tags": ["café", "restaurant", "great", "indoor", "aure"]
-  },
-  {
     "title": "YOSOY",
     "comment": "Tapas",
     "position": {
@@ -643,14 +565,6 @@
       "lng": 13.40280800000005
     },
     "tags": ["restaurant", "bar", "great", "indoor", "aure"]
-  },
-  {
-    "title": "Szimpla",
-    "position": {
-      "lat": 52.511181,
-      "lng": 13.461207000000059
-    },
-    "tags": ["brunch", "restaurant", "café", "great", "indoor", "aure"]
   },
   {
     "title": "Ankerklause",
@@ -688,15 +602,6 @@
       "lng": 13.4217253
     },
     "tags": ["restaurant", "bar", "outdoor", "good", "aure"]
-  },
-  {
-    "title": "Eckbert Zwo",
-    "comment": "German food",
-    "position": {
-      "lat": 52.49732,
-      "lng": 13.43893000000003
-    },
-    "tags": ["restaurant", "café", "great", "indoor", "aure"]
   },
   {
     "title": "Republik Berlin",
@@ -808,23 +713,6 @@
     "tags": ["restaurant", "great", "indoor", "aure"]
   },
   {
-    "title": "Schiller Burger",
-    "position": {
-      "lat": 52.477364,
-      "lng": 13.423579000000018
-    },
-    "tags": ["restaurant", "great", "indoor", "aure"]
-  },
-  {
-    "title": "ROOTZ",
-    "comment": "Vegetarian",
-    "position": {
-      "lat": 52.500851,
-      "lng": 13.44025099999999
-    },
-    "tags": ["restaurant", "outdoor", "indoor", "great", "aure"]
-  },
-  {
     "title": "Burgermeister",
     "comment": "Burger",
     "position": {
@@ -859,15 +747,6 @@
       "lng": 13.444496999999956
     },
     "tags": ["restaurant", "great", "indoor", "outdoor", "aure"]
-  },
-  {
-    "title": "Rundstück Warm",
-    "comment": "Burger",
-    "position": {
-      "lat": 52.473983,
-      "lng": 13.425381000000016
-    },
-    "tags": ["restaurant", "indoor", "good", "aure"]
   },
   {
     "title": "Pagode",
@@ -977,15 +856,6 @@
     "tags": ["restaurant", "great", "outdoor", "indoor", "aure"]
   },
   {
-    "title": "Devil's Kitchen",
-    "comment": "Israeli",
-    "position": {
-      "lat": 52.493665,
-      "lng": 13.418125000000032
-    },
-    "tags": ["restaurant", "bar", "outdoor", "good", "aure"]
-  },
-  {
     "title": "Pig & Tiger",
     "comment": "Korean",
     "position": {
@@ -1012,15 +882,6 @@
       "lng": 13.444148000000041
     },
     "tags": ["restaurant", "good", "indoor", "outdoor", "aure"]
-  },
-  {
-    "title": "helloGoodPie",
-    "comment": "Salty pies to take away",
-    "position": {
-      "lat": 52.4990337,
-      "lng": 13.44249000000002
-    },
-    "tags": ["restaurant", "outdoor", "great", "aure", "romu"]
   },
   {
     "title": "Shaan",
@@ -1069,20 +930,11 @@
     "tags": ["concert", "indoor", "good", "aure"]
   },
   {
-    "title": "Badeparadies BLUB",
-    "comment": "Abandonned swimming pool",
-    "position": {
-      "lat": 52.45797399999999,
-      "lng": 13.44420260000004
-    },
-    "tags": ["sightseeing", "outdoor", "good", "aure"]
-  },
-  {
     "title": "Tempelhofer Feld",
     "comment": "Former airport",
     "position": {
-      "lat": 52.47786199999999,
-      "lng": 13.396226699999943
+      "lat": 52.475466,
+      "lng": 13.401738
     },
     "tags": ["sightseeing", "outdoor", "great", "aure"]
   },
@@ -1090,8 +942,8 @@
     "title": "Mauerpark",
     "comment": "Flea market",
     "position": {
-      "lat": 52.541234,
-      "lng": 13.402439
+      "lat": 52.5424,
+      "lng": 13.403352
     },
     "tags": ["sightseeing", "bar", "restaurant", "outdoor", "great", "aure", "romu"]
   },
@@ -1138,15 +990,6 @@
       "lng": 13.343464
     },
     "tags": ["sightseeing", "great", "indoor", "aure"]
-  },
-  {
-    "title": "FilmBar",
-    "comment": "Bar cinema",
-    "position": {
-      "lat": 52.480745,
-      "lng": 13.431741
-    },
-    "tags": ["bar", "café", "great", "indoor", "aure"]
   },
   {
     "title": "Baraka",
@@ -1226,14 +1069,6 @@
     "tags": ["restaurant", "other", "good", "indoor"]
   },
   {
-    "title": "Burrito Baby",
-    "position": {
-      "lat": 52.491289,
-      "lng": 13.428281
-    },
-    "tags": ["restaurant", "romu", "great", "indoor"]
-  },
-  {
     "title": "Oui, madame",
     "position": {
       "lat": 52.526744,
@@ -1268,6 +1103,7 @@
   },
   {
     "title": "Transit",
+    "place_id": "ChIJR0X0A_dOqEcR2ty_3Q1Emnk",
     "comment": "Asian tapas",
     "position": {
       "lat": 52.505982,
@@ -1294,15 +1130,6 @@
     "tags": ["restaurant", "other", "good", "indoor"]
   },
   {
-    "title": "Momos",
-    "comment": "Organic vegetarian dumplings",
-    "position": {
-      "lat": 52.531075,
-      "lng": 13.410100
-    },
-    "tags": ["restaurant", "other", "good", "indoor"]
-  },
-  {
     "title": "Ohlala",
     "comment": "Vegan",
     "position": {
@@ -1312,16 +1139,8 @@
     "tags": ["restaurant", "other", "good", "indoor"]
   },
   {
-    "title": "Bakery",
-    "ignore_errors": true,
-    "position": {
-      "lat": 52.498603,
-      "lng": 13.442243
-    },
-    "tags": ["brunch", "other", "good", "indoor"]
-  },
-  {
     "title": "Gärten der Welt",
+    "place_id": "ChIJachwbehLqEcRBlLZ4EMK9go",
     "position": {
       "lat": 52.537697,
       "lng": 13.574696
@@ -1392,8 +1211,8 @@
     "title": "Bite Club",
     "comment": "Street food every second Friday",
     "position": {
-      "lat": 52.497048,
-      "lng": 13.452544
+      "lat": 52.4970022,
+      "lng": 13.4541427
     },
     "tags": ["restaurant", "outdoor", "great", "aure"]
   },
@@ -1491,8 +1310,8 @@
     "comment": "Bar with view",
     "place_id": "ChIJ99S8mv9QqEcRZxIPBXtoDro",
     "position": {
-      "lat": 52.505499,
-      "lng": 13.335814
+      "lat": 52.5055985,
+      "lng": 13.334758
     },
     "tags": ["bar", "other", "indoor", "good"]
   },
@@ -1510,14 +1329,6 @@
     "position": {
       "lat": 52.525711,
       "lng": 13.400931
-    },
-    "tags": ["restaurant", "other", "indoor", "good"]
-  },
-  {
-    "title": "Solo pizza e pasta",
-    "position": {
-      "lat": 52.501948,
-      "lng": 13.417457
     },
     "tags": ["restaurant", "other", "indoor", "good"]
   },
@@ -1567,15 +1378,6 @@
     "tags": ["restaurant", "good", "indoor", "outdoor", "aure"]
   },
   {
-    "title": "Balé",
-    "comment": "Italian",
-    "position": {
-      "lat": 52.499456,
-      "lng": 13.445441
-    },
-    "tags": ["restaurant", "good", "indoor", "outdoor", "aure"]
-  },
-  {
     "title": "Lisboa",
     "comment": "Portuguese tapas",
     "position": {
@@ -1611,14 +1413,6 @@
     "tags": ["restaurant", "other", "indoor", "good"]
   },
   {
-    "title": "Bitte",
-    "position": {
-      "lat": 52.494109,
-      "lng": 13.437718
-    },
-    "tags": ["café", "other", "indoor", "outdoor", "good"]
-  },
-  {
     "title": "New Deli Yoga",
     "comment": "Vegetarian, Vegan",
     "position": {
@@ -1633,8 +1427,8 @@
     "ignore_errors": true,
     "website": "http://picnic-berlin.com/",
     "position": {
-      "lat": 52.470714,
-      "lng": 13.419397
+      "lat": 52.470835,
+      "lng": 13.420181
     },
     "tags": ["bar", "outdoor", "good", "aure"]
   },
@@ -1669,8 +1463,8 @@
   {
     "title": "Freischwimmer",
     "position": {
-      "lat": 52.497344,
-      "lng": 13.450786
+      "lat": 52.4970534,
+      "lng": 13.4500504
     },
     "tags": ["restaurant", "outdoor", "great", "aure"]
   },
@@ -1735,7 +1529,7 @@
     "tags": ["bar", "café", "restaurant", "outdoor", "great", "aure"]
   },
   {
-    "title": "Arena",
+    "title": "Arena Club",
     "place_id": "ChIJ5QIoVFROqEcRcGmvtcH0dxI",
     "position": {
       "lat": 52.497137,
@@ -1772,25 +1566,6 @@
     "tags": ["restaurant", "indoor", "outdoor", "good", "aure"]
   },
   {
-    "title": "Kala",
-    "comment": "Fish",
-    "place_id": "ChIJTVVOj71PqEcRbSsEhndOk_w",
-    "position": {
-      "lat": 52.475910,
-      "lng": 13.425985
-    },
-    "tags": ["restaurant", "other", "indoor", "good"]
-  },
-  {
-    "title": "Fuchs und Fähe",
-    "comment": "Sandwiches",
-    "position": {
-      "lat": 52.475926,
-      "lng": 13.426115
-    },
-    "tags": ["restaurant", "other", "indoor", "good"]
-  },
-  {
     "title": "Kiez Vegan",
     "position": {
       "lat": 52.490502,
@@ -1808,15 +1583,6 @@
     "tags": ["bar", "café", "great", "indoor", "outdoor", "aure"]
   },
   {
-    "title": "KIKI SOL",
-    "comment": "Student bar",
-    "position": {
-      "lat": 52.544135,
-      "lng": 13.368908
-    },
-    "tags": ["bar", "other", "good", "indoor"]
-  },
-  {
     "title": "Monti",
     "comment": "Italian",
     "position": {
@@ -1828,8 +1594,8 @@
   {
     "title": "Tempelburger",
     "position": {
-      "lat": 52.480709,
-      "lng": 13.406784
+      "lat": 52.480729,
+      "lng": 13.408455
     },
     "tags": ["restaurant", "bar", "outdoor", "good", "aure"]
   },
@@ -1937,15 +1703,6 @@
       "lng": 13.411259
     },
     "tags": ["brunch", "restaurant", "other", "indoor", "good"]
-  },
-  {
-    "title": "Schiller Bar",
-    "place_id": "ChIJt40WdL5PqEcRGO3IGXFYcvY",
-    "position": {
-      "lat": 52.477382,
-      "lng": 13.423574
-    },
-    "tags": ["bar", "other", "indoor", "good"]
   },
   {
     "title": "Brinks",
@@ -2090,15 +1847,6 @@
     "tags": ["restaurant", "great", "indoor", "aure"]
   },
   {
-    "title": "BettoMagno",
-    "comment": "Italian",
-    "position": {
-      "lat": 52.474070,
-      "lng": 13.426196
-    },
-    "tags": ["bar", "restaurant", "good", "indoor", "aure"]
-  },
-  {
     "title": "An einem Sonntag im August",
     "comment": "Vegetarian and vegan burgers",
     "position": {
@@ -2106,15 +1854,6 @@
       "lng": 13.411464
     },
     "tags": ["restaurant", "bar", "café", "other", "great", "indoor", "outdoor"]
-  },
-  {
-    "title": "Mimino",
-    "comment": "Georgian",
-    "position": {
-      "lat": 52.504667,
-      "lng": 13.327555
-    },
-    "tags": ["restaurant", "indoor", "good", "aure"]
   },
   {
     "title": "Schwiliko",
@@ -2232,15 +1971,6 @@
     "tags": ["restaurant", "other", "great", "indoor"]
   },
   {
-    "title": "Stone",
-    "comment": "Brewery",
-    "position": {
-      "lat": 52.438062,
-      "lng": 13.368270
-    },
-    "tags": ["bar", "other", "great", "indoor", "outdoor"]
-  },
-  {
     "title": "Wok & Grill",
     "position": {
       "lat": 52.525438,
@@ -2258,15 +1988,6 @@
     "tags": ["restaurant", "great", "indoor", "aure"]
   },
   {
-    "title": "Paparazzi",
-    "comment": "Italian",
-    "position": {
-      "lat": 52.539950,
-      "lng": 13.417775
-    },
-    "tags": ["restaurant", "great", "indoor", "outdoor", "aure"]
-  },
-  {
     "title": "Lava",
     "comment": "Italian",
     "position": {
@@ -2278,7 +1999,6 @@
   {
     "title": "Café am Neuen See",
     "comment": "Biergarten, Ice stock sport (bavarian curling)",
-    "place_id": "ChIJrUoJwatRqEcRxIAAnn02nN8",
     "position": {
       "lat": 52.510731,
       "lng": 13.344655
@@ -2337,15 +2057,6 @@
       "lng": 13.421285
     },
     "tags": ["restaurant", "great", "indoor", "aure"]
-  },
-  {
-    "title": "Kropp",
-    "comment": "Fish",
-    "position": {
-      "lat": 52.481250,
-      "lng": 13.434457
-    },
-    "tags": ["restaurant", "good", "indoor", "aure", "romu"]
   },
   {
     "title": "Sol y Sombra",
