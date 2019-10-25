@@ -73,17 +73,26 @@ define(['angular/map/declutterer', 'angular/map/device'], function(declutterer, 
       };
 
       this.dbg_click_each_visible_marker = function dbg_click_each_visible_marker() {
+        var SKIP_N_FIRST = 0;
+
         var nextDelay = 5000; // ms
+        var i = 0;
         for (var id in markers) {
           if (!markers[id].isVisible()) {
             continue;
           }
 
-          (function(idCopy) {
+          ++i;
+          if (i <= SKIP_N_FIRST) {
+            continue;
+          }
+
+          (function(idCopy, iCopy) {
             $timeout(function() {
+              console.log('Clicking marker number ' + iCopy + '...');
               markers[idCopy].dbg_clickListener();
             }, nextDelay);
-          })(id);
+          })(id, i);
 
           nextDelay += 2800;
         }
