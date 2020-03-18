@@ -1,6 +1,8 @@
+> **WARNING**: This project isn't maintained anymore.
+
 # myberl.in [![Build Status](https://travis-ci.org/AurelienLourot/myberl.in.svg?branch=master)](https://travis-ci.org/AurelienLourot/myberl.in)
 
-Source of https://myberl.in . An interactive map of bars, clubs and restaurants in Berlin.
+Interactive map of bars, clubs and restaurants in Berlin.
 
 ## Serve locally
 
@@ -94,7 +96,7 @@ $ npm run-script loadsite
 In addition to sending any error to Sentry, `npm` will terminate with a non-null exit value if:
 
 * the app's initialization times out, or
-* [myberl.in](https://myberl.in) is unreachable.
+* myberl.in is unreachable.
 
 ## Documentation
 
